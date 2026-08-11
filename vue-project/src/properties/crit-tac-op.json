@@ -1,0 +1,102 @@
+{
+  "crit_ops": [
+    {
+      "id": "crit-01",
+      "number": 1,
+      "title": "METTERE IN SICUREZZA",
+      "rule": null,
+      "mission_actions": [
+        {
+          "name": "SECURE",
+          "ap": "1 PA",
+          "text": "Un segnalino obiettivo che l'agente attivo controlla è messo in sicurezza dal tuo kill team finché il kill team nemico non mette in sicurezza quel segnalino obiettivo. Un agente non può eseguire questa azione durante il primo punto di svolta, o mentre si trova entro il raggio di controllo di un agente nemico."
+        }
+      ],
+      "victory_points": "Alla fine di ogni punto di svolta dopo il primo:<br><p>Se qualsiasi segnalino obiettivo è messo in sicurezza dal tuo kill team, ottieni 1 PV.</p><br><p>Se sono messi in sicurezza dal tuo kill team più segnalini obiettivo rispetto al kill team del tuo avversario, ottieni 1 PV.</p>"
+    },
+    {
+      "id": "crit-02",
+      "number": 2,
+      "title": "SACCHEGGIARE",
+      "rule": null,
+      "mission_actions": [
+        {
+          "name": "SACCHEGGIA",
+          "ap": "1 PA",
+          "text": "Un segnalino obiettivo che l'agente attivo controlla è saccheggiato. Un agente non può eseguire questa azione durante il primo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se quel segnalino obiettivo è già stato saccheggiato durante questo punto di svolta."
+        }
+      ],
+      "victory_points": "Ogni volta che un agente amico esegue l'azione Saccheggiare, ottieni 1PV\n(fino a un massimo di 2VP per punto di svolta)"
+    },
+    {
+      "id": "crit-03",
+      "number": 3,
+      "title": "TRASMISSIONE",
+      "rule": null,
+      "mission_actions": [
+        {
+          "name": "TRASMETTI",
+          "ap": "1 PA",
+          "text": "Un segnalino obiettivo che l'agente attivo controlla sta trasmettendofino all'inizio del prossimo punto di svolta. Un agente non può eseguire questa azione durante il primo punto di svolta, o mentre si trova entro il raggio di controllo di un agente nemico."
+        }
+      ],
+      "victory_points": "Alla fine di ogni punto di svolta dopo il primo:<br><p>Se gli agenti amici controllano qualsiasi segnalino obiettivo che trasmette, ottieni 1VP.</p><br><p>Se gli agenti amici controllano più segnalini obiettivo che trasmettono rispetto agli agenti nemici, ottieni 1VP."
+    },
+    {
+      "id": "crit-04",
+      "number": 4,
+      "title": "L'ORB",
+      "rule": "All'inizio della battaglia, l'obiettivo centrale ha il gettone Orb.",
+      "mission_actions": [
+        {
+          "name": "MUOVI L'ORB",
+          "ap": "1 PA",
+          "text": "Se l'agente attivo controlla il segnalino obiettivo che ha il gettone Orb, muovi il gettone come segue:<br><p>Se il segnalino obiettivo centrale ce l'ha, spostalo sul segnalino obiettivo di uno dei due giocatori (a tua scelta).</p><br><p>Se il segnalino obiettivo di un giocatore ce l'ha, spostalo sul segnalino obiettivo centrale. Un agente non può eseguire questa azione durante il primo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se non controlla il segnalino obiettivo che ha il gettone Orb"
+        }
+      ],
+      "victory_points": "Alla fine di ogni punto di svolta dopo il primo, per ogni segnalino obiettivo che gli agenti amici controllano che non ha il gettone Orb, ottieni 1VP."
+    },
+    {
+      "id": "crit-05",
+      "number": 5,
+      "title": "RIVENDICAZIONE",
+      "rule": "All'inizio della battaglia, l'obiettivo centrale ha il gettone Orb.",
+      "mission_actions": [
+        {
+          "name": "MUOVI L'ORB",
+          "ap": "1 PA",
+          "text": "Se l'agente attivo controlla il segnalino obiettivo che ha il gettone Orb, muovi il gettone come segue:<br><p>Se il segnalino obiettivo centrale ce l'ha, spostalo sul segnalino obiettivo di uno dei due giocatori (a tua scelta).</p><br><p>Se il segnalino obiettivo di un giocatore ce l'ha, spostalo sul segnalino obiettivo centrale. Un agente non può eseguire questa azione durante il primo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se non controlla il segnalino obiettivo che ha il gettone Orb"
+        }
+      ],
+      "victory_points": "Alla fine di ogni punto di svolta dopo il primo, per ogni segnalino obiettivo che gli agenti amici controllano che non ha il gettone Orb, ottieni 1VP."
+    }
+  ],
+  "tac_ops": [
+    {
+      "id": "tac-recon-01",
+      "archetypeId": "recon",
+      "archetype": "RICOGNIZIONE",
+      "title": "FLANKARE",
+      "reveal": "Come AZZARDO STRATEGICO (STRATEGIC GAMBIT).",
+      "rule": "Dividi la killzone in due fianchi (sinistro e destro) tracciando una linea immaginaria che è proprio come la linea centrale, tranne che parte dal centro del bordo della killzone di ciascun giocatore. Un agente contesta un fianco mentre si trova sia interamente all'interno di esso sia all'interno del territorio del suo avversario. Gli agenti amici controllano un fianco se la statistica LPA totale di coloro che lo contestano è maggiore di quella degli agenti nemici.",
+      "mission_actions": [],
+      "victory_points": "Dopo aver rivelato questa OP, alla fine di ogni punto di svolta dopo il primo, per ogni fianco che gli agenti amici controllano, ottieni 1VP. Se gli agenti amici controllavano quel fianco anche alla fine del punto di svolta precedente (escluso il primo), ottieni invece 2VP.<br>Non puoi ottenere più di 2VP da questa op per punto di svolta."
+    },
+    {
+      "id": "tac-seek-02",
+      "archetypeId": "seek",
+      "archetype": "RICERCA E DISTRUZIONE",
+      "title": "SWEEP & CLEAR",
+      "reveal": "La prima volta che un agente nemico viene incapacitato mentre contesta un segnalino obiettivo, o la prima volta che un agente amico esegue l'azione Liberare (Clear) (qualunque avvenga prima).",
+      "rule": "Quando un agente nemico che contesta un segnalino obiettivo viene incapacitato, quel segnalino obiettivo ottiene uno dei tuoi gettoni Setacciato (Swept) (se non ne ha già uno) fino alla fase di Approntamento della successiva fase di Strategia.",
+      "mission_actions": [
+        {
+          "name": "CLEAR",
+          "ap": "1 PA",
+          "text": "Un segnalino obiettivo che l'agente attivo controlla è liberato (cleared) per il punto di svolta. Un agente non può eseguire questa azione durante il primo punto di svolta, o mentre si trova entro il raggio di controllo di un agente nemico."
+        }
+      ],
+      "victory_points": "Alla fine di ogni punto di svolta dopo il primo, se gli agenti amici controllano qualsiasi segnalino obiettivo che ha uno dei tuoi gettoni Setacciato, ottieni 1VP. Se questo è vero e uno qualsiasi di quei segnalini obiettivo è anche liberato, ottieni invece 2VP.<br>Non puoi ottenere più di 2VP da questa op per punto di svolta."
+    }
+  ]
+}
