@@ -1,0 +1,368 @@
+/* ==========================================================================
+   KILL TEAM COMPANION APP - TEMA SCURO TATTICO
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@700&display=swap');
+
+:root {
+  /* Material Design 2 Dark Theme Palette */
+  --bg-app: #121212;          /* Material Dark Surface/Background */
+  --bg-surface: #1e1e1e;      /* Material Dark Surface (Elevation +1) */
+  --bg-surface-hover: #2c2c2c;/* Elevation +2 equivalent */
+  
+  /* Testi */
+  --text-primary: rgba(255, 255, 255, 0.87); /* Material High Emphasis */
+  --text-secondary: rgba(255, 255, 255, 0.60); /* Material Medium Emphasis */
+  --text-disabled: rgba(255, 255, 255, 0.38);  /* Material Disabled */
+  
+  /* Colori di Accento (Pastel Purple / Lavender) */
+  --accent-main: #BB86FC;     /* Material Dark Primary (Pastel Purple) */
+  --accent-main-dim: rgba(187, 134, 252, 0.2);
+  --border-subtle: rgba(255, 255, 255, 0.12); /* Material Divider */
+  --accent-important: rgb(177 244 134 / 0.85);
+
+  /* Colori Fazioni / Operazioni (Material-style pastels) */
+  --op-recon: #03DAC6;        /* Material Secondary (Teal) */
+  --op-infil: #CF6679;        /* Material Error (Red/Pink) */
+  --op-sec: #80DEEA;          /* Pastel Cyan */
+  --op-seek: #FFAB91;         /* Pastel Deep Orange */
+  --op-crit: #FFF59D;         /* Pastel Yellow */
+
+  /* Tipografia */
+  --font-main: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* UI Setup */
+  --radius: 8px;              /* Material standard radius */
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+/* ==========================================================================
+   REGOLE BASE & RESET
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 0;
+  /* Lo scroll avviene solo dentro .hero-section: il body non deve mai scrollare */
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+/* Scrollbar personalizzata per un look integrato */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-app); }
+::-webkit-scrollbar-thumb { background: var(--border-subtle); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3 { text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800; line-height: 1.2; }
+h1 { font-size: 1.75rem; color: var(--text-primary); margin-bottom: 1.25rem; }
+h2 { font-size: 1.3rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; margin-bottom: 1rem; margin-top: 2rem;}
+h3 { font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem; }
+
+p {
+  color: var(--text-secondary);
+  font-size: 0.8rem
+}
+/* ==========================================================================
+   LAYOUT E NAVIGAZIONE
+   ========================================================================== */
+.app-wrapper {
+  background-color: #0a0a0a; /* Darker faded background */
+  height: 100vh;  /* fallback per browser senza dvh */
+  height: 100dvh; /* si adatta a barre browser e rotazione */
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.app-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: var(--bg-app); /* The actual app background */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;  /* permette ai figli flex di restringersi */
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  /* Notch / bordi curvi in orizzontale */
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+.hero-section {
+  /* basis 0 + min-height 0: l'area di scroll prende SOLO lo spazio
+     rimasto da header e menu, senza mai sforare il viewport */
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-subtle) transparent;
+  transition: mask-image 0.3s ease;
+}
+
+/* Dissolvenza in basso a banda fissa: su schermi bassi/orizzontali una
+   percentuale coprirebbe troppo contenuto */
+.hero-section.has-fade {
+  mask-image: linear-gradient(to bottom, black calc(100% - 48px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 48px), transparent 100%);
+}
+
+.hero-section::-webkit-scrollbar {
+  width: 4px;
+}
+
+.hero-section::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+.hero-section::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.hero-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container {
+  width: 100%;
+  /* cresce per riempire lo scroller quando il contenuto e' corto,
+     ma non impone mai un'altezza minima al viewport di scroll */
+  flex: 1 0 auto;
+  padding: 1.5rem 1rem;
+  /* spazio sotto l'ultimo contenuto: dissolvenza + home indicator */
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  margin: 0 auto;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: left; /* Keep card content left-aligned */
+}
+
+@media (max-width: 400px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    max-width: 100%;
+    box-shadow: none;
+    /* NIENTE height qui: eredita il 100% del wrapper in dvh.
+       -webkit-fill-available non si ricalcola dopo la rotazione su iOS */
+  }
+  .container {
+    padding: 0.75rem 0.75rem;
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Schermi bassi (tipicamente telefono in orizzontale): header e menu
+   devono lasciare piu' spazio possibile al contenuto scrollabile */
+@media (max-height: 500px) {
+  header.navbar {
+    /* il padding compatto e' nello scoped di AppHeader (.custom-padding vince) */
+    gap: 0.5rem;
+  }
+  header h1 {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+  h2 {
+    margin-top: 1.25rem;
+  }
+  .container {
+    padding-top: 0.5rem;
+    padding-bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+header.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-app); /* Material Surface */
+  padding: 1rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+header h1 { margin: 0; font-size: 1.4rem; }
+
+/* Footer Styling */
+.app-footer {
+  padding: 1.5rem;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  margin-top: auto;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   COMPONENTI: SCOREBOARD (DASHBOARD PUNTI)
+   ========================================================================== */
+.scoreboard {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .scoreboard {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.score-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-name {
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.score-value {
+  font-family: var(--font-mono);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+/* Colora il punteggio del giocatore principale */
+.score-player.ally .score-value { color: var(--accent-main); }
+
+.score-controls { display: flex; gap: 0.5rem; }
+
+/* ==========================================================================
+   BOTTONI E INTERAZIONI
+   ========================================================================== */
+.btn {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--text-secondary);
+}
+
+.btn:active { transform: scale(0.95); }
+
+/* Bottoni di azione principali */
+.btn-primary {
+  background-color: var(--accent-main);
+  border-color: var(--accent-main);
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #d7b4ff; /* Lighter pastel purple */
+  border-color: #d7b4ff;
+  box-shadow: 0 0 10px var(--accent-main-dim);
+}
+
+/* Bottone quadrato per counter (+ / -) */
+.btn-icon {
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  padding: 0;
+  border-radius: 50%; /* Tondi per i counter punti */
+}
+
+.swipe-area {
+  touch-action: pan-y;
+  user-select: none;
+  /* NB: nessun min-height qui. Questa classe sta sullo stesso elemento di
+     .hero-section: un min-height:100% lo forzerebbe a 100dvh sommandosi ad
+     header e menu, spingendo la fine dello scroller fuori dallo schermo. */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
