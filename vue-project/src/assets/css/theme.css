@@ -2,8 +2,6 @@
    KILL TEAM COMPANION APP - TEMA SCURO TATTICO
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@700&display=swap');
-
 :root {
   /* Material Design 2 Dark Theme Palette */
   --bg-app: #121212;          /* Material Dark Surface/Background */
@@ -23,7 +21,7 @@
 
   /* Colori Fazioni / Operazioni (Material-style pastels) */
   --op-recon: #03DAC6;        /* Material Secondary (Teal) */
-  --op-infil: #CF6679;        /* Material Error (Red/Pink) */
+  --op-infil: #cc576c;        /* Material Error (Red/Pink) */
   --op-sec: #80DEEA;          /* Pastel Cyan */
   --op-seek: #FFAB91;         /* Pastel Deep Orange */
   --op-crit: #FFF59D;         /* Pastel Yellow */
@@ -58,7 +56,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
 
 html,
@@ -70,7 +67,7 @@ body,
 body {
   background-color: var(--bg-app);
   color: var(--text-primary);
-  font-family: var(--font-main);
+  font-family: var(--font-main), serif;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -182,6 +179,7 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
+  /*padding: 0 1em 0 1em;*/
   text-align: left; /* Keep card content left-aligned */
 }
 
@@ -296,7 +294,7 @@ header h1 { margin: 0; font-size: 1.4rem; }
 }
 
 .score-value {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), serif;
   font-size: 4rem;
   font-weight: 700;
   line-height: 1;
@@ -318,7 +316,7 @@ header h1 { margin: 0; font-size: 1.4rem; }
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius);
   padding: 0.75rem 1.25rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), serif;
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
@@ -356,13 +354,6 @@ header h1 { margin: 0; font-size: 1.4rem; }
   border-radius: 50%; /* Tondi per i counter punti */
 }
 
-.swipe-area {
-  touch-action: pan-y;
-  user-select: none;
-  /* NB: nessun min-height qui. Questa classe sta sullo stesso elemento di
-     .hero-section: un min-height:100% lo forzerebbe a 100dvh sommandosi ad
-     header e menu, spingendo la fine dello scroller fuori dallo schermo. */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.centered-view {
+  text-align: center;
 }

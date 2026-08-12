@@ -4,11 +4,9 @@ import AppHeader from './components/AppHeader.vue'
 import AppMenu from './components/AppMenu.vue'
 import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
-import {useSwipe} from "@/composables/useSwipe.js";
 
 const heroSection = ref(null)
 const isAtBottom = ref(true)
-const routedComponent = ref(null)
 const route = useRoute()
 
 let resizeObserver = null
@@ -69,48 +67,30 @@ onUnmounted(() => {
     pendingChecks = []
 })
 
-const { swipeHandlers } = useSwipe({
-    onSwipeLeft: () => {
-        if (routedComponent.value && routedComponent.value.swipeLeft) {
-            routedComponent.value.swipeLeft()
-        } else {
-            console.log("Nessun'azione di swipe definita in questo componente.")
-        }
-    },
-    onSwipeRight: () => {
-        if (routedComponent.value && routedComponent.value.swipeRight) {
-            routedComponent.value.swipeRight()
-        } else {
-            console.log("Nessun'azione di swipe definita in questo componente.")
-        }
-    },
-})
 </script>
 
 <template>
-    <div class="app-wrapper">
-        <div class="app-container">
-            <AppHeader />
-            <AppMenu/>
-            <div 
-                ref="heroSection"
-                class="hero-section swipe-area"
-                :class="{ 'has-fade': !isAtBottom }"
-                @pointerdown="swipeHandlers.onPointerDown"
-                @pointerup="swipeHandlers.onPointerUp"
-                @pointercancel="swipeHandlers.onPointerCancel"
-                @touchstart="swipeHandlers.onPointerDown"
-                @touchend="swipeHandlers.onPointerUp"
-                @touchcancel="swipeHandlers.onPointerCancel"
-            >
-                <main class="container">
-                    <router-view v-slot="{ Component }">
-                        <component :is="Component" ref="routedComponent" />
-                    </router-view>
-                </main>
+    <UApp>
+        <div class="app-wrapper">
+            <div class="app-container">
+                <AppHeader />
+                <AppMenu/>
+                <div
+                        ref="heroSection"
+                        class="hero-section swipe-area"
+                        :class="{ 'has-fade': !isAtBottom }"
+                >
+                    <main class="container">
+                        <router-view v-slot="{ Component }">
+                            <KeepAlive>
+                                <component :is="Component" ref="routedComponent" />
+                            </KeepAlive>
+                        </router-view>
+                    </main>
+                </div>
             </div>
         </div>
-    </div>
+    </UApp>
 </template>
 
 <style>

@@ -61,7 +61,7 @@ const title = computed(() => {
 /* Archetype-specific colors for internal elements */
 .op-card.recon :deep(.op-section-title) { color: var(--op-recon); }
 .op-card.recon :deep(.op-action-box) { border-left-color: var(--op-recon); }
-.op-card.recon :deep(.ap-cost) { background-color: var(--op-recon); }
+.op-card.recon :deep(.ap-cost) { background-color: var(--op-recon); color: var(--bg-surface);}
 
 .op-card.infiltration :deep(.op-section-title) { color: var(--op-infil); }
 .op-card.infiltration :deep(.op-action-box) { border-left-color: var(--op-infil); }
@@ -69,7 +69,7 @@ const title = computed(() => {
 
 .op-card.security :deep(.op-section-title) { color: var(--op-sec); }
 .op-card.security :deep(.op-action-box) { border-left-color: var(--op-sec); }
-.op-card.security :deep(.ap-cost) { background-color: var(--op-sec); }
+.op-card.security :deep(.ap-cost) { background-color: var(--op-sec); color: var(--bg-surface);}
 
 .op-card.seek :deep(.op-section-title) { color: var(--op-seek); }
 .op-card.seek :deep(.op-action-box) { border-left-color: var(--op-seek); }

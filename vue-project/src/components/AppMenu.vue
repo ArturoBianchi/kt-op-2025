@@ -37,6 +37,7 @@ import { RouterLink } from 'vue-router'
     margin: 0;
     flex-shrink: 0;
     background-color: var(--bg-surface);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-text {
