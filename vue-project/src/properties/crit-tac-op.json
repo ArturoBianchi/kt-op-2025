@@ -8,7 +8,7 @@
       "mission_actions": [
         {
           "name": "METTERE AL SICURO",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Un segnalino obiettivo che l'agente attivo controlla è messo in sicurezza (secured) dal tuo kill team finché il kill team nemico non mette in sicurezza quel segnalino obiettivo. Un agente non può eseguire questa azione durante il primo punto di svolta, o mentre si trova entro il raggio di controllo di un agente nemico."
         }
       ],
@@ -22,7 +22,7 @@
       "mission_actions": [
         {
           "name": "LOOTARE",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Un segnalino obiettivo che l'agente attivo controlla è saccheggiato. Un agente non può eseguire questa azione durante il primo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se quel segnalino obiettivo è già stato saccheggiato durante questo punto di svolta."
         }
       ],
@@ -36,7 +36,7 @@
       "mission_actions": [
         {
           "name": "TRASMETTI",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Un segnalino obiettivo che l'agente attivo controlla sta trasmettendo fino all'inizio del prossimo punto di svolta. Un agente non può eseguire questa azione durante il primo punto di svolta, o mentre si trova entro il raggio di controllo di un agente nemico."
         }
       ],
@@ -50,7 +50,7 @@
       "mission_actions": [
         {
           "name": "MUOVERE LA SFERA",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Se l'agente attivo controlla il segnalino obiettivo che ha il gettone Sfera, muovi il gettone come segue:<br><p>Se il segnalino obiettivo centrale ce l'ha, spostalo sul segnalino obiettivo di uno dei due giocatori (a tua scelta).</p><br><p>Se il segnalino obiettivo di un giocatore ce l'ha, spostalo sul segnalino obiettivo centrale.</p><br>Un agente non può eseguire questa azione durante il primo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se non controlla il segnalino obiettivo che ha il gettone Sfera."
         }
       ],
@@ -68,7 +68,7 @@
       "id": "crit-06",
       "number": 6,
       "title": "CELLE DI ENERGIA",
-      "rule": "Gli agenti possono eseguire l'azione Raccogliere Segnalino su ciascun segnalino obiettivo nei seguenti punti di svolta:<br><p>2, ma devi spendere 2AP aggiuntivi (quell'azione non può essere gratuita e i suoi AP non possono essere ridotti).</p><br><p>3, ma devi spendere 1AP aggiuntivo (quell'azione non può essere gratuita e i suoi AP non possono essere ridotti).</p><br><p>4 (come normale).</p><br>Ogni volta che un agente trasporta un segnalino obiettivo, quell'agente non può essere rimosso e schierato di nuovo a più di 6\" di distanza.",
+      "rule": "Gli agenti possono eseguire l'azione Raccogliere Segnalino su ciascun segnalino obiettivo nei seguenti punti di svolta:<br><p>2, ma devi spendere 2PA aggiuntivi (quell'azione non può essere gratuita e i suoi PA non possono essere ridotti).</p><br><p>3, ma devi spendere 1PA aggiuntivo (quell'azione non può essere gratuita e i suoi PA non possono essere ridotti).</p><br><p>4 (come normale).</p><br>Ogni volta che un agente trasporta un segnalino obiettivo, quell'agente non può essere rimosso e schierato di nuovo a più di 6\" di distanza.",
       "mission_actions": [],
       "victory_points": "Alla fine di ogni punto di svolta, se gli agenti amici controllano più segnalini obiettivo di quanto facciano gli agenti nemici, ottieni 1PV.<br>Alla fine della battaglia, per ogni segnalino obiettivo che gli agenti amici stanno trasportando, ottieni 1PV."
     },
@@ -80,7 +80,7 @@
       "mission_actions": [
         {
           "name": "DOWNLOAD",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Un segnalino obiettivo centrale o dell'avversario che l'agente attivo controlla è scaricato. Un agente non può eseguire questa azione durante il primo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se quel segnalino obiettivo è già stato scaricato durante la battaglia."
         }
       ],
@@ -94,12 +94,12 @@
       "mission_actions": [
         {
           "name": "COMPILARE DATI",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Un segnalino obiettivo che l'agente attivo controlla ottiene 1 punto Dati (usa un dado come gettone per tenere traccia dei punti). Un agente non può eseguire questa azione durante il primo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se quel segnalino obiettivo ha già ottenuto un punto Dati durante questo punto di svolta."
         },
         {
           "name": "INVIARE DATI",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Rimuovi tutti i punti Dati da un segnalino obiettivo che l'agente attivo controlla. Un agente non può eseguire questa azione durante il primo, secondo o terzo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se quel segnalino obiettivo non ha alcun punto Dati da rimuovere."
         }
       ],
@@ -113,7 +113,7 @@
       "mission_actions": [
         {
           "name": "RIAVVIARE",
-          "ap": "2AP",
+          "ap": "2PA",
           "text": "Un segnalino obiettivo inerte che l'agente attivo controlla non è più inerte. Un agente non può eseguire questa azione durante il primo punto di svolta, o mentre si trova entro il raggio di controllo di un agente nemico."
         }
       ],
@@ -127,7 +127,7 @@
       "archetype": "RICOGNIZIONE",
       "title": "FLANKARE",
       "reveal": "Come AZZARDO STRATEGICO.",
-      "rule": "Dividi la killzone in due fianchi (sinistro e destro) tracciando una linea immaginaria che è proprio come la linea centrale, tranne che parte dal centro del bordo della killzone di ciascun giocatore. Un agente contesta un fianco mentre si trova sia interamente all'interno di esso sia all'interno del territorio del suo avversario. Gli agenti amici controllano un fianco se la statistica APL totale di coloro che lo contestano è maggiore di quella degli agenti nemici.",
+      "rule": "Dividi la killzone in due fianchi (sinistro e destro) tracciando una linea immaginaria che è proprio come la linea centrale, tranne che parte dal centro del bordo della killzone di ciascun giocatore. Un agente contesta un fianco mentre si trova sia interamente all'interno di esso sia all'interno del territorio del suo avversario. Gli agenti amici controllano un fianco se la statistica LPA totale di coloro che lo contestano è maggiore di quella degli agenti nemici.",
       "mission_actions": [],
       "victory_points": "Dopo aver rivelato questa op, alla fine di ogni punto di svolta dopo il primo, per ogni fianco che gli agenti amici controllano, ottieni 1PV. Se gli agenti amici controllavano quel fianco anche alla fine del punto di svolta precedente (escluso il primo), ottieni invece 2PV.<br>Non puoi ottenere più di 2PV da questa op per punto di svolta."
     },
@@ -141,7 +141,7 @@
       "mission_actions": [
         {
           "name": "INDIVIDUATO!",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Seleziona un agente nemico pronto (ready) visibile e a più di 6\" dall'agente attivo. Quell'agente nemico è ora individuato fino alla fase di Approntamento (Ready step) della successiva fase di Strategia. Un agente non può eseguire questa azione mentre ha un ordine di ingaggiare, durante il primo punto di svolta, o mentre si trova entro il raggio di controllo di un agente nemico."
         }
       ],
@@ -157,7 +157,7 @@
       "mission_actions": [
         {
           "name": "PERLUSTRA",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Se l'agente attivo controlla un segnalino obiettivo che non è stato perlustrato da agenti amici, quell'agente sta ora trasportando uno dei tuoi segnalini missione di Recupero e quel segnalino obiettivo è stato perlustrato dagli agenti amici. Gli agenti amici possono eseguire l'azione Raccogliere Segnalino sui tuoi segnalini missione di Recupero. Un agente non può eseguire questa azione durante il primo punto di svolta, o mentre si trova entro il raggio di controllo di un agente nemico."
         }
       ],
@@ -178,8 +178,8 @@
       "archetypeId": "infiltration",
       "archetype": "INFILTRAZIONE",
       "title": "FURTO DI INTELLIGENCE",
-      "reveal": "La prima volta che un agente nemico viene incapacitato.",
-      "rule": "Ogni volta che un agente nemico viene incapacitato, prima che venga rimosso dalla killzone, posiziona uno dei tuoi segnalini missione Informazione entro il suo raggio di controllo. Gli agenti amici possono eseguire l'azione Raccogliere Segnalino sui tuoi segnalini missione Informazione, e ai fini delle condizioni di quell'azione, ignora il primo segnalino missione Informazione che l'agente attivo sta trasportando. In altre parole, ogni agente amico può trasportare fino a due segnalini missione Informazione, oppure uno e un altro segnalino.",
+      "reveal": "La prima volta che un agente nemico viene neutralizzato.",
+      "rule": "Ogni volta che un agente nemico viene neutralizzato, prima che venga rimosso dalla killzone, posiziona uno dei tuoi segnalini missione Informazione entro il suo raggio di controllo. Gli agenti amici possono eseguire l'azione Raccogliere Segnalino sui tuoi segnalini missione Informazione, e ai fini delle condizioni di quell'azione, ignora il primo segnalino missione Informazione che l'agente attivo sta trasportando. In altre parole, ogni agente amico può trasportare fino a due segnalini missione Informazione, oppure uno e un altro segnalino.",
       "mission_actions": [],
       "victory_points": "Alla fine di ogni punto di svolta dopo il primo, se eventuali agenti amici stanno trasportando qualsiasi dei tuoi segnalini missione Informazione, ottieni 1PV.<br>Alla fine della battaglia, per ciascuno dei tuoi segnalini missione Informazione che gli agenti amici stanno trasportando, ottieni 1PV."
     },
@@ -187,13 +187,13 @@
       "id": "tac-infil-03",
       "archetypeId": "infiltration",
       "archetype": "INFILTRAZIONE",
-      "title": "PLANT DEVICES",
-      "reveal": "La prima volta che un agente amico esegue l'azione Piazzare Dispositivo (Plant Device).",
+      "title": "PIAZZARE DISPOSITIVO",
+      "reveal": "La prima volta che un agente amico esegue l'azione Piazzare Dispositivo.",
       "rule": null,
       "mission_actions": [
         {
           "name": "PIAZZARE DISPOSITIVO",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Un segnalino obiettivo che l'agente attivo controlla ottiene uno dei tuoi gettoni Dispositivo. Un agente non può eseguire questa azione durante il primo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se quel segnalino obiettivo ha già uno dei tuoi gettoni Dispositivo."
         }
       ],
@@ -203,13 +203,13 @@
       "id": "tac-sec-01",
       "archetypeId": "security",
       "archetype": "SICUREZZA",
-      "title": "PLANT BANNER",
-      "reveal": "Quando esegui l'azione Piazzare Stendardo (Plant Banner).",
+      "title": "PIAZZARE STENDARDO",
+      "reveal": "Quando esegui l'azione Piazzare Stendardo.",
       "rule": null,
       "mission_actions": [
         {
           "name": "PIAZZARE STENDARDO",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Posiziona il tuo segnalino missione Stendardo entro il raggio di controllo dell'agente attivo, interamente all'interno del territorio del tuo avversario e a più di 5\" da un bordo neutro della killzone. Gli agenti possono eseguire l'azione Raccogliere Segnalino sul tuo segnalino missione Stendardo. Un agente non può eseguire questa azione durante il primo punto di svolta, mentre si trova entro il raggio di controllo di un agente nemico, o se un agente amico ha già eseguito questa azione durante la battaglia."
         }
       ],
@@ -220,8 +220,8 @@
       "archetypeId": "security",
       "archetype": "SICUREZZA",
       "title": "MARTIRI",
-      "reveal": "La prima volta che un agente amico viene incapacitato mentre contesta un segnalino obiettivo.",
-      "rule": "Ogni volta che un agente amico viene incapacitato mentre contesta un segnalino obiettivo, quel segnalino ottiene uno dei tuoi gettoni Martire.",
+      "reveal": "La prima volta che un agente amico viene neutralizzato mentre contesta un segnalino obiettivo.",
+      "rule": "Ogni volta che un agente amico viene neutralizzato mentre contesta un segnalino obiettivo, quel segnalino ottiene uno dei tuoi gettoni Martire.",
       "mission_actions": [],
       "victory_points": "Alla fine di ogni punto di svolta dopo il primo, se agenti amici contestano un segnalino obiettivo che ha uno o più dei tuoi gettoni Martire, puoi rimuovere uno qualsiasi di quei gettoni. Per ogni gettone che rimuovi in questo modo, ottieni 1PV; se gli agenti amici controllano anche quel marker, ottieni invece 2PV.<br>Non puoi ottenere più di 2PV da questa op per punto di svolta."
     },
@@ -240,12 +240,12 @@
       "archetypeId": "seek",
       "archetype": "CERCA E DISTRUGGI",
       "title": "LIBERA E SETACCIA",
-      "reveal": "La prima volta che un agente nemico viene incapacitato mentre contesta un segnalino obiettivo, o la prima volta che un agente amico esegue l'azione Liberare (qualunque avvenga prima).",
-      "rule": "Quando un agente nemico che contesta un segnalino obiettivo viene incapacitato, quel segnalino obiettivo ottiene uno dei tuoi gettoni Setacciato (se non ne ha già uno) fino alla fase di Approntamento della successiva fase di Strategia.",
+      "reveal": "La prima volta che un agente nemico viene neutralizzato mentre contesta un segnalino obiettivo, o la prima volta che un agente amico esegue l'azione Liberare (qualunque avvenga prima).",
+      "rule": "Quando un agente nemico che contesta un segnalino obiettivo viene neutralizzato, quel segnalino obiettivo ottiene uno dei tuoi gettoni Setacciato (se non ne ha già uno) fino alla fase di Approntamento della successiva fase di Strategia.",
       "mission_actions": [
         {
           "name": "LIBERA",
-          "ap": "1AP",
+          "ap": "1PA",
           "text": "Un segnalino obiettivo che l'agente attivo controlla è liberato per il punto di svolta. Un agente non può eseguire questa azione durante il primo punto di svolta, o mentre si trova entro il raggio di controllo di un agente nemico."
         }
       ],
@@ -266,10 +266,10 @@
       "archetypeId": "seek",
       "archetype": "CERCA E DISTRUGGI",
       "title": "DOMINIO",
-      "reveal": "La prima volta che un agente nemico è incapacitato da un agente amico.",
+      "reveal": "La prima volta che un agente nemico è neutralizzato da un agente amico.",
       "rule": "Ogni volta che un agente amico incapacita un agente nemico, quell'agente amico ottiene uno dei tuoi gettoni Dominio.",
       "mission_actions": [],
-      "victory_points": "Alla fine del terzo e quarto punto di svolta, puoi rimuovere i gettoni Dominio dagli agenti amici che non sono incapacitati. Per ciascuno che rimuovi, ottieni 1PV.<br>Non puoi ottenere più di 3PV da questa op per punto di svolta."
+      "victory_points": "Alla fine del terzo e quarto punto di svolta, puoi rimuovere i gettoni Dominio dagli agenti amici che non sono neutralizzati. Per ciascuno che rimuovi, ottieni 1PV.<br>Non puoi ottenere più di 3PV da questa op per punto di svolta."
     }
   ]
 }

@@ -1,9 +1,9 @@
 <template>
-    <div class="centered-view">
+    <div class="centered-view" style="height: 100%;">
         <h1>CRIT & TAC OPS</h1>
-        <keep-alive>
-            <KTCarousel :carouselItems="carouselItems" :auto-height="true"/>
-        </keep-alive>
+        <!-- La view è già in cache nel <KeepAlive> di App.vue: un keep-alive
+             qui sarebbe inutile (il figlio non viene mai rimosso). -->
+        <KTCarousel :carouselItems="carouselItems" :auto-height="false"/>
     </div>
 </template>
 

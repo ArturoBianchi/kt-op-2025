@@ -1,5 +1,5 @@
 <script setup>
-import {computed, onActivated, ref, useTemplateRef} from "vue";
+import {computed, onActivated, onMounted, onUnmounted, ref, useTemplateRef} from "vue";
 
 const props = defineProps({
     carouselItems: {
@@ -40,25 +40,59 @@ const carouselUi = computed(() => ({
     ...(props.autoHeight ? {container: 'transition-[height] duration-200'} : {}),
 }))
 
-const lastIndex = ref(0);
-const opsCarousel = useTemplateRef('carousel')
+const carouselRef = useTemplateRef('carousel')
+const lastIndex = ref(0)
 
-function onSelectEvent(item) {
-    lastIndex.value = item;
+const isMeasurable = (container) => container.isConnected && container.offsetParent !== null
+
+const watchResizeWhenVisible = (emblaApi) => isMeasurable(emblaApi.containerNode())
+
+let slideObserver = null
+
+const remeasureIfSlidesChanged = () => {
+    const embla = carouselRef.value?.emblaApi
+    if (!embla || !isMeasurable(embla.containerNode())) return
+    const {slideRects} = embla.internalEngine()
+    const stale = embla.slideNodes()
+            .some((node, i) => Math.abs(node.offsetHeight - (slideRects[i]?.height ?? 0)) >= 0.5)
+    if (stale) embla.reInit()
+}
+
+const observeSlides = () => {
+    const embla = carouselRef.value?.emblaApi
+    if (!embla || !slideObserver) return
+    slideObserver.disconnect()
+    embla.slideNodes().forEach(node => slideObserver.observe(node))
+}
+
+onMounted(() => {
+    const embla = carouselRef.value?.emblaApi
+    if (!embla) return
+    slideObserver = new ResizeObserver(remeasureIfSlidesChanged)
+    embla.on('reInit', observeSlides)
+    observeSlides()
+})
+
+onUnmounted(() => {
+    slideObserver?.disconnect()
+    slideObserver = null
+    carouselRef.value?.emblaApi?.off('reInit', observeSlides)
+})
+
+const handleSelect = (index) => {
+    lastIndex.value = index
 }
 
 onActivated(() => {
-    const embla = opsCarousel.value?.emblaApi
-    if (!embla) {
-        console.warn("API Embla non trovata sulla ref del carosello.")
-        return
-    }
-    if (lastIndex.value !== 0) {
+    // Rete di sicurezza: la posizione dovrebbe essere già corretta, ma se
+    // qualcosa l'ha comunque persa si torna sulla slide da cui si era usciti.
+    requestAnimationFrame(() => {
+        const embla = carouselRef.value?.emblaApi
+        if (!embla || embla.selectedScrollSnap() === lastIndex.value) return
+        // Snap collassati: il motore va rimisurato prima di poterci navigare.
+        if (embla.scrollSnapList().length <= lastIndex.value) embla.reInit()
         embla.scrollTo(lastIndex.value, true)
-        console.log("Scrolling to last index:", lastIndex.value)
-    }else{
-        console.log("No last index to scroll to.")
-    }
+    })
 })
 
 </script>
@@ -72,9 +106,10 @@ onActivated(() => {
                 :dots="dots"
                 :arrows="arrows"
                 :auto-height="autoHeight"
-                @select="onSelectEvent"
+                :watch-resize="watchResizeWhenVisible"
                 class="w-full max-w-full mx-auto"
-                :ui="carouselUi">
+                :ui="carouselUi"
+                @select="handleSelect">
             <component :is="item.component" :key="item.id" v-bind="item.props ?? {}"/>
         </UCarousel>
     </div>

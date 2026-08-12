@@ -82,7 +82,7 @@ onUnmounted(() => {
                 >
                     <main class="container">
                         <router-view v-slot="{ Component }">
-                            <KeepAlive>
+                            <KeepAlive :max="10">
                                 <component :is="Component" ref="routedComponent" />
                             </KeepAlive>
                         </router-view>
