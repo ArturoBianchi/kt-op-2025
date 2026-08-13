@@ -1,6 +1,6 @@
 <template>
     <div class="centered-view">
-        <h1>SEQUENZA DI GIOCO</h1>
+<!--        <h1>SEQUENZA DI GIOCO</h1>-->
         <KTCarousel carousel-id="rules" :carouselItems="carouselItems" :auto-height="false"/>
     </div>
 </template>

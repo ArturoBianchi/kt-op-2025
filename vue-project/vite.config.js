@@ -11,7 +11,16 @@ export default defineConfig({
     plugins: [
         vue(),
         vueDevTools(),
-        ui()
+        ui({
+            colorMode: false,
+            ui: {
+                select: {
+                    slots: {
+                        content: 'font-mono',
+                    },
+                },
+            },
+        })
     ],
     resolve: {
         alias: {

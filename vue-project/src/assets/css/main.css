@@ -2,3 +2,20 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 @import "./theme.css";
+
+/* La classe "font-mono" usata nella personalizzazione "ui.select" passata a
+   @nuxt/ui in vite.config.js e' letta solo a runtime dal modulo virtuale
+   dell'app config: la scansione automatica di Tailwind la trova in dev, ma
+   non in modo affidabile durante "vite build". @source inline() forza
+   Tailwind a generarla comunque in entrambi i casi. */
+@source inline("font-mono");
+
+/* Punta l'utility "font-sans" di Tailwind (usata anche da alcuni componenti
+   Nuxt UI, es. Kbd) al font scelto in theme.css (--font-main), invece di
+   duplicare qui lo stack tipografico. --font-mono non va ridichiarato:
+   theme.css definisce già una variabile con lo stesso nome, che per ordine
+   di import vince comunque su quella di default di Tailwind. */
+@theme {
+    --font-sans: var(--font-main);
+}
+

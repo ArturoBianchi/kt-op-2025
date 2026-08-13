@@ -7,7 +7,9 @@
   --bg-app: #121212;          /* Material Dark Surface/Background */
   --bg-surface: #1e1e1e;      /* Material Dark Surface (Elevation +1) */
   --bg-surface-hover: #2c2c2c;/* Elevation +2 equivalent */
-  
+
+  --bg-contrast-surface: color-mix(in srgb, white 5%, var(--bg-surface));
+
   /* Testi */
   --text-primary: rgba(255, 255, 255, 0.87); /* Material High Emphasis */
   --text-secondary: rgba(255, 255, 255, 0.60); /* Material Medium Emphasis */
@@ -16,6 +18,7 @@
   /* Colori di Accento (Pastel Purple / Lavender) */
   --accent-main: #BB86FC;     /* Material Dark Primary (Pastel Purple) */
   --accent-main-dim: rgba(187, 134, 252, 0.2);
+  --text-secondary-dim: rgba(255, 255, 255, 0.2);
   --border-subtle: rgba(255, 255, 255, 0.12); /* Material Divider */
   --accent-important: rgb(177 244 134 / 0.85);
 
@@ -34,6 +37,128 @@
   --radius: 8px;              /* Material standard radius */
   --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* ==========================================================================
+   PONTE TEMA NUXT UI
+   Adatta le variabili CSS di @nuxt/ui (--ui-*) alla palette definita sopra,
+   così i componenti Nuxt UI (UCarousel, UFormField, USelect, ...) restano
+   coerenti con il resto dell'app invece di usare la palette chiara di
+   default. Il color mode automatico di Nuxt UI è disattivato in
+   vite.config.js (colorMode: false): qui basta un solo set di valori su
+   :root, senza doverli duplicare sotto .dark.
+   ========================================================================== */
+:root {
+  --ui-text-highlighted: var(--text-primary);
+  --ui-text: var(--text-primary);
+  --ui-text-toned: var(--text-secondary);
+  --ui-text-muted: var(--text-secondary);
+  --ui-text-dimmed: var(--text-disabled);
+  --ui-text-inverted: var(--bg-app);
+
+  --ui-bg: var(--bg-app);
+  --ui-bg-muted: var(--bg-surface);
+  --ui-bg-elevated: var(--bg-surface);
+  --ui-bg-accented: var(--bg-surface-hover);
+  --ui-bg-inverted: var(--text-primary);
+
+  --ui-border: var(--border-subtle);
+  --ui-border-muted: var(--border-subtle);
+  --ui-border-accented: var(--border-subtle);
+  --ui-border-inverted: var(--bg-app);
+
+  --ui-radius: var(--radius);
+
+  --ui-primary: var(--accent-main);
+  --ui-secondary: var(--text-secondary);
+  --ui-success: var(--accent-important);
+  --ui-error: var(--op-infil);
+  /* secondary/info/warning non hanno ancora un equivalente nel design
+     system: restano ai default di Nuxt UI finché non servirà introdurli. */
+}
+
+/* ==========================================================================
+   VARIANTI COLORE PER UButton
+   Nuxt UI colora già "primary"/"secondary" tramite il ponte qui sopra, ma
+   usa "text-inverted" per il testo e un semplice fade di opacità per lo
+   stato disabled: qui servono invece un testo esplicito e colori disabled
+   dedicati. Sono classi CSS normali (niente config in vite.config.js, niente
+   safelist da tenere sincronizzata): si applicano con class="btn-accent" /
+   class="btn-muted" su un UButton, in aggiunta alle sue classi esistenti.
+   ========================================================================== */
+.btn-accent {
+  color: var(--bg-app);
+}
+.btn-accent {
+  background-color: var(--accent-main);
+}
+.btn-accent:active {
+  background-color: color-mix(in srgb, var(--accent-main) 75%, transparent);
+}
+.btn-accent:focus-visible {
+  outline-color: var(--accent-main);
+}
+.btn-accent:disabled,
+.btn-accent[aria-disabled="true"] {
+  opacity: 1;
+  background-color: var(--accent-main-dim);
+  color: var(--bg-surface);
+}
+
+.btn-muted {
+  color: var(--bg-app);
+}
+.btn-muted {
+  background-color: var(--text-primary);
+}
+.btn-muted:active {
+  background-color: color-mix(in srgb, var(--text-primary) 75%, transparent);
+}
+.btn-muted:focus-visible {
+  outline-color: var(--text-primary);
+}
+.btn-muted:disabled,
+.btn-muted[aria-disabled="true"] {
+  opacity: 1;
+  background-color: var(--text-secondary-dim);
+  color: var(--bg-surface);
+}
+
+.btn-dark {
+  color: var(--text-primary);
+}
+.btn-dark {
+  background-color: var(--bg-contrast-surface);
+}
+.btn-dark:active {
+  background-color: color-mix(in srgb, var(--bg-contrast-surface) 75%, transparent);
+}
+.btn-dark:focus-visible {
+  outline-color: var(--bg-contrast-surface);
+}
+.btn-dark:disabled,
+.btn-dark[aria-disabled="true"] {
+  opacity: 1;
+  background-color: var(--bg-contrast-surface);
+  color: var(--bg-app);
+}
+
+/* Su touch screen non esiste un vero "mouseleave": :hover viene applicato
+   al tocco e resta attivo finche' non si tocca altrove, facendo sembrare il
+   pulsante rimasto "premuto" dopo il click. (hover: hover) applica :hover
+   solo sui dispositivi con hover reale (mouse), lasciando :active da solo
+   per il feedback tattile momentaneo che si rilascia correttamente. */
+/*@media (hover: hover) {*/
+/*  .btn-accent:hover {*/
+/*    background-color: color-mix(in srgb, var(--accent-main) 75%, transparent);*/
+/*  }*/
+/*  .btn-muted:hover {*/
+/*    background-color: color-mix(in srgb, var(--text-primary) 75%, transparent);*/
+/*  }*/
+/*  .btn-dark:hover {*/
+/*    background-color: color-mix(in srgb, var(--bg-surface) 75%, transparent);*/
+/*  }*/
+/*}*/
+/* ========================================================================== */
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -228,7 +353,7 @@ p {
 header.navbar {
   position: sticky;
   top: 0;
-  background-color: var(--bg-app); /* Material Surface */
+  background-color: var(--bg-surface); /* Material Surface */
   padding: 1rem;
   z-index: 100;
   display: flex;
@@ -238,7 +363,7 @@ header.navbar {
   flex-shrink: 0;
 }
 
-header h1 { margin: 0; font-size: 1rem; }
+header h1 { color: var(--text-secondary) !important; margin: 0; font-size: 1rem; }
 
 /* Footer Styling */
 .app-footer {

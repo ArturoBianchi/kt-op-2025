@@ -2,12 +2,13 @@
 import {RouterView} from 'vue-router'
 import AppHeader from './components/AppHeader.vue'
 import AppMenu from './components/AppMenu.vue'
-import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import {ref, onMounted, onUnmounted, watch, nextTick, computed} from 'vue'
 import { useRoute } from 'vue-router'
 
 const heroSection = ref(null)
 const isAtBottom = ref(true)
 const route = useRoute()
+const pageTitle = computed(() => route.meta.title ?? null);
 
 let resizeObserver = null
 let pendingChecks = []
@@ -74,6 +75,9 @@ onUnmounted(() => {
         <div class="app-wrapper">
             <div class="app-container">
                 <AppHeader />
+                <div v-if="pageTitle !== null" class="centered-view">
+                    <h1 style="margin-bottom: 0.5rem; margin-top: 0.5rem">{{ pageTitle }}</h1>
+                </div>
                 <div ref="heroSection" class="hero-section swipe-area" :class="{ 'has-fade': !isAtBottom }">
                     <main class="container">
                         <router-view v-slot="{ Component }">
@@ -90,6 +94,5 @@ onUnmounted(() => {
 <style>
 .app-wrapper {
     font-family: var(--font-mono), serif;
-    background-color: #0a0a0a;
 }
 </style>

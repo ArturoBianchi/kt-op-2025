@@ -5,139 +5,135 @@ sessionId: session-260813-110752-bvzq
 # Requirements
 
 ### Overview & Goals
-- Fix the regression where returning to `Rules.vue` / `CritTacOps.vue` no longer visually restores the previously-viewed carousel slide, even though `KTCarousel.vue` correctly reads the saved item id from `useCarouselStore()`.
-- Root-cause it purely from code (Embla + `@nuxt/ui` internals + our own component), without needing live browser debugging.
-- Keep the fix small, readable and effective — no new state, no new UI, no behavior change beyond making the restore reliably work again.
+- Answer: **yes** — `@nuxt/ui`'s Vite plugin (the `ui()` call in `vite.config.js`) accepts a `ui` option with the exact same shape as Nuxt's `app.config.ts` `ui` key, and it is merged into every component's runtime theme app-wide. This was confirmed by reading `@nuxt/ui`'s own source, not by guessing (see Technical Design).
+- Migrate the `USelect` dropdown-font fix — currently a per-instance `:ui="selectDropdownUi"` prop duplicated on both `USelect`s in `src/views/CritTacOps.vue` — into a single global override in `vite.config.js`, alongside the existing `ui({ colorMode: false })` call.
+- Net effect for the user is **zero visual change**: the dropdown options keep rendering in the app's monospace font exactly as today. The only thing that changes is *where* that rule lives, so any future `USelect` added anywhere in the app gets the fix automatically instead of needing the prop copy-pasted again.
 
 ### Scope
 **In Scope**
-- `src/components/KTCarousel.vue`: how the initial slide index is computed, how it's fed into `UCarousel`, and how the post-mount "safety net" re-check works.
-- Removing the stray `debugger;` statement left in `onMounted` from a prior investigation.
+- `vite.config.js`: add a global Nuxt UI theme override for the `select` component's `content` slot.
+- `src/views/CritTacOps.vue`: remove the now-redundant local `selectDropdownUi` object and the two `:ui="selectDropdownUi"` bindings, since the global override supersedes them.
 
 **Out of Scope**
-- The future CritTacOps search/filter feature (already anticipated by `resolveIndexFromSavedId`'s id-based lookup, per the existing comment) — not implemented here.
-- Any change to `src/stores/carousels.js`'s shape or persistence strategy.
-- Adding an automated test suite (none exists in the project — no test runner in `package.json`).
+- Any other component's theme (only the `select` popup-font issue is being relocated; no new design-system-wide theme file is introduced).
+- The `--ui-*` CSS variable bridge in `src/assets/css/theme.css` (a separate mechanism — CSS custom properties consumed by all components' Tailwind classes — untouched by this change).
+- Any change to `USelect`'s behavior, props, or the `CritTacOps.vue` filter feature itself (still scaffolded/commented-out).
 
-### Functional Requirement
-- After navigating away from a view containing `<KTCarousel>` and back (full remount, no `KeepAlive`), the carousel must visually resume at the slide corresponding to the id saved in `useCarouselStore()`, on every visit — not just intermittently.
-- The behavior for a brand-new carousel id (no saved position yet) is unchanged: it starts at slide 0.
+### Functional Requirements
+- After the change, both `USelect` dropdowns in `CritTacOps.vue` ("Crit Ops" / "Tac Ops" filters) still render their popup option list in the app's monospace font (`"JetBrains Mono", monospace`), matching the trigger — identical to the current behavior, just sourced from `vite.config.js` instead of the view file.
+- Any `USelect` instance added to the app in the future (no such usage exists elsewhere today) automatically inherits the same monospace-popup styling with zero extra code in that new location.
+- A component-level `:ui` prop, if ever added back on a specific instance, must still be able to override the global default for that one instance (this is Nuxt UI's own documented precedence — the plan does not need to build this, only avoid breaking it).
 
 # Technical Design
 
 ### Current Implementation
-`src/components/KTCarousel.vue` (current `onMounted`):
+- `vite.config.js` currently registers Nuxt UI as:
 ```js
-onMounted(() => {
-    debugger;
-    lastIndex.value = resolveIndexFromSavedId()
-
-    const embla = carouselRef.value?.emblaApi
-    if (!embla) return
-    slideObserver = new ResizeObserver(remeasureIfSlidesChanged)
-    embla.on('reInit', observeSlides)
-    observeSlides()
-
-    requestAnimationFrame(() => {
-        if (!embla || embla.selectedScrollSnap() === lastIndex.value) return
-        if (embla.scrollSnapList().length <= lastIndex.value) embla.reInit()
-        embla.scrollTo(lastIndex.value, true)
-    })
+ui({
+    colorMode: false,
 })
 ```
-`<UCarousel>` is used in the template **without a `start-index` prop**, so Embla always constructs itself at slide 0; the only mechanism that's supposed to move it to the saved slide is the imperative `scrollTo` above.
-
-### Root Cause (traced through library source, not guesswork)
-Three facts combine into the bug:
-1. **Embla defers its `init` event.** In `node_modules/embla-carousel/esm/embla-carousel.esm.js:1664`: `setTimeout(() => eventHandler.emit('init'), 0)` — the `init` event is emitted on a macrotask, not synchronously during construction.
-2. **`@nuxt/ui`'s `Carousel.vue` re-broadcasts `init` as a `select` event.** In `node_modules/@nuxt/ui/dist/runtime/components/Carousel.vue:147-156`, `onMounted` registers `emblaApi.value.on('init', onSelect)` (not just `onInit`). `onSelect` (lines 138-143) always does `selectedIndex.value = api.selectedScrollSnap(); emits('select', selectedIndex.value)`. Since `startIndex` was never passed, `selectedScrollSnap()` at this point is `0` — so **every mount emits a phantom `@select(0)` shortly after mount**, even with zero user interaction.
-3. **`KTCarousel.vue`'s `handleSelect` unconditionally overwrites both the local index and the persisted store value:**
+- `src/views/CritTacOps.vue` currently defines the font override locally and applies it twice:
 ```js
-const handleSelect = (index) => {
-    lastIndex.value = index
-    carouselStore.setPosition(props.carouselId, props.carouselItems[index]?.id)
-}
+// Il pannello a tendina di USelect viene teleportato fuori da .app-wrapper
+// (che in App.vue imposta font-family: var(--font-mono) per tutta l'app),
+// quindi le opzioni erediterebbero il font di fallback di <body> (--font-main)
+// invece del monospace usato ovunque nell'interfaccia. La prop "ui" del
+// componente e' il modo corretto per personalizzarlo: forza font-mono sullo
+// slot "content" del popup, da cui le opzioni ereditano il font per cascata.
+const selectDropdownUi = { content: 'font-mono' }
 ```
-This phantom `@select(0)` fires via a `setTimeout(0)` macrotask scheduled *during the child's mount* (before our own `onMounted` even runs), while our "safety net" `requestAnimationFrame` is scheduled *after*, during the parent's `onMounted`. In practice the macrotask resolves before that later-scheduled animation frame renders, so by the time the safety net's callback runs, `handleSelect(0)` has already reset `lastIndex.value` back to `0`. The check `embla.selectedScrollSnap() === lastIndex.value` then reads `0 === 0` → **true** → the function returns before ever reaching `embla.scrollTo(...)`. This matches the reported symptom exactly: the saved index was read correctly, but `scrollTo` is never reached.
-- A second, compounding effect: because `handleSelect(0)` also calls `carouselStore.setPosition(...)` with slide 0's id, **the persisted position itself gets silently corrupted back to slide 0 on every mount**, regardless of whether the visual jump happens to succeed. This is why the problem looks permanent rather than occasionally flaky.
+```html
+<USelect v-model="selectMultiple1" multiple :items="items" placeholder="Filtra..." class="w-full" :ui="selectDropdownUi" />
+...
+<USelect v-model="selectMultiple2" multiple :items="items" placeholder="Filtra..." class="w-full" :ui="selectDropdownUi" />
+```
+- `src/assets/css/theme.css` already bridges Nuxt UI's `--ui-*` CSS variables (colors, radius, borders) to the app's own design tokens, but that mechanism only covers CSS custom properties — it cannot express "give this specific slot the `font-mono` utility class", which is a Tailwind Variants slot override, a different customization layer.
+
+### Investigation — confirming the vite.config.js-level option actually works
+Traced this end-to-end through `@nuxt/ui`'s installed source (not just the docs) to make sure the claim is accurate for this project's *Vite-only* (non-Nuxt) setup:
+1. `node_modules/@nuxt/ui/dist/unplugin.d.mts:42-45` — the options object accepted by `ui()` (`NuxtUIOptions`) declares `ui?: AppConfigUI`, i.e. a `ui` key with the same Tailwind-Variants-config shape used in `app.config.ts` for full Nuxt apps.
+2. `node_modules/@nuxt/ui/dist/unplugin.mjs:215-219` — at plugin setup time: `const appConfig = defu({ ui: options.ui, colorMode: options.colorMode }, { ui: getDefaultUiConfig(options.theme.colors) })`. Whatever is passed as `ui.ui` in `vite.config.js` is merged straight into this `appConfig.ui`.
+3. `node_modules/@nuxt/ui/dist/unplugin.mjs:89-103` (`AppConfigPlugin`) — this `appConfig` is serialized into a virtual module resolved as `#build/app.config`, which is exactly what every Nuxt UI component reads via `useAppConfig()`.
+4. `node_modules/@nuxt/ui/dist/runtime/components/Select.vue:59,68` — `Select.vue` calls `const appConfig = useAppConfig()` and computes its runtime theme as `tv({ extend: tv(theme), ...appConfig.ui?.select || {} })(...)`, i.e. anything under `appConfig.ui.select` (slots, variants, etc.) is merged on top of the component's built-in theme, for **every** `USelect` instance in the app.
+5. `node_modules/@nuxt/ui/.nuxt/ui/select.ts:42` confirms the exact slot key needed: `"content": "max-h-60 ... bg-default ..."` is the teleported popup panel — the same slot already targeted by the current per-instance fix.
+
+Conclusion: passing `ui({ ui: { select: { slots: { content: 'font-mono' } } } } )` to the Vite plugin is not a workaround — it is the exact same override path as Nuxt's documented `app.config.ts` global config, just exposed through the Vite plugin's own `ui` option, and it reaches every `USelect` in the app, current and future.
 
 ### Key Decision
-**Feed Embla the correct `start-index` at construction time, instead of constructing at 0 and imperatively jumping afterwards.** `resolveIndexFromSavedId()` only depends on `props.carouselItems` (static per mount today) and the already-hydrated `carouselStore` (Pinia + `pinia-plugin-persistedstate` hydrates synchronously on store creation) — both available before the template even renders. Passing this as `UCarousel`'s existing `start-index` prop (`Carousel.vue:41`, forwarded to Embla via `rootProps`) means the *first* `selectedScrollSnap()` — and thus the phantom `@select` echo — already reports the correct index. There is no longer a wrong value to race against or correct after the fact. This is simpler than patching the race with extra guard flags, and it also fixes the store-corruption side effect for free.
-The post-mount `requestAnimationFrame` block is kept, but narrowed to its one legitimate remaining job: Embla may still clamp/trim `start-index` if `scrollSnapList()` is shorter than expected at construction (e.g. slides not fully measurable yet). To avoid re-introducing the same race, this check must compare against the original, immutable `initialIndex` — not the mutable `lastIndex.value`, which legitimately changes as soon as any real `select` event (including the now-correct phantom one) fires.
-
-### Verified Safety: Manual Slides Don't Reactively Corrupt the Carousel
-A related concern was checked: every real slide interaction fires `handleSelect`, which updates `lastIndex.value` and calls `carouselStore.setPosition(...)` — so while the user stays on the same page (no navigation/remount), the store keeps getting rewritten on every single slide. The question was whether this could feed back into `start-index` and disturb the slide currently in progress, purely from staying on the page rather than from a fresh mount.
-- Traced through `@nuxt/ui`'s `Carousel.vue`: `startIndex` is picked into `rootProps` (`Carousel.vue:53`) and spread into a `computed` named `options` (`Carousel.vue:59-64`), which is watched at `Carousel.vue:99-101` — any change to `options` (including a changed `startIndex`) triggers `emblaApi.value?.reInit(options.value, plugins.value)` on the **already-mounted** Embla instance.
-- If `initialIndex`/`start-index` were ever made reactive (e.g. a `computed` re-deriving from `lastIndex.value` or reading the store live), every `handleSelect` would re-trigger this `reInit`, snapping the carousel back and corrupting the very slide the user just performed — while still on the same page, not from a fresh mount.
-- The fix avoids this entirely by design: `initialIndex` is a **plain, non-reactive `const`**, computed once at `<script setup>` top level and never reassigned. `lastIndex` and the store update on every slide exactly as before, but neither is ever read back into a prop bound onto `<UCarousel>`, so `props.startIndex` inside `Carousel.vue` never changes after mount and the `watch(options, ...) → reInit()` path is never re-triggered by ordinary sliding. No extra code beyond keeping this invariant is required — it is captured explicitly as a guarding comment (see Proposed Changes) and a regression scenario (see Testing).
+**Move the fix one layer up: from a per-`USelect`-instance `:ui` prop to the global `ui` option of the `ui()` Vite plugin call.** This is preferred over the current duplication because:
+- It matches the project's existing precedent of using `vite.config.js` for app-wide Nuxt UI configuration (`colorMode: false` already lives there for the exact same "one decision, applies everywhere" reason).
+- It removes duplication (the same `{ content: 'font-mono' }` object was already repeated on both `USelect`s in `CritTacOps.vue`) and eliminates the risk of a future `USelect` elsewhere in the app forgetting the override.
+- Nuxt UI's own precedence rules (global config → resolved variants → `ui` prop → `class` prop) are unaffected: a specific instance could still opt out or customize further with its own `:ui` prop later, without needing to touch the global default.
 
 ### Proposed Changes
-- **`src/components/KTCarousel.vue`**
-  - Compute `const initialIndex = resolveIndexFromSavedId()` once, at `<script setup>` top level (right after `resolveIndexFromSavedId` is declared), instead of inside `onMounted`. Initialize `const lastIndex = ref(initialIndex)`.
-  - Add a short comment directly above `initialIndex` documenting that it must stay a plain, non-reactive constant — never a `computed`/`ref` re-deriving from `lastIndex` or the store — because doing so would feed back into `start-index` and re-trigger `@nuxt/ui`'s internal `reInit()` (`Carousel.vue:99-101`) on every slide selection, corrupting the in-progress slide while still on the same page.
-  - Add `:start-index="initialIndex"` to the `<UCarousel>` template binding.
-  - In `onMounted`, drop `lastIndex.value = resolveIndexFromSavedId()` (now redundant) and remove the leftover `debugger;` statement.
-  - Change the safety-net check to reference `initialIndex` instead of `lastIndex.value`:
-    ```js
-    requestAnimationFrame(() => {
-        if (!embla || embla.selectedScrollSnap() === initialIndex) return
-        if (embla.scrollSnapList().length <= initialIndex) embla.reInit()
-        embla.scrollTo(initialIndex, true)
-    })
-    ```
-  - Update the two Italian comments above `resolveIndexFromSavedId` and above the safety net to describe the corrected flow: the index is now resolved *before* Embla is created and passed in as `start-index`; the `requestAnimationFrame` block is a defensive fallback only for the case Embla couldn't yet measure enough slides at construction time.
+- **`vite.config.js`** — extend the existing `ui({ colorMode: false })` call with a `ui` option targeting the `select` component's `content` slot:
+```js
+ui({
+    colorMode: false,
+    // Il pannello a tendina di USelect viene teleportato fuori da
+    // .app-wrapper (che in App.vue imposta font-family: var(--font-mono)
+    // per tutta l'app), quindi per default le opzioni userebbero il font
+    // di fallback di <body> invece del monospace usato ovunque nell'UI.
+    // Impostarlo qui, invece che per singola istanza, lo applica a ogni
+    // USelect dell'app, presente e futura.
+    ui: {
+        select: {
+            slots: {
+                content: 'font-mono',
+            },
+        },
+    },
+})
+```
+- **`src/views/CritTacOps.vue`** — remove the now-redundant local override: delete the `const selectDropdownUi = { content: 'font-mono' }` declaration, its explanatory comment, and both `:ui="selectDropdownUi"` bindings on the two `USelect` elements (the components keep their other props — `v-model`, `multiple`, `:items`, `placeholder`, `class` — unchanged).
 
 ### Data Models / Contracts
-No store or prop contract changes. `KTCarousel.vue`'s public props (`carouselItems`, `carouselId`, `dots`, `arrows`, `autoHeight`) stay identical; `useCarouselStore()`'s `getPosition`/`setPosition` API is unchanged.
+No store, prop, or component API changes. `USelect`'s public behavior is unaffected; this only changes which layer supplies the `content` slot's class.
 
 ### Components
-- `KTCarousel.vue` — only file touched: initial-index resolution moves earlier and is passed as `start-index`; the mount-time safety net is corrected to stop racing with the store-writing `@select` handler.
-- `Rules.vue` / `CritTacOps.vue` — no changes needed; they already pass `carousel-id` and will transparently benefit from the fix.
+- `vite.config.js` — gains the global `select` theme override, colocated with the existing `colorMode: false` Nuxt UI setting.
+- `src/views/CritTacOps.vue` — loses the local `selectDropdownUi` object and its two usages; the two `USelect` filter dropdowns render identically, now driven by the global config.
 
 ### File Structure
 ```
+vite.config.js               (modified: add global `ui.select.slots.content` override)
 src/
-  components/
-    KTCarousel.vue   (modified: eager initialIndex, start-index prop, corrected safety net, debugger removed)
+  views/
+    CritTacOps.vue            (modified: remove local selectDropdownUi + :ui bindings)
 ```
 
 ### Risks
-- **Late-measured slides at construction** (e.g. images not yet decoded) could still make Embla clamp `start-index` to fewer snaps than intended; this is exactly what the retained `requestAnimationFrame` fallback (`reInit()` + `scrollTo`) exists to correct, now checked against a stable, race-free `initialIndex`.
-- **Future dynamic filtering** (search/filter on CritTacOps, previously discussed) will change `carouselItems` *without* a remount; `initialIndex` is only computed once at setup and won't react to that. This is explicitly out of scope here — the existing id-based `resolveIndexFromSavedId` design was already built anticipating that feature, and re-resolving position on a live list change is a separate, future concern.
-- **Accidental reactive `start-index`**: if a future change (e.g. that same search/filter feature) re-derives `initialIndex`/`start-index` reactively from `lastIndex` or the store instead of keeping it a one-time constant, it would re-trigger `@nuxt/ui`'s `watch(options, ...) → reInit()` (`Carousel.vue:99-101`) on every slide, visually corrupting the slide in progress even without navigating away. Verified this does not happen with the current design; the guarding comment added in Proposed Changes exists specifically to prevent this regression.
+- **Scope of the override**: setting `select.slots.content` globally affects *every* `USelect` in the app, not just the two in `CritTacOps.vue`. Today that's the only place `USelect` is used, so there is no behavior change to verify elsewhere, but this is worth knowing before adding a new `USelect` with a different font requirement in the future (it would need its own `:ui` prop to opt out, which Nuxt UI's precedence rules already support).
+- **`colorMode: false` interaction**: the `ui` option is merged independently of `colorMode` in `unplugin.mjs` (`defu({ ui: options.ui, colorMode: options.colorMode }, ...)`), so disabling color mode does not affect whether the `select` override applies — no interaction risk.
+- **Build-time only**: like the existing `colorMode` setting, this override takes effect at Vite plugin configuration time, so a dev-server restart (not just HMR) is needed to see it reflected after editing `vite.config.js` — consistent with how the earlier `colorMode: false` change was validated in this project.
 
 # Testing
 
 ### Validation Approach
-No automated test runner exists in this project; validation is manual via the dev server (`npm run dev`) plus a final `npm run build` sanity check, consistent with how this area was previously validated.
+No automated test runner exists in this project; validation is manual via a restarted dev server (`npm run dev`) plus a final `npm run build` sanity check, consistent with how this area was previously validated.
 
 ### Key Scenarios
-- On the Rules carousel, scroll to slide 3 (or any non-zero slide), navigate to `/ops`, then back to `/`: confirm the carousel visually resumes at slide 3 immediately after mount (no visible flash back to slide 0 first).
-- Repeat the same check independently for the Crit/Tac Ops carousel (`/ops`).
-- After returning and restoring correctly, inspect `localStorage['carousels']` and confirm the saved id still matches the restored slide (i.e. it wasn't silently reset back to the first item's id by a phantom select).
-- Reload the page (full page refresh, not just SPA navigation) after scrolling to a non-zero slide: confirm the position still restores from `localStorage` on a cold load.
-- First-ever visit with no saved id yet: confirm the carousel still starts at slide 0 with no console errors.
-- Without navigating away, manually click/drag through several slides in a row on both carousels: confirm each slide settles smoothly with no visual snap-back or flicker after each one, and that `localStorage['carousels']` updates to match the latest slide after every click (i.e. no `reInit`-triggered jump while staying on the page).
+- After adding the global override and removing the local one, restart `npm run dev` (config-level plugin change, not HMR-safe) and open `/ops`.
+- Open both the "Crit Ops" and "Tac Ops" filter dropdowns: confirm the option list still renders in `"JetBrains Mono", monospace`, matching the trigger button's font, exactly as before the change.
+- Confirm no other visual regression on the dropdowns (colors, radius, spacing) — only the font-source mechanism changed, not any styling values.
+- Confirm the rest of the app (Rules carousel, Crit/Tac Ops carousel, header, nav) is visually unaffected, since the change is scoped to the `select` component's `content` slot only.
 
 ### Edge Cases
-- Rapidly navigating away and back multiple times in succession: confirm the restored index remains stable each time (no drift toward slide 0).
-- `carouselItems` list where the previously-saved id is no longer present (simulating a future filter removing that item): confirm it falls back to slide 0, as `resolveIndexFromSavedId` already handles.
-- Confirm `initialIndex`/`start-index` is never turned into a reactive value by a later change (e.g. the future search/filter feature) — doing so would re-trigger `Carousel.vue`'s `reInit()` on every slide selection (see Risks).
-- Confirm `npm run build` still completes with no errors/warnings after the change.
+- Confirm `npm run build` completes with no errors/warnings after both the `vite.config.js` and `CritTacOps.vue` changes.
+- Confirm no leftover reference to `selectDropdownUi` remains in `CritTacOps.vue` (unused-variable/import) after removal.
+- If a future `USelect` is added elsewhere without any `:ui` prop, confirm (by code review, since no such usage exists yet) it would also render `content` in `font-mono`, per the global override's app-wide scope.
 
 # Delivery Steps
 
-### ✓ Step 1: Seed Embla's start index from the saved position instead of jumping after mount
-KTCarousel.vue constructs its UCarousel already positioned at the saved slide, removing the need to imperatively jump to it afterwards.
-- In `src/components/KTCarousel.vue`, compute `const initialIndex = resolveIndexFromSavedId()` once at `<script setup>` top level (moved out of `onMounted`), and initialize `const lastIndex = ref(initialIndex)`.
-- Add `:start-index="initialIndex"` to the `<UCarousel>` binding in the template so Embla is created already at the correct slide.
-- Remove the now-redundant `lastIndex.value = resolveIndexFromSavedId()` line and the leftover `debugger;` statement from `onMounted`.
-- Update the comment above `resolveIndexFromSavedId` to reflect that its result is now consumed before Embla is constructed, not after.
-- Add a comment above `const initialIndex = resolveIndexFromSavedId()` stating it must remain a plain, non-reactive constant, so that ongoing `handleSelect` updates to `lastIndex`/the store during normal sliding never feed back into `start-index` and re-trigger a `reInit` on the mounted carousel.
+### ✓ Step 1: Add the global Select theme override to vite.config.js
+All `USelect` popups app-wide render their options in `font-mono`, driven by a single override in `vite.config.js` instead of a per-instance prop.
+- In `vite.config.js`, extend the existing `ui({ colorMode: false })` call with a `ui: { select: { slots: { content: 'font-mono' } } }` option.
+- Add a short Italian comment above it (matching the codebase's comment style) explaining why: `USelect`'s popup content is teleported outside `.app-wrapper` (which sets `font-family: var(--font-mono)` for the whole app in `App.vue`), so without this override the options would fall back to `body`'s font instead.
+- Restart the dev server (`npm run dev`) — a Vite plugin config change, not something HMR picks up — and confirm no console/startup errors.
 
-### ✓ Step 2: Correct the post-mount safety net to stop racing with the store-writing select handler
-The requestAnimationFrame fallback in onMounted only corrects genuinely under-measured slides and no longer gets defeated by the carousel's own initial select echo.
-- In `src/components/KTCarousel.vue`, change the `requestAnimationFrame` safety-net checks (`embla.selectedScrollSnap() === lastIndex.value`, `embla.scrollSnapList().length <= lastIndex.value`, `embla.scrollTo(lastIndex.value, true)`) to compare against the stable `initialIndex` constant instead of the mutable `lastIndex.value`.
-- Update the Italian "Rete di sicurezza" comment to describe its narrowed role: a defensive fallback for slides that weren't fully measurable when Embla was constructed, not the primary restore mechanism.
-- Run `npm run build` to confirm the change compiles cleanly, then manually verify in `npm run dev` that navigating away from and back to `/` and `/ops` restores the previously-viewed slide every time, and that `localStorage['carousels']` keeps the correct saved id afterwards.
-- While staying on the same page, manually click through several slides in a row on both carousels and confirm no snap-back/flicker occurs after each click, verifying that `lastIndex`/store updates from `handleSelect` never reactively feed back into `start-index` and re-trigger `@nuxt/ui`'s `reInit()` (`Carousel.vue:99-101`).
+### ✓ Step 2: Remove the now-redundant per-component override and verify equivalence
+CritTacOps.vue's two filter dropdowns keep exactly the same visual behavior with less duplicated code, now sourced from the global config.
+- In `src/views/CritTacOps.vue`, delete the local `const selectDropdownUi = { content: 'font-mono' }` declaration and its explanatory comment, and remove the `:ui="selectDropdownUi"` binding from both `USelect` elements (all other props stay unchanged).
+- Manually verify in the restarted `npm run dev` session that both the "Crit Ops" and "Tac Ops" dropdown option lists still render in `"JetBrains Mono", monospace`, matching the trigger and the rest of the UI — confirming the global config produces the identical runtime result as the removed per-instance prop.
+- Run `npm run build` to confirm the full app still builds cleanly with no errors/warnings and no unused-variable references left behind.

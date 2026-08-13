@@ -21,6 +21,7 @@ declare module 'vue' {
     RuleCard: typeof import('./src/components/cards/RuleCard.vue')['default']
     TacCard: typeof import('./src/components/cards/TacCard.vue')['default']
     UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
+    UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
     UCarousel: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Carousel.vue')['default']
     UFormField: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/FormField.vue')['default']
     USelect: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Select.vue')['default']

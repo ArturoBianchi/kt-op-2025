@@ -17,14 +17,14 @@ sessionId: session-260813-110752-bvzq
 - Convert `KTCarousel.vue`'s `onActivated` hook to `onMounted`, backed by a new `carousels` Pinia store, so slide position survives full component remounts.
 - Harden that `carousels` store so a persisted position never breaks once the future CritTacOps search/filter feature can shrink or reorder the visible card list — a stale/out-of-range position must fall back gracefully instead of crashing or scrolling to the wrong card.
 - Create a new, dedicated `battleSession` Pinia store holding only `BattleBoard.vue`'s `myScore`/`opponentScore`, replacing its local `ref`s.
-- Reclassify (without merging) the existing `operations` store: per the user's clarification it's earmarked as the future home of CritTacOps search/filter selection data (a checklist of chosen op IDs, consumed later by `CritTacOps.vue`), so it is explicitly excluded from the 6h battle TTL and kept on plain, non-expiring persistence — the same bucket as `carousels`.
+- Reclassify (without merging) the existing `filterOperations` store: per the user's clarification it's earmarked as the future home of CritTacOps search/filter selection data (a checklist of chosen op IDs, consumed later by `CritTacOps.vue`), so it is explicitly excluded from the 6h battle TTL and kept on plain, non-expiring persistence — the same bucket as `carousels`.
 - Build a shared, reusable "expiring persistence" utility (rolling 6h TTL) and apply it only to the new `battleSession` store.
 - Add a one-time boot-time sweep (in `src/main.js`) that proactively removes expired `localStorage` entries before Pinia stores hydrate.
 - Produce `.requirements/state-persistence-migration.md` documenting the approach.
 
 **Out of Scope**
 - Building new UI for `BattleBoard.vue` (the score buttons stay commented out in the template; only the underlying state model changes).
-- Building the actual CritTacOps search/filter UI or wiring the `operations` store into `CritCard.vue` / `TacCard.vue` / `OpCard.vue` (no consumer exists today; only the store's persistence classification is clarified/updated by this migration, in anticipation of that future feature).
+- Building the actual CritTacOps search/filter UI or wiring the `filterOperations` store into `CritCard.vue` / `TacCard.vue` / `OpCard.vue` (no consumer exists today; only the store's persistence classification is clarified/updated by this migration, in anticipation of that future feature).
 - Persisting purely transient, DOM-derived view state (e.g. `App.vue`'s `isAtBottom` scroll-fade flag) — this is view-layer plumbing, not domain/component state, and intentionally stays local.
 - Adding an automated test suite (none exists in the project today — no test runner in `package.json`).
 
@@ -39,7 +39,7 @@ sessionId: session-260813-110752-bvzq
 - `KTCarousel` restores the previously selected slide on (re)mount, matching current `onActivated` behavior, independently for the Rules carousel and the Crit/Tac Ops carousel.
 - If a carousel's item list changes shape between visits (e.g. a future filter removes the previously-viewed card, or the list is temporarily empty), restoring a stale position never throws or scrolls out of range — it falls back to the first available slide.
 - Session-scoped persisted data (battle scores) survives page reloads within 6 hours of the last interaction, and is discarded once 6 hours have elapsed since the last interaction (rolling TTL).
-- The carousel-position store and the `operations` (future CritTacOps filter-selection) store both persist indefinitely (UI/browsing preferences, not match data) and are unaffected by the 6h cleanup.
+- The carousel-position store and the `filterOperations` (future CritTacOps filter-selection) store both persist indefinitely (UI/browsing preferences, not match data) and are unaffected by the 6h cleanup.
 
 # Technical Design
 
@@ -47,8 +47,8 @@ sessionId: session-260813-110752-bvzq
 - `src/App.vue` wraps every routed view in `<KeepAlive :max="10"><component :is="Component" ref="routedComponent" /></KeepAlive>` inside the `router-view` slot — this is the only `KeepAlive` usage in the app.
 - `src/components/KTCarousel.vue` relies on that caching: it keeps a local `lastIndex` ref updated in `handleSelect`, and uses `onActivated` to snap the carousel back to `lastIndex` whenever the (cached) parent view is re-shown. Without `KeepAlive`, `onActivated` never fires again after the very first mount.
 - `KTCarousel` is reused, unparameterized, by `src/views/Rules.vue` and `src/views/CritTacOps.vue` (each passes different `carouselItems`), so any store-backed replacement needs a per-instance identity.
-- The existing `onActivated` safety net already special-cases a collapsed snap list (`if (embla.scrollSnapList().length <= lastIndex.value) embla.reInit()`) before calling `embla.scrollTo(lastIndex.value, true)`, but it still assumes `lastIndex` is a meaningful position in whatever list is currently rendered. Once `CritTacOps.vue`'s carousel items become filterable (via the future `operations`-backed search/filter feature), a raw numeric index persisted across visits can silently point at the wrong card, or fall beyond the filtered list's new length.
-- `src/stores/operations.js` already demonstrates the target persistence pattern (`persist: true`, via the already-registered `pinia-plugin-persistedstate` from `src/main.js`). Per the user's clarification, its real purpose is to back a **future search/filter feature on `CritTacOps.vue`**: `operations` is a checklist of selected Crit/Tac Op IDs, and `addOperation`/`removeOperation`/`isOperationPresent` toggle whether an op is included in that filter selection. It currently has **no UI consumer**, but it is browsing/preference state, not battle-match state.
+- The existing `onActivated` safety net already special-cases a collapsed snap list (`if (embla.scrollSnapList().length <= lastIndex.value) embla.reInit()`) before calling `embla.scrollTo(lastIndex.value, true)`, but it still assumes `lastIndex` is a meaningful position in whatever list is currently rendered. Once `CritTacOps.vue`'s carousel items become filterable (via the future `filterOperations`-backed search/filter feature), a raw numeric index persisted across visits can silently point at the wrong card, or fall beyond the filtered list's new length.
+- `src/stores/operations.js` already demonstrates the target persistence pattern (`persist: true`, via the already-registered `pinia-plugin-persistedstate` from `src/main.js`). Per the user's clarification, its real purpose is to back a **future search/filter feature on `CritTacOps.vue`**: `filterOperations` is a checklist of selected Crit/Tac Op IDs, and `addOperation`/`removeOperation`/`isOperationPresent` toggle whether an op is included in that filter selection. It currently has **no UI consumer**, but it is browsing/preference state, not battle-match state.
 - `src/stores/carousels.js` exists but is empty — an evident placeholder for exactly the carousel-position state this migration needs.
 - `src/views/BattleBoard.vue` is a work-in-progress screen: `myScore`/`opponentScore` are local `ref`s updated by (currently commented-out) `+`/`-` buttons; this is local component state that should move to a store per the migration goal, and is also the natural home for the upcoming "battle session" concept the user described.
 - No other component (`AppHeader.vue`, `AppMenu.vue`, `RuleCard.vue`, `OpCard.vue`, `CritCard.vue`, `TacCard.vue`) holds meaningful local state; `App.vue`'s `isAtBottom`/`heroSection` scroll-fade logic is transient DOM-derived UI state, not migrated.
@@ -56,8 +56,8 @@ sessionId: session-260813-110752-bvzq
 ### Key Decisions
 1. **TTL semantics — rolling from last activity.** The persisted `savedAt` timestamp is refreshed on every store mutation (this falls out naturally from `pinia-plugin-persistedstate`'s subscribe-and-serialize-on-every-change behavior). Data expires 6h after the *last* interaction, not 6h after the match started — so an actively-played match never gets wiped mid-game, while an abandoned session is cleaned up 6h after it went quiet.
 2. **Cleanup mechanism — shared expiring serializer + one-time boot sweep.** Each session-scoped store configures a shared custom `serializer` (via `persist.serializer`) that embeds `{ savedAt, value }` and ignores/ discards stale reads. Additionally, `src/main.js` runs a small `pruneExpiredStores()` sweep once at startup (before `app.mount`) that removes any already-expired `localStorage` entries outright, so stale data never even gets hydrated into memory. No live timer/`visibilitychange` watcher is introduced; a continuously-open idle tab beyond 6h is an accepted limitation (see Risks).
-3. **Store granularity — keep `operations.js` separate from battle scores.** The user clarified that `operations.js` is earmarked for a future CritTacOps search/filter feature (a checklist of selected op IDs), not for in-match "active ops" tracking. Because it's browsing/preference state rather than match data, merging it with battle scores under one 6h rolling TTL would be wrong — filter selections shouldn't vanish after 6h of inactivity, and unrelated filter edits shouldn't keep resetting a match-score expiry clock. So a new `src/stores/battleSession.js` is added holding only `myScore`/`opponentScore` under the expiring serializer, while `operations.js` keeps its existing shape/id and switches to plain, non-expiring `persist: true` — the same bucket as `carousels.js`.
-4. **Carousel position robustness against future filtering — persist by item id, not raw index.** Because `CritTacOps.vue`'s carousel items will later be filtered by the `operations` selection, a plain numeric slide index isn't stable: filtering changes both the list's length and any given card's position within it. So `carousels.js` persists the *last-viewed item's `id`* (already a stable string on every `carouselItems` entry) per `carouselId`, and `KTCarousel.vue` resolves that id back to an index against whatever `carouselItems` it is currently rendering at mount time. If the id is no longer present (filtered out) or the list is empty, it falls back to slide 0 instead of throwing or scrolling out of range — the existing collapsed-snap-list `reInit` safety net stays as a second layer of defense.
+3. **Store granularity — keep `filterOperations.js` separate from battle scores.** The user clarified that `filterOperations.js` is earmarked for a future CritTacOps search/filter feature (a checklist of selected op IDs), not for in-match "active ops" tracking. Because it's browsing/preference state rather than match data, merging it with battle scores under one 6h rolling TTL would be wrong — filter selections shouldn't vanish after 6h of inactivity, and unrelated filter edits shouldn't keep resetting a match-score expiry clock. So a new `src/stores/battleSession.js` is added holding only `myScore`/`opponentScore` under the expiring serializer, while `filterOperations.js` keeps its existing shape/id and switches to plain, non-expiring `persist: true` — the same bucket as `carousels.js`.
+4. **Carousel position robustness against future filtering — persist by item id, not raw index.** Because `CritTacOps.vue`'s carousel items will later be filtered by the `filterOperations` selection, a plain numeric slide index isn't stable: filtering changes both the list's length and any given card's position within it. So `carousels.js` persists the *last-viewed item's `id`* (already a stable string on every `carouselItems` entry) per `carouselId`, and `KTCarousel.vue` resolves that id back to an index against whatever `carouselItems` it is currently rendering at mount time. If the id is no longer present (filtered out) or the list is empty, it falls back to slide 0 instead of throwing or scrolling out of range — the existing collapsed-snap-list `reInit` safety net stays as a second layer of defense.
 
 ### Proposed Changes
 - **`src/stores/plugins/persistExpiry.js` (new)** — shared utility: `SIX_HOURS_MS`, `createExpiringSerializer(ttlMs)` for use as a store's `persist.serializer`, and `pruneExpiredStores()` for the boot-time sweep, driven by a small internal registry of session-scoped store keys/TTLs.
@@ -101,12 +101,15 @@ useCarouselStore(): { positions, getPosition(carouselId), setPosition(carouselId
 useBattleSessionStore(): { myScore, opponentScore, $reset() }
 // persist: { serializer: createExpiringSerializer(SIX_HOURS_MS) }
 ```
+
 ```js
-// src/stores/operations.js (unchanged shape/logic — future CritTacOps filter-selection store)
-useOperationStore(): {
-  operations, getAllOperations, isOperationPresent,
-  addOperation(opId), removeOperation(opId),
-  $reset()
+// src/stores/filterOperations.js (unchanged shape/logic — future CritTacOps filter-selection store)
+useFilterOperationStore()
+:
+{
+    filterOperations, getAllOperations, isOperationPresent,
+        addOperation(opId), removeOperation(opId),
+        $reset()
 }
 // persist: true (no TTL — same bucket as carousels.js)
 ```
@@ -131,7 +134,7 @@ src/
   stores/
     carousels.js                  (implemented: position store, persist:true)
     battleSession.js              (new: scores only, expiring persist)
-    operations.js                 (unchanged: excluded from TTL sweep, kept as future CritTacOps filter-selection store)
+    filterOperations.js                 (unchanged: excluded from TTL sweep, kept as future CritTacOps filter-selection store)
     plugins/
       persistExpiry.js            (new: TTL serializer + boot sweep)
 .requirements/
@@ -168,8 +171,8 @@ graph TD
 
 ### Risks
 - **Registry/key drift**: the boot-sweep registry in `persistExpiry.js` must stay in sync with each session-scoped store's actual persisted key (`store.$id` by default) — mitigated by keeping the registry colocated in the same file that defines the serializer helper, and by using the store's own `$id` string as the single source of truth.
-- **`operations.js` shape drift**: it still has no UI consumer today; when the CritTacOps search/filter feature is actually built, its shape (currently a flat op-id checklist) may need to evolve (e.g. free-text search, category toggles) — that evolution is future work, out of scope for this migration.
-- **Carousel position invalidated by future filtering**: once CritTacOps gains a filter UI backed by the `operations` store, its carousel's item list can shrink or reorder between visits; storing the *item id* instead of a raw index (Key Decision 4) means a stale or filtered-out position simply falls back to slide 0 on restore, rather than crashing or scrolling out of range.
+- **`filterOperations.js` shape drift**: it still has no UI consumer today; when the CritTacOps search/filter feature is actually built, its shape (currently a flat op-id checklist) may need to evolve (e.g. free-text search, category toggles) — that evolution is future work, out of scope for this migration.
+- **Carousel position invalidated by future filtering**: once CritTacOps gains a filter UI backed by the `filterOperations` store, its carousel's item list can shrink or reorder between visits; storing the *item id* instead of a raw index (Key Decision 4) means a stale or filtered-out position simply falls back to slide 0 on restore, rather than crashing or scrolling out of range.
 - **Multi-tab usage**: the rolling TTL refreshes on every mutation from whichever tab is active; this is acceptable for a single-user companion app and not a scenario this app currently guards against.
 - **Long continuous idle session**: if the app is left open (foregrounded, not reloaded) for more than 6h without any interaction, expiry is only re-evaluated on the next reload/boot sweep, not live — an accepted trade-off given the chosen boot-sweep-only design (no live timer/`visibilitychange` watcher was introduced, per explicit decision).
 
@@ -189,7 +192,7 @@ The app is moving state from ephemeral `KeepAlive`/in-memory storage to `localSt
 - **Rolling TTL of 6h**, refreshed automatically on every store mutation (a natural side effect of `pinia-plugin-persistedstate` re-serializing on every change) — no bespoke "keep-alive ping" logic needed.
 - **Per-store expiring serializer**: `createExpiringSerializer(SIX_HOURS_MS)` wraps persisted data as `{ savedAt, value }`; on read, data older than the TTL is treated as absent (store falls back to its defaults).
 - **One-time boot sweep**: `pruneExpiredStores()` runs in `main.js` before the app mounts, physically removing expired `localStorage` entries so the app never even transiently loads stale data.
-- **Scope of the TTL**: only session-scoped, match-relevant data (`battleSession` store — scores) gets the TTL. The `carousels` store and the `operations` store (future CritTacOps filter-selection state) are durable UI/browsing preferences (tiny, non-sensitive) and persist without expiry.
+- **Scope of the TTL**: only session-scoped, match-relevant data (`battleSession` store — scores) gets the TTL. The `carousels` store and the `filterOperations` store (future CritTacOps filter-selection state) are durable UI/browsing preferences (tiny, non-sensitive) and persist without expiry.
 
 ### Accepted Limitations
 - Expiry is only re-evaluated at app boot, not continuously while the app stays open and idle — acceptable given this is a mobile companion app that gets backgrounded/reopened rather than left in one continuous foreground session for 6+ hours.
@@ -206,13 +209,13 @@ The project has no automated test runner configured (`package.json` has no `vite
 - Reload the page after interacting with the Rules carousel: confirm the position still restores from `localStorage` (`carousels` key present).
 - Trigger a `battleSession` mutation (e.g. via store devtools or a temporary call incrementing `myScore`), inspect `localStorage['battleSession']` and confirm it contains a `savedAt` timestamp alongside the value.
 - Manually edit `localStorage['battleSession']`'s `savedAt` to a value older than 6h, reload the app, and confirm the boot sweep removes the key and the store hydrates with defaults.
-- Trigger an `operations` store mutation (e.g. `addOperation`), reload the page, and confirm the raw value persists in `localStorage['operations']` without a `{ savedAt, value }` wrapper (i.e. it is not subject to the TTL serializer).
+- Trigger an `filterOperations` store mutation (e.g. `addOperation`), reload the page, and confirm the raw value persists in `localStorage['operations']` without a `{ savedAt, value }` wrapper (i.e. it is not subject to the TTL serializer).
 - Temporarily shrink the `carouselItems` array passed to the Crit/Tac Ops `KTCarousel` (simulating a future filter) after a position was saved for an item no longer in the list: confirm `onMounted` falls back to slide 0 with no console errors, instead of failing to resolve the saved id.
 
 ### Edge Cases
 - First-ever load with empty `localStorage`: all stores hydrate to their defaults with no console errors.
 - Corrupted/malformed JSON manually placed under the `battleSession` key: boot sweep and/or serializer's `deserialize` must fail gracefully (treat as expired/absent) rather than throwing.
-- `operations` store data present from before this migration: it keeps loading normally, since its persistence and shape are unchanged by this migration.
+- `filterOperations` store data present from before this migration: it keeps loading normally, since its persistence and shape are unchanged by this migration.
 - Dev-only `/sandbox` route (excluded from production builds) is unaffected by the `KeepAlive` removal since it was never part of the cached tree in a meaningful way.
 - Persisted `carousels` position references an item `id` that no longer exists in `carouselItems` (e.g. filtered out by the future CritTacOps search/filter feature) or the list is empty: `KTCarousel.vue` falls back to slide 0 rather than throwing.
 
@@ -222,7 +225,7 @@ The project has no automated test runner configured (`package.json` has no `vite
 A committed `.requirements/state-persistence-migration.md` captures the agreed goals, the three confirmed key decisions, and the file-level change list for this migration.
 - Create the `.requirements/` directory and add `state-persistence-migration.md`.
 - Summarize the goals: drop `<KeepAlive>`, migrate component state into persisted Pinia stores, define the localStorage cleanup strategy.
-- Document the three confirmed decisions: rolling 6h TTL (refreshed on last activity), per-store expiring serializer plus a boot-time sweep, and keeping the new `battleSession` store (scores only) separate from the existing `operations` store, which is reclassified as durable filter-selection state for the future CritTacOps search/filter feature and excluded from the TTL.
+- Document the three confirmed decisions: rolling 6h TTL (refreshed on last activity), per-store expiring serializer plus a boot-time sweep, and keeping the new `battleSession` store (scores only) separate from the existing `filterOperations` store, which is reclassified as durable filter-selection state for the future CritTacOps search/filter feature and excluded from the TTL.
 - List every file touched by the migration (new, modified, removed) for future reference.
 
 ### ✓ Step 2: Build the shared expiring-persistence utility and boot-time sweep
@@ -245,7 +248,7 @@ Route navigation always fully mounts/unmounts view components, with no visible r
 - Update the "safety net" comment in `src/components/KTCarousel.vue` to describe the new mount-based restore instead of the old activation-based one.
 
 ### ✓ Step 5: Add a dedicated persisted battleSession store for BattleBoard scores
-BattleBoard's scores move into a small rolling-TTL store, while the existing `operations` store is left untouched and excluded from the TTL sweep.
+BattleBoard's scores move into a small rolling-TTL store, while the existing `filterOperations` store is left untouched and excluded from the TTL sweep.
 - Create `src/stores/battleSession.js` (`useBattleSessionStore`) holding only `myScore`/`opponentScore` state and a `$reset()`.
 - Configure `battleSession.js`'s persistence as `persist: { serializer: createExpiringSerializer(SIX_HOURS_MS) }` from the Stage 2 utility.
 - Update `src/views/BattleBoard.vue` to read/write `myScore`/`opponentScore` through `useBattleSessionStore()` instead of local `ref`s, preserving the existing `onMounted` console logging behavior.
