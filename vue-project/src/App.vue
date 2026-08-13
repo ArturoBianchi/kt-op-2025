@@ -74,20 +74,14 @@ onUnmounted(() => {
         <div class="app-wrapper">
             <div class="app-container">
                 <AppHeader />
-                <AppMenu/>
-                <div
-                        ref="heroSection"
-                        class="hero-section swipe-area"
-                        :class="{ 'has-fade': !isAtBottom }"
-                >
+                <div ref="heroSection" class="hero-section swipe-area" :class="{ 'has-fade': !isAtBottom }">
                     <main class="container">
                         <router-view v-slot="{ Component }">
-                            <KeepAlive :max="10">
-                                <component :is="Component" ref="routedComponent" />
-                            </KeepAlive>
+                            <component :is="Component" ref="routedComponent" />
                         </router-view>
                     </main>
                 </div>
+                <AppMenu/>
             </div>
         </div>
     </UApp>

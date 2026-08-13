@@ -25,3 +25,5 @@ This is a simple Single Page Application (SPA) designed as a mobile companion ap
 - **Code Style**: Follow standard Vue 3 Composition API patterns. Keep components small and focused.
 - **Menu Positioning**: Ensure the menu is positioned correctly and does not overlap with other elements. Prefer to position it at the top of the page. Dont modify menu css and style if not specified differently.
 - **Coding**: update only code when asking, dont hallucinate. Dont refactor or modify code if not asked to.
+- **Stay Simple**: try to write simple and readable code. Avoid unnecessary complexity.
+- **State of the app**: ensure the state of the component is consistent and predictable. Use stores and pinia for state management.

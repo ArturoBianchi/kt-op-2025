@@ -87,9 +87,9 @@ body {
    TYPOGRAPHY
    ========================================================================== */
 h1, h2, h3 { text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800; line-height: 1.2; }
-h1 { font-size: 1.75rem; color: var(--text-primary); margin-bottom: 1.25rem; }
-h2 { font-size: 1.3rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; margin-bottom: 1rem; margin-top: 2rem;}
-h3 { font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem; }
+h1 { font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1.25rem; }
+h2 { font-size: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; margin-bottom: 1rem; margin-top: 2rem;}
+h3 { font-size: 1rem; color: var(--text-primary); margin-bottom: 0.5rem; }
 
 p {
   color: var(--text-secondary);
@@ -238,7 +238,7 @@ header.navbar {
   flex-shrink: 0;
 }
 
-header h1 { margin: 0; font-size: 1.4rem; }
+header h1 { margin: 0; font-size: 1rem; }
 
 /* Footer Styling */
 .app-footer {

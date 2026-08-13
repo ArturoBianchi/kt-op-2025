@@ -25,11 +25,13 @@
 </template>
 
 <script setup>
-import {onMounted, ref} from "vue";
+import {onMounted} from "vue";
+import {storeToRefs} from "pinia";
+import {useBattleSessionStore} from "@/stores/battleSession.js";
 
 const props = defineProps({});
-const myScore = ref(0);
-const opponentScore = ref(0);
+const battleSessionStore = useBattleSessionStore();
+const {myScore, opponentScore} = storeToRefs(battleSessionStore);
 
 onMounted(() => {
     console.log("Mounted");

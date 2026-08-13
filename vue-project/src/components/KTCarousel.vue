@@ -1,5 +1,6 @@
 <script setup>
-import {computed, onActivated, onMounted, onUnmounted, ref, useTemplateRef} from "vue";
+import {computed, onMounted, onUnmounted, ref, useTemplateRef} from "vue";
+import {useCarouselStore} from "@/stores/carousels.js";
 
 const props = defineProps({
     carouselItems: {
@@ -16,8 +17,10 @@ const props = defineProps({
             )
         },
     },
-    // Passthrough verso UCarousel: disattivati per default, così i caroselli
-    // esistenti non cambiano aspetto.
+    carouselId: {
+        type: String,
+        required: true,
+    },
     dots: {
         type: Boolean,
         default: false,
@@ -26,8 +29,6 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
-    // Adatta l'altezza del carosello alla slide visibile invece di usare
-    // sempre quella della slide più alta.
     autoHeight: {
         type: [Boolean, Object],
         default: false,
@@ -36,18 +37,40 @@ const props = defineProps({
 
 const carouselUi = computed(() => ({
     item: 'p-1',
-    // Senza transizione il cambio di altezza fra slide è a scatti.
     ...(props.autoHeight ? {container: 'transition-[height] duration-200'} : {}),
 }))
 
 const carouselRef = useTemplateRef('carousel')
-const lastIndex = ref(0)
-
+const carouselStore = useCarouselStore()
 const isMeasurable = (container) => container.isConnected && container.offsetParent !== null
-
 const watchResizeWhenVisible = (emblaApi) => isMeasurable(emblaApi.containerNode())
-
 let slideObserver = null
+
+// Risolve l'id salvato in un indice valido per l'attuale carouselItems.
+// Senza <KeepAlive> il componente viene rimontato da zero ad ogni visita:
+// il risultato va letto qui, prima che UCarousel/Embla venga costruito, e
+// passato come start-index invece di essere applicato con uno scrollTo dopo
+// il mount. Se l'id non è più presente (es. escluso da un futuro filtro) o
+// la lista è vuota, si torna alla prima slide invece di andare fuori range.
+const resolveIndexFromSavedId = () => {
+    if (props.carouselItems.length === 0) {
+        return 0
+    }
+    const savedId = carouselStore.getPosition(props.carouselId)
+    const index = props.carouselItems.findIndex(item => item.id === savedId)
+    
+    return index === -1
+            ? 0
+            : index
+}
+
+// initialIndex è una costante non reattiva calcolata una sola volta: non va
+// mai trasformata in un computed/ref derivato da lastIndex o dallo store,
+// altrimenti ogni handleSelect (anche restando sulla stessa pagina)
+// aggiornerebbe start-index e farebbe scattare il reInit interno di
+// @nuxt/ui (Carousel.vue:99-101), corrompendo la slide in corso.
+const initialIndex = resolveIndexFromSavedId()
+const lastIndex = ref(initialIndex)
 
 const remeasureIfSlidesChanged = () => {
     const embla = carouselRef.value?.emblaApi
@@ -65,12 +88,31 @@ const observeSlides = () => {
     embla.slideNodes().forEach(node => slideObserver.observe(node))
 }
 
+
+const handleSelect = (index) => {
+    lastIndex.value = index
+    carouselStore.setPosition(props.carouselId, props.carouselItems[index]?.id)
+}
+
 onMounted(() => {
     const embla = carouselRef.value?.emblaApi
     if (!embla) return
     slideObserver = new ResizeObserver(remeasureIfSlidesChanged)
     embla.on('reInit', observeSlides)
     observeSlides()
+
+    // Rete di sicurezza: start-index dovrebbe già aver posizionato Embla
+    // correttamente alla costruzione. Questo fallback interviene solo se
+    // alcune slide non erano ancora misurabili in quel momento, per cui
+    // Embla potrebbe aver ridotto/clampato start-index; il confronto usa
+    // initialIndex (non lastIndex.value) per non correre contro il select
+    // fantasma emesso da Embla/@nuxt/ui subito dopo il mount.
+    requestAnimationFrame(() => {
+        if (!embla || embla.selectedScrollSnap() === initialIndex) return
+        // Snap collassati: il motore va rimisurato prima di poterci navigare.
+        if (embla.scrollSnapList().length <= initialIndex) embla.reInit()
+        embla.scrollTo(initialIndex, true)
+    })
 })
 
 onUnmounted(() => {
@@ -78,23 +120,6 @@ onUnmounted(() => {
     slideObserver = null
     carouselRef.value?.emblaApi?.off('reInit', observeSlides)
 })
-
-const handleSelect = (index) => {
-    lastIndex.value = index
-}
-
-onActivated(() => {
-    // Rete di sicurezza: la posizione dovrebbe essere già corretta, ma se
-    // qualcosa l'ha comunque persa si torna sulla slide da cui si era usciti.
-    requestAnimationFrame(() => {
-        const embla = carouselRef.value?.emblaApi
-        if (!embla || embla.selectedScrollSnap() === lastIndex.value) return
-        // Snap collassati: il motore va rimisurato prima di poterci navigare.
-        if (embla.scrollSnapList().length <= lastIndex.value) embla.reInit()
-        embla.scrollTo(lastIndex.value, true)
-    })
-})
-
 </script>
 
 <template>
@@ -107,6 +132,7 @@ onActivated(() => {
                 :arrows="arrows"
                 :auto-height="autoHeight"
                 :watch-resize="watchResizeWhenVisible"
+                :start-index="initialIndex"
                 class="w-full max-w-full mx-auto"
                 :ui="carouselUi"
                 @select="handleSelect">

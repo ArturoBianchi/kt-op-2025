@@ -21,7 +21,7 @@ defineProps({
 <style scoped>
 .logo {
     justify-content: left;
-    height: 80px;
+    height: 40px;
     display: block;
 }
 
