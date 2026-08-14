@@ -1,11 +1,11 @@
 // Rolling-TTL persistence helper for Pinia stores.
 //
 // Session-scoped stores (e.g. battleSession) opt into this via
-// `persist: { serializer: createExpiringSerializer(SIX_HOURS_MS) }`.
+// `persist: { serializer: createExpiringSerializer(NINE_HOURS_MS) }`.
 // The serialized payload is wrapped as `{ savedAt, value }`: `savedAt` is
 // refreshed on every write (pinia-plugin-persistedstate re-serializes on
-// every mutation), so data only expires after SIX_HOURS_MS of inactivity.
-export const SIX_HOURS_MS = 6 * 60 * 60 * 1000
+// every mutation), so data only expires after NINE_HOURS_MS of inactivity.
+export const NINE_HOURS_MS = 9 * 60 * 60 * 1000
 
 export function createExpiringSerializer(ttlMs) {
     return {
@@ -29,7 +29,7 @@ export function createExpiringSerializer(ttlMs) {
 // with the serializer helper so the registry never drifts from the stores
 // that actually use it.
 const EXPIRING_STORES = [
-    {key: 'battleSession', ttlMs: SIX_HOURS_MS},
+    {key: 'battleSession', ttlMs: NINE_HOURS_MS},
 ]
 
 // One-time boot sweep: removes any already-expired entries from

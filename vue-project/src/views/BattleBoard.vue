@@ -3,33 +3,33 @@
         <div class="grid grid-cols-4 gap-4 board-scoreboard">
             <div class="col-span-1 col-start-1 score-player ally">
                 <div class="score-name">PC</div>
-                <div class="score-value">{{ myScore }}</div>
+                <div class="score-value">{{ commandPoints }}</div>
                 <div class="score-controls">
-                    <button class="btn btn-icon" type="button">-</button>
-                    <button class="btn btn-icon" type="button">+</button>
+                    <button class="btn btn-icon" type="button" @click="battleSessionStore.decreaseCommandPoints()">-</button>
+                    <button class="btn btn-icon" type="button" @click="battleSessionStore.increaseCommandPoints()">+</button>
                 </div>
             </div>
             <div class="col-span-1 score-player">
                 <div class="score-name">PF</div>
-                <div class="score-value">{{ opponentScore }}</div>
+                <div class="score-value">{{ factionPoints }}</div>
                 <div class="score-controls">
-                    <button class="btn btn-icon" type="button">-</button>
-                    <button class="btn btn-icon" type="button">+</button>
+                    <button class="btn btn-icon" type="button" @click="battleSessionStore.decreaseFactionPoints()">-</button>
+                    <button class="btn btn-icon" type="button" @click="battleSessionStore.increaseFactionPoints()">+</button>
                 </div>
             </div>
             <div class="col-span-2">
                 <div class="ops-scoreboard">
                     <div class="ops-row">
                         <span class="ops-label">Crit:</span>
-                        <span class="ops-value">{{ opsSummary.critOp }}</span>
+                        <span class="ops-value">{{ opsSummary.critOp.desc }}</span>
                     </div>
                     <div class="ops-row">
                         <span class="ops-label">Tac:</span>
-                        <span class="ops-value">{{ opsSummary.tacOp }}</span>
+                        <span class="ops-value">{{ opsSummary.tacOp.desc }}</span>
                     </div>
                     <div class="ops-row">
                         <span class="ops-label">P.Op:</span>
-                        <span class="ops-value ops-dots">{{ opsSummary.primaryOp }}</span>
+                        <span class="ops-value ops-dots">{{ opsSummary.primaryOp.desc }}</span>
                     </div>
                 </div>
             </div>
@@ -48,38 +48,38 @@
                         <div class="wounds-section">
                             <div class="wounds-label-row">
                                 <span class="wounds-label" >PUNTI CRIT OP</span>
-                                <button class="btn btn-icon" type="button">-</button>
-                                <button class="btn btn-icon" type="button">+</button>
-                                <span class="wounds-value">{{ item.wounds }} / {{ item.maxWounds }}</span>
+                                <button class="btn btn-icon" type="button" @click="removePoint(item.turningPointNumber, 'crit')">-</button>
+                                <button class="btn btn-icon" type="button" @click="addPoint(item.turningPointNumber, 'crit')">+</button>
+                                <span class="wounds-value">{{ item.turningPoint.crit }} / {{ maxScorePerMission }}</span>
                             </div>
                             <UProgress
-                                    :model-value="item.wounds"
-                                    :max="item.maxWounds"
-                                    :color="item.wounds === 0 ? 'error' : 'primary'"
+                                    :model-value="item.turningPoint.crit"
+                                    :max="maxScorePerMission"
+                                    :color="item.turningPoint.crit === maxScorePerMission ? 'success' : 'primary'"
                                     size="sm"
                             />
                             <div class="wounds-label-row">
                                 <span class="wounds-label">PUNTI TAC OP</span>
-                                <button class="btn btn-icon" type="button">-</button>
-                                <button class="btn btn-icon" type="button">+</button>
-                                <span class="wounds-value">{{ item.wounds }} / {{ item.maxWounds }}</span>
+                                <button class="btn btn-icon" type="button" @click="removePoint(item.turningPointNumber, 'tac')">-</button>
+                                <button class="btn btn-icon" type="button" @click="addPoint(item.turningPointNumber, 'tac')">+</button>
+                                <span class="wounds-value">{{ item.turningPoint.tac }} / {{ maxScorePerMission }}</span>
                             </div>
                             <UProgress
-                                    :model-value="item.wounds"
-                                    :max="item.maxWounds"
-                                    :color="item.wounds === 0 ? 'error' : 'primary'"
+                                    :model-value="item.turningPoint.tac"
+                                    :max="maxScorePerMission"
+                                    :color="item.turningPoint.tac === maxScorePerMission ? 'success' : 'primary'"
                                     size="sm"
                             />
                             <div class="wounds-label-row">
                                 <span class="wounds-label">PUNTI KILL OP</span>
-                                <button class="btn btn-icon" type="button">-</button>
-                                <button class="btn btn-icon" type="button">+</button>
-                                <span class="wounds-value">{{ item.wounds }} / {{ item.maxWounds }}</span>
+                                <button class="btn btn-icon" type="button" @click="removePoint(item.turningPointNumber, 'kills')">-</button>
+                                <button class="btn btn-icon" type="button" @click="addPoint(item.turningPointNumber, 'kills')">+</button>
+                                <span class="wounds-value">{{ item.turningPoint.kills }} / {{ maxScorePerMission }}</span>
                             </div>
                             <UProgress
-                                    :model-value="item.wounds"
-                                    :max="item.maxWounds"
-                                    :color="item.wounds === 0 ? 'error' : 'primary'"
+                                    :model-value="item.turningPoint.kills"
+                                    :max="maxScorePerMission"
+                                    :color="item.turningPoint.kills === maxScorePerMission ? 'success' : 'primary'"
                                     size="sm"
                             />
                         </div>
@@ -95,14 +95,14 @@
         <div class="board-tabs">
             <div class="initiative-card">
                 <div class="cards-row">
-                    <span id="reroll" class="nav-icon" :class="isInitiativeCardActive('reroll') ? 'color-icon' : ''">
+                    <span id="reroll" class="nav-icon" :class="isInitiativeCardActive('reroll') ? 'color-icon' : ''" @click="toggleInitiativeCard('reroll')">
                         <svg class="reroll-icon" viewBox="0 0 35 35" aria-hidden="true" focusable="false">
                             <use href="/icons/reroll.svg#reroll" />
                         </svg>
                     </span>
-                    <span id="plus1" class="nav-icon" :class="isInitiativeCardActive('plus1') ? 'color-icon' : ''">+/- 1</span>
-                    <span id="plus2" class="nav-icon" :class="isInitiativeCardActive('plus2') ? 'color-icon' : ''">+/- 2</span>
-                    <span id="plus3" class="nav-icon" :class="isInitiativeCardActive('plus3') ? 'color-icon' : ''">+/- 3</span>
+                    <span id="plus1" class="nav-icon" :class="isInitiativeCardActive('plus1') ? 'color-icon' : ''" @click="toggleInitiativeCard('plus1')">+/- 1</span>
+                    <span id="plus2" class="nav-icon" :class="isInitiativeCardActive('plus2') ? 'color-icon' : ''" @click="toggleInitiativeCard('plus2')">+/- 2</span>
+                    <span id="plus3" class="nav-icon" :class="isInitiativeCardActive('plus3') ? 'color-icon' : ''" @click="toggleInitiativeCard('plus3')">+/- 3</span>
                 </div>
             </div>
         </div>
@@ -110,33 +110,28 @@
 </template>
 
 <script setup>
-// Mockup statico per testare lo stile della battle board: dati d'esempio,
-// nessuna interazione reale collegata allo store (vedi task di styling).
-const myScore = 21;
-const opponentScore = 18;
-const initiativeCardsStatus = [
-    {id: 'reroll', value: true},
-    {id: 'plus1', value: false},
-    {id: 'plus2', value: true},
-    {id: 'plus3', value: false},
-]
-const opsSummary = {
-    critOp: 'Op Crit 1',
-    tacOp: 'Op Tac 5',
-    primaryOp: '* * * ',
-};
+import { computed } from 'vue';
+import { storeToRefs } from 'pinia';
+import { useBattleSessionStore } from '../stores/battleSession';
 
-const operatives = [
-    {name: 'Operative Alpha', order: 'Engage', wounds: 2, maxWounds: 12, apl: 2, status: null, statusColor: null},
-    {name: 'Operative Bravo', order: 'Conceal', wounds: 6, maxWounds: 11, apl: 2, status: 'Ferito', statusColor: 'warning'},
-    {name: 'Operative Charlie', order: 'Engage', wounds: 9, maxWounds: 9, apl: 1, status: null, statusColor: null},
-    {name: 'Operative Delta', order: 'Conceal', wounds: 0, maxWounds: 10, apl: 0, status: 'Abbattuto', statusColor: 'error'},
-];
+const battleSessionStore = useBattleSessionStore();
 
-const operativeTabs = operatives.map((op, index) => ({
-    label: String(index + 1),
-    ...op,
-}));
+const {
+    commandPoints,
+    factionPoints,
+    initiativeCardsStatus,
+    opsSummary,
+    turningPointsScores,
+} = storeToRefs(battleSessionStore);
+
+const maxScorePerMission = battleSessionStore.getMaxScorePerMission;
+
+const operativeTabs = computed(() =>
+    turningPointsScores.value.map((op, index) => ({
+        label: String(index + 1),
+        ...op,
+    }))
+);
 
 const tabsUi = {
     list: 'w-full',
@@ -145,7 +140,19 @@ const tabsUi = {
 };
 
 function isInitiativeCardActive(id) {
-    return initiativeCardsStatus.find(card => card.id === id).value === true;
+    return initiativeCardsStatus.value.find(card => card.id === id).value === true;
+}
+
+function toggleInitiativeCard(id) {
+    battleSessionStore.updateInitiativeCardsStatus(id, !isInitiativeCardActive(id));
+}
+
+function addPoint(turnNumber, opType) {
+    battleSessionStore.addOpPoint(turnNumber, opType);
+}
+
+function removePoint(turnNumber, opType) {
+    battleSessionStore.removeOpPoint(turnNumber, opType);
 }
 
 </script>
@@ -337,6 +344,10 @@ function isInitiativeCardActive(id) {
 .status-badge.status-error {
     color: var(--op-infil);
     background-color: rgba(204, 87, 108, 0.12);
+}
+
+.cards-row .nav-icon {
+    cursor: pointer;
 }
 
 .nav-icon.color-icon {
