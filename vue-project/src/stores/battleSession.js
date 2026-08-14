@@ -65,6 +65,7 @@ export const useBattleSessionStore = defineStore(
 
             return toRet;
         })
+
         const getPrimaryOpsBonus = computed(() => {
             return (primaryOpType) => {
                 let sum = 0;
@@ -119,7 +120,7 @@ export const useBattleSessionStore = defineStore(
             let turn = turningPointsScores.value
                 .find(turningPoint => turningPoint.turningPointNumber === turnNumber);
 
-            if(turn.turningPoint[opType] < maxScorePerMission){
+            if(turn.turningPoint[opType] < maxScorePerMission && getCountOfOpByType(opType) < maxScorePerMission){
                 turn.turningPoint[opType]++;
             }
         }
@@ -131,6 +132,15 @@ export const useBattleSessionStore = defineStore(
             if(turn.turningPoint[opType] > 0){
                 turn.turningPoint[opType]--;
             }
+        }
+
+        function getCountOfOpByType(opType){
+            let count = 0;
+            turningPointsScores.value.forEach(turn => {
+                count += turn.turningPoint[opType];
+            });
+
+            return count;
         }
 
         /**

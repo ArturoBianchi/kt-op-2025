@@ -202,7 +202,7 @@ function removePoint(turnNumber, opType) {
 }
 
 .ops-dots {
-    letter-spacing: 0.2em;
+    letter-spacing: 0;
 }
 
 .ops-cycle {
