@@ -26,7 +26,7 @@ This is an actively evolving personal/hobby project. What's implemented today:
 ### Roadmap / not implemented yet
 
 - Battle board scoreboard UI (score tracking) — store is ready, UI is commented out.
-- A future "battle session" tracking tool built on top of the persisted battle state.
+- A future "battle session" tracking tool built on top of the persisted battle state. What is desired here: tracking of CP and FP; wizard to chose team deployed and loadout; possibility to read on demand agent selected weapons, ability etc; a summary of active rules while fighting;
 - No automated test suite exists yet; validation is currently manual (dev server + build sanity checks).
 
 ## Tech Stack
