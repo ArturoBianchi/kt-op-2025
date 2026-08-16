@@ -259,7 +259,7 @@
       "reveal": "La prima volta che ottieni PV da questa op.",
       "rule": null,
       "mission_actions": [],
-      "victory_points": "Ogni volta che un agente amico incapacita un agente nemico, se quell'agente amico è entro 6\" dalla drop zone del tuo avversario, ottieni 1PV; se questo è vero e l'agente nemico aveva una statistica ferite di 12 o più, ottieni invece 2PV.<br>Non puoi ottenere più di 2PV da questa op per punto di svolta."
+      "victory_points": "Ogni volta che un agente amico neutralizza un agente nemico, se quell'agente amico è entro 6\" dalla drop zone del tuo avversario, ottieni 1PV; se questo è vero e l'agente nemico aveva una statistica ferite di 12 o più, ottieni invece 2PV.<br>Non puoi ottenere più di 2PV da questa op per punto di svolta."
     },
     {
       "id": "tac-seek-03",
@@ -267,7 +267,7 @@
       "archetype": "CERCA E DISTRUGGI",
       "title": "DOMINIO",
       "reveal": "La prima volta che un agente nemico è neutralizzato da un agente amico.",
-      "rule": "Ogni volta che un agente amico incapacita un agente nemico, quell'agente amico ottiene uno dei tuoi gettoni Dominio.",
+      "rule": "Ogni volta che un agente amico neutralizza un agente nemico, quell'agente amico ottiene uno dei tuoi gettoni Dominio.",
       "mission_actions": [],
       "victory_points": "Alla fine del terzo e quarto punto di svolta, puoi rimuovere i gettoni Dominio dagli agenti amici che non sono neutralizzati. Per ciascuno che rimuovi, ottieni 1PV.<br>Non puoi ottenere più di 3PV da questa op per punto di svolta."
     }
