@@ -1,7 +1,4 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
-import Rules from '../views/Rules.vue'
-import BattleBoard from '../views/BattleBoard.vue'
-import CritTacOps from '../views/CritTacOps.vue'
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -9,7 +6,7 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            component: Rules,
+            component: () => import('../views/Rules.vue'),
             meta: {
                 title: 'SEQUENZA DI GIOCO',
             },
@@ -17,7 +14,7 @@ const router = createRouter({
         {
             path: '/battle',
             name: 'battle',
-            component: BattleBoard,
+            component: () => import('../views/BattleBoard.vue'),
             meta: {
                 title: '',
             },
@@ -25,9 +22,9 @@ const router = createRouter({
         {
             path: '/ops',
             name: 'ops',
-            component: CritTacOps,
+            component: () => import('../views/CritTacOps.vue'),
             meta: {
-                title: 'CRIT & TAC OPS',
+                title: 'KILL, CRIT & TAC OPS',
             },
         },
         // Anteprima dei componenti durante lo sviluppo: esclusa dalla build di produzione

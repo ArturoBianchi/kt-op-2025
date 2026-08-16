@@ -5,24 +5,47 @@ import {computed, ref} from "vue";
 // are being filtered by). Catalog data lives separately in critTacOps.js —
 // this store intentionally excludes it to keep a single responsibility.
 export const useFilterOperationStore = defineStore('filterOperations', () => {
-        const filteredOperations = ref([])
+        const filteredCritOps = ref([])
+        const filteredTacOps = ref([])
 
-        const getFilteredOperations = computed(() => filteredOperations.value)
-        const isFiltering = computed(() => filteredOperations.value.length > 0)
-        const isOperationPresent = computed(() => {
-            return (opId) => filteredOperations.value.includes(opId)
+        const getFilteredCritOps = computed(() => filteredCritOps.value)
+        const getFilteredTacOps = computed(() => filteredTacOps.value)
+
+        const isFilteringCrit = computed(() => filteredCritOps.value.length > 0)
+        const isFilteringTac = computed(() => filteredTacOps.value.length > 0)
+
+        const isCritOperationPresent = computed(() => {
+            return (opId) => filteredCritOps.value.includes(opId)
+        })
+        const isTacOperationPresent = computed(() => {
+            return (opId) => filteredTacOps.value.includes(opId)
         })
 
-        function addOperationFilter(opId) {
-            !filteredOperations.value.includes(opId)
-                ? filteredOperations.value.push(opId)
+        function addCritOperationFilter(opId) {
+            !filteredCritOps.value.includes(opId)
+                ? filteredCritOps.value.push(opId)
                 : console.log("Operation already exists");
         }
 
-        function removeOperationFilter(opId) {
-            let index = filteredOperations.value.indexOf(opId);
+        function removeCritOperationFilter(opId) {
+            let index = filteredCritOps.value.indexOf(opId);
             if (index !== -1) {
-                filteredOperations.value.splice(index, 1);
+                filteredCritOps.value.splice(index, 1);
+            } else {
+                console.log("Operation not exists");
+            }
+        }
+
+        function addTacOperationFilter(opId) {
+            !filteredTacOps.value.includes(opId)
+                ? filteredTacOps.value.push(opId)
+                : console.log("Operation already exists");
+        }
+
+        function removeTacOperationFilter(opId) {
+            let index = filteredTacOps.value.indexOf(opId);
+            if (index !== -1) {
+                filteredTacOps.value.splice(index, 1);
             } else {
                 console.log("Operation not exists");
             }
@@ -32,16 +55,23 @@ export const useFilterOperationStore = defineStore('filterOperations', () => {
          * Reset state
          */
         function $reset() {
-            filteredOperations.value = [];
+            filteredCritOps.value = [];
+            filteredTacOps.value = [];
         }
 
         return {
-            filteredOperations,
-            getFilteredOperations,
-            isOperationPresent,
-            isFiltering,
-            addOperationFilter,
-            removeOperationFilter,
+            filteredCritOps,
+            filteredTacOps,
+            getFilteredCritOps,
+            getFilteredTacOps,
+            isFilteringCrit,
+            isFilteringTac,
+            isCritOperationPresent,
+            isTacOperationPresent,
+            addCritOperationFilter,
+            removeCritOperationFilter,
+            addTacOperationFilter,
+            removeTacOperationFilter,
             $reset
         }
     },

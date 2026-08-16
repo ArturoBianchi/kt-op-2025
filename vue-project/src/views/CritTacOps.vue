@@ -4,32 +4,40 @@ import CritCard from '@/components/cards/CritCard.vue'
 import TacCard from '@/components/cards/TacCard.vue'
 import { useCritTacOpsStore } from '@/stores/critTacOps.js';
 import {useFilterOperationStore} from "@/stores/filterOperations.js";
+import KillCard from "@/components/cards/KillCard.vue";
 
 const critTacOpsStore = useCritTacOpsStore();
 const filterOpStore = useFilterOperationStore();
 const critFilterItems = critTacOpsStore.getCritOpsFilterItems;
-const tacFilterItems = critTacOpsStore.getTacOpsFilterItems
+const tacFilterItems = critTacOpsStore.getTacOpsFilterItems;
 
-const critIds = critFilterItems.map(item => item.value);
-const tacIds = tacFilterItems.map(item => item.value);
-
-function applyFilterSelection(newIds, scopeIds) {
-    const currentIds = filterOpStore.filteredOperations.filter(id => scopeIds.includes(id));
-    newIds.filter(id => !currentIds.includes(id)).forEach(id => filterOpStore.addOperationFilter(id));
-    currentIds.filter(id => !newIds.includes(id)).forEach(id => filterOpStore.removeOperationFilter(id));
+function applyFilterSelection(newIds, currentIds, addFn, removeFn) {
+    const previousIds = [...currentIds];
+    newIds.filter(id => !previousIds.includes(id)).forEach(id => addFn(id));
+    previousIds.filter(id => !newIds.includes(id)).forEach(id => removeFn(id));
 }
 
 const critOpsFilter = computed({
-    get: () => filterOpStore.filteredOperations.filter(id => critIds.includes(id)),
-    set: (newIds) => applyFilterSelection(newIds, critIds)
+    get: () => filterOpStore.getFilteredCritOps,
+    set: (newIds) => applyFilterSelection(
+        newIds,
+        filterOpStore.getFilteredCritOps,
+        filterOpStore.addCritOperationFilter,
+        filterOpStore.removeCritOperationFilter
+    )
 });
 
 const tacOpsFilter = computed({
-    get: () => filterOpStore.filteredOperations.filter(id => tacIds.includes(id)),
-    set: (newIds) => applyFilterSelection(newIds, tacIds)
+    get: () => filterOpStore.getFilteredTacOps,
+    set: (newIds) => applyFilterSelection(
+        newIds,
+        filterOpStore.getFilteredTacOps,
+        filterOpStore.addTacOperationFilter,
+        filterOpStore.removeTacOperationFilter
+    )
 });
 
-const activeFilterCount = computed(() => filterOpStore.filteredOperations.length);
+const activeFilterCount = computed(() => filterOpStore.getFilteredCritOps.length + filterOpStore.getFilteredTacOps.length);
 
 const showFilterSection = ref(false);
 
@@ -37,13 +45,15 @@ const carouselItems = computed(() => {
         let items = [];
         let critOpsObj = critTacOpsStore.getCritOps;
         let tacOpsObj = critTacOpsStore.getTacOps;
+        let killOpObj = critTacOpsStore.getKillOp;
         
+        items.push(getKillCardCarouselItem(0, killOpObj));
         critOpsObj.forEach((el, index) => {
-            if(!filterOpStore.isFiltering || filterOpStore.isOperationPresent(el.id))
+            if(!filterOpStore.isFilteringCrit || filterOpStore.isCritOperationPresent(el.id))
                 items.push(getCritCardCarouselItem(index, el));
         });
         tacOpsObj.forEach((el, index) => {
-            if(!filterOpStore.isFiltering || filterOpStore.isOperationPresent(el.id))
+            if(!filterOpStore.isFilteringTac || filterOpStore.isTacOperationPresent(el.id))
                 items.push(getTacCardCarouselItem(index, el));
         });
 
@@ -64,6 +74,16 @@ function getTacCardCarouselItem(id, model){
     return {
         id: `tac-${id}`,
         component: TacCard,
+        props: {
+            model: model,
+        }
+    }
+}
+
+function getKillCardCarouselItem(id, model){
+    return {
+        id: `kill-${id}`,
+        component: KillCard,
         props: {
             model: model,
         }

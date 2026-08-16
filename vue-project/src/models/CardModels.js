@@ -16,6 +16,22 @@ export class BaseOp {
     }
 }
 
+export class KillOp extends BaseOp {
+    constructor(data = {}) {
+        super(data);
+        this.tableData = data.table_data || [];
+    }
+
+    get typeText() {
+        return `KILL OP`;
+    }
+
+    get typeClass() {
+        return 'kill';
+    }
+}
+
+
 export class CritOp extends BaseOp {
     constructor(data = {}) {
         super(data);

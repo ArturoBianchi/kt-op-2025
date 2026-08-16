@@ -271,5 +271,92 @@
       "mission_actions": [],
       "victory_points": "Alla fine del terzo e quarto punto di svolta, puoi rimuovere i gettoni Dominio dagli agenti amici che non sono neutralizzati. Per ciascuno che rimuovi, ottieni 1PV.<br>Non puoi ottenere più di 3PV da questa op per punto di svolta."
     }
-  ]
+  ],
+  "kill_op": {
+    "id": "kill-op-1",
+    "title": "OPERAZIONE DI UCCISIONE",
+    "rule": "Inizi senza un grado uccisioni. Man mano che gli operativi nemici vengono neutralizzati, il tuo grado sale fino a raggiungere 5. Ogni volta che passi a un nuovo grado, ottieni 1VP. Alla fine del quarto punto di svolta, se il tuo grado è più alto di quello del tuo avversario, ottieni 1PV. In un pareggio, nessun giocatore ottiene un PV extra. La tabella seguente mostra quanti operativi nemici devono essere neutralizzati per raggiungere ciascun grado. La riga che utilizzi è determinata dal numero iniziale di agenti nemici. ",
+    "table_data" : [
+      {
+        "startingAgents": 5,
+        "grade1": 1,
+        "grade2": 2,
+        "grade3": 3,
+        "grade4": 4,
+        "grade5": 5
+      },
+      {
+        "startingAgents": 6,
+        "grade1": 1,
+        "grade2": 2,
+        "grade3": 3,
+        "grade4": 4,
+        "grade5": 6
+      },
+      {
+        "startingAgents": 7,
+        "grade1": 1,
+        "grade2": 2,
+        "grade3": 4,
+        "grade4": 5,
+        "grade5": 7
+      },
+      {
+        "startingAgents": 8,
+        "grade1": 2,
+        "grade2": 3,
+        "grade3": 4,
+        "grade4": 6,
+        "grade5": 8
+      },
+      {
+        "startingAgents": 9,
+        "grade1": 2,
+        "grade2": 3,
+        "grade3": 5,
+        "grade4": 7,
+        "grade5": 9
+      },
+      {
+        "startingAgents": 10,
+        "grade1": 2,
+        "grade2": 4,
+        "grade3": 6,
+        "grade4": 8,
+        "grade5": 10
+      },
+      {
+        "startingAgents": 11,
+        "grade1": 2,
+        "grade2": 4,
+        "grade3": 7,
+        "grade4": 9,
+        "grade5": 11
+      },
+      {
+        "startingAgents": 12,
+        "grade1": 2,
+        "grade2": 5,
+        "grade3": 7,
+        "grade4": 10,
+        "grade5": 12
+      },
+      {
+        "startingAgents": 13,
+        "grade1": 2,
+        "grade2": 5,
+        "grade3": 8,
+        "grade4": 10,
+        "grade5": 13
+      },
+      {
+        "startingAgents": 14,
+        "grade1": 3,
+        "grade2": 6,
+        "grade3": 8,
+        "grade4": 11,
+        "grade5": 14
+      }
+    ]
+  }
 }

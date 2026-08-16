@@ -57,6 +57,7 @@ const title = computed(() => {
 .op-card.security::before { background-color: var(--op-sec); }
 .op-card.seek::before { background-color: var(--op-seek); }
 .op-card.crit::before { background-color: var(--op-crit); }
+.op-card.kill::before { background-color: var(--accent-main); }
 
 /* Archetype-specific colors for internal elements */
 .op-card.recon :deep(.op-section-title) { color: var(--op-recon); }
@@ -78,6 +79,10 @@ const title = computed(() => {
 .op-card.crit :deep(.op-section-title) { color: var(--op-crit); }
 .op-card.crit :deep(.op-action-box) { border-left-color: var(--op-crit); }
 .op-card.crit :deep(.ap-cost) { background-color: var(--op-crit);color: var(--bg-surface);}
+
+.op-card.kill :deep(.op-section-title) { color: var(--accent-main); }
+.op-card.kill :deep(.op-action-box) { border-left-color: var(--accent-main); }
+.op-card.kill :deep(.ap-cost) { background-color: var(--accent-main);color: var(--text-primary);}
 
 .op-card .op-type {
     font-size: 0.8rem;

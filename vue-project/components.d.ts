@@ -14,6 +14,7 @@ declare module 'vue' {
     AppHeader: typeof import('./src/components/AppHeader.vue')['default']
     AppMenu: typeof import('./src/components/AppMenu.vue')['default']
     CritCard: typeof import('./src/components/cards/CritCard.vue')['default']
+    KillCard: typeof import('./src/components/cards/KillCard.vue')['default']
     KTCarousel: typeof import('./src/components/KTCarousel.vue')['default']
     OpCard: typeof import('./src/components/cards/OpCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -26,6 +27,7 @@ declare module 'vue' {
     UFormField: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/FormField.vue')['default']
     UProgress: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Progress.vue')['default']
     USelect: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Select.vue')['default']
+    UTable: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Table.vue')['default']
     UTabs: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Tabs.vue')['default']
   }
 }
