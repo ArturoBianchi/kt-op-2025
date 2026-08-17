@@ -1,5 +1,5 @@
 import {defineStore} from "pinia";
-import critTacOpsData from '@/properties/crit-tac-kill-op.json';
+import critTacOpsData from '@/properties/op/crit-tac-kill-op.json';
 import {CritOp, KillOp, TacOp} from "@/models/CardModels.js";
 import {computed, ref} from "vue";
 

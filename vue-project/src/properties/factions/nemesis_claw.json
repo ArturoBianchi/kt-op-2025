@@ -1,0 +1,554 @@
+{
+  "faction": "ARTIGLIO NEMESI",
+  "agents": [
+    {
+      "name": "NIGHT LORD VISIONARIO",
+      "keywords": [
+        "ARTIGLIO NEMESI",
+        "CAOS",
+        "ASTARTES ERETICI",
+        "PSIONICO",
+        "LEADER",
+        "VISIONARIO"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 15
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Pistola plasma (standard)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": [
+            "Gittata 8\"",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Pistola plasma (sovraccarica)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Gittata 8\"",
+            "Ustionante",
+            "Letale 5+",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Lama a catena nostramana",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": "Dilaniante"
+        },
+        {
+          "name": "Maglio potenziato",
+          "ATT": 5,
+          "COLP": "4+",
+          "DNN": "5/7",
+          "RdA": "Brutale"
+        },
+        {
+          "name": "Mazza potenziata",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": "Shock"
+        },
+        {
+          "name": "Arma potenziata",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": "Letale 5+"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "PREFIGURAZIONE 1PA",
+          "description": "PSICHICA. Spendi 1 dei tuoi punti Prescienza per ottenere 1PC. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico o più di una volta per punto di svolta."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Prescienza",
+          "description": "PSICHICA. Nel passo Preparare di ogni fase di Strategia ottieni D3 punti Prescienza. Alla fine di ciascun punto di svolta, scarta i tuoi punti Prescienza. Puoi spendere i tuoi punti Prescienza nella fase di Scontro a Fuoco come segue (puoi usare ciascuna delle seguenti regole solo una volta per punto di svolta):\n• Presentimento: PSICHICA. Ogni volta che è il tuo turno di attivare un agente amico puoi spendere 1 dei tuoi punti Prescienza per saltare quell’attivazione.\n• Premonizione: PSICHICA. Ogni volta che un dado attacco infligge Dnn Normali a questo agente puoi spendere 1 dei tuoi punti Prescienza per ignorare quei danni inflitti.\nNon puoi ottenere o spendere i tuoi punti Prescienza se questo agente è neutralizzato."
+        }
+      ]
+    },
+    {
+      "name": "NIGHT LORD PORTATORE DI TERRORE",
+      "keywords": [
+        "ARTIGLIO NEMESI",
+        "CAOS",
+        "ASTARTES ERETICI",
+        "PORTATORE DI TERRORE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem con mirino (corta gittata)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Gittata 8\"",
+            "Letale 5+"
+          ]
+        },
+        {
+          "name": "Pistola requiem con mirino (lunga gittata)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fiala di terrordroga",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "2/0",
+          "RdA": [
+            "Gittata 6\"",
+            "Area 2\"",
+            "Devastante 3",
+            "Limitata 1",
+            "Saturazione",
+            "Terrordroga*"
+          ]
+        },
+        {
+          "name": "Lama corrotta",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": "Terrordroga*"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "AVVELENARE OBIETTIVO 1PA",
+          "description": "Scegli un segnalino obiettivo controllato da questo agente affinché ottenga uno dei tuoi indicatori Terrordroga. Non può essere un segnalino obiettivo entro la distanza di controllo di un agente nemico, né uno che ha già uno dei tuoi indicatori Terrordroga. La prima volta che un agente nemico che non ha uno dei tuoi indicatori Terrordroga contende quel segnalino obiettivo, quell’agente ottiene quell’indicatore Terrordroga, poi infliggi 2D3 danni a quell’agente (se ciò avviene durante un’azione, alla fine di quell’azione). Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": [
+        {
+          "name": "*Terrordroga",
+          "description": "nel passo Risolvere i dadi attacco, se infliggi danni con uno o più successi critici (inclusi quelli come conseguenza della regola delle armi Devastante), l’agente contro cui viene usata quest’arma ottiene uno dei tuoi indicatori Terrordroga (se non ne ha già uno)."
+        },
+        {
+          "name": "Avvelenamento da Terrordroga",
+          "description": "ogni volta che un agente che ha uno dei tuoi indicatori Terrordroga viene attivato, infliggigli D3 danni."
+        }
+      ]
+    },
+    {
+      "name": "NIGHT LORD ARTIGLIERE PESANTE",
+      "keywords": [
+        "ARTIGLIO NEMESI",
+        "CAOS",
+        "ASTARTES ERETICI",
+        "ARTIGLIERE PESANTE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Requiem pesante (concentrato)",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Pesante (solo Riposizionarsi)",
+            "Critici Penetranti 1"
+          ]
+        },
+        {
+          "name": "Requiem pesante (sventagliata)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Pesante (solo Scattare)",
+            "Critici Penetranti 1",
+            "Torrenziale 1\""
+          ]
+        },
+        {
+          "name": "Lanciamissili (a frammentazione)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": [
+            "Area 2\"",
+            "Pesante (solo Riposizionarsi)"
+          ]
+        },
+        {
+          "name": "Lanciamissili (perforante)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/7",
+          "RdA": [
+            "Pesante (solo Riposizionarsi)",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": []
+    },
+    {
+      "name": "NIGHT LORD RUBAPELLE",
+      "keywords": [
+        "ARTIGLIO NEMESI",
+        "CAOS",
+        "ASTARTES ERETICI",
+        "RUBAPELLE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Falcione a catena nostramano",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": "Dilaniante"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Scorticali Vivi",
+          "description": "una volta per punto di svolta, quando questo agente neutralizza un agente nemico entro la propria distanza di controllo, puoi scegliere un altro agente nemico visibile a questo agente ed entro 6\" da questo agente o dall’agente nemico neutralizzato. Fino all’inizio del prossimo punto di svolta quell’altro agente nemico non può controllare segnalini né svolgere l’azione Raccogliere Segnalino o azioni della missione."
+        },
+        {
+          "name": "Tiranno delle Fosse dello Scuoiamento",
+          "description": "ogni volta che questo agente combatte o si rivale, i Dnn Normali e Critici di 3 o più gli infliggono 1 danno in meno."
+        }
+      ]
+    },
+    {
+      "name": "NIGHT LORD ARTIGLIERE",
+      "keywords": [
+        "ARTIGLIO NEMESI",
+        "CAOS",
+        "ASTARTES ERETICI",
+        "ARTIGLIERE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Lanciafiamme",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": [
+            "Gittata 8\"",
+            "Saturazione",
+            "Torrenziale 2\""
+          ]
+        },
+        {
+          "name": "Fucile termico",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "6/3",
+          "RdA": [
+            "Gittata 6\"",
+            "Devastante 4",
+            "Penetrante 2"
+          ]
+        },
+        {
+          "name": "Fucile plasma (standard)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": "Penetrante 1"
+        },
+        {
+          "name": "Fucile plasma (sovraccarico)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/6",
+          "RdA": [
+            "Ustionante",
+            "Letale 5+",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": []
+    },
+    {
+      "name": "NIGHT LORD URLATORE",
+      "keywords": [
+        "ARTIGLIO NEMESI",
+        "CAOS",
+        "ASTARTES ERETICI",
+        "URLATORE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Artigli fulmine",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Incessante",
+            "Letale 5+"
+          ]
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Urlatore",
+          "description": "ogni volta che un agente nemico entro 3\" da questo agente spara, combatte o si rivale, l’avversario non può ripetere il tiro dei suoi dadi attacco."
+        },
+        {
+          "name": "Smania di Crudeltà",
+          "description": "ogni volta che questo agente combatte contro un agente nemico ferito, gli artigli fulmine di questo agente hanno la regola delle armi Letale 4+."
+        }
+      ]
+    },
+    {
+      "name": "NIGHT LORD VENTRILOKAR",
+      "keywords": [
+        "ARTIGLIO NEMESI",
+        "CAOS",
+        "ASTARTES ERETICI",
+        "PSIONICO",
+        "VENTRILOKAR"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Spada a catena",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "IMITAZIONE SCONCERTANTE 1PA",
+          "description": "PSICHICA. Scegli un agente nemico entro 6\" da questo agente, poi seleziona una delle seguenti opzioni per quell’agente nemico (puoi selezionare ciascuna opzione solo una volta per battaglia):\n• Fino alla fine della sua prossima attivazione sottrai 1 dalla sua statistica LPA.\n• Cambia il suo ordine.\n• Svolgi un’azione Scattare gratuita con esso (specifica la posizione in cui l’avversario deve muoverlo).\nQuesto agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Portatore dell’Icona",
+          "description": "ogni volta che bisogna determinare il controllo di un segnalino, considera la statistica LPA di questo agente come più alta di 1. Nota che ciò non è una modifica alla sua statistica LPA, quindi qualsiasi cambiamento è cumulativo a questo."
+        }
+      ]
+    },
+    {
+      "name": "NIGHT LORD GUERRIERO",
+      "keywords": [
+        "ARTIGLIO NEMESI",
+        "CAOS",
+        "ASTARTES ERETICI",
+        "GUERRIERO"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Fucile requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Spada a catena",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": ""
+        },
+        {
+          "name": "Pugni",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Aguzzino Crudele",
+          "description": "ogni volta che questo agente spara, si rivale o combatte contro un agente nemico infortunato, oppure contro un agente nemico che ha una statistica Ferite di 7 o meno, le armi di questo agente hanno la regola delle armi Letale 5+."
+        }
+      ]
+    }
+  ],
+  "faction_equiment": [
+    {
+      "name": "PELLE SCUOIATA",
+      "description": "Ogni volta che un agente nemico spara, combatte o si rivale su un agente ARTIGLIO NEMESI amico entro 2\" da esso, l’avversario non può ripetere il tiro dei suoi dadi attacco con un risultato pari a 1."
+    },
+    {
+      "name": "CATENA STRAZIANTE",
+      "description": "Puoi usare questa regola ogni volta che un agente nemico sta per svolgere l’azione Ripiegare mentre si trova entro la distanza di controllo di un agente ARTIGLIO NEMESI amico, se nessun altro agente nemico si trova entro la distanza di controllo di quell’agente amico. Se lo fai, tira due D6, oppure un D6 se quell’agente nemico ha una statistica Ferite superiore a quella di quell’agente amico. Se uno o più risultati sono 4+, quell’agente nemico non può svolgere quell’azione durante quella attivazione o azione in risposta (non vengono spesi PA per essa), e tu non puoi usare di nuovo questa regola in questo punto di svolta."
+    },
+    {
+      "name": "TROFEO MACABRO",
+      "description": "Puoi usare questa regola una volta per battaglia, quando un agente ARTIGLIO NEMESI amico neutralizza un agente nemico entro 2\" da esso. Se lo fai, quell’agente amico ottiene uno dei tuoi indicatori Trofeo Macabro (se non ne ha già uno). Ogni volta che un agente ARTIGLIO NEMESI amico che ha uno dei tuoi indicatori Trofeo Macabro si trova entro 2\" da un agente nemico ed è visibile ad esso, sottrai 1 dalla statistica Att delle armi di quell’agente nemico."
+    },
+    {
+      "name": "DISTURBATORI DI SEGNALE",
+      "description": "Ogni volta che un agente nemico si trova entro 3\" da un agente ARTIGLIO NEMESI amico, la statistica LPA di quell’agente nemico non può essere aumentata. Nota che ciò non influenza le statistiche LPA che sono già state modificate."
+    }
+  ],
+  "faction_rules": [
+    {
+      "name": "ASTARTES",
+      "description": "Durante l’attivazione di ogni agente ARTIGLIO NEMESI amico, esso può svolgere due azioni Combattere oppure due azioni Sparare. Se sceglie due azioni Sparare, deve scegliere una pistola requiem, un fucile requiem o una pistola requiem con mirino per almeno una di esse. Ogni agente ARTIGLIO NEMESI amico può agire in risposta indipendentemente dal suo ordine."
+    },
+    {
+      "name": "CORAZZA D’OSCURITÀ",
+      "description": "Ogni volta che un agente nemico spara a un agente ARTIGLIO NEMESI amico, quell’agente amico è oscurato se si applicano entrambe le seguenti condizioni:\n• Si trova a più di 8\" dagli agenti nemici a cui è visibile.\n• Si trova entro 1\" da terreni Pesanti che non sono più in basso di esso, oppure qualsiasi parte della sua basetta si trova sotto terreni Sopraelevati."
+    }
+  ],
+  "strategy_ploy": [
+    {
+      "name": "SIAMO VENUTI PER VOI",
+      "description": "Ogni volta che un agente ARTIGLIO NEMESI amico viene attivato, se la prima azione che svolge nel corso di quell’attivazione è l’azione Caricare, quando termina il suo movimento durante quell’azione puoi infliggere D3 danni a un agente nemico entro la sua distanza di controllo."
+    },
+    {
+      "name": "LA CACCIA NERA",
+      "description": "Ogni volta che un agente ARTIGLIO NEMESI amico spara, combatte o si rivale su un agente nemico ferito, puoi ripetere il tiro di uno dei tuoi dadi attacco."
+    },
+    {
+      "name": "OCULUS RAPAX",
+      "description": "Puoi usare questa regola ogni volta che un agente ARTIGLIO NEMESI amico svolge l’azione Sparare. Se lo fai, fino alla fine di quell’azione le armi da tiro di quell’agente amico hanno le regole delle armi Gittata 6\" e A Ricerca Leggera."
+    },
+    {
+      "name": "RITORNO ALL’OSCURITÀ",
+      "description": "Un agente ARTIGLIO NEMESI amico può svolgere subito un’azione Ripiegare gratuita o un’azione Riposizionarsi gratuita, ma deve terminare quel movimento con terreni Pesanti entro la propria distanza di controllo, oppure con qualsiasi parte della sua basetta sotto terreni Sopraelevati. Inoltre, non può muoversi di più di 4\" durante quell’azione e non può terminare quel movimento più vicino agli agenti nemici (in una killzone che usa le regole Spazi Angusti, per esempio la Killzone: Mondo Tomba, quando determini questa distanza ignora i terreni Muro)."
+    }
+  ],
+  "fire_ploy": [
+    {
+      "name": "URLA VOX",
+      "description": "Usa questo espediente Scontro a Fuoco quando l’avversario sta per attivare un agente nemico che è visibile a un agente ARTIGLIO NEMESI amico. Tira un D6: se il risultato è più alto della statistica LPA di quell’agente nemico, l’avversario non può attivarlo in questa attivazione; se il risultato è uguale o inferiore alla statistica LPA di quell’agente nemico, questo espediente non viene usato, il PC speso per usarlo ti viene restituito e non puoi usare di nuovo questo espediente in questo punto di svolta. Se non ci sono altri agenti nemici idonei ad essere attivati, questo espediente non ha effetto."
+    },
+    {
+      "name": "MORTE AL FALSO IMPERATORE",
+      "description": "Usa questo espediente Scontro a Fuoco dopo aver tirato i dadi attacco per un agente ARTIGLIO NEMESI amico, se sta sparando a, sta combattendo contro o si sta rivalendo su un agente nemico che ha la keyword IMPERIUM. Le armi di quell’agente amico hanno la regola dell’arma Incessante fino alla fine di quella sequenza; se quell’agente nemico ha anche la keyword ADEPTUS ASTARTES, le armi di quell’agente amico hanno invece la regola dell’arma Ineluttabile fino alla fine di quella sequenza."
+    },
+    {
+      "name": "INCLINAZIONE ALL’OMICIDIO",
+      "description": "Usa questo espediente Scontro a Fuoco dopo che un agente ARTIGLIO NEMESI amico neutralizza un agente nemico entro la sua distanza di controllo. Quell’agente amico può subito svolgere un’azione Caricare gratuita o un’azione Scattare gratuita (per la prima può muoversi di massimo 3\"), anche se ha svolto un’azione che gli impedisce di svolgere l’azione Caricare o Scattare."
+    },
+    {
+      "name": "COMBATTIMENTO SPORCO",
+      "description": "Usa questo espediente Scontro a Fuoco all’inizio del passo Risolvere i dadi attacco, quando un agente ARTIGLIO NEMESI amico si rivale. Puoi risolvere uno dei tuoi successi prima del consueto ordine. Se lo fai, durante quella sequenza non puoi risolvere nessun altro successo."
+    }
+  ],
+  "agents_deploy_rules": {
+    "description": "KILL TEAM ARTIGLIO NEMESI\nARCHETIPI: INFILTRAZIONE, RICERCA E DISTRUZIONE\n\nAGENTI\n↘ 1 agente ARTIGLIO NEMESI VISIONARIO con una delle seguenti opzioni:\n• Pistola requiem; maglio potenziato\n• Pistola requiem; mazza potenziata\n• Pistola requiem; arma potenziata\n• Pistola plasma; lama a catena nostramana\n\n↘ 5 agenti ARTIGLIO NEMESI scelti dalla seguente lista:\n• PORTATORE DI TERRORE\n• ARTIGLIERE con una delle seguenti opzioni:\n  ○ Pistola requiem; lanciafiamme; pugni\n  ○ Pistola requiem; fucile termico; pugni\n  ○ Pistola requiem; fucile plasma; pugni\n• ARTIGLIERE PESANTE con una delle seguenti opzioni:\n  ○ Pistola requiem; requiem pesante; pugni\n  ○ Pistola requiem; lanciamissili; pugni\n• URLATORE\n• RUBAPELLE\n• VENTRILOKAR\n• GUERRIERO con una delle seguenti opzioni:\n  ○ Pistola requiem; spada a catena\n  ○ Fucile requiem; pugni\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente di questa lista solo una volta."
+  }
+}

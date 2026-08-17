@@ -1,0 +1,745 @@
+{
+  "faction": "LEGIONARI",
+  "agents": [
+    {
+      "name": "LEGIONARIO ASPIRANTE CAMPIONE",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "LEADER",
+        "ASPIRANTE CAMPIONE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 15
+      },
+      "weapons": [
+        {
+          "name": "Pistola plasma (standard)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": [
+            "Gittata 8\"",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Pistola plasma (sovraccarica)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Gittata 8\"",
+            "Ustionante",
+            "Letale 5+",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Pistola requiem corrotta",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": [
+            "Gittata 8\"",
+            "Dilaniante"
+          ]
+        },
+        {
+          "name": "Maglio potenziato",
+          "ATT": 5,
+          "COLP": "4+",
+          "DNN": "5/7",
+          "RdA": [
+            "Brutale"
+          ]
+        },
+        {
+          "name": "Mazza potenziata",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": [
+            "Shock"
+          ]
+        },
+        {
+          "name": "Arma potenziata",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": [
+            "Letale 5+"
+          ]
+        },
+        {
+          "name": "Spada a catena corrotta",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Dilaniante"
+          ]
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Osservato dagli Dei",
+          "description": "una volta durante ciascuna attivazione di questo agente, se esso ha neutralizzato un agente nemico aggiungi 1 alla sua statistica LPA fino alla fine di quell’attivazione."
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARIO PRESCELTO",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "LEADER",
+        "PRESCELTO"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 15
+      },
+      "weapons": [
+        {
+          "name": "Pistola plasma (standard)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": [
+            "Gittata 8\"",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Pistola plasma (sovraccarica)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Gittata 8\"",
+            "Ustionante",
+            "Letale 5+",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Pistola requiem corrotta",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": [
+            "Gittata 8\"",
+            "Dilaniante"
+          ]
+        },
+        {
+          "name": "Lama demoniaca",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/7",
+          "RdA": [
+            "Letale 5+"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Aura Demoniaca",
+          "description": "puoi usare questa regola ogni volta che un agente nemico svolge l’azione Ripiegare mentre si trova entro la distanza di controllo di questo agente. Se lo fai tira un D6: con 3+ quell’agente nemico non può svolgere quella azione durante quella attivazione o azione in risposta (il PA speso per essa viene rimborsato)."
+        },
+        {
+          "name": "Divorare l’Anima",
+          "description": "dopo che questo agente ha combattuto o si è rivalso, se non è neutralizzato ma ha neutralizzato un agente nemico, recupera fino a D3+3 ferite perse."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "LEGIONARIO ELETTO",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "ELETTO"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Gittata 8\""
+          ]
+        },
+        {
+          "name": "Artiglio demoniaco",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Dilaniante"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Scatenare il Demone",
+          "description": "puoi usare questa regola una volta per battaglia, quando questo agente viene attivato. Se lo fai, fino alla fine della battaglia:\n• Questo agente non può svolgere azioni Raccogliere Segnalino o azioni della missione (eccetto Azionare Portello). Se sta trasportando un segnalino, deve svolgere immediatamente l’azione Collocare Segnalino per 0PA (ciò ha la precedenza su tutte le altre regole).\n• I Dnn Normali e Critici di 4 o più infliggono a questo agente 1 danno in meno.\n• L’artiglio demoniaco di questo agente ha le regole delle armi Incessante e Letale 5+. Se questo agente ha la keyword NURGLE, non puoi ridurre i danni di un dado attacco di più di 1. In altre parole, non puoi usare entrambe le regole per ridurre di 2 Dnn Normali di 4 o più."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "LEGIONARIO ACCOLITO MALIFUOCO",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "PSIONICO",
+        "ACCOLITO MALIFUOCO"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Gittata 8\""
+          ]
+        },
+        {
+          "name": "Raffica di Fuoco",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Area 2\"",
+            "1\" Devastante 1",
+            "Saturazione",
+            "PSICHICA"
+          ]
+        },
+        {
+          "name": "Prosciugamento Vitale",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "3/3",
+          "RdA": [
+            "Saturazione",
+            "PSICHICA",
+            "Prosciugare Vita*"
+          ]
+        },
+        {
+          "name": "Pugnale empio",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Dilaniante",
+            "PSICHICA",
+            "Prosciugare Vita*"
+          ]
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Prosciugare Vita*",
+          "description": "quando scegli questa arma puoi usare questa regola. Se lo fai, all’inizio del passo Risolvere i dadi attacco scegli un agente LEGIONARI amico entro 6\" da questo agente e visibile ad esso. Per ogni dado attacco che risolvi in quel passo che infligge danni, quell’agente amico recupera 1 ferita persa, oppure D3 ferite perse se era un successo critico. Non puoi usare questa regola delle armi più di una volta per punto di svolta."
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARIO MACELLAIO",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "MACELLAIO"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Gittata 8\""
+          ]
+        },
+        {
+          "name": "Ascia a catena a due mani",
+          "ATT": 5,
+          "COLP": "4+",
+          "DNN": "5/7",
+          "RdA": [
+            "Brutale"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Assalto Distruttivo",
+          "description": "• Ogni volta che questo agente combatte o si rivale, gli agenti nemici non possono assistere.\n• Alla fine dell’attivazione o dell’azione in risposta di ogni agente nemico puoi selezionare un agente nemico entro 2\" da questo agente. Questo agente può svolgere un’azione Caricare gratuita (per farlo puoi cambiare il suo ordine in Ingaggiare), ma esso può muoversi di massimo 2\" e deve terminare quel movimento entro la distanza di controllo di quell’agente selezionato."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "LEGIONARIO ARTIGLIERE",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "ARTIGLIERE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Gittata 8\""
+          ]
+        },
+        {
+          "name": "Lanciafiamme",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": [
+            "Gittata 8\"",
+            "Saturazione",
+            "Torrenziale 2\""
+          ]
+        },
+        {
+          "name": "Fucile termico",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "6/3",
+          "RdA": [
+            "Gittata 6\"",
+            "Devastante 4",
+            "Penetrante 2"
+          ]
+        },
+        {
+          "name": "Fucile plasma (standard)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": [
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Fucile plasma (sovraccarica)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/6",
+          "RdA": [
+            "Ustionante",
+            "Letale 5+",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": []
+        }
+      ],
+      "abilities": [],
+      "traits": []
+    },
+    {
+      "name": "LEGIONARIO ARTIGLIERE PESANTE",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "ARTIGLIERE PESANTE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Gittata 8\""
+          ]
+        },
+        {
+          "name": "Requiem pesante (concentrato)",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Pesante (solo Riposizionarsi)",
+            "Critici Penetranti 1"
+          ]
+        },
+        {
+          "name": "Requiem pesante (sventagliata)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Pesante (solo Riposizionarsi)",
+            "Critici Penetranti 1",
+            "Torrenziale 1\""
+          ]
+        },
+        {
+          "name": "Lanciamissili (a frammentazione)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": [
+            "Area 2\"",
+            "Pesante (solo Riposizionarsi)"
+          ]
+        },
+        {
+          "name": "Lanciamissili (perforante)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/7",
+          "RdA": [
+            "Pesante (solo Riposizionarsi)",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Cannone a catena Mietitore (conc.)",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Incessante",
+            "Pesante (solo Riposizionarsi)",
+            "Punitiva"
+          ]
+        },
+        {
+          "name": "Cannone a catena Mietitore (svent.)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Incessante",
+            "Pesante (solo Riposizionarsi)",
+            "Punitiva",
+            "Torrenziale 2\""
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": []
+        }
+      ],
+      "abilities": [],
+      "traits": []
+    },
+    {
+      "name": "LEGIONARIO PORTATORE DELL’ICONA",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "PORTATORE DELL’ICONA"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Gittata 8\""
+          ]
+        },
+        {
+          "name": "Fucile requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": []
+        },
+        {
+          "name": "Spada a catena",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": []
+        },
+        {
+          "name": "Pugni",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": []
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Portatore dell’Icona",
+          "description": "ogni volta che determini il controllo di un segnalino, considera la statistica LPA di questo agente come di 1 più alta. Nota che ciò non è una modifica alla sua statistica LPA, quindi qualsiasi cambiamento è cumulativo a questo."
+        },
+        {
+          "name": "Favorito degli Dei Oscuri",
+          "description": "nel passo Preparare di ogni fase di Strategia, se questo agente controlla un segnalino obiettivo che non è profanato, quel segnalino obiettivo viene profanato per questa battaglia e ottieni 1PC. Nota che se qualsiasi agente (inclusi gli agenti nemici) ha profanato un segalino obiettivo, non puoi profanare quel segnalino obiettivo."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "LEGIONARIO ARTIGLIO CONFESSORE",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "ARTIGLIO CONFESSORE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Gittata 8\""
+          ]
+        },
+        {
+          "name": "Lame Scuoiatrici",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": [
+            "Letale 5+"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Riflessi Inesorabili",
+          "description": "ogni volta che questo agente si rivale, risolvi tu il primo dado attacco (cioè il difensore anziché l’attaccante)."
+        },
+        {
+          "name": "Smembramento Orripilante",
+          "description": "ogni volta che questo agente neutralizza un agente nemico mentre combatte o si rivale, scegli un altro agente nemico entro 3\" da questo agente e visibile ad esso oppure entro 3\" dall’agente nemico neutralizzato e visibile ad esso. Sottrai 1 dalla statistica LPA di quell’agente nemico fino alla fine della sua prossima attivazione."
+        },
+        {
+          "name": "MARCHIO TERRIBILE (2PA)",
+          "description": "Colloca il tuo segnalino Terribile entro la distanza di controllo di questo agente.\n• Ogni volta che un agente nemico si trova entro 3\" dal tuo segnalino Terribile, l’avversario deve spendere 1PA addizionale affinché quell’agente nemico svolga azioni Raccogliere Segnalino e azioni della missione.\n• Ogni volta che determini il controllo di un segnalino, considera la statistica LPA totale degli agenti nemici che lo contendono come se fosse di 1 più bassa se almeno uno di quegli agenti nemici si trova entro 3\" dal tuo segnalino Terribile. Nota che ciò non è una modifica alla sua statistica LPA, quindi qualsiasi cambiamento è cumulativo a questo.\nQuesto agente può svolgere questa azione solo una volta per battaglia e non può svolgerla fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "LEGIONARIO GUERRIERO",
+      "keywords": [
+        "LEGIONARI",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "GUERRIERO"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": [
+            "Gittata 8\""
+          ]
+        },
+        {
+          "name": "Fucile requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": []
+        },
+        {
+          "name": "Spada a catena",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": []
+        },
+        {
+          "name": "Pugni",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": []
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Patto Infernale",
+          "description": "una volta per battaglia, quando un agente LEGIONARI GUERRIERO amico viene attivato puoi usare questa regola. Se lo fai, cambia la sua keyword Marchi del Caos."
+        }
+      ],
+      "traits": []
+    }
+  ],
+  "faction_equiment": [
+    {
+      "name": "ARMATURA CON PROTEZIONI",
+      "description": "AZZARDO STRATEGICO. Scegli un agente LEGIONARI amico. Fino al passo Preparare della prossima fase di Strategia cambia in 2+ la statistica Salvezza di quell’agente."
+    },
+    {
+      "name": "PROIETTILI CORROTTI",
+      "description": "Puoi usare questa regola una volta per punto di svolta, quando un agente LEGIONARI amico sta svolgendo l’azione Sparare e tu scegli una pistola requiem o un fucile requiem. Se lo fai, fino alla fine di quell’azione quell’arma ha la regola delle armi Dilaniante."
+    },
+    {
+      "name": "TALISMANI DEL CAOS",
+      "description": "AZZARDO STRATEGICO. Scegli una keyword dei Marchi del Caos. Una volta durante ciascuna delle sue attivazioni, quando un agente LEGIONARI amico con quella keyword spara, combatte o si rivale, se ottieni due o più fallimenti puoi infliggere D3 danni a quell’agente amico per scartare un fallimento e mantenere invece l’altro come successo normale. Nota che, se si tratta dell’azione Sparare e quel danno neutralizza quell’agente amico, l’azione non termina (continua la sequenza con i tuoi dadi attacco che hanno successo)."
+    },
+    {
+      "name": "LAME MALEFICHE",
+      "description": "Gli agenti LEGIONARI amici hanno la seguente arma da mischia:\nLama malefica: ATT 5, COLP 3+, DNN 3/4."
+    }
+  ],
+  "faction_rules": [
+    {
+      "name": "MARCHI DEL CAOS",
+      "description": "Ogni volta che selezioni un agente LEGIONARI per la battaglia, devi scegliere una delle seguenti keyword e assegnarla ad esso per quella battaglia: KHORNE, NURGLE, SLAANESH, TZEENTCH, INDIVISO. Ogni agente può avere una keyword differente, ma un agente ACCOLITO MALIFUOCO non può avere la keyword KHORNE. Gli agenti LEGIONARI amici hanno una regola addizionale determinata da questa keyword. Inoltre, gli espedienti LEGIONARI conferiscono benefici addizionali agli agenti con la keyword appropriata."
+    },
+    {
+      "name": "MARCHI DEL CAOS: KHORNE",
+      "description": "Assalto Furibondo: Le armi da mischia di questo agente hanno la regola delle armi Inclemente."
+    },
+    {
+      "name": "MARCHI DEL CAOS: NURGLE",
+      "description": "Vigore Disgustoso: Tira un D6 ogni volta che a questo agente vengono inflitti Dnn Normali di 3 o più: con 5+ a questo agente viene inflitto 1 danno in meno."
+    },
+    {
+      "name": "MARCHI DEL CAOS: SLAANESH",
+      "description": "Agilità Innaturale: Aggiungi 1\" alla statistica Movimento di questo agente."
+    },
+    {
+      "name": "MARCHI DEL CAOS: TZEENTCH",
+      "description": "Guida Empyrica: Le armi da tiro di questo agente hanno la regola delle armi Inclemente."
+    },
+    {
+      "name": "MARCHI DEL CAOS: INDIVISO",
+      "description": "Predoni Spietati: Ogni volta che questo agente spara, combatte o si rivale contro un agente nemico entro 6\" da esso, le armi di questo agente hanno la regola delle armi Incessante."
+    },
+    {
+      "name": "ASTARTES",
+      "description": "Durante l’attivazione di ogni agente LEGIONARI amico, esso può svolgere due azioni Combattere oppure due azioni Sparare. Se sceglie due azioni Sparare, deve selezionare una pistola requiem, un fucile requiem o una pistola requiem corrotta per almeno una di esse. Ogni agente LEGIONARI amico può agire in risposta indipendentemente dal suo ordine."
+    }
+  ],
+  "strategy_ploy": [
+    {
+      "name": "SANGUE PER IL DIO DEL SANGUE",
+      "description": "Ogni volta che un agente LEGIONARI amico (esclusi gli agenti di KHORNE) combatte, la prima volta che affondi durante quella sequenza infliggi 1 danno addizionale (fino a un massimo di 7). Aggiungi 1 a entrambe le statistiche Danni delle armi da mischia degli agenti LEGIONARI di KHORNE amici (fino a un massimo di 7)."
+    },
+    {
+      "name": "IMPLACABILE",
+      "description": "Ogni volta che un agente spara a un agente LEGIONARI amico, le armi con la regola delle armi Penetrante 1 hanno invece la regola delle armi Critici Penetranti 1. Puoi ignorare qualsiasi cambiamento alle statistiche degli agenti LEGIONARI di NURGLE amici derivante dall’essere infortunati (inclusi quelli alle statistiche delle loro armi)."
+    },
+    {
+      "name": "RAPIDITÀ IMPRESSIONANTE",
+      "description": "Ogni volta che un agente LEGIONARI amico che in questo punto di svolta ha svolto un azione in cui si è mosso combatte o si rivale, peggiora di 1 la statistica Colpire delle armi da mischia dell’agente nemico. Ogni volta che un agente spara a un agente LEGIONARI di SLAANESH amico che si trova a più di 6\" da esso e che durante questo punto di svolta ha svolto un’azione in cui si è mosso, peggiora di 1 la statistica Colp delle armi dell’agente nemico. In tutti i casi per questo espediente, ciò non è cumulativo con l’essere infortunati."
+    },
+    {
+      "name": "CAPRICCI DEL FATO",
+      "description": "Ogni volta che un agente LEGIONARI amico spara a un agente nemico preparato, le armi da tiro di quell’agente amico hanno la regola delle armi Bilanciata. Ogni volta che un agente spara a un agente LEGIONARI di TZEENTCH amico preparato, nel passo Tirare i dadi difesa, se mantieni uno o più successi critici, puoi mantenere uno dei tuoi fallimenti come se fosse un successo normale anziché scartarlo."
+    }
+  ],
+  "fire_ploy": [
+    {
+      "name": "MASSACRO SENZA FINE",
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente LEGIONARI di KHORNE amico viene neutralizzato mentre combatte o si rivale. Prima che venga rimosso dalla killzone puoi affondare contro l’agente nemico in quella sequenza con uno dei tuoi successi non risolti."
+    },
+    {
+      "name": "MUTABILITÀ E CAMBIAMENTO",
+      "description": "Usa questo espediente Scontro a Fuoco quando viene attivato un agente LEGIONARI di TZEENTCH amico. Fino alla fine dell’attivazione di quell’agente aggiungi 1 alla sua statistica LPA, ma non può svolgere la stessa azione più di una volta durante quell’attivazione. Se è un agente GUERRIERO, la keyword Marchi del Caos di quell’agente non può cambiare durate questo punto di svolta (vedi la regola addizionale Patto Infernale)."
+    },
+    {
+      "name": "AURA MALIGNA",
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente LEGIONARI di NURGLE amico svolga l’azione Sparare, quando scegli un bersaglio valido. Fino alla fine di quella azione, ogni volta che quell’agente spara a un agente nemico entro 3\" da esso (cioè compresi eventuali bersagli secondary), le armi da tiro di quell’agente amico hanno la regola delle armi Penetrante 1."
+    },
+    {
+      "name": "FASCINO RIVOLTANTE",
+      "description": "Usa questo espediente Scontro a Fuoco durante l’attivazione di un agente LEGIONARI di SLAANESH amico, prima o dopo che abbia svolto un’azione. Scegli un agente nemico entro 4\" da quell’agente amico e visibile ad esso. Fino alla fine della prossima attivazione di quell’agente nemico sottrai 1 dalla sua statistica LPA."
+    }
+  ],
+  "agents_deploy_rules": {
+    "description": "KILL TEAM LEGIONARI\nARCHETIPI: SICUREZZA, RICERCA E DISTRUZIONE\n\nAGENTI\n1 agente LEGIONARI scelto dalla seguente lista:\n• ASPIRANTE CAMPIONE con una opzione da ciascuna delle seguenti:\n  - Pistola plasma o pistola requiem corrotta\n  - Maglio potenziato, mazza potenziata, arma potenziata o spada a catena corrotta\n• PRESCELTO con una delle seguenti opzioni:\n  - Pistola plasma; lama demoniaca\n  - Pistola requiem corrotta; lama demoniaca\n\n5 agenti LEGIONARI scelti dalla seguente lista:\n• ELETTO\n• ACCOLITO MALIFUOCO\n• MACELLAIO\n• ARTIGLIERE con una delle seguenti opzioni:\n  - Pistola requiem; lanciafiamme; pugni\n  - Pistola requiem; fucile termico; pugni\n  - Pistola requiem; fucile plasma; pugni\n• ARTIGLIERE PESANTE con una delle seguenti opzioni:\n  - Pistola requiem; requiem pesante; pugni\n  - Pistola requiem; lanciamissili; pugni\n  - Pistola requiem; cannone a catena Mietitore; pugni\n• PORTATORE DELL’ICONA con una delle seguenti opzioni:\n  - Fucile requiem; pugni\n  - Pistola requiem; spada a catena\n• ARTIGLIO CONFESSORE\n• GUERRIERO con una delle seguenti opzioni:\n  - Fucile requiem; pugni\n  - Pistola requiem; spada a catena\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente in alto solo una volta."
+  }
+}

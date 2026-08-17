@@ -21,6 +21,7 @@
   --text-secondary-dim: rgba(255, 255, 255, 0.2);
   --border-subtle: rgba(255, 255, 255, 0.12); /* Material Divider */
   --accent-important: rgb(177 244 134 / 0.85);
+  --accent-info: #80DEEA;     /* Material Dark Primary (Pastel Purple) */
 
   /* Colori Fazioni / Operazioni (Material-style pastels) */
   --op-recon: #03DAC6;        /* Material Secondary (Teal) */
@@ -71,6 +72,7 @@
   --ui-primary: var(--accent-main);
   --ui-secondary: var(--text-secondary);
   --ui-success: var(--accent-important);
+  --ui-info: var(--accent-info);
   --ui-error: var(--op-infil);
   /* secondary/info/warning non hanno ancora un equivalente nel design
      system: restano ai default di Nuxt UI finché non servirà introdurli. */
@@ -471,8 +473,8 @@ header h1 { color: var(--text-secondary) !important; margin: 0; font-size: 1rem;
 
 /* Bottone quadrato per counter (+ / -) */
 .btn-icon {
-  width: 1rem;
-  height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
   font-size: 1rem;
   padding: 0;
   border-radius: 50%; /* Tondi per i counter punti */

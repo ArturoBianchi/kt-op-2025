@@ -12,6 +12,12 @@ import { RouterLink } from 'vue-router'
                 </RouterLink>
             </li>
             <li class="nav-item">
+                <RouterLink to="/data" active-class="active">
+                    <span class="nav-icon material-symbols-outlined">data_table</span>
+                    <span class="nav-text">Dati</span>
+                </RouterLink>
+            </li>
+            <li class="nav-item">
                 <RouterLink to="/ops" active-class="active">
                     <span class="nav-icon material-symbols-outlined">target</span>
                     <span class="nav-text">Ops</span>

@@ -1,0 +1,729 @@
+{
+  "faction": "KILL TEAM RATLING",
+  "agents": [
+    {
+      "name": "RATLING RISOLUTORE",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "LEADER",
+        "RISOLUTORE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "5+",
+        "FER": 7
+      },
+      "weapons": [
+        {
+          "name": "Fucile da battaglia",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fucile di precisione (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fucile di precisione (stazionario)",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": [
+            "Devastante 3",
+            "Pesante"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "5+",
+          "DNN": "1/2",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Contatti del Munitorum",
+          "description": "puoi scegliere un’opzione di equipaggiamento addizionale."
+        },
+        {
+          "name": "Individuazione Bersaglio",
+          "description": "AZZARDO STRATEGICO. Scegli un agente nemico. Fino alla fine del punto di svolta, ogni volta che un agente RATLING amico spara a quell’agente nemico con un fucile, quell’arma ha la regola delle armi Letale 5+."
+        }
+      ]
+    },
+    {
+      "name": "RATLING CAGNACCIO DA GUERRA",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "CAGNACCIO DA GUERRA"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 4
+      },
+      "weapons": [
+        {
+          "name": "Morso",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Allarme Preventivo",
+          "description": "una volta per punto di svolta, dopo che un agente nemico svolge un’azione in cui si muove o viene schierato, puoi interrompere per usare questa regola. Se lo fai, ogni agente RATLING amico (esclusi OGRYN e BULLGRYN) entro 6\" da questo agente ed entro 2\" da quell’agente nemico può svolgere un’azione Scattare gratuita o un’azione Ripiegare gratuita, ma non può muoversi più di 3\". In ogni caso, ciascuno di essi può terminare quel movimento entro 2\" da un agente nemico solo se non è visibile a nessun agente nemico quando termina quel movimento (un agente non può muoversi se ciò non fosse possibile per esso)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Bestia",
+          "description": "questo agente non può svolgere nessuna azione che non sia Caricare, Scattare, Ripiegare, Combattere e Riposizionarsi. Non può usare nessuna arma oltre a quella sulla sua carta dati."
+        }
+      ]
+    },
+    {
+      "name": "BULLGRYN",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "BULLGRYN"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 16
+      },
+      "weapons": [
+        {
+          "name": "Guanto lanciagranate",
+          "ATT": 4,
+          "COLP": "4+",
+          "DNN": "3/5",
+          "RdA": "Area 2\""
+        },
+        {
+          "name": "Mazza potenziata",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": "Shock"
+        },
+        {
+          "name": "Scudo del bruto",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Scudo a piastre",
+          "ATT": 4,
+          "COLP": "4+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Scudo",
+          "description": "se questo agente ha uno scudo a piastre, ha una statistica Salvezza di 3+; se ha uno scudo del bruto, ogni volta che combatte o si rivale, ognuno dei tuoi blocchi può essere assegnato a bloccare due successi non risolti (anziché uno)."
+        },
+        {
+          "name": "Bruto",
+          "description": "ogni volta che l’avversario sceglie un bersaglio valido, se questo agente ha un ordine Nascondersi, non può usare terreni Leggeri come copertura. Nonostante ciò possa consentire all’agente di essere scelto come bersaglio (sempre che sia visibile), non rimuove il suo eventuale tiro copertura."
+        },
+        {
+          "name": "Lento di Comprendonio",
+          "description": "devi spendere 1 PA addizionale se vuoi che questo agente svolga azioni Raccogliere Segnalino e azioni della missione (escluso Azionare Portello)."
+        }
+      ]
+    },
+    {
+      "name": "OGRYN",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "OGRYN"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 16
+      },
+      "weapons": [
+        {
+          "name": "Fucile lacerante",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Gittata 8\"",
+            "Punitiva"
+          ]
+        },
+        {
+          "name": "Baionetta",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Carica con Baionetta",
+          "description": "ogni volta che questo agente termina di muoversi durante l’azione Caricare, puoi infliggere D3+1 danni a un agente nemico entro la sua distanza di controllo."
+        },
+        {
+          "name": "Bruto",
+          "description": "ogni volta che l’avversario sceglie un bersaglio valido, se questo agente ha un ordine Nascondersi, non può usare terreni Leggeri come copertura. Nonostante ciò possa consentire all’agente di essere scelto come bersaglio (sempre che sia visibile), non rimuove il suo eventuale tiro copertura."
+        },
+        {
+          "name": "Lento di Comprendonio",
+          "description": "devi spendere 1 PA addizionale se vuoi che questo agente svolga azioni Raccogliere Segnalino e azioni della missione (escluso Azionare Portello)."
+        }
+      ]
+    },
+    {
+      "name": "RATLING PEZZO GROSSO",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "PEZZO GROSSO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "5+",
+        "FER": 6
+      },
+      "weapons": [
+        {
+          "name": "Fucile arrestacorazzati (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/4",
+          "RdA": [
+            "Devastante 1",
+            "Pesante (solo Scattare)",
+            "Penetrante 1"
+          ]
+        },
+        {
+          "name": "Fucile arrestacorazzati (stazionario)",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "4/2",
+          "RdA": [
+            "Devastante 4",
+            "Pesante",
+            "Penetrante 1",
+            "Inclemente"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "5+",
+          "DNN": "1/2",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": []
+    },
+    {
+      "name": "RATLING BOMBAROLO",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "BOMBAROLO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "4+",
+        "FER": 6
+      },
+      "weapons": [
+        {
+          "name": "Arsenale esplosivo",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": [
+            "Gittata 3\"",
+            "Area 1\"",
+            "Pesante (solo Riposizionarsi)",
+            "Limitata 1",
+            "Penetrante 1",
+            "Saturazione"
+          ]
+        },
+        {
+          "name": "Fucile di precisione (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fucile di precisione (stazionario)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/3",
+          "RdA": [
+            "Devastante 3",
+            "Pesante"
+          ]
+        },
+        {
+          "name": "Braccio bionico",
+          "ATT": 3,
+          "COLP": "5+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Cavo a Inciampo",
+          "description": "quando schieri gli equipaggiamenti prima della battaglia puoi collocare fino a due dei tuoi segnalini Cavo a Inciampo interamente nel tuo territorio e a più di 2\" da altri segnalini, dai punti d’accesso e dai terreni Accessibili. La prima volta che quel segnalino si trova entro la distanza di controllo di un agente nemico, termina l’eventuale azione di quell’agente, rimuovi quel segnalino e sottrai 1 dalla statistica LPA di quell’agente fino alla fine della sua prossima attivazione."
+        },
+        {
+          "name": "Mina",
+          "description": "le mine che scegli dagli equipaggiamenti universali infliggono invece 2D3+3 danni, e gli agenti RATLING amici (esclusi gli OGRYN e i BULLGRYN) vengono ignorati ai fini dei loro effetti (quindi non possono attivarle o ricevere danni da esse). Ciò ha la precedenza sulle normali regole delle mine."
+        }
+      ]
+    },
+    {
+      "name": "RATLING OSSO DURO",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "OSSO DURO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "5+",
+        "FER": 6
+      },
+      "weapons": [
+        {
+          "name": "Fucile da battaglia",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Coltello da combattimento",
+          "ATT": 3,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": "Bilanciata"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Cacciatore",
+          "description": "questo agente può svolgere un’azione Caricare fintanto che ha un ordine Nascondersi. Se lo fa durante la sua attivazione, fino alla fine di quell’attivazione aggiungi 1 alla statistica Att del suo coltello da combattimento e quell’arma da mischia ha la regola delle armi Brutale."
+        },
+        {
+          "name": "Restare in Attesa",
+          "description": "ogni volta che questo agente si rivale mentre c’è un terreno Leggero o Pesante entro la sua distanza di controllo, risolvi tu il primo dado attacco (ovvero il difensore anziché l’attaccante)."
+        }
+      ]
+    },
+    {
+      "name": "RATLING PREDONE",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "PREDONE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "5+",
+        "FER": 6
+      },
+      "weapons": [
+        {
+          "name": "Fucile di precisione silenziato (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Silenziosa"
+        },
+        {
+          "name": "Fucile di precisione silenziato (stazionario)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/3",
+          "RdA": [
+            "Devastante 2",
+            "Pesante",
+            "Silenziosa"
+          ]
+        },
+        {
+          "name": "Pugnale",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "FIONDARSI 1PA",
+          "description": "Scegli un punto su un elemento di terreno visibile a questo agente ed entro 6\" da esso. Rimuovi questo agente dalla killzone e rischieralo in una posizione in cui può essere collocato, interamente entro 6\" in orizzontale da quel punto, non entro la distanza di controllo degli agenti nemici e in modo che quel punto sia visibile a esso. Questa azione viene considerata un’azione Riposizionarsi. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico o durante un’attivazione in cui ha svolto l’azione Caricare, Ripiegare o Sparare (o viceversa)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Rampino",
+          "description": "ogni volta che questo agente si arrampica su un terreno verso l’alto, puoi considerare la distanza verticale come se fosse 2\" (a prescindere da quanto lontano l’agente si muova effettivamente in verticale)."
+        }
+      ]
+    },
+    {
+      "name": "RATLING INFILTRATO",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "INFILTRATO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "5+",
+        "FER": 6
+      },
+      "weapons": [
+        {
+          "name": "Fucile di precisione silenziato (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Silenziosa"
+        },
+        {
+          "name": "Fucile di precisione silenziato (stazionario)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/3",
+          "RdA": [
+            "Devastante 2",
+            "Pesante",
+            "Silenziosa"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "5+",
+          "DNN": "1/2",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "MIRINO 1PA",
+          "description": "Fino all’inizio della prossima attivazione di questo agente, ogni volta che esso spara gli agenti nemici non possono essere oscurati e il profilo stazionario del fucile di precisione silenziato di questo agente ha la regola delle armi Letale 5+. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Eludere",
+          "description": "una volta per punto di svolta, dopo che un agente nemico svolge un’azione, puoi interrompere e svolgere un’azione Scattare gratuita con questo agente. Nota che questo agente non può usare la regola della Fazione Tagliare la Corda (ha invece questa regola)."
+        }
+      ]
+    },
+    {
+      "name": "RATLING CECCHINO",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "CECCHINO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "5+",
+        "FER": 6
+      },
+      "weapons": [
+        {
+          "name": "Fucile di precisione (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fucile di precisione (stazionario)",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": [
+            "Devastante 3",
+            "Pesante"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "5+",
+          "DNN": "1/2",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": []
+    },
+    {
+      "name": "RATLING AVVISTATORE",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "AVVISTATORE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "5+",
+        "FER": 6
+      },
+      "weapons": [
+        {
+          "name": "Fucile di precisione (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fucile di precisione (stazionario)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/3",
+          "RdA": [
+            "Devastante 3",
+            "Pesante"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "5+",
+          "DNN": "1/2",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "AVVISTARE 1PA",
+          "description": "SUPPORTO. Scegli un agente nemico visibile a questo agente. Fino alla fine del punto di svolta, ogni volta che un agente RATLING amico entro 3\" da questo agente spara a quell’agente nemico, puoi usare questo effetto. Se lo fai: • Le armi da tiro di quell’agente amico hanno la regola delle armi A Ricerca Leggera. • Quell’agente nemico non è oscurato. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "RATLING MAGAZZINIERE",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "MAGAZZINIERE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "5+",
+        "FER": 6
+      },
+      "weapons": [
+        {
+          "name": "Fucile di precisione (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fucile di precisione (stazionario)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/3",
+          "RdA": [
+            "Devastante 3",
+            "Pesante"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "5+",
+          "DNN": "1/2",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Manolesta",
+          "description": "una volta durante ciascuna attivazione di questo agente, esso può svolgere l’azione Collocare Segnalino, Raccogliere Segnalino o un’azione della missione per 1PA in meno."
+        },
+        {
+          "name": "Rifornito a Dovere",
+          "description": "se scegli una cassa di munizioni dagli equipaggiamenti universali puoi schierare un segnalino Cassa di Munizioni addizionale."
+        }
+      ]
+    },
+    {
+      "name": "RATLING RUBAVOX",
+      "keywords": [
+        "RATLING",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "RUBAVOX"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "5\"",
+        "SALV": "5+",
+        "FER": 6
+      },
+      "weapons": [
+        {
+          "name": "Fucile di precisione (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fucile di precisione (stazionario)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/3",
+          "RdA": [
+            "Devastante 3",
+            "Pesante"
+          ]
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "5+",
+          "DNN": "1/2",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "INTERCETTARE LE COMUNICAZIONI 1PA",
+          "description": "SUPPORTO. Scegli un altro agente RATLING amico visibile a questo agente ed entro 6\" da esso. Fino alla fine della sua prossima attivazione aggiungi 1 alla statistica LPA di quell’agente. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": []
+    }
+  ],
+  "faction_equiment": [
+    {
+      "name": "RAZIONI TRAFUGATE",
+      "description": "Una volta per punto di svolta, puoi usare questa regola ogni volta che un agente RATLING amico spara con un fucile e hai tirato i dadi attacco. Se lo fai, fino alla fine di quella sequenza migliora di 1 la statistica Colp del suo fucile. Ciò ti permette di applicare il cambiamento alla statistica Colp durante un’azione (ciò ha la precedenza sulle regole base)."
+    },
+    {
+      "name": "PROIETTILE FORTUNATO",
+      "description": "Una volta per punto di svolta, ogni volta che un agente RATLING amico spara con un fucile e hai tirato i tuoi dadi attacco, puoi usare questa regola. Se lo fai quell’arma ha la regola delle armi Inclemente per quella sequenza."
+    },
+    {
+      "name": "BENI RUBATI",
+      "description": "Alla fine del passo Scegliere gli agenti tira un D3. Se il risultato è:\n• 1, perdi 1CP.\n• 2, ottieni 1CP.\n• 3, l’avversario perde 1CP."
+    },
+    {
+      "name": "ARMATURA DI FORTUNA",
+      "description": "Ogni volta che un agente spara a un agente RATLING BULLGRYN amico o a un agente RATLING OGRYN amico, i risultati di 5+ dei dadi difesa sono successi critici."
+    }
+  ],
+  "faction_rules": [
+    {
+      "name": "TAGLIARE LA CORDA",
+      "description": "Dopo l’attivazione di ogni agente nemico, prima che l’agente successivo venga attivato, un agente RATLING amico (esclusi BULLGRYN, OGRYN e INFILTRATO) può svolgere un’azione Scattare gratuita, ma esso può terminare quel movimento entro 3\" da un agente nemico solo se non è visibile a nessun agente nemico quando termina quel movimento.\nOgni agente amico può fare ciò solo una volta per punto di svolta, e non può farlo dopo l’attivazione finale del punto di svolta."
+    }
+  ],
+  "strategy_ploy": [
+    {
+      "name": "SFUGGENTI",
+      "description": "Ogni volta che un agente RATLING amico (esclusi OGRYN e BULLGRYN) ha un ordine Nascondersi e si trova in copertura, non può essere scelto come bersaglio valido e ciò ha la precedenza su ogni altra regola (ad esempio terreni Sopraelevati)."
+    },
+    {
+      "name": "ASSALTO DALLA PRIMA LINEA",
+      "description": "Ogni volta che un agente RATLING BULLGRYN amico o un agente RATLING OGRYN amico spara, combatte o si rivale entro il territorio dell’avversario oppure entro 3\" da un segnalino obiettivo, le sue armi hanno la regola delle armi Bilanciata."
+    },
+    {
+      "name": "POSIZIONI DA CECCHINO",
+      "description": "Ogni volta che un agente RATLING amico si trova a più di 6\" dagli agenti nemici ed entro 1\" da un terreno Pesante, il profilo stazionario del suo fucile (se ha un fucile) ha la regola delle armi Silenziosa."
+    },
+    {
+      "name": "TIRATORI PRECISI",
+      "description": "Ogni volta che un agente RATLING amico spara a un agente nemico che si trova a più di 6\" da esso, se quell’agente amico non ha svolto l’azione Caricare, Ripiegare o Riposizionarsi durante l’attivazione, oppure se sta agendo in risposta, il suo fucile (se ha un fucile) ha la regola delle armi Bilanciata."
+    }
+  ],
+  "fire_ploy": [
+    {
+      "name": "CRIMINALI",
+      "description": "Usa questo Espediente Scontro a Fuoco durante l’attivazione di un agente RATLING amico (esclusi OGRYN e BULLGRYN). Fino alla fine di quell’attivazione, quell’agente non deve necessariamente controllare un segnalino per svolgere l’azione Raccogliere Segnalino o azioni della missione che solitamente lo richiedono (ha la precedenza sulle condizioni di quell’azione: deve soltanto contendere il segnalino), e può farlo anche se si trova entro la distanza di controllo di un agente nemico."
+    },
+    {
+      "name": "SPARA E NASCONDITI",
+      "description": "Usa questo Espediente Scontro a Fuoco dopo che un agente RATLING amico con un ordine Ingaggiare svolge un’azione Sparare con un fucile. Se si trova a più di 3\" dagli agenti nemici o non è visibile a ogni agente nemico, puoi cambiare il suo ordine in Nascondersi."
+    },
+    {
+      "name": "ISTINTI DI SOPRAVVIVENZA",
+      "description": "Usa questo Espediente Scontro a Fuoco quando un agente nemico spara o combatte con un agente RATLING amico (esclusi OGRYN o BULLGRYN) e tu assegni un dado per bloccare. Se è un successo normale puoi bloccare un successo critico non risolto; se è un successo critico puoi bloccare due successi non risolti (normali o critici)."
+    },
+    {
+      "name": "COLPO BEN MIRATO",
+      "description": "Usa questo Espediente Scontro a Fuoco quando un agente RATLING amico svolge l’azione Sparare con un fucile e tu scegli un bersaglio valido. Avere almeno un altro agente RATLING amico che si trova entro la distanza di controllo di un agente nemico non impedisce a quest’ultimo di essere scelto."
+    }
+  ],
+  "agents_deploy_rules": {
+    "description": "KILL TEAM RATLING\nARCHETIPI: SICUREZZA, INFILTRAZIONE\n\nAGENTI\n↘ 1 agente RATLING RISOLUTORE con una delle seguenti opzioni:\n• Fucile da battaglia; pugni\n• Fucile di precisione; pugni\n\n↘ 10 agenti RATLING selezionati dalla seguente lista:\n• CAGNACCIO DA GUERRA\n• BULLGRYN con una opzione da ciascuna delle seguenti: Guanto lanciagranate o mazza potenziata; Scudo del bruto o scudo a piastre\n• OGRYN\n• PEZZO GROSSO\n• BOMBAROLO\n• OSSO DURO\n• PREDONE\n• INFILTRATO\n• CECCHINO\n• AVVISTATORE\n• MAGAZZINIERE\n• RUBAVOX\n\nA parte gli agenti BULLGRYN, OGRYN e CECCHINO, il tuo kill team può includere ognuno degli agenti di questa lista solo una volta.\nNon puoi scegliere più di tre di questi agenti combinati. Per un massimo di tre volte, se non selezioni uno di questi agenti puoi scegliere per la battaglia un espediente dei RATLING ad un costo di 0PC.\n\nAlcune regole dei RATLING fanno riferimento a un ‘fucile’. Si tratta di un’arma da tiro che include ‘fucile’ nel proprio nome, ad esempio tutti i profili di un fucile di precisione, fucile arrestacorazzati ecc."
+  }
+}

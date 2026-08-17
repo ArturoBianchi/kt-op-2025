@@ -8,6 +8,7 @@
                     <button class="btn btn-icon" type="button" @click="battleSessionStore.decreaseCommandPoints()">-</button>
                     <button class="btn btn-icon" type="button" @click="battleSessionStore.increaseCommandPoints()">+</button>
                 </div>
+                <UButton size="sm" style="margin-top: 1rem" icon="i-mdi-delete-outline" class="btn-dark font-bold rounded-full " @click="commandPoints = 0"></UButton>
             </div>
             <div class="col-span-1 score-player">
                 <div class="score-name">PF</div>
@@ -16,6 +17,7 @@
                     <button class="btn btn-icon" type="button" @click="battleSessionStore.decreaseFactionPoints()">-</button>
                     <button class="btn btn-icon" type="button" @click="battleSessionStore.increaseFactionPoints()">+</button>
                 </div>
+                <UButton size="sm" style="margin-top: 1rem" icon="i-mdi-delete-outline" class="btn-dark font-bold rounded-full " @click="factionPoints = 0"></UButton>
             </div>
             <div class="col-span-2">
                 <div class="ops-scoreboard">
@@ -26,10 +28,13 @@
                     <div class="ops-row">
                         <span class="ops-label">Tac:</span>
                         <span class="ops-value">{{ opsSummary.tacOp.desc }}</span>
+                        <UButton size="xs" style="" icon="i-mdi-eye-outline" class="btn-dark font-bold rounded-full " @click="factionPoints = 0"></UButton>
                     </div>
                     <div class="ops-row">
                         <span class="ops-label">P.Op:</span>
                         <span class="ops-value ops-dots">{{ opsSummary.primaryOp.desc }}</span>
+                        <UButton size="xs"  icon="i-mdi-eye-outline" class="btn-dark font-bold rounded-full " @click="factionPoints = 0"></UButton>
+                    
                     </div>
                 </div>
             </div>
@@ -37,14 +42,9 @@
 
         <div class="board-tabs">
             <div class="score-name">PUNTI DI SVOLTA</div>
-            <UTabs :items="operativeTabs" color="primary" variant="pill" size="sm" :ui="tabsUi" class="w-full">
+            <UTabs :items="tabs" color="primary" variant="pill" size="sm" :ui="tabsUi" class="w-full">
                 <template #content="{ item }">
                     <div class="points-card">
-<!--                        <div class="operative-header">-->
-<!--                            <span class="operative-name">{{ item.name }}</span>-->
-<!--                            <span class="order-badge" :class="`order-${item.order.toLowerCase()}`">{{ item.order }}</span>-->
-<!--                        </div>-->
-
                         <div class="wounds-section">
                             <div class="wounds-label-row">
                                 <span class="wounds-label" >PUNTI CRIT OP</span>
@@ -126,7 +126,7 @@ const {
 
 const maxScorePerMission = battleSessionStore.getMaxScorePerMission;
 
-const operativeTabs = computed(() =>
+const tabs = computed(() =>
     turningPointsScores.value.map((op, index) => ({
         label: String(index + 1),
         ...op,
@@ -170,7 +170,7 @@ function removePoint(turnNumber, opType) {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius);
-    padding: 0.6rem 0.8rem;
+    padding: 0 0.6rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -180,7 +180,7 @@ function removePoint(turnNumber, opType) {
 
 .ops-row {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 0.4rem;
     font-size: 0.75rem;
 }
@@ -199,6 +199,7 @@ function removePoint(turnNumber, opType) {
     font-family: var(--font-mono), serif;
     text-align: left;
     flex: 1;
+    font-size: 0.5rem;
 }
 
 .ops-dots {

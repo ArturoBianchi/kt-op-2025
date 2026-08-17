@@ -1,0 +1,631 @@
+{
+  "faction": "SQUADRA SPETTRO",
+  "agents": [
+    {
+      "name": "SPETTRO SERGENTE VETERANO",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "LEADER",
+        "SERGENTE VETERANO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 9
+      },
+      "weapons": [
+        {
+          "name": "Carabina laser con mirino",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Letale 5+, Dilaniante"
+        },
+        {
+          "name": "Braccio bionico",
+          "ATT": 3,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "IMPARTIRE MISSIONE (0PA)",
+          "description": "Scegli un agente SQUADRA SPETTRO amico usato (escluso il FARO VOX-RIPETITORE) visibile a questo agente e che in questo punto di svolta non ha interrotto l’attivazione di un agente nemico con la regola della Fazione Sofisticate Tecniche di Sopravvivenza. Fino alla fine del punto di svolta quell’agente amico può usare la regola della Fazione anche se è usato (ciò ha la precedenza sulle regole consuete). Tuttavia, se lo fa non può agire in risposta durante il punto di svolta, né svolgere l’azione Riposizionarsi se l’ha già fatto in questo punto di svolta. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "SPETTRO MEDICAE DA CAMPO",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "MEDICAE DA CAMPO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Carabina laser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Dilaniante"
+        },
+        {
+          "name": "Fucile laser a lunga gittata",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Pesante (solo Riposizionarsi), Letale 5+"
+        },
+        {
+          "name": "Calcio dell’arma",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "MEDIKIT (0PA)",
+          "description": "Scegli un agente SQUADRA SPETTRO amico (escluso il FARO VOX-RIPETITORE) entro la distanza di controllo di questo agente affinché recuperi fino a 2D3 ferite perse. Non può essere un agente su cui è stata usata la regola Medico! in questo punto di svolta. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Medico!",
+          "description": "la prima volta in ogni punto di svolta che un altro agente SQUADRA SPETTRO amico (escluso il FARO VOX-RIPETITORE) verrebbe neutralizzato mentre si trova entro 3\" da questo agente ed è visibile a esso, puoi usare questa regola se né questo né quell’agente si trovano entro la distanza di controllo di un agente nemico. Se lo fai, quell’agente amico non è neutralizzato, rimane con 1 ferita e non può essere neutralizzato per il resto dell’azione. Dopo quell’azione, quell’agente amico può svolgere subito un’azione Scattare gratuita, ma deve terminare quel movimento entro la distanza di controllo di questo agente. Sottrai 1 dalle statistiche LPA di questo e di quell’agente fino alla fine delle loro rispettive prossime attivazioni. Se hai usato questa regola nell’attivazione di quell’agente amico, quell’attivazione termina. Non puoi usare questa regola se questo agente è neutralizzato, o se si tratta di un’azione Sparare e questo agente è un bersaglio primario o secondario."
+        }
+      ]
+    },
+    {
+      "name": "SPETTRO GRANATIERE",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "GRANATIERE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Carabina laser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Dilaniante"
+        },
+        {
+          "name": "Fucile laser a lunga gittata",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Pesante (solo Riposizionarsi), Letale 5+"
+        },
+        {
+          "name": "Calcio dell’arma",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Granatiere",
+          "description": "questo agente può usare granate a frammentazione, perforanti e fumogene (vedi equipaggiamento universale). Farlo non conta ai fini di eventuali utilizzi limitati a tua disposizione (ovvero se scegli tali granate dall’equipaggiamento anche per altri agenti). Ogni volta che questo agente usa una granata a frammentazione o perforante, migliora di 1 la statistica Colp di quell’arma."
+        },
+        {
+          "name": "Mina Termica",
+          "description": "questo agente trasporta il tuo segnalino Mina Termica. Può svolgere su di esso l’azione Raccogliere Segnalino, e ogni volta che svolge su di esso l’azione Collocare Segnalino può subito svolgere un’azione Scattare gratuita. Il segnalino non può essere collocato nella distanza di controllo di un agente nemico (se questo agente viene neutralizzato mentre trasporta il segnalino e quest’ultimo non può essere collocato, viene rimosso con questo agente)."
+        },
+        {
+          "name": "Mina di Prossimità",
+          "description": "la prima volta che il tuo segnalino Mina Termica si trova nella distanza di controllo di un altro agente, rimuovi il segnalino e infliggi a quell’agente 2D6+3 danni; se l’agente non è neutralizzato, termina la sua eventuale azione, anche se gli effetti di quell’azione non sono completi. Se l’agente non può essere collocato, spostalo del minimo necessario per farlo. Nota che questo agente viene ignorato per questi effetti (non può dunque innescare quel segnalino o subire danni da esso)."
+        }
+      ]
+    },
+    {
+      "name": "SPETTRO GUIDA",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "GUIDA"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Carabina laser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Dilaniante"
+        },
+        {
+          "name": "Fucile laser a lunga gittata",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Pesante (solo Riposizionarsi), Letale 5+"
+        },
+        {
+          "name": "Calcio dell’arma",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Killzone Preparata",
+          "description": "puoi scegliere un’opzione di equipaggiamento addizionale, ma deve essere una Cassa di Munizioni o un equipaggiamento che è un elemento di terreno (vedi gli equipaggiamenti universali)."
+        },
+        {
+          "name": "Perlustrare Terreno",
+          "description": "gli elementi di terreno entro il tuo territorio o entro 3\" da questo agente sono perlustrati per gli agenti SQUADRA SPETTRO amici. Una volta in ciascuna delle proprie attivazioni, gli agenti SQUADRA SPETTRO amici possono svolgere una delle seguenti:\n• Ignorare i primi 2\" in verticale di cui si muovono durante un’arrampicata se l’elemento di terreno è perlustrato per gli agenti SQUADRA SPETTRO amici.\n• Svolgere l’azione Azionare Portello per 1PA in meno se il punto d’accesso è perlustrato per gli agenti SQUADRA SPETTRO amici."
+        }
+      ]
+    },
+    {
+      "name": "SPETTRO ARTIGLIERE",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "ARTIGLIERE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Fucile termico",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "6/3",
+          "RdA": "Gittata 6\", Devastante 4, Penetrante 2"
+        },
+        {
+          "name": "Fucile plasma (standard)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": "Penetrante 1"
+        },
+        {
+          "name": "Fucile plasma (sovraccarica)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/6",
+          "RdA": "Ustionante, Letale 5+, Penetrante 1"
+        },
+        {
+          "name": "Calcio dell’arma",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": []
+    },
+    {
+      "name": "SPETTRO ARTIGLIERE PESANTE",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "ARTIGLIERE PESANTE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Pistola laser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Lanciamissili (a frammentazione)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": "Area 2\", Pesante"
+        },
+        {
+          "name": "Lanciamissili (perforante)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/7",
+          "RdA": "Pesante, Penetrante 1"
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Squadra Arma",
+          "description": "ogni volta che questo agente viene attivato, se un agente SERVENTE amico si trova entro la sua distanza di controllo, fino alla fine di quell’attivazione tutti i profili del suo lanciamissili hanno la regola delle armi Pesante (solo Scattare) invece della regola delle armi Pesante."
+        }
+      ]
+    },
+    {
+      "name": "SPETTRO SERVENTE",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "SERVENTE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Pistola laser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "CARICARE L’ARMA (1PA)",
+          "description": "Scegli un agente SQUADRA SPETTRO amico entro la distanza di controllo di questo agente e non entro 3\" dagli agenti nemici. Quell’agente amico può svolgere subito un’azione Sparare gratuita (esclusa Guardia), e puoi cambiare il suo ordine per farlo. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico, mentre agisce in risposta o durante un’attivazione in cui ha svolto l’azione Caricare, Scattare o Sparare (o viceversa)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Aiutare con l’Arma",
+          "description": "ogni volta che un altro agente SQUADRA SPETTRO amico entro la distanza di controllo di questo agente spara, puoi ripetere il tiro di uno dei tuoi dadi attacco."
+        }
+      ]
+    },
+    {
+      "name": "SPETTRO TIRATORE ESPERTO",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "TIRATORE ESPERTO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Fucile laser lungo (nascosto)",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": "Devastante 3, Pesante, Silenziosa, Posizione Nascosta*"
+        },
+        {
+          "name": "Fucile laser lungo (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fucile laser lungo (stazionario)",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": "Devastante 3, Pesante"
+        },
+        {
+          "name": "Calcio dell’arma",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "*Posizione Nascosta",
+          "description": "questo agente può usare quest’arma solo la prima volta che svolge l’azione Sparare durante la battaglia."
+        }
+      ]
+    },
+    {
+      "name": "SPETTRO MITRAGLIERE",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "MITRAGLIERE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Mitragliatore automatico (concentrato)",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Pesante (solo Scattare)"
+        },
+        {
+          "name": "Mitragliatore automatico (soppressore)",
+          "ATT": 5,
+          "COLP": "5+",
+          "DNN": "0/0",
+          "RdA": "Pesante, Letale 5+, A Ricerca Leggera, Stordente, Torrenziale 1\""
+        },
+        {
+          "name": "Mitragliatore automatico (sventagliata)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Pesante (solo Scattare), Torrenziale 1\""
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Fuoco di Soppressione",
+          "description": "ogni volta che un agente nemico si trova entro 3\" da questo agente ed è visibile a esso, se questo agente ha un ordine Ingaggiare e non si trova entro la distanza di controllo di nessun altro agente nemico, sottrai 1 (fino a un minimo di 1) dalla statistica Att delle armi di quell’agente nemico. Questa regola non ha effetto se questo agente ha svolto l’azione Caricare durante questo punto di svolta."
+        }
+      ]
+    },
+    {
+      "name": "SPETTRO SOLDATO",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "SOLDATO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Carabina laser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Dilaniante"
+        },
+        {
+          "name": "Fucile laser a lunga gittata",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Pesante (solo Riposizionarsi), Letale 5+"
+        },
+        {
+          "name": "Calcio dell’arma",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Sangue Freddo",
+          "description": "una volta per punto di svolta, un agente SQUADRA SPETTRO amico con questa regola può interrompere l’attivazione di un agente nemico con la regola della Fazione Sofisticate Tecniche di Sopravvivenza per 0 punti Sopravvivenza (ciò ha la precedenza sulle regole consuete)."
+        }
+      ]
+    },
+    {
+      "name": "SPETTRO OPERATORE VOX",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "OPERATORE VOX"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Carabina laser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Dilaniante"
+        },
+        {
+          "name": "Fucile laser a lunga gittata",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "Pesante (solo Riposizionarsi), Letale 5+"
+        },
+        {
+          "name": "Calcio dell’arma",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "SEGNALE (1PA)",
+          "description": "SUPPORTO. Scegli un altro agente SQUADRA SPETTRO amico (escluso il FARO VOX-RIPETITORE) visibile a questo agente. Fino alla fine della prossima attivazione di quell’agente aggiungi 1 alla sua statistica LPA. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "FARO VOX-RIPETITORE DEGLI SPETTRI",
+      "keywords": [
+        "SQUADRA SPETTRO",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "FARO VOX-RIPETITORE"
+      ],
+      "stats": {
+        "LPA": 1,
+        "MOV": "0\"",
+        "SALV": "5+",
+        "FER": 3
+      },
+      "weapons": [],
+      "abilities": [
+        {
+          "name": "SEGNALE (1PA)",
+          "description": "Scegli un altro agente SQUADRA SPETTRO amico entro 6\" da questo agente. Fino alla fine della prossima attivazione di quell’agente aggiungi 1 alla sua statistica LPA. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Preschieramento",
+          "description": "nel passo Schierare gli agenti, questo agente può essere schierato fuori dalla tua zona di atterraggio. Deve essere schierato in una posizione in cui può essere collocato, interamente entro il tuo territorio e a più di 2\" da segnalini ed equipaggiamenti che sono elementi di terreno."
+        },
+        {
+          "name": "Sacrificabile",
+          "description": "questo agente non può svolgere azioni diverse da Segnale. Non può agire in risposta, rivalersi o assistere in combattimento. Questo agente non può contendere segnalini né aree della killzone, e viene ignorato ai fini dell’op omicida/eliminazione dell’avversario (quando viene neutralizzato e quando determini il tuo numero iniziale di agenti). Viene ignorato anche ai fini delle condizioni di vittoria e all’ottenimento di PV se ciò richiede agli agenti di ‘fuggire’, ‘sopravvivere’ o essere neutralizzati dagli agenti nemici (se fugge/sopravvive/viene neutralizzato, quando determini quanti agenti devono fuggire/sopravvivere/essere neutralizzati ecc.). Gli agenti possono muoversi attraverso questo agente. L’avversario può sempre ignorare la distanza di controllo di questo agente. Ogni volta che un agente SQUADRA SPETTRO amico svolge l’azione Sparare e tu scegli un bersaglio valido, puoi ignorare la distanza di controllo di questo agente. Nota che la distanza di controllo non è reciproca quando viene ignorata."
+        }
+      ]
+    }
+  ],
+  "faction_equiment": [
+    {
+      "name": "CECCHINO APPOSTATO",
+      "description": "Una volta per punto di svolta un agente SQUADRA SPETTRO amico può usare la seguente arma da tiro: Cecchino Appostato (ATT: 4, COLP: 3+, DNN: 3/3, RdA: Devastante 2, Pesante (solo Scattare), Saturazione, Silenziosa)."
+    },
+    {
+      "name": "TRIANGOLAZIONE IMMAGINI TVCC",
+      "description": "Puoi usare questa regola una volta per punto di svolta, quando un agente SQUADRA SPETTRO amico svolge l’azione Sparare e dovresti scegliere un bersaglio valido. Se lo fai, quel bersaglio non può essere oscurato se è vera almeno una delle seguenti condizioni:\n• È un bersaglio valido anche per un altro agente SQUADRA SPETTRO amico.\n• Si trova entro 6\" da un agente FARO VOX-RIPETITORE amico."
+    },
+    {
+      "name": "BENGALA ILLUMINANTE",
+      "description": "AZZARDO STRATEGICO. Un agente SQUADRA SPETTRO amico può svolgere subito un’azione Granata Ottundente gratuita (vedi gli equipaggiamenti universali). Svolgere questa azione usando questa regola non conta ai fini del numero di volte che puoi svolgerla (cioè se hai anche scelto quella granata dagli equipaggiamenti). Quando la statistica LPA di un agente nemico cambia come conseguenza di questo AZZARDO STRATEGICO, non puoi usare questo equipaggiamento per il resto della battaglia."
+    },
+    {
+      "name": "MIMETISMO SOPRAFFINO",
+      "description": "Gli agenti SQUADRA SPETTRO amici (escluso il FARO VOX-RIPETITORE) possono svolgere la seguente azione unica:\nMIMETISMO SOPRAFFINO 1PA: Fino all’inizio della sua prossima attivazione, fintanto che questo agente ha un ordine Nascondersi e si trova in copertura, non può essere selezionato come bersaglio valido (a meno che l’attaccante non si trovi entro 2\") e ciò ha la precedenza su tutte le altre regole (ad es. A Ricerca e i terreni Sopraelevati). Questo agente non può svolgere questa azione fintanto che è visibile a un agente nemico e si trova entro 3\" da esso."
+    }
+  ],
+  "faction_rules": [
+    {
+      "name": "SOFISTICATE TECNICHE DI SOPRAVVIVENZA",
+      "description": "Nel passo Preparare di ogni fase di Strategia ottieni 1 punto Sopravvivenza, o 2 se un agente SQUADRA SPETTRO OPERATORE VOX amico si trova nella killzone e non entro la distanza di controllo degli agenti nemici. Alla fine di ogni punto di svolta, perdi i punti Sopravvivenza. Dopo che un agente nemico con un ordine Ingaggiare svolge un’azione durante la propria attivazione, puoi spendere 1 punto Sopravvivenza per interrompere quell’attivazione. Se lo fai, un agente SQUADRA SPETTRO amico preparato e non entro la distanza di controllo di nessun altro agente nemico può svolgere un’azione Sparare gratuita (esclusa Guardia), Scattare gratuita o Riposizionarsi gratuita. Non puoi interrompere ciascuna attivazione di un agente nemico più di una volta per attivazione (anche per Guardia), e grazie a questa regola un agente amico non può svolgere più di un’azione gratuita per punto di svolta. Se è l’azione Sparare, puoi cambiare l’ordine di quell’agente amico per svolgere questa azione. Non puoi scegliere nessun altro agente nemico come bersaglio valido durante quell’azione. Trovarsi entro la distanza di controllo di quell’agente nemico (ma non di altri) non impedisce a quell’agente amico di svolgere quell’azione: in quel caso segui le regole per sparare a bruciapelo dell’azione Guardia (vedi Kill Team Libro Base). Se è l’azione Riposizionarsi, quell’agente amico non può svolgere quell’azione di nuovo nel punto di svolta. Se è l’azione Scattare o Riposizionarsi, quell’agente amico non può terminare questo movimento più vicino a quell’agente nemico o alla zona di atterraggio dell’avversario (però può farlo se termina quel movimento interamente entro la tua zona di atterraggio). In una killzone che usa le regole Spazi Angusti (ad es. Killzone: Mondo Tomba), ignora i terreni Muro quando determini la distanza e non puoi teletrasportarti."
+    },
+    {
+      "name": "MANTELLI MIMETICI",
+      "description": "Ogni volta che un agente spara a un agente SQUADRA SPETTRO amico (escluso il FARO VOX-RIPETITORE), se puoi mantenere tiri copertura, puoi mantenere un tiro copertura addizionale, oppure puoi mantenere un tiro copertura come successo critico. Ciò non è cumulativo con i tiri copertura migliorati per i terreni Sopraelevati."
+    }
+  ],
+  "strategy_ploy": [
+    {
+      "name": "SCOMPARIRE",
+      "description": "Un agente SQUADRA SPETTRO amico può effettuare subito un’azione Riposizionarsi gratuita. Non può terminare quel movimento più vicino agli agenti nemici o alla zona di atterraggio dell’avversario (però può farlo se termina quel movimento interamente entro la tua zona di atterraggio) e non può svolgere quell’azione di nuovo nel punto di svolta. In una killzone che usa le regole Spazi Angusti (ad es. Killzone: Mondo Tomba), ignora i terreni Muro quando determini la distanza."
+    },
+    {
+      "name": "COMBATTIMENTO NASCOSTO",
+      "description": "Ogni volta che un agente SQUADRA SPETTRO amico spara, se è in copertura dal punto di vista del bersaglio le armi dell’agente amico hanno la regola delle armi Bilanciata. Nota che, a tal fine, è comunque l’avversario a determinare le linee di puntamento (ovvero decide da quale punto della basetta del proprio agente vengono tracciate le linee di puntamento)."
+    },
+    {
+      "name": "RAFFICA DALL’IMBOSCATA",
+      "description": "Ogni volta che un agente SQUADRA SPETTRO amico viene attivato, se si trova a più di 3\" dagli agenti nemici e non è un bersaglio valido per gli agenti nemici prima di determinare il suo ordine, le sue armi da tiro (tranne il profilo soppressore del mitragliatore automatico) hanno la regola delle armi Devastante 1 fino alla fine di quell’attivazione. Se quell’arma ha già la regola delle armi Devastante x, aggiungi invece 1 alla x della sua regola delle armi Devastante x."
+    },
+    {
+      "name": "PAZIENZA",
+      "description": "Nella fase di Scontro a Fuoco di questo punto di svolta puoi svolgere una delle seguenti:\n• Quando è il tuo turno di attivare un agente amico, puoi saltare quell’attivazione. Puoi farlo solo dopo la prima attivazione dell’avversario.\n• Quando un agente SQUADRA SPETTRO amico svolge l’azione Sparare o Combattere durante la sua attivazione, se è l’ultimo agente amico a essere attivato in questo punto di svolta, le sue armi hanno la regola delle armi Ineluttabile per quell’azione."
+    }
+  ],
+  "fire_ploy": [
+    {
+      "name": "SCHIVATA",
+      "description": "Usa questo espediente Scontro a Fuoco durante l’attivazione di un agente SQUADRA SPETTRO amico. Nel corso di quell’attivazione quell’agente può svolgere l’azione Ripiegare per 1PA in meno."
+    },
+    {
+      "name": "ASSASSINI SILENZIOSI",
+      "description": "Usa questo espediente Scontro a Fuoco durante l’attivazione di un agente SQUADRA SPETTRO amico prima o dopo che svolga un’azione, se ha un ordine Nascondersi e non è un bersaglio valido per gli agenti nemici. Fino alla fine di quell’attivazione può svolgere l’azione Caricare fintanto che ha un ordine Nascondersi, e la prima volta che affonda puoi infliggere 3 danni addizionali, ma in quella sequenza non puoi risolvere altri successi."
+    },
+    {
+      "name": "REAZIONI TEMPESTIVE",
+      "description": "Usa questo espediente Scontro a Fuoco dopo che un agente nemico che ha un ordine Nascondersi ha svolto un’azione durante la sua attivazione, se si trova entro 8\" da un agente SQUADRA SPETTRO amico. Puoi usare la regola della Fazione Sofisticate Tecniche di Sopravvivenza per interrompere quell’attivazione con quell’agente SQUADRA SPETTRO amico indipendentemente dall’ordine di quell’agente nemico (ciò ha la precedenza sulle regole consuete)."
+    },
+    {
+      "name": "DIFESA APPRONTATA",
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente SQUADRA SPETTRO amico preparato o che ha un ordine Nascondersi si rivale. Puoi svolgere una delle seguenti:\n• All’inizio del passo Risolvere i dadi attacco puoi risolvere uno dei tuoi successi prima dell’ordine normale. Se lo fai, quel successo deve essere usato per bloccare.\n• Quando blocchi, quel blocco può essere assegnato a bloccare due successi non risolti (invece di uno).\nNon puoi usare questo espediente durante un’attivazione che hai interrotto con la regola della Fazione Sofisticate Tecniche di Sopravvivenza."
+    }
+  ],
+  "agents_deploy_rules": {
+    "description": "KILL TEAM SQUADRA SPETTRO\nARCHETIPI: INFILTRAZIONE, RICOGNIZIONE\nAGENTI:\n- 1 SQUADRA SPETTRO SERGENTE VETERANO\n- 1 SQUADRA SPETTRO FARO VOX-RIPETITORE\n- 9 agenti SQUADRA SPETTRO scelti dalla seguente lista:\n  • MEDICAE DA CAMPO\n  • GRANATIERE\n  • GUIDA\n  • ARTIGLIERE con una delle seguenti opzioni: Fucile termico; pugni / Fucile plasma; pugni\n  • ARTIGLIERE PESANTE\n  • SERVENTE\n  • TIRATORE ESPERTO\n  • MITRAGLIERE\n  • SOLDATO\n  • OPERATORE VOX\n\nA eccezione degli agenti SOLDATO, il tuo kill team può includere ciascun agente di questa lista solo una volta.\nCon una delle seguenti opzioni:\n• Fucile laser a lunga gittata; calcio dell’arma\n• Carabina laser; calcio dell’arma"
+  }
+}

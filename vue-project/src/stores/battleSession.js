@@ -2,7 +2,7 @@ import {defineStore} from 'pinia'
 import {computed, ref} from "vue";
 import {createExpiringSerializer, NINE_HOURS_MS} from "@/stores/plugins/persistExpiry.js";
 import {TurningPointsModel} from "@/models/TurningPointsModel.js";
-import critTacOpsData from "@/properties/crit-tac-kill-op.json";
+import critTacOpsData from "@/properties/op/crit-tac-kill-op.json";
 
 // TODO: the start/end-battle wizard will let the players pick their own
 // Crit Op, Tac Op and Primary Op for the session. Until it exists, default
@@ -13,7 +13,7 @@ function getMockedOpsSummary() {
     return {
         critOp: {id: mockCritOp.id, desc: mockCritOp.title},
         tacOp: {id: mockTacOp.id, desc: mockTacOp.title},
-        primaryOp: {id: 'crit', desc: mockCritOp.title},
+        primaryOp: {id: 'crit', desc: "CRIT"},
     };
 }
 

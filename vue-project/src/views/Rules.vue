@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import rulesData from '@/properties/rules.json'
+import rulesData from '@/properties/rules/game.json'
 import RuleCard from '@/components/cards/RuleCard.vue'
 
 const carouselItems = rulesData.sections.map(section => ({

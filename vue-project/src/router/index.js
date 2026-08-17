@@ -12,11 +12,19 @@ const router = createRouter({
             },
         },
         {
+            path: '/data',
+            name: 'data',
+            component: () => import('../views/Data.vue'),
+            meta: {
+                title: 'DATI',
+            },
+        },
+        {
             path: '/battle',
             name: 'battle',
             component: () => import('../views/BattleBoard.vue'),
             meta: {
-                title: '',
+                title: 'SESSIONE DI GIOCO',
             },
         },
         {

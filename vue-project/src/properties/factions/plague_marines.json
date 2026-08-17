@@ -1,0 +1,380 @@
+{
+  "faction": "MARINES DELLA PESTE",
+  "agents": [
+    {
+      "name": "MARINE DELLA PESTE CAMPIONE",
+      "keywords": [
+        "MARINES DELLA PESTE",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "LEADER",
+        "CAMPIONE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "5\"",
+        "SALV": "3+",
+        "FER": 15
+      },
+      "weapons": [
+        {
+          "name": "Pistola plasma (standard)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": "Gittata 8\", Penetrante 1"
+        },
+        {
+          "name": "Pistola plasma (sovraccarica)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": "Gittata 8\", Ustionante, Letale 5+, Penetrante 1"
+        },
+        {
+          "name": "Spada della peste",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": "Inclemente, Veleno*, Tossica*"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Benedizione del Nonno",
+          "description": "ogni volta che un agente nemico entro 7\" da questo agente e che ha un tuo indicatore Veleno perde una o più ferite, questo agente recupera fino ad altrettante ferite perse (fino a un massimo di 3 ferite perse per punto di svolta, e solo se questo agente non è neutralizzato)."
+        },
+        {
+          "name": "Tossica",
+          "description": "ogni volta che questo agente usa quest’arma contro un agente nemico che ha un tuo indicatore Veleno, aggiungi 1 a entrambe le statistiche Dnn di quest’arma."
+        }
+      ]
+    },
+    {
+      "name": "MARINE DELLA PESTE BOMBARDIERE",
+      "keywords": [
+        "MARINES DELLA PESTE",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "BOMBARDIERE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "5\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Fucile requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Pugni",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Granatiere",
+          "description": "questo agente può usare granate del contagio e perforanti (vedi equipaggiamento universale e della Fazione) senza che ciò conti ai fini di eventuali utilizzi limitati (ad es. se hai scelto tali granate dall’equipaggiamento anche per altri agenti). Ogni volta che lo fa, migliora di 1 la statistica Colp di quell’arma e le granate del contagio hanno la regola delle armi Tossica (vedi accanto)."
+        },
+        {
+          "name": "Tossica",
+          "description": "ogni volta che questo agente usa quest’arma contro un agente nemico che ha un tuo indicatore Veleno, aggiungi 1 a entrambe le statistiche Dnn di quest’arma."
+        }
+      ]
+    },
+    {
+      "name": "MARINE DELLA PESTE COMBATTENTE",
+      "keywords": [
+        "MARINES DELLA PESTE",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "COMBATTENTE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "5\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Flagello della corruzione",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": "Brutale, Inclemente, Shock, Veleno*"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "FLAGELLARE 1PA",
+          "description": "Infliggi D3+2 danni a ogni altro agente entro 2\" da questo agente e visibile a esso. Tira separatamente per ciascuno: se si tratta di un agente nemico e il risultato del D3 è 3, quell’agente nemico ottiene anche un tuo indicatore Veleno (se non ce l’ha già). Ai fini delle limitazioni alle azioni e della regola della Fazione Astartes, questa regola viene considerata un’azione Combattere. Questo agente non può svolgere questa azione fintanto che ha un ordine Nascondersi."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "MARINE DELLA PESTE ARTIGLIERE PESANTE",
+      "keywords": [
+        "MARINES DELLA PESTE",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "ARTIGLIERE PESANTE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "5\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Sparapeste",
+          "ATT": 5,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": "Gittata 7\", Saturazione, Inclemente, Torrenziale 2\", Veleno*"
+        },
+        {
+          "name": "Pugni",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": []
+    },
+    {
+      "name": "MARINE DELLA PESTE PORTATORE DELL’ICONA",
+      "keywords": [
+        "MARINES DELLA PESTE",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "PORTATORE DELL’ICONA"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "5\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Coltello della peste",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Inclemente, Veleno*"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Portatore dell’Icona",
+          "description": "ogni volta che determini il controllo di un segnalino, considera la statistica LPA di questo agente come di 1 più alta. Nota che ciò non è una modifica alla sua statistica LPA, quindi qualsiasi cambiamento è cumulativo a questo."
+        },
+        {
+          "name": "Icona del Contagio",
+          "description": "se questo agente si trova nel territorio dell’avversario, l’espediente strategico Contagio ti costa 0PC."
+        }
+      ]
+    },
+    {
+      "name": "AGENTE DI VIRULENZA",
+      "keywords": [
+        "MARINES DELLA PESTE",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "PSIONICO",
+        "AGENTE DI VIRULENZA"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "5\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Entropia",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/7",
+          "RdA": "PSICHICA, Gittata 7\", Saturazione, Inclemente, Veleno*"
+        },
+        {
+          "name": "Vento pestilenziale",
+          "ATT": 6,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": "PSICHICA, Saturazione, Inclemente, Torrenziale 1\", Veleno*"
+        },
+        {
+          "name": "Bastone corrotto",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "PSICHICA, Inclemente, Shock, Stordente, Veleno*"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "MIASMA VELENOSO 1PA",
+          "description": "PSICHICA. Scegli un agente nemico entro 7\" da questo agente e visibile a esso, oppure un agente nemico che è un bersaglio valido per questo agente. Quell’agente nemico ottiene un tuo indicatore Veleno (se non ce l’ha già). Se lo ha già, infliggigli invece 3 danni. Questo agente non può svolgere questa azione fintanto che si trova entro la distancia di controllo di un agente nemico."
+        },
+        {
+          "name": "VITALITÀ PUTRESCENTE 1PA",
+          "description": "PSICHICA. Scegli un agente amico entro 3\" da questo agente e visibile a esso, poi tira 2D6: se il risultato è 7, l’agente scelto recupera 7 ferite perse; altrimenti l’agente scelto recupera un numero di ferite perse pari al risultato del D6 più alto. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico o più di una volta per punto di svolta."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "MARINE DELLA PESTE GUERRIERO",
+      "keywords": [
+        "MARINES DELLA PESTE",
+        "CAOS",
+        "ASTARTES ERETICO",
+        "GUERRIERO"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "5\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Fucile requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Tossica*"
+        },
+        {
+          "name": "Coltello della peste",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Inclemente, Veleno*"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Tempra Repellente",
+          "description": "ogni volta che un agente spara a questo agente, i risultati dei dadi difesa pari a 5+ sono successi critici."
+        },
+        {
+          "name": "Tossica",
+          "description": "ogni volta che questo agente usa quest’arma contro un agente nemico che ha un tuo indicatore Veleno, aggiungi 1 a entrambe le statistiche Dnn di quest’arma."
+        }
+      ]
+    }
+  ],
+  "faction_equiment": [
+    {
+      "name": "CAMPANE DELLA PESTE",
+      "description": "Puoi ignorare qualsiasi cambiamento alle statistiche degli agenti MARINES DELLA PESTE amici derivante dall’essere infortunati (inclusi quelli alle statistiche delle loro armi)."
+    },
+    {
+      "name": "GRANATE DEL CONTAGIO",
+      "description": "Gli agenti MARINES DELLA PESTE amici hanno la seguente arma da tiro (non puoi sceglierla per usarla più di due volte durante la battaglia):\nNOME: Granata del contagio | ATT: 4 | COLP: 4+ | DNN: 2/4 | RdA: Gittata 6\", Area 2\", Saturazione, Inclemente, Veleno*"
+    },
+    {
+      "name": "PROIETTILI DELLA PESTE",
+      "description": "I fucili requiem e le pistole requiem degli agenti MARINES DELLA PESTE amici hanno le regole delle armi Veleno e Inclemente."
+    },
+    {
+      "name": "SFIATI VELENIFERI",
+      "description": "Ogni volta che un agente nemico viene attivato entro 3\" da un agente MARINES DELLA PESTE amico:\n• Se quell’agente nemico non ha uno dei tuoi indicatori Veleno, tira un D3: con 3 ne ottiene uno.\n• Se quell’agente nemico ha uno dei tuoi indicatori Veleno, infliggigli D3 danni (anziché 1)."
+    }
+  ],
+  "faction_rules": [
+    {
+      "name": "ASTARTES",
+      "description": "Durante l’attivazione di ciascun agente MARINES DELLA PESTE amico, esso può svolgere due azioni Sparare oppure due azioni Combattere. Se si tratta di due azioni Sparare, per almeno una di esse devi scegliere una pistola requiem, un fucile requiem o un’arma PSICHICA. Non puoi scegliere la stessa arma PSICHICA da tiro più di una volta per attivazione. Ogni agente MARINES DELLA PESTE amico può agire in risposta a prescindere dal proprio ordine."
+    },
+    {
+      "name": "VELENO",
+      "description": "Alcune armi presenti nelle regole di questo team hanno la regola delle armi Veleno.\n*Veleno: nel passo Risolvere i dadi attacco, se infliggi danni con uno o più successi, l’agente contro cui viene usata quest’arma (esclusi gli agenti MARINES DELLA PESTE amici) ottiene uno dei tuoi indicatori Veleno (se non ce l’ha già). Ogni volta che un agente con un tuo indicatore Veleno viene attivato, infliggigli 1 danno."
+    },
+    {
+      "name": "DISGUSTOSAMENTE RESISTENTE",
+      "description": "Ogni volta che un dado attacco infligge danni di 3 o più a un agente MARINES DELLA PESTE amico, tira un D6: con 4+ sottrai 1 da quei danni inflitti."
+    }
+  ],
+  "strategy_ploy": [
+    {
+      "name": "CONTAGIO",
+      "description": "Sottrai 2\" dalla statistica Mov di un agente nemico e peggiora di 1 la statistica Colp delle sue armi (ciò non è cumulativo con l’essere infortunati) ogni volta che si verifica qualsiasi delle seguenti:\n• Quell’agente nemico ha uno dei tuoi indicatori Veleno, si trova entro 3\" da agenti MARINES DELLA PESTE amici ed è visibile a essi (o viceversa).\n• Quell’agente nemico si trova entro 3\" da un agente MARINES DELLA PESTE PORTATORE DELL’ICONA amico ed è visibile ad esso (o viceversa)."
+    },
+    {
+      "name": "MORTE INESORABILE",
+      "description": "Ogni volta che un agente MARINES DELLA PESTE amico spara o combatte durante un’attivazione in cui non si è mosso per più di 3\", o ogni volta che si rivale, le sue armi hanno la regola delle armi Incessante."
+    },
+    {
+      "name": "NUBE DI MOSCHE",
+      "description": "Colloca nella killzone un tuo segnalino Nube di Mosche. Ogni volta che un agente spara a un agente MARINES DELLA PESTE amico che si trova a più di 3\" da esso, quell’agente amico è oscurato se si trova interamente entro 1\" da quel segnalino. Nel passo Preparare della prossima fase di Strategia rimuovi quel segnalino."
+    },
+    {
+      "name": "NURGLINI",
+      "description": "Scegli un agente nemico entro 3\" da un agente MARINES DELLA PESTE amico, o un agente nemico con un tuo indicatore Veleno che si trova entro 7\" da un agente MARINES DELLA PESTE amico. Fino alla fine della prossima attivazione dell’agente scelto sottrai 1 dalla sua statistica LPA."
+    }
+  ],
+  "fire_ploy": [
+    {
+      "name": "VELENO VIRULENTO",
+      "description": "Usa questo espediente Scontro a Fuoco durante l’attivazione o l’azione in risposta di un agente MARINES DELLA PESTE amico, prima o dopo che ha svolto un’azione. Un agente nemico entro 3\" da quell’agente o visibile ad esso ed entro 7\" da esso ottiene un tuo indicatore Veleno (se non ce l’ha già)."
+    },
+    {
+      "name": "DIPARTITA VELENOSA",
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente MARINES DELLA PESTE amico viene neutralizzato, prima che venga rimosso dalla killzone. Ogni agente nemico entro 3\" da quell’agente e visibile a esso ottiene un tuo indicatore Veleno (se non ce l’ha già); per ciascuno di tali agenti nemici che ha già un tuo indicatore Veleno (anche nel caso in cui l’abbia ottenuto in questa azione), infliggigli invece 1 danno."
+    },
+    {
+      "name": "ROBUSTEZZA RACCAPRICCIANTE",
+      "description": "Usa questo espediente Scontro a Fuoco quando un dado attacco infligge danni a un agente MARINES DELLA PESTE amico. Fino alla fine dell’attivazione o dell’azione in risposta, ai fini della regola Disgustosamente Resistente per quell’agente sottrai sempre 1 (fino a un minimo di 2) dai danni inflitti; non hai bisogno di tirare."
+    },
+    {
+      "name": "MALEDIZIONE DELLA MARCESCENZA",
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente MARINES DELLA PESTE amico combatte o spara contro un agente nemico entro 3\" da esso (o entro 7\" da esso se quell’agente nemico ha un tuo indicatore Veleno), dopo che l’avversario ha tirato i suoi dadi attacco o difesa. Per ogni risultato pari a 3 che ottiene, infliggi a quell’agente nemico 1 danno, quel risultato non può essere mantenuto come un successo e il tiro non può essere ripetuto."
+    }
+  ],
+  "agents_deploy_rules": {
+    "description": "AGENTI\n↘ 1 agente MARINES DELLA PESTE CAMPIONE\n↘ 5 agenti MARINES DELLA PESTE scelti dalla seguente lista:\n• BOMBARDIERE\n• COMBATTENTE\n• ARTIGLIERE PESANTE\n• PORTATORE DELL’ICONA\n• AGENTE DI VIRULENZA\n• GUERRIERO\nIl tuo kill team può includere ciascun agente di questa lista solo una volta."
+  }
+}

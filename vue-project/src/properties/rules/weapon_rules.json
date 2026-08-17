@@ -1,0 +1,114 @@
+{
+    "weaponRules": [
+        {
+            "id": "1",
+            "nome": "A RICERCA",
+            "testo": "quando scegli un bersaglio valido, gli agenti con un ordine Nascondersi non possono usare i terreni come copertura. Se la regola è A Ricerca Leggera, non possono usare terreni Leggeri come copertura. Sebbene questa regola consenta agli agenti di essere scelti come bersagli (presumendo siano visibili), non rimuove il loro eventuale tiro copertura."
+        },
+        {
+            "id": "2",
+            "nome": "ACCURATA x",
+            "testo": "puoi mantenere fino a x dadi attacco come successi normali senza tirarli."
+        },
+        {
+            "id": "3",
+            "nome": "AREA x",
+            "testo": "il bersaglio che scegli è il bersaglio primario. Dopo aver tirato sul bersaglio primario, spara con quest’arma su ogni bersaglio secondario in un ordine a tua scelta (tira per ogni sequenza separatamente). I bersagli secondari sono altri agenti visibili al bersaglio primario ed entro x da esso, ad esempio Area 2\" (sono tutti bersagli validi, a prescindere da un ordine Nascondersi). I bersagli secondari sono in copertura e oscurati se lo era anche il bersaglio primario."
+        },
+        {
+            "id": "4",
+            "nome": "BILANCIATA",
+            "testo": "puoi ripetere il tiro di uno dei tuoi dadi attacco."
+        },
+        {
+            "id": "5",
+            "nome": "BRUTALE",
+            "testo": "l’avversario può bloccare solo con successi critici."
+        },
+        {
+            "id": "6",
+            "nome": "DEVASTANTE x",
+            "testo": "ogni successo critico mantenuto infligge immediatamente x danni all’agente contro cui quest’arma viene usata, ad esempio Devastante 3. Se la regola inizia con una distanza (ad esempio 1\" Devastante x), infliggi x danni a quell’agente e a ogni altro agente visibile al bersaglio ed entro quella distanza da esso. Quel successo non viene scartato dopo che l’hai fatto: può comunque essere risolto più avanti nella sequenza."
+        },
+        {
+            "id": "7",
+            "nome": "DILANIANTE",
+            "testo": "se mantieni uno o più successi critici, puoi mantenere uno dei tuoi successi normali come successo critico."
+        },
+        {
+            "id": "8",
+            "nome": "GITTATA x",
+            "testo": "solo gli agenti entro x dall’agente attivo possono essere bersagli validi, ad esempio Gittata 9\"."
+        },
+        {
+            "id": "9",
+            "nome": "INCESSANTE",
+            "testo": "puoi ripetere il tiro di uno o più dei tuoi dadi attacco con lo stesso risultato (ad esempio: i risultati pari a 2)."
+        },
+        {
+            "id": "10",
+            "nome": "INCLEMENTE",
+            "testo": "se non mantieni successi critici puoi cambiare uno dei tuoi successi normali in un successo critico. Le regole delle armi Devastante e Critici Penetranti continuano ad avere effetto, ma Punitiva e Dilaniante no."
+        },
+        {
+            "id": "11",
+            "nome": "INELUTTABILE",
+            "testo": "puoi ripetere il tiro di uno o più dei tuoi dadi attacco."
+        },
+        {
+            "id": "12",
+            "nome": "LETALE x+",
+            "testo": "i tuoi successi uguali o superiori a x sono successi critici, ad esempio Letale 5+."
+        },
+        {
+            "id": "13",
+            "nome": "LIMITATA x",
+            "testo": "un agente perde quest’arma dopo che la usa in battaglia un numero di volte pari a x. Se usata più volte durante un’azione (ad esempio per via di Area) viene considerata usata una sola volta."
+        },
+        {
+            "id": "14",
+            "nome": "PENETRANTE x",
+            "testo": "il difensore prende x dadi difesa in meno, ad esempio Penetrante 1. Se questa regola è Critici Penetranti x ha effetto solo quando mantieni uno o più successi critici."
+        },
+        {
+            "id": "15",
+            "nome": "PESANTE",
+            "testo": "un agente non può usare quest’arma in un’attivazione o in un’azione in risposta in cui si è mosso, e non può muoversi in un’attivazione o in un’azione in risposta in cui ha usato quest’arma. Se la regola è Pesante (solo x), in cui x è un’azione Movimento, solo quel movimento è concesso, ad esempio Pesante (solo Scattare). Questa regola delle armi non ha effetto nell’impedire l’azione Guardia."
+        },
+        {
+            "id": "16",
+            "nome": "PUNITIVA",
+            "testo": "se mantieni uno o più successi critici puoi mantenere uno dei tuoi fallimenti come successo normale, anziché scartarlo."
+        },
+        {
+            "id": "17",
+            "nome": "SATURAZIONE",
+            "testo": "il difensore non può mantenere tiri copertura."
+        },
+        {
+            "id": "18",
+            "nome": "SHOCK",
+            "testo": "la prima volta che affondi con un successo critico in ciascuna sequenza, scarta anche uno dei successi normali non risolti dell’avversario (o, se non ce ne sono, uno dei suoi successi critici)."
+        },
+        {
+            "id": "19",
+            "nome": "SILENZIOSA",
+            "testo": "un agente può svolgere l’azione Sparare con quest’arma mentre ha un ordine Nascondersi."
+        },
+        {
+            "id": "20",
+            "nome": "STORDENTE",
+            "testo": "se mantieni uno o più successi critici sottrai 1 dalla statistica LPA dell’agente contro cui è stata usata quest’arma fino alla fine della sua prossima attivazione."
+        },
+        {
+            "id": "21",
+            "nome": "TORRENZIALE x",
+            "testo": "scegli normalmente un bersaglio valido come bersaglio primario, poi scegli come bersagli secondari un numero qualsiasi di altri bersagli validi entro x dal primo bersaglio valido ma non entro la distanza di controllo di agenti amici, ad esempio Torrenziale 2\". Spara con quest’arma contro tutti i bersagli nell’ordine che preferisci (tira per ciascuna sequenza separatamente)."
+        },
+        {
+            "id": "22",
+            "nome": "USTIONANTE",
+            "testo": "tira un D6 dopo che un agente usa quest’arma. Se il risultato è inferiore alla statistica Colpire dell’arma infliggi a quell’agente un numero di danni pari al risultato moltiplicato per due. Se usata più volte durante un’azione (ad esempio per via di Area) tiri comunque soltanto un D6."
+        }
+    ]
+}

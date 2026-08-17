@@ -1,0 +1,393 @@
+{
+  "faction": "KRIKKA ZPAKKATRICE",
+  "agents": [
+    {
+      "name": "ZPAKKATORE KAPO NOB",
+      "keywords": [
+        "KRIKKA ZPAKKATRICE",
+        "ORKO",
+        "LEADER",
+        "KAPO NOB"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola a mizzili",
+          "ATT": 6,
+          "COLP": "5+",
+          "DNN": "4/5",
+          "RdA": "Gittata 8\", Area 1\""
+        },
+        {
+          "name": "Due pistole a mizzili (concentrato)",
+          "ATT": 6,
+          "COLP": "4+",
+          "DNN": "4/5",
+          "RdA": "Gittata 8\", Area 1\", Incessante"
+        },
+        {
+          "name": "Due pistole a mizzili (salva)",
+          "ATT": 6,
+          "COLP": "5+",
+          "DNN": "4/5",
+          "RdA": "Gittata 8\", Area 1\", Salva*"
+        },
+        {
+          "name": "Zpakka",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": ""
+        },
+        {
+          "name": "Frantumartello",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/6",
+          "RdA": "Brutale"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Zpakkatore Kapo",
+          "description": "ogni volta che questo agente svolge un’azione Combattere o Sparare (esclusa Guardia), ottieni 1 punto Zpakko."
+        },
+        {
+          "name": "*Salva",
+          "description": "Scegli fino a due bersagli validi differenti che non si trovano entro la distanza di controllo di agenti amici. Spara con quest’arma contro entrambi i bersagli primari in un ordine a tua scelta, poi contro tutti i bersagli secondari rimanenti allo stesso modo (tira separatamente per ogni sequenza). Non puoi sparare contro ciascun bersaglio (primario e secondario) più di una volta nel corso dell’azione."
+        }
+      ]
+    },
+    {
+      "name": "SQUIG BOMBA DEGLI ZPAKKATORI",
+      "keywords": [
+        "KRIKKA ZPAKKATRICE",
+        "ORKO",
+        "SQUIG BOMBA"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "5+",
+        "FER": 5
+      },
+      "weapons": [
+        {
+          "name": "Esplosivi",
+          "ATT": 6,
+          "COLP": "4+",
+          "DNN": "4/5",
+          "RdA": "Area 1\", Limitata 1, Esplosiva*"
+        },
+        {
+          "name": "Morso",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "4/5",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "*Esplosiva",
+          "description": "questo agente può svolgere l’azione Sparare con quest’arma fintanto che si trova entro la distanza di controllo di un agente nemico. Non scegliere un bersaglio valido. Invece, questo agente è sempre il bersaglio primario e non può essere in copertura od oscurato."
+        },
+        {
+          "name": "Kretino",
+          "description": "nella fase di Scontro a Fuoco, ogni volta che determini l’ordine di questo agente, non puoi scegliere Nascondersi. Questo agente non può svolgere nessuna azione tranne Caricare, Scattare, Combattere, Riposizionarsi e Sparare, né usare armi che non sono sulla sua carta dati."
+        },
+        {
+          "name": "Boom!",
+          "description": "ogni volta che questo agente viene neutralizzato durante una battaglia in cui non ha usato i suoi esplosivi, tira un D6, oppure due D6 se lo desideri. Se qualsiasi risultato è 4+, questo agente svolge un’azione Sparare gratuita con i suoi esplosivi prima di essere rimosso dalla killzone."
+        },
+        {
+          "name": "Sacrificabile",
+          "description": "questo agente viene ignorato ai fini delle op omicide/eliminazione dell’avversario (quando viene neutralizzato e quando determini il tuo numero iniziale di agenti). Viene ignorato anche ai fini delle condizioni di vittoria e per l’ottenimento di PV se richiedono agli agenti di ‘fuggire’, ‘sopravvivere’ o essere neutralizzati da agenti nemici (se fugge/sopravvive/è neutralizzato, se occorre determinare quanti agenti devono fuggire/sopravvivere/essere neutralizzati ecc.)."
+        }
+      ]
+    },
+    {
+      "name": "ZPEZZATORE DEMOLITORE",
+      "keywords": [
+        "KRIKKA ZPAKKATRICE",
+        "ORKO",
+        "ZPEZZATORE",
+        "DEMOLITORE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 12
+      },
+      "weapons": [
+        {
+          "name": "Zfondakarri (botta)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": ""
+        },
+        {
+          "name": "Zfondakarri (detonazione)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "*",
+          "RdA": "Letale 5+, Limitata 1, Deflagrazione*"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Temperamento Temerario",
+          "description": "i Dnn Normali di 4 o più infliggono 1 danno in meno a questo agente; se questo agente ha un ordine Ingaggiare, anche i Dnn Critici di 4 o più infliggono 1 danno in meno a questo agente."
+        },
+        {
+          "name": "*Deflagrazione",
+          "description": "la prima volta durante la battaglia che questo agente infliggerebbe danni con questo profilo d’arma a un agente nemico, se ottieni un successo normale infliggi separatamente D6+6 danni a quell’agente e a ogni altro agente entro la distanza di controllo di quell’agente nemico, oppure 2D6+6 danni se ottieni un successo critico. Poi l’azione termina e ottieni 1 punto Zpakko, più 1 per ogni agente neutralizzato nel corso di quell’azione. I danni inflitti da questa regola delle armi non possono essere ignorati né ridotti."
+        }
+      ]
+    },
+    {
+      "name": "ZPEZZATORE GUERRIERO",
+      "keywords": [
+        "KRIKKA ZPAKKATRICE",
+        "ORKO",
+        "ZPEZZATORE",
+        "GUERRIERO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 12
+      },
+      "weapons": [
+        {
+          "name": "Frantumartello",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/6",
+          "RdA": "Brutale"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "ROMPERE KOZE 1AP",
+          "description": "Scegli un elemento di terreno entro la distanza di controllo di questo agente. Se è un terreno equipaggiamento, rimuovilo. Altrimenti, colloca uno dei tuoi segnalini Breccia entro la distanza di controllo di questo agente, il più vicino possibile a quel terreno. Ogni volta che un agente si trova entro 1\" da quel segnalino, considera come terreni Accessibili le parti di quell’elemento di terreno che hanno uno spessore di 1\" o inferiore. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico, oppure se non ci sono elementi di terreno entro la sua distanza di controllo."
+        }
+      ],
+      "traits": []
+    },
+    {
+      "name": "ZPEZZATORE ZKIACCIATORE",
+      "keywords": [
+        "KRIKKA ZPAKKATRICE",
+        "ORKO",
+        "ZPEZZATORE",
+        "ZKIACCIATORE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 12
+      },
+      "weapons": [
+        {
+          "name": "Zkrokkianokke",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/6",
+          "RdA": "Brutale, Shock, Zkiacciare*"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "*Zkiacciare",
+          "description": "ogni volta che affondi, puoi muovere l’agente nemico di massimo 1\" in linea retta per ogni affondo. Se lo fai, deve terminare il movimento più lontano da questo agente e in un luogo dove può essere collocato. Poi muovi questo agente di massimo 1\" in linea retta per ogni affondo, ma deve terminare quel movimento entro la distanza di controllo di quell’agente nemico (se uno dei due movimenti non fosse possibile, non puoi effettuarne nessuno di due)."
+        },
+        {
+          "name": "Korazzato",
+          "description": "ogni volta che un agente nemico spara a questo agente, o che questo agente combatte in corpo a corpo o si rivale, l’avversario non può mantenere i risultati dei dadi attacco inferiori a 6 come successi critici (ad es. come conseguenza delle regole delle armi Letale, Dilaniante o Inclemente)."
+        }
+      ]
+    },
+    {
+      "name": "ZMONTAKARRI ARTIGLIERE",
+      "keywords": [
+        "KRIKKA ZPAKKATRICE",
+        "ORKO",
+        "ZMONTAKARRI",
+        "ARTIGLIERE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 12
+      },
+      "weapons": [
+        {
+          "name": "Zparamizzili pezante",
+          "ATT": 6,
+          "COLP": "4+",
+          "DNN": "4/5",
+          "RdA": "Area 1\", Pesante (solo Scattare)"
+        },
+        {
+          "name": "Zparamizzili",
+          "ATT": 6,
+          "COLP": "5+",
+          "DNN": "4/5",
+          "RdA": "Area 1\""
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Karattere Kompetitivo",
+          "description": "una volta per azione Sparare, se questo agente spara a un agente nemico su cui altri agenti amici hanno già sparato in questo punto di svolta, ottieni 1 punto Zpakko. Determina ciò quando scegli un bersaglio valido, ma in quel momento puoi includere uno o più bersagli secondari (ad es. per la regola delle armi Area)."
+        }
+      ]
+    },
+    {
+      "name": "ZMONTAKARRI MIZZILIZTA",
+      "keywords": [
+        "KRIKKA ZPAKKATRICE",
+        "ORKO",
+        "ZMONTAKARRI",
+        "MIZZILIZTA"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 12
+      },
+      "weapons": [
+        {
+          "name": "Mizzile a impulzi",
+          "ATT": 6,
+          "COLP": "5+",
+          "DNN": "-",
+          "RdA": "Pesante (solo Riposizionarsi), Limitata 1, Impulzi*"
+        },
+        {
+          "name": "Zparamizzili",
+          "ATT": 6,
+          "COLP": "5+",
+          "DNN": "4/5",
+          "RdA": "Area 1\""
+        },
+        {
+          "name": "Rastrelliera di mizzili",
+          "ATT": 6,
+          "COLP": "5+",
+          "DNN": "4/5",
+          "RdA": "Area 2\", Pesante (solo Riposizionarsi), Limitata 1, Ineluttabile"
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "*Impulzi",
+          "description": "non scegliere un bersaglio valido. Invece, colloca il tuo segnalino Impulzo in modo che sia visibile a questo agente, oppure su un terreno Sopraelevato di un elemento di terreno visibile a questo agente. Quel segnalino ottiene 1 punto Impulzo, poi tira i dadi attacco: ottiene 1 punto Impulzo addizionale per ogni successo (fino a un massimo di 3 punti addizionali). Infliggi separatamente D3 danni a ciascun agente interamente entro x\" da quel segnalino, dove x è il numero di punti Impulzo di quel segnalino. Poi l’azione termina."
+        },
+        {
+          "name": "Onda d’Urto",
+          "description": "ogni volta che un agente si trova entro x\" dal tuo segnalino Impulzo (vedi a sinistra), peggiora di 1 la statistica Colp delle sue armi e sottrai 2\" dalla sua statistica Mov. Ciò è cumulativo con lo stato infortunato. X è il numero di punti Impulzo di quel segnalino. Nel passo Preparare di ogni fase di Strategia sottrai 1 dai punti del tuo segnalino Impulzo. Se in qualsiasi momento un segnalino Impulzo raggiunge 0 punti, rimuovilo."
+        }
+      ]
+    }
+  ],
+  "faction_equiment": [
+    {
+      "name": "OLIO MOTORE",
+      "description": "Puoi usare questa regola una volta per punto di svolta, ogni volta che un agente KRIKKA ZPAKKATRICE amico (esclusi gli SQUIG BOMBA) viene attivato. Se lo fai, fino alla fine di quell’attivazione puoi ignorare qualsiasi cambiamento alle statistiche di quell’agente se viene infortunato (incluse le statistiche delle sue armi)."
+    },
+    {
+      "name": "GLIFI",
+      "description": "Quando selezioni questo equipaggiamento, scegli anche l’espediente Strategia Waaagh! o Distruzione. La prima volta che usi quell’espediente nel corso della battaglia, ti costa 0PC; ogni volta che lo usi successivamente, ti costa 0PC se hai 1 o più punti Zpakko."
+    },
+    {
+      "name": "MIZZILI TRIVELLA",
+      "description": "Puoi usare questa regola una volta per punto di svolta, ogni volta che un agente KRIKKA ZPAKKATRICE amico sta svolgendo l’azione Sparare e scegli uno zparamizzili o uno zparamizzili pezante. Se lo fai, fino alla fine di quell’azione quell’arma perde la regola delle armi Area, ma ha la regola delle armi Penetrante 1."
+    },
+    {
+      "name": "ARMATURA EXTRA",
+      "description": "Sottrai 1\" dalla statistica Mov degli agenti KRIKKA ZPAKKATRICE amici e migliora di 1 la loro statistica Salv. Gli agenti SQUIG BOMBA sono esclusi e ciò non è cumulativo con la regola Protettivo dell’equipaggiamento universale barricata portatile."
+    }
+  ],
+  "faction_rules": [
+    {
+      "name": "SERBATOIO PIENO",
+      "description": "La prima volta che un agente KRIKKA ZPAKKATRICE amico (esclusi gli SQUIG BOMBA) con un ordine Ingaggiare svolge l’azione Caricare, Combattere o Sparare (esclusa Guardia) durante ciascuna delle sue attivazioni/azioni in risposta, aggiungi 1 alla sua statistica LPA fino all’inizio della sua prossima attivazione."
+    },
+    {
+      "name": "ATTACCO ZPAKKATORE",
+      "description": "Ogni volta che un agente KRIKKA ZPAKKATRICE amico sta sparando, combattendo in corpo a corpo o si sta rivalendo, nel passo Tirare i dadi attacco:\n• Per ogni risultato pari a 6 sui dadi attacco che mantieni ottieni un punto Zpakko.\n• Puoi spendere fino a 2 dei tuoi punti Zpakko (se non si tratta di uno SQUIG BOMBA). Per ogni punto che spendi in questo modo, mantieni uno dei tuoi tiri falliti come un successo normale invece di scartarlo.\nNon puoi avere più di 6 punti Zpakko per volta. Puoi ottenere e spendere punti Zpakko durante la stessa azione, e puoi farlo in qualsiasi ordine a tua scelta; se però hai iniziato l’azione con 6 punti Zpakko, puoi solo spenderli."
+    }
+  ],
+  "strategy_ploy": [
+    {
+      "name": "DISTRUZIONE",
+      "description": "Le armi da tiro degli agenti KRIKKA ZPAKKATRICE amici hanno la regola delle armi Saturazione."
+    },
+    {
+      "name": "A TUTTO ZPIANO",
+      "description": "Ogni agente KRIKKA ZPAKKATRICE amico che ha un ordine Ingaggiare può subito recuperare D3+1 ferite perse (tira separatamente per ognuno)."
+    },
+    {
+      "name": "WAAAGH!",
+      "description": "Le armi da mischia degli agenti KRIKKA ZPAKKATRICE amici hanno la regola delle armi Bilanciata."
+    },
+    {
+      "name": "TIZI KORIACEI",
+      "description": "Ogni volta che un agente spara a un agente KRIKKA ZPAKKATRICE amico che ha un ordine Ingaggiare, puoi ripetere il tiro di uno dei tuoi dadi difesa."
+    }
+  ],
+  "fire_ploy": [
+    {
+      "name": "ZUFFA KOME ZI DEVE",
+      "description": "Usa questo espediente Scontro a Fuoco durante l’attivazione di un agente KRIKKA ZPAKKATRICE ZPEZZATORE amico o KRIKKA ZPAKKATRICE KAPO NOB amico. Durante quell’attivazione quell’agente può svolgere due azioni Combattere."
+    },
+    {
+      "name": "KABOOM!",
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente KRIKKA ZPAKKATRICE amico svolge l’azione Sparare e viene scelta un’arma con la regola delle armi Area. Fino alla fine di quell’azione aggiungi 1\" all’Area di quell’arma e quell’arma ha la regola delle armi Inclemente quando spara al bersaglio primario. Non puoi usare questo espediente e la regola Mizzili Trivella (vedi equipaggiamento) nel corso della stessa azione. Nota che Inclemente non genera un punto Zpakko (perché non è un 6)."
+    },
+    {
+      "name": "SOLO UN GRAFFIO",
+      "description": "Usa questo espediente Scontro a Fuoco quando un dado attacco infligge Dnn Normali a un agente KRIKKA ZPAKKATRICE amico (esclusi gli SQUIG BOMBA). Ignora quei danni inflitti."
+    },
+    {
+      "name": "OPERA DI DEMOLIZIONE",
+      "description": "Usa questo espediente Scontro a Fuoco dopo che un agente KRIKKA ZPAKKATRICE amico ha svolto l’azione Combattere o Sparare, subito prima che vengano rimossi eventuali agenti neutralizzati. Colloca uno dei tuoi segnalini Demolizione entro la distanza di controllo del bersaglio (se sta usando un’arma ad Area, del bersaglio primario). Ogni volta che un agente KRIKKA ZPAKKATRICE amico (esclusi gli SQUIG BOMBA) spara contro, combatte con o si rivale su un agente che si trova entro 3\" da quel segnalino, puoi spendere un punto Zpakko gratuitamente (anche se non ne hai). Nel passo Preparare della successiva fase di Strategia rimuovi quel segnalini."
+    }
+  ],
+  "agents_deploy_rules": {
+    "description": "KILL TEAM KRIKKA ZPAKKATRICE\nARCHETIPI: SICUREZZA, RICERCA E DISTRUZIONE\nAGENTI\n↘ 1 agente KRIKKA ZPAKKATRICE KAPO NOB con una delle seguenti opzioni:\n• Piztola a mizzili; frantumartello\n• Due piztole a mizzili; zpakka\n↘ 2 agenti KRIKKA ZPAKKATRICE SQUIG BOMBA\n↘ 5 agenti KRIKKA ZPAKKATRICE selezionati dalla seguente lista:\n• ZPEZZATORE DEMOLITORE\n• ZPEZZATORE GUERRIERO\n• ZPEZZATORE ZKIACCIATORE\n• ZMONTAKARRI ARTIGLIERE con una delle seguenti opzioni:\n○ Zparamizzili pezante; pugni\n○ Zparamizzili; pugni\n• ZMONTAKARRI MIZZILIZTA con una delle seguenti opzioni:\n○ Zparamizzili; mizzile a impulzi; pugni\n○ Zparamizzili; rastrelliera di mizzili; pugni\nA parte gli agenti SQUIG BOMBA, ZPEZZATORE GUERRIERO e ZMONTAKARRI ARTIGLIERE, il tuo kill team può includere ogni agente in alto solo una volta."
+  }
+}
