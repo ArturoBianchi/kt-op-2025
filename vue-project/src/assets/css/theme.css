@@ -413,7 +413,7 @@ header h1 { color: var(--text-secondary) !important; margin: 0; font-size: 1rem;
 }
 
 .score-name {
-  font-weight: 800;
+  font-weight: 900;
   color: var(--text-secondary);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -422,7 +422,7 @@ header h1 { color: var(--text-secondary) !important; margin: 0; font-size: 1rem;
 .score-value {
   font-family: var(--font-mono), serif;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1;
   color: var(--text-primary);
   margin-bottom: 1rem;
@@ -476,7 +476,9 @@ header h1 { color: var(--text-secondary) !important; margin: 0; font-size: 1rem;
 .btn-icon {
   width: 1.2rem;
   height: 1.2rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  background-color: var(--bg-contrast-surface);
+  border-color:  var(--bg-contrast-surface);
   padding: 0;
   border-radius: 50%; /* Tondi per i counter punti */
 }

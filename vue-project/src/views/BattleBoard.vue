@@ -163,7 +163,7 @@ function removePoint(turnNumber, opType) {
 }
 
 .score-value {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
 }
 
 .ops-scoreboard {
