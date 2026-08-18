@@ -1,5 +1,5 @@
 <script setup>
-import logoImg from '@/../public/logo.svg'
+import logoImg from '../../../public/logo.svg'
 
 defineProps({
     title: {

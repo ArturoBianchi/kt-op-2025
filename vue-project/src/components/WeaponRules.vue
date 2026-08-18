@@ -1,18 +1,10 @@
 <script setup>
-import {computed, ref} from "vue";
+import {ref} from "vue";
 import {useWeaponRulesStore} from "@/stores/weaponRules.js";
 import {storeToRefs} from "pinia";
 
 const weaponRuleStore = useWeaponRulesStore();
-const {
-    rules,
-    pinned
-} = storeToRefs(weaponRuleStore)
-const getRulesItems = computed(() =>
-        rules.value.map(
-                rule => ({label: rule.name, content: rule.text})
-        )
-);
+const {rules} = storeToRefs(weaponRuleStore)
 const open = ref(true)
 </script>
 
@@ -27,34 +19,26 @@ const open = ref(true)
     >
         <UAlert v-if="open"
                 description="Per leggere il testo della regola, clicca sulla freccia. Per fissare la regola nella sezione di battaglia, invece, clicca sul pin."
-                color="info"
+                color="primary"
                 variant="soft"
                 icon="i-lucide-info"
                 close
-                :ui="{title: 'text-left text-base font-semibold', description: 'font-semibold text-left text-xs'}"
+                :ui="{title: 'text-left text-base font-semibold', description: 'font-semibold text-left text-xs', close: 'text-primary'}"
                 @update:open="open = false"
         />
     </Transition>
-    <UAccordion type="multiple" :items="getRulesItems"
-                :ui="{item: 'border-primary', body: 'text-left text-secondary',trigger: 'font-bold justify-between'}">
-        <template #trailing="{ item, index }">
-            <div class="flex items-center gap-3.5 ms-auto">
-                <UButton
-                        icon="i-lucide-pin"
-                        color="neutral"
-                        variant="ghost"
-                        size="xs"
-                        @click.stop="console.log(item)"
-                />
-                <UIcon
-                        name="i-lucide-chevron-down"
-                        class="size-5 shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180"
-                />
-            </div>
-        </template>
-    </UAccordion>
+    <div class="weapon-rules-list">
+        <DataCard v-for="rule in rules" :key="rule.id" :pin-data="rule">
+            <WeaponDataCard :rule="rule" />
+        </DataCard>
+    </div>
 </template>
 
 <style scoped>
-
+.weapon-rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
 </style>

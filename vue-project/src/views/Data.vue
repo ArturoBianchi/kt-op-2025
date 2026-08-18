@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import FactionsData from "@/components/FactionsData.vue";
 
 const tabsUi = {
     list: 'w-full',
@@ -27,11 +28,8 @@ const tabs = ref([
                 <WeaponRules />
             </template>
             <template #factions>
+                <FactionsData />
             </template>
         </UTabs>
     </div>
 </template>
-
-<style scoped>
-
-</style>

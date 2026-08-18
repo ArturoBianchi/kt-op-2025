@@ -11,9 +11,12 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AppHeader: typeof import('./src/components/AppHeader.vue')['default']
-    AppMenu: typeof import('./src/components/AppMenu.vue')['default']
+    AgentDataCard: typeof import('./src/components/faction/AgentDataCard.vue')['default']
+    AppHeader: typeof import('./src/components/common/AppHeader.vue')['default']
+    AppMenu: typeof import('./src/components/common/AppMenu.vue')['default']
     CritCard: typeof import('./src/components/cards/CritCard.vue')['default']
+    DataCard: typeof import('./src/components/cards/DataCard.vue')['default']
+    FactionsData: typeof import('./src/components/FactionsData.vue')['default']
     KillCard: typeof import('./src/components/cards/KillCard.vue')['default']
     KTCarousel: typeof import('./src/components/KTCarousel.vue')['default']
     OpCard: typeof import('./src/components/cards/OpCard.vue')['default']
@@ -26,12 +29,16 @@ declare module 'vue' {
     UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
     UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
     UCarousel: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Carousel.vue')['default']
+    UCollapsible: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Collapsible.vue')['default']
     UFormField: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/FormField.vue')['default']
     UIcon: typeof import('./node_modules/@nuxt/ui/dist/runtime/vue/components/Icon.vue')['default']
+    UNavigationMenu: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/NavigationMenu.vue')['default']
     UProgress: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Progress.vue')['default']
     USelect: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Select.vue')['default']
     UTable: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Table.vue')['default']
     UTabs: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Tabs.vue')['default']
+    UUser: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/User.vue')['default']
+    WeaponDataCard: typeof import('./src/components/weapon/WeaponDataCard.vue')['default']
     WeaponRules: typeof import('./src/components/WeaponRules.vue')['default']
   }
 }

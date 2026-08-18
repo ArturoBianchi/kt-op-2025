@@ -1,7 +1,7 @@
 <script setup>
 import {RouterView} from 'vue-router'
-import AppHeader from './components/AppHeader.vue'
-import AppMenu from './components/AppMenu.vue'
+import AppHeader from './components/common/AppHeader.vue'
+import AppMenu from './components/common/AppMenu.vue'
 import {ref, onMounted, onUnmounted, watch, nextTick, computed} from 'vue'
 import { useRoute } from 'vue-router'
 

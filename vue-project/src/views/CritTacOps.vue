@@ -104,12 +104,12 @@ function getKillCardCarouselItem(id, model){
             </div>
             <div v-show="showFilterSection" class="card-filters grid grid-cols-2 sm:grid-cols-3 gap-4">
                 <div class="col-span-1">
-                    <UFormField orientation="horizontal"  size="sm" name="test" label="Crit Ops">
+                    <UFormField orientation=""  size="sm" name="test" label="Crit Ops">
                         <USelect v-model="critOpsFilter" multiple :items="critFilterItems" placeholder="Filtra..." class="w-full" />
                     </UFormField>
                 </div>
                 <div class="col-span-1">
-                    <UFormField orientation="horizontal" size="sm" name="test" label="Tac Ops">
+                    <UFormField orientation="" size="sm" name="test" label="Tac Ops">
                         <USelect v-model="tacOpsFilter" multiple :items="tacFilterItems" placeholder="Filtra..." class="w-full" />
                     </UFormField>
                 </div>

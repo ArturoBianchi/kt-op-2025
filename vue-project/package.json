@@ -10,7 +10,7 @@
     "icons": "node scripts/generate-icons.mjs"
   },
   "dependencies": {
-    "@nuxt/ui": "^3.3.7",
+    "@nuxt/ui": "^4.10.0",
     "pinia": "^4.0.2",
     "pinia-plugin-persistedstate": "^4.7.1",
     "tailwindcss": "^4.3.3",

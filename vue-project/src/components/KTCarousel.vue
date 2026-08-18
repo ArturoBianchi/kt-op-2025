@@ -46,12 +46,6 @@ const isMeasurable = (container) => container.isConnected && container.offsetPar
 const watchResizeWhenVisible = (emblaApi) => isMeasurable(emblaApi.containerNode())
 let slideObserver = null
 
-// Risolve l'id salvato in un indice valido per l'attuale carouselItems.
-// Senza <KeepAlive> il componente viene rimontato da zero ad ogni visita:
-// il risultato va letto qui, prima che UCarousel/Embla venga costruito, e
-// passato come start-index invece di essere applicato con uno scrollTo dopo
-// il mount. Se l'id non è più presente (es. escluso da un futuro filtro) o
-// la lista è vuota, si torna alla prima slide invece di andare fuori range.
 const resolveIndexFromSavedId = () => {
     if (props.carouselItems.length === 0) {
         return 0
@@ -64,11 +58,6 @@ const resolveIndexFromSavedId = () => {
             : index
 }
 
-// initialIndex è una costante non reattiva calcolata una sola volta: non va
-// mai trasformata in un computed/ref derivato da lastIndex o dallo store,
-// altrimenti ogni handleSelect (anche restando sulla stessa pagina)
-// aggiornerebbe start-index e farebbe scattare il reInit interno di
-// @nuxt/ui (Carousel.vue:99-101), corrompendo la slide in corso.
 const initialIndex = resolveIndexFromSavedId()
 const lastIndex = ref(initialIndex)
 
@@ -100,13 +89,7 @@ onMounted(() => {
     slideObserver = new ResizeObserver(remeasureIfSlidesChanged)
     embla.on('reInit', observeSlides)
     observeSlides()
-
-    // Rete di sicurezza: start-index dovrebbe già aver posizionato Embla
-    // correttamente alla costruzione. Questo fallback interviene solo se
-    // alcune slide non erano ancora misurabili in quel momento, per cui
-    // Embla potrebbe aver ridotto/clampato start-index; il confronto usa
-    // initialIndex (non lastIndex.value) per non correre contro il select
-    // fantasma emesso da Embla/@nuxt/ui subito dopo il mount.
+    
     requestAnimationFrame(() => {
         if (!embla || embla.selectedScrollSnap() === initialIndex) return
         // Snap collassati: il motore va rimisurato prima di poterci navigare.
@@ -147,8 +130,7 @@ onUnmounted(() => {
     justify-content: center;
 }
 
-/* I dots di UCarousel sono in posizione assoluta a -1.75rem dal fondo della
-   root: senza questo spazio finirebbero sopra il contenuto successivo. */
+
 .centered-view.has-dots {
     margin-bottom: 2.5rem;
 }

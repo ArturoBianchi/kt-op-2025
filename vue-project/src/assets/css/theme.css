@@ -7,7 +7,6 @@
   --bg-app: #121212;          /* Material Dark Surface/Background */
   --bg-surface: #1e1e1e;      /* Material Dark Surface (Elevation +1) */
   --bg-surface-hover: #2c2c2c;/* Elevation +2 equivalent */
-
   --bg-contrast-surface: color-mix(in srgb, white 5%, var(--bg-surface));
 
   /* Testi */
@@ -17,7 +16,7 @@
   
   /* Colori di Accento (Pastel Purple / Lavender) */
   --accent-main: #BB86FC;     /* Material Dark Primary (Pastel Purple) */
-  --accent-main-dim: rgba(187, 134, 252, 0.2);
+  --accent-main-dim: rgb(187 134 252 / 0.2);
   --text-secondary-dim: rgba(255, 255, 255, 0.2);
   --border-subtle: rgba(255, 255, 255, 0.12); /* Material Divider */
   --accent-important: rgb(177 244 134 / 0.85);
@@ -470,6 +469,12 @@ header h1 { color: var(--text-secondary) !important; margin: 0; font-size: 1rem;
   background-color: #d7b4ff; /* Lighter pastel purple */
   border-color: #d7b4ff;
   box-shadow: 0 0 10px var(--accent-main-dim);
+}
+
+
+.card-gradient-background{
+  background: #1E1E1E;
+  background: linear-gradient(180deg, rgba(30, 30, 30, 1) 0%, rgba(18, 18, 18, 1) 100%);
 }
 
 /* Bottone quadrato per counter (+ / -) */
