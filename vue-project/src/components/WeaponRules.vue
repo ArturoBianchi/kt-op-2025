@@ -27,16 +27,16 @@ const open = ref(true)
     >
         <UAlert v-if="open"
                 description="Per leggere il testo della regola, clicca sulla freccia. Per fissare la regola nella sezione di battaglia, invece, clicca sul pin."
-                color="info"
+                color="primary"
                 variant="soft"
                 icon="i-lucide-info"
                 close
-                :ui="{title: 'text-left text-base font-semibold', description: 'font-semibold text-left text-xs'}"
+                :ui="{title: 'text-left text-base font-semibold', description: 'font-semibold text-left text-xs', close: 'text-primary'}"
                 @update:open="open = false"
         />
     </Transition>
     <UAccordion type="multiple" :items="getRulesItems"
-                :ui="{item: 'border-primary', body: 'text-left text-secondary',trigger: 'font-bold justify-between'}">
+                :ui="{item: '', body: 'text-left text-secondary',trigger: 'font-bold justify-between'}">
         <template #trailing="{ item, index }">
             <div class="flex items-center gap-3.5 ms-auto">
                 <UButton
