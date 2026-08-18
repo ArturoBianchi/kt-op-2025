@@ -98,7 +98,7 @@ function getKillCardCarouselItem(id, model){
         <div style="padding: 0.4rem">
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 <div class="col-span-1 form-button">
-                    <UButton size="sm" icon="i-mdi-filter-outline" class="btn-dark font-bold rounded-full" @click="showFilterSection = !showFilterSection">Filtri ({{ activeFilterCount }})</UButton>
+                    <UButton size="sm" icon="i-mdi-filter-outline" class="btn-dark font-bold rounded-full" @click="showFilterSection = !showFilterSection">Filtri ( {{ activeFilterCount }} )</UButton>
                     <UButton size="sm" style="margin-left: 1rem" icon="i-mdi-delete-outline" class="btn-dark font-bold rounded-full " @click="filterOpStore.$reset()"></UButton>
                 </div>
             </div>

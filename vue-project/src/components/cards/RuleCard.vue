@@ -29,6 +29,7 @@ const props = defineProps({
 
 <style scoped>
 p {
+    font-size: 0.88rem;
     text-align: left;
     margin: 1.2em 0;
     line-height: 1.4;

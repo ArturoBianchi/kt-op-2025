@@ -68,7 +68,8 @@ import { RouterLink } from 'vue-router'
 .menu a {
     text-decoration: none;
     color: var(--text-secondary);
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 0.03em;
     padding: 0.4rem 0.2rem;
     border-top: 3px solid transparent;
     border-radius: var(--radius);
@@ -94,6 +95,7 @@ import { RouterLink } from 'vue-router'
 
 .menu a.active {
     color: var(--accent-main);
+    font-weight: 800;
     border-radius: 0.5rem;
 }
 

@@ -309,6 +309,7 @@ function removePoint(turnNumber, opType) {
 .wounds-value {
     font-family: var(--font-mono), serif;
     color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
 }
 
 .operative-footer {
@@ -322,6 +323,7 @@ function removePoint(turnNumber, opType) {
     font-family: var(--font-mono), serif;
     font-size: 0.75rem;
     font-weight: 700;
+    font-variant-numeric: tabular-nums;
     color: var(--bg-app);
     background-color: var(--accent-main);
     padding: 0.2rem 0.6rem;

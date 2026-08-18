@@ -94,6 +94,7 @@ const title = computed(() => {
 
 .op-card .op-title {
     font-size: 1.4rem;
+    font-weight: 800;
     margin-bottom: 0.75rem;
 }
 
@@ -124,6 +125,7 @@ const title = computed(() => {
     color: #fff;
     font-family: var(--font-mono),serif;
     font-size: 0.9rem;
+    font-weight: 800;
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
 }

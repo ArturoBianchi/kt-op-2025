@@ -31,12 +31,12 @@ const open = ref(true)
                 variant="soft"
                 icon="i-lucide-info"
                 close
-                :ui="{title: 'text-left text-base font-semibold', description: 'text-left text-xs'}"
+                :ui="{title: 'text-left text-base font-semibold', description: 'font-semibold text-left text-xs'}"
                 @update:open="open = false"
         />
     </Transition>
     <UAccordion type="multiple" :items="getRulesItems"
-                :ui="{item: 'border-primary',body: 'text-left text-secondary',trigger: 'justify-between'}">
+                :ui="{item: 'border-primary', body: 'text-left text-secondary',trigger: 'font-bold justify-between'}">
         <template #trailing="{ item, index }">
             <div class="flex items-center gap-3.5 ms-auto">
                 <UButton
