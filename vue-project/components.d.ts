@@ -11,7 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AgentDataCard: typeof import('./src/components/faction/AgentDataCard.vue')['default']
+    AgentDataCard: typeof import('./src/components/cards/AgentDataCard.vue')['default']
     AppHeader: typeof import('./src/components/common/AppHeader.vue')['default']
     AppMenu: typeof import('./src/components/common/AppMenu.vue')['default']
     CritCard: typeof import('./src/components/cards/CritCard.vue')['default']

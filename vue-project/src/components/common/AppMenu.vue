@@ -56,7 +56,7 @@ import { RouterLink } from 'vue-router'
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
 }
 

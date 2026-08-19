@@ -235,7 +235,7 @@ p {
 }
 
 .app-container {
-  max-width: 600px;
+  max-width: 90%;
   width: 100%;
   background-color: var(--bg-app); /* The actual app background */
   display: flex;
@@ -302,7 +302,7 @@ p {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   gap: 1rem;
   margin-top: 1rem;
   /*padding: 0 1em 0 1em;*/
