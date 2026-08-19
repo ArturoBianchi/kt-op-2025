@@ -1,6 +1,14 @@
 <script setup>
 import {ref} from "vue";
 import FactionsData from "@/components/FactionsData.vue";
+import {useDataViewStore} from "@/stores/dataViewStore.js";
+import {storeToRefs} from "pinia";
+
+const dataViewStore = useDataViewStore();
+
+const {
+    active
+} = storeToRefs(dataViewStore);
 
 const tabsUi = {
     list: 'w-full',
@@ -23,7 +31,7 @@ const tabs = ref([
 
 <template>
     <div class="centered-view" style="height: 100%;">
-        <UTabs :items="tabs" color="primary" variant="pill" size="sm" :ui="tabsUi" class="w-full">
+        <UTabs v-model="active" :items="tabs" color="primary" variant="pill" size="sm" :ui="tabsUi" class="w-full">
             <template #weapons>
                 <WeaponRules />
             </template>

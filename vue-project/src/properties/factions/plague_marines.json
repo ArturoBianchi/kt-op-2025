@@ -3,6 +3,7 @@
   "agents": [
     {
       "name": "MARINE DELLA PESTE CAMPIONE",
+      "img_path": "assets/pics/plague_marines/agente_di_virulenza.png",
       "keywords": [
         "MARINES DELLA PESTE",
         "CAOS",
@@ -53,6 +54,7 @@
     },
     {
       "name": "MARINE DELLA PESTE BOMBARDIERE",
+      "img_path": "assets/pics/plague_marines/marine_della_peste_bombardiere.png",
       "keywords": [
         "MARINES DELLA PESTE",
         "CAOS",
@@ -95,6 +97,7 @@
     },
     {
       "name": "MARINE DELLA PESTE COMBATTENTE",
+      "img_path": "assets/pics/plague_marines/marine_della_peste_combattente.png",
       "keywords": [
         "MARINES DELLA PESTE",
         "CAOS",
@@ -133,6 +136,7 @@
     },
     {
       "name": "MARINE DELLA PESTE ARTIGLIERE PESANTE",
+      "img_path": "assets/pics/plague_marines/marine_della_peste_artigliere_pesante.png",
       "keywords": [
         "MARINES DELLA PESTE",
         "CAOS",
@@ -173,6 +177,7 @@
     },
     {
       "name": "MARINE DELLA PESTE PORTATORE DELL’ICONA",
+      "img_path": "assets/pics/plague_marines/marine_della_peste_portatore_dell'icona.png",
       "keywords": [
         "MARINES DELLA PESTE",
         "CAOS",
@@ -215,6 +220,7 @@
     },
     {
       "name": "AGENTE DI VIRULENZA",
+      "img_path": "assets/pics/plague_marines/agente_di_virulenza.png",
       "keywords": [
         "MARINES DELLA PESTE",
         "CAOS",
@@ -265,6 +271,7 @@
     },
     {
       "name": "MARINE DELLA PESTE GUERRIERO",
+      "img_path": "assets/pics/plague_marines/marine_della_peste_guerriero.png",
       "keywords": [
         "MARINES DELLA PESTE",
         "CAOS",
@@ -321,7 +328,7 @@
     },
     {
       "name": "SFIATI VELENIFERI",
-      "description": "Ogni volta che un agente nemico viene attivato entro 3\" da un agente MARINES DELLA PESTE amico:\n• Se quell’agente nemico non ha uno dei tuoi indicatori Veleno, tira un D3: con 3 ne ottiene uno.\n• Se quell’agente nemico ha uno dei tuoi indicatori Veleno, infliggigli D3 danni (anziché 1)."
+      "description": "Ogni volta che un agente nemico viene attivato entro 3\" da un agente MARINES DELLA PESTE amico:<br><br>• Se quell’agente nemico non ha uno dei tuoi indicatori Veleno, tira un D3: con 3 ne ottiene uno.<br><br>• Se quell’agente nemico ha uno dei tuoi indicatori Veleno, infliggigli D3 danni (anziché 1)."
     }
   ],
   "faction_rules": [
@@ -341,7 +348,7 @@
   "strategy_ploy": [
     {
       "name": "CONTAGIO",
-      "description": "Sottrai 2\" dalla statistica Mov di un agente nemico e peggiora di 1 la statistica Colp delle sue armi (ciò non è cumulativo con l’essere infortunati) ogni volta che si verifica qualsiasi delle seguenti:\n• Quell’agente nemico ha uno dei tuoi indicatori Veleno, si trova entro 3\" da agenti MARINES DELLA PESTE amici ed è visibile a essi (o viceversa).\n• Quell’agente nemico si trova entro 3\" da un agente MARINES DELLA PESTE PORTATORE DELL’ICONA amico ed è visibile ad esso (o viceversa)."
+      "description": "Sottrai 2\" dalla statistica Mov di un agente nemico e peggiora di 1 la statistica Colp delle sue armi (ciò non è cumulativo con l’essere infortunati) ogni volta che si verifica qualsiasi delle seguenti:<br><br>• Quell’agente nemico ha uno dei tuoi indicatori Veleno, si trova entro 3\" da agenti MARINES DELLA PESTE amici ed è visibile a essi (o viceversa).<br><br>• Quell’agente nemico si trova entro 3\" da un agente MARINES DELLA PESTE PORTATORE DELL’ICONA amico ed è visibile ad esso (o viceversa)."
     },
     {
       "name": "MORTE INESORABILE",
@@ -375,6 +382,6 @@
     }
   ],
   "agents_deploy_rules": {
-    "description": "AGENTI\n↘ 1 agente MARINES DELLA PESTE CAMPIONE\n↘ 5 agenti MARINES DELLA PESTE scelti dalla seguente lista:\n• BOMBARDIERE\n• COMBATTENTE\n• ARTIGLIERE PESANTE\n• PORTATORE DELL’ICONA\n• AGENTE DI VIRULENZA\n• GUERRIERO\nIl tuo kill team può includere ciascun agente di questa lista solo una volta."
+    "description": "AGENTI\n↘ 1 agente MARINES DELLA PESTE CAMPIONE\n↘ 5 agenti MARINES DELLA PESTE scelti dalla seguente lista:<br><br>• BOMBARDIERE<br><br>• COMBATTENTE<br><br>• ARTIGLIERE PESANTE<br><br>• PORTATORE DELL’ICONA<br><br>• AGENTE DI VIRULENZA<br><br>• GUERRIERO\nIl tuo kill team può includere ciascun agente di questa lista solo una volta."
   }
 }

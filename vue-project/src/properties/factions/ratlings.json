@@ -3,6 +3,7 @@
   "agents": [
     {
       "name": "RATLING RISOLUTORE",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -63,6 +64,7 @@
     },
     {
       "name": "RATLING CAGNACCIO DA GUERRA",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -99,6 +101,7 @@
     },
     {
       "name": "BULLGRYN",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -159,6 +162,7 @@
     },
     {
       "name": "OGRYN",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -208,6 +212,7 @@
     },
     {
       "name": "RATLING PEZZO GROSSO",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -257,6 +262,7 @@
     },
     {
       "name": "RATLING BOMBAROLO",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -323,6 +329,7 @@
     },
     {
       "name": "RATLING OSSO DURO",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -365,6 +372,7 @@
     },
     {
       "name": "RATLING PREDONE",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -419,6 +427,7 @@
     },
     {
       "name": "RATLING INFILTRATO",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -473,6 +482,7 @@
     },
     {
       "name": "RATLING CECCHINO",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -516,6 +526,7 @@
     },
     {
       "name": "RATLING AVVISTATORE",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -564,6 +575,7 @@
     },
     {
       "name": "RATLING MAGAZZINIERE",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -616,6 +628,7 @@
     },
     {
       "name": "RATLING RUBAVOX",
+      "img_path": "",
       "keywords": [
         "RATLING",
         "IMPERIUM",
@@ -674,7 +687,7 @@
     },
     {
       "name": "BENI RUBATI",
-      "description": "Alla fine del passo Scegliere gli agenti tira un D3. Se il risultato è:\n• 1, perdi 1CP.\n• 2, ottieni 1CP.\n• 3, l’avversario perde 1CP."
+      "description": "Alla fine del passo Scegliere gli agenti tira un D3. Se il risultato è:<br><br>• 1, perdi 1CP.<br><br>• 2, ottieni 1CP.<br><br>• 3, l’avversario perde 1CP."
     },
     {
       "name": "ARMATURA DI FORTUNA",
@@ -724,6 +737,6 @@
     }
   ],
   "agents_deploy_rules": {
-    "description": "KILL TEAM RATLING\nARCHETIPI: SICUREZZA, INFILTRAZIONE\n\nAGENTI\n↘ 1 agente RATLING RISOLUTORE con una delle seguenti opzioni:\n• Fucile da battaglia; pugni\n• Fucile di precisione; pugni\n\n↘ 10 agenti RATLING selezionati dalla seguente lista:\n• CAGNACCIO DA GUERRA\n• BULLGRYN con una opzione da ciascuna delle seguenti: Guanto lanciagranate o mazza potenziata; Scudo del bruto o scudo a piastre\n• OGRYN\n• PEZZO GROSSO\n• BOMBAROLO\n• OSSO DURO\n• PREDONE\n• INFILTRATO\n• CECCHINO\n• AVVISTATORE\n• MAGAZZINIERE\n• RUBAVOX\n\nA parte gli agenti BULLGRYN, OGRYN e CECCHINO, il tuo kill team può includere ognuno degli agenti di questa lista solo una volta.\nNon puoi scegliere più di tre di questi agenti combinati. Per un massimo di tre volte, se non selezioni uno di questi agenti puoi scegliere per la battaglia un espediente dei RATLING ad un costo di 0PC.\n\nAlcune regole dei RATLING fanno riferimento a un ‘fucile’. Si tratta di un’arma da tiro che include ‘fucile’ nel proprio nome, ad esempio tutti i profili di un fucile di precisione, fucile arrestacorazzati ecc."
+    "description": "KILL TEAM RATLING\nARCHETIPI: SICUREZZA, INFILTRAZIONE\n\nAGENTI\n↘ 1 agente RATLING RISOLUTORE con una delle seguenti opzioni:<br><br>• Fucile da battaglia; pugni<br><br>• Fucile di precisione; pugni\n\n↘ 10 agenti RATLING selezionati dalla seguente lista:<br><br>• CAGNACCIO DA GUERRA<br><br>• BULLGRYN con una opzione da ciascuna delle seguenti: Guanto lanciagranate o mazza potenziata; Scudo del bruto o scudo a piastre<br><br>• OGRYN<br><br>• PEZZO GROSSO<br><br>• BOMBAROLO<br><br>• OSSO DURO<br><br>• PREDONE<br><br>• INFILTRATO<br><br>• CECCHINO<br><br>• AVVISTATORE<br><br>• MAGAZZINIERE<br><br>• RUBAVOX\n\nA parte gli agenti BULLGRYN, OGRYN e CECCHINO, il tuo kill team può includere ognuno degli agenti di questa lista solo una volta.\nNon puoi scegliere più di tre di questi agenti combinati. Per un massimo di tre volte, se non selezioni uno di questi agenti puoi scegliere per la battaglia un espediente dei RATLING ad un costo di 0PC.\n\nAlcune regole dei RATLING fanno riferimento a un ‘fucile’. Si tratta di un’arma da tiro che include ‘fucile’ nel proprio nome, ad esempio tutti i profili di un fucile di precisione, fucile arrestacorazzati ecc."
   }
 }

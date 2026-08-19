@@ -3,6 +3,7 @@
   "agents": [
     {
       "name": "ZPAKKATORE KAPO NOB",
+      "img_path": "",
       "keywords": [
         "KRIKKA ZPAKKATRICE",
         "ORKO",
@@ -66,6 +67,7 @@
     },
     {
       "name": "SQUIG BOMBA DEGLI ZPAKKATORI",
+      "img_path": "",
       "keywords": [
         "KRIKKA ZPAKKATRICE",
         "ORKO",
@@ -115,6 +117,7 @@
     },
     {
       "name": "ZPEZZATORE DEMOLITORE",
+      "img_path": "",
       "keywords": [
         "KRIKKA ZPAKKATRICE",
         "ORKO",
@@ -157,6 +160,7 @@
     },
     {
       "name": "ZPEZZATORE GUERRIERO",
+      "img_path": "",
       "keywords": [
         "KRIKKA ZPAKKATRICE",
         "ORKO",
@@ -188,6 +192,7 @@
     },
     {
       "name": "ZPEZZATORE ZKIACCIATORE",
+      "img_path": "",
       "keywords": [
         "KRIKKA ZPAKKATRICE",
         "ORKO",
@@ -223,6 +228,7 @@
     },
     {
       "name": "ZMONTAKARRI ARTIGLIERE",
+      "img_path": "",
       "keywords": [
         "KRIKKA ZPAKKATRICE",
         "ORKO",
@@ -268,6 +274,7 @@
     },
     {
       "name": "ZMONTAKARRI MIZZILIZTA",
+      "img_path": "",
       "keywords": [
         "KRIKKA ZPAKKATRICE",
         "ORKO",
@@ -348,7 +355,7 @@
     },
     {
       "name": "ATTACCO ZPAKKATORE",
-      "description": "Ogni volta che un agente KRIKKA ZPAKKATRICE amico sta sparando, combattendo in corpo a corpo o si sta rivalendo, nel passo Tirare i dadi attacco:\n• Per ogni risultato pari a 6 sui dadi attacco che mantieni ottieni un punto Zpakko.\n• Puoi spendere fino a 2 dei tuoi punti Zpakko (se non si tratta di uno SQUIG BOMBA). Per ogni punto che spendi in questo modo, mantieni uno dei tuoi tiri falliti come un successo normale invece di scartarlo.\nNon puoi avere più di 6 punti Zpakko per volta. Puoi ottenere e spendere punti Zpakko durante la stessa azione, e puoi farlo in qualsiasi ordine a tua scelta; se però hai iniziato l’azione con 6 punti Zpakko, puoi solo spenderli."
+      "description": "Ogni volta che un agente KRIKKA ZPAKKATRICE amico sta sparando, combattendo in corpo a corpo o si sta rivalendo, nel passo Tirare i dadi attacco:<br><br>• Per ogni risultato pari a 6 sui dadi attacco che mantieni ottieni un punto Zpakko.<br><br>• Puoi spendere fino a 2 dei tuoi punti Zpakko (se non si tratta di uno SQUIG BOMBA). Per ogni punto che spendi in questo modo, mantieni uno dei tuoi tiri falliti come un successo normale invece di scartarlo.\nNon puoi avere più di 6 punti Zpakko per volta. Puoi ottenere e spendere punti Zpakko durante la stessa azione, e puoi farlo in qualsiasi ordine a tua scelta; se però hai iniziato l’azione con 6 punti Zpakko, puoi solo spenderli."
     }
   ],
   "strategy_ploy": [
@@ -388,6 +395,6 @@
     }
   ],
   "agents_deploy_rules": {
-    "description": "KILL TEAM KRIKKA ZPAKKATRICE\nARCHETIPI: SICUREZZA, RICERCA E DISTRUZIONE\nAGENTI\n↘ 1 agente KRIKKA ZPAKKATRICE KAPO NOB con una delle seguenti opzioni:\n• Piztola a mizzili; frantumartello\n• Due piztole a mizzili; zpakka\n↘ 2 agenti KRIKKA ZPAKKATRICE SQUIG BOMBA\n↘ 5 agenti KRIKKA ZPAKKATRICE selezionati dalla seguente lista:\n• ZPEZZATORE DEMOLITORE\n• ZPEZZATORE GUERRIERO\n• ZPEZZATORE ZKIACCIATORE\n• ZMONTAKARRI ARTIGLIERE con una delle seguenti opzioni:\n○ Zparamizzili pezante; pugni\n○ Zparamizzili; pugni\n• ZMONTAKARRI MIZZILIZTA con una delle seguenti opzioni:\n○ Zparamizzili; mizzile a impulzi; pugni\n○ Zparamizzili; rastrelliera di mizzili; pugni\nA parte gli agenti SQUIG BOMBA, ZPEZZATORE GUERRIERO e ZMONTAKARRI ARTIGLIERE, il tuo kill team può includere ogni agente in alto solo una volta."
+    "description": "KILL TEAM KRIKKA ZPAKKATRICE\nARCHETIPI: SICUREZZA, RICERCA E DISTRUZIONE\nAGENTI\n↘ 1 agente KRIKKA ZPAKKATRICE KAPO NOB con una delle seguenti opzioni:<br><br>• Piztola a mizzili; frantumartello<br><br>• Due piztole a mizzili; zpakka\n↘ 2 agenti KRIKKA ZPAKKATRICE SQUIG BOMBA\n↘ 5 agenti KRIKKA ZPAKKATRICE selezionati dalla seguente lista:<br><br>• ZPEZZATORE DEMOLITORE<br><br>• ZPEZZATORE GUERRIERO<br><br>• ZPEZZATORE ZKIACCIATORE<br><br>• ZMONTAKARRI ARTIGLIERE con una delle seguenti opzioni:\n○ Zparamizzili pezante; pugni\n○ Zparamizzili; pugni<br><br>• ZMONTAKARRI MIZZILIZTA con una delle seguenti opzioni:\n○ Zparamizzili; mizzile a impulzi; pugni\n○ Zparamizzili; rastrelliera di mizzili; pugni\nA parte gli agenti SQUIG BOMBA, ZPEZZATORE GUERRIERO e ZMONTAKARRI ARTIGLIERE, il tuo kill team può includere ogni agente in alto solo una volta."
   }
 }

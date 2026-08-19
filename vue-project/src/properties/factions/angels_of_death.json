@@ -3,6 +3,7 @@
   "agents": [
     {
       "name": "SPACE MARINE CAPITANO",
+      "img_path": "assets/pics/angels_of_death/space_marine_capitano.png",
       "keywords": [
         "ANGELI DELLA MORTE",
         "IMPERIUM",
@@ -43,7 +44,7 @@
       "traits": [
         {
           "name": "Leader Eroico",
-          "description": "una volta per punto di svolta puoi scegliere una delle seguenti opzioni:\n• Usare un espediente Scontro a Fuoco (escluso Ripetizione Comando) per 0PC se questo agente è l’agente ANGELI DELLA MORTE specificato.\n• Usare l’espediente strategia Dottrina di Combattimento quando attivi un agente ANGELI DELLA MORTE amico se questo agente si trova nella killzone e non entro la distanza di controllo degli agenti nemici (pagane normalmente il costo in PC). Nota che non puoi farlo se hai già usato quell’espediente durante questo punto di svolta.\n• Usare l’espediente Scontro a Fuoco Variare Dottrina per 0PC se questo agente si trova nella killzone e non entro la distanza di controllo degli agenti nemici."
+          "description": "una volta per punto di svolta puoi scegliere una delle seguenti opzioni:<br><br>• Usare un espediente Scontro a Fuoco (escluso Ripetizione Comando) per 0PC se questo agente è l’agente ANGELI DELLA MORTE specificato.<br><br>• Usare l’espediente strategia Dottrina di Combattimento quando attivi un agente ANGELI DELLA MORTE amico se questo agente si trova nella killzone e non entro la distanza di controllo degli agenti nemici (pagane normalmente il costo in PC). Nota che non puoi farlo se hai già usato quell’espediente durante questo punto di svolta.<br><br>• Usare l’espediente Scontro a Fuoco Variare Dottrina per 0PC se questo agente si trova nella killzone e non entro la distanza di controllo degli agenti nemici."
         },
         {
           "name": "Aureola di Ferro",
@@ -53,6 +54,7 @@
     },
     {
       "name": "INTERCESSOR D’ASSALTO SERGENTE",
+      "img_path": "assets/pics/angels_of_death/intercessor_d'assalto_sergente.png",
       "keywords": [
         "ANGELI DELLA MORTE",
         "IMPERIUM",
@@ -129,7 +131,7 @@
       "traits": [
         {
           "name": "Guerra Secondo Dottrina",
-          "description": "puoi scegliere ciascuna delle seguenti opzioni una volta per battaglia:\n• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina di Assalto, se questo agente si trova nella killzone quell’espediente ti costa 0PC.\n• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina Tattica, se questo agente si trova nella killzone quell’espediente ti costa 0PC."
+          "description": "puoi scegliere ciascuna delle seguenti opzioni una volta per battaglia:<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina di Assalto, se questo agente si trova nella killzone quell’espediente ti costa 0PC.<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina Tattica, se questo agente si trova nella killzone quell’espediente ti costa 0PC."
         },
         {
           "name": "Veterano del Capitolo",
@@ -139,6 +141,7 @@
     },
     {
       "name": "INTERCESSOR SERGENTE",
+      "img_path": "assets/pics/angels_of_death/intercessor_sergente.png",
       "keywords": [
         "ANGELI DELLA MORTE",
         "IMPERIUM",
@@ -222,7 +225,7 @@
       "traits": [
         {
           "name": "Guerra Secondo Dottrina",
-          "description": "puoi scegliere ciascuna delle seguenti opzioni una volta per battaglia:\n• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina di Devastazione, se questo agente si trova nella killzone quell’espediente ti costa 0PC.\n• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina Tattica, se questo agente si trova nella killzone quell’espediente ti costa 0PC."
+          "description": "puoi scegliere ciascuna delle seguenti opzioni una volta per battaglia:<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina di Devastazione, se questo agente si trova nella killzone quell’espediente ti costa 0PC.<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina Tattica, se questo agente si trova nella killzone quell’espediente ti costa 0PC."
         },
         {
           "name": "Veterano del Capitolo",
@@ -232,6 +235,7 @@
     },
     {
       "name": "INTERCESSOR D’ASSALTO GRANATIERE",
+      "img_path": "assets/pics/angels_of_death/intercessor_d'assalto_granatiere.png",
       "keywords": [
         "ANGELI DELLA MORTE",
         "IMPERIUM",
@@ -271,6 +275,7 @@
     },
     {
       "name": "INTERCESSOR D’ASSALTO GUERRIERO",
+      "img_path": "assets/pics/angels_of_death/intercessor_d'assalto_guerriero.png",
       "keywords": [
         "ANGELI DELLA MORTE",
         "IMPERIUM",
@@ -305,6 +310,7 @@
     },
     {
       "name": "INTERCESSOR PESANTE ARTIGLIERE",
+      "img_path": "assets/pics/angels_of_death/intercessor_pesante_artigliere.png",
       "keywords": [
         "ANGELI DELLA MORTE",
         "IMPERIUM",
@@ -353,6 +359,7 @@
     },
     {
       "name": "INTERCESSOR ARTIGLIERE",
+      "img_path": "assets/pics/angels_of_death/intercessor_artigliere.png",
       "keywords": [
         "ANGELI DELLA MORTE",
         "IMPERIUM",
@@ -422,6 +429,7 @@
     },
     {
       "name": "INTERCESSOR GUERRIERO",
+      "img_path": "assets/pics/angels_of_death/intercessor_guerriero.png",
       "keywords": [
         "ANGELI DELLA MORTE",
         "IMPERIUM",
@@ -477,6 +485,7 @@
     },
     {
       "name": "ELIMINATORE CECCHINO",
+      "img_path": "assets/pics/angels_of_death/eliminatore_cecchino.png",
       "keywords": [
         "ANGELI DELLA MORTE",
         "IMPERIUM",
@@ -572,7 +581,7 @@
   "strategy_ploy": [
     {
       "name": "DOTTRINA DI COMBATTIMENTO",
-      "description": "Scegli una DOTTRINA DI COMBATTIMENTO fra quelle presentate in basso. Ogni volta che un agente ANGELI DELLA MORTE amico effettua quanto previsto da x, le sue armi hanno la regola delle armi Bilanciata. X è la DOTTRINA DI COMBATTIMENTO che hai scelto.\n• Dottrina di Devastazione: spara a un agente a più di 6\" da esso.\n• Dottrina Tattica: spara a un agente entro 6\" da esso.\n• Dottrina di Assalto: combatte o si rivale."
+      "description": "Scegli una DOTTRINA DI COMBATTIMENTO fra quelle presentate in basso. Ogni volta che un agente ANGELI DELLA MORTE amico effettua quanto previsto da x, le sue armi hanno la regola delle armi Bilanciata. X è la DOTTRINA DI COMBATTIMENTO che hai scelto.<br><br>• Dottrina di Devastazione: spara a un agente a più di 6\" da esso.<br><br>• Dottrina Tattica: spara a un agente entro 6\" da esso.<br><br>• Dottrina di Assalto: combatte o si rivale."
     },
     {
       "name": "INDOMITUS",
@@ -598,7 +607,7 @@
     },
     {
       "name": "ASSALTO FOLGORANTE",
-      "description": "Usa questo espediente Scontro a Fuoco quando un agente ANGELI DELLA MORTE amico svolga l’azione Combattere durante un’attivazione in cui ha svolto l’azione Caricare, all’inizio del passo Risolvere i dadi attacco. Fino alla fine di quella azione:\n• Le sue armi da mischia hanno la regola delle armi Shock.\n• La prima volta che affondi durante quella sequenza, infliggi 1 danno addizionale (fino a un massimo di 7)."
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente ANGELI DELLA MORTE amico svolga l’azione Combattere durante un’attivazione in cui ha svolto l’azione Caricare, all’inizio del passo Risolvere i dadi attacco. Fino alla fine di quella azione:<br><br>• Le sue armi da mischia hanno la regola delle armi Shock.<br><br>• La prima volta che affondi durante quella sequenza, infliggi 1 danno addizionale (fino a un massimo di 7)."
     },
     {
       "name": "IRA VENDICATIVA",
@@ -606,6 +615,6 @@
     }
   ],
   "agents_deploy_rules": {
-    "description": "1 agente ANGELI DELLA MORTE scelto dalla seguente lista:\n• INTERCESSOR D’ASSALTO SERGENTE con una opzione da ciascuna delle seguenti:\n  - Pistola lanciafiamme o pistola requiem pesante\n  - Spada a catena, maglio potenziato, arma potenziata o martello Tuono\n O la seguente opzione:\n  - Pistola plasma; spada a catena\n• INTERCESSOR SERGENTE con una opzione da ciascuna delle seguenti:\n  - Fucile requiem a lunga gittata automatico, fucile requiem a lunga gittata o fucile requiem a lunga gittata Venator\n  - Spada a catena, pugni, maglio potenziato, arma potenziata o martello Tuono\n• SPACE MARINE CAPITANO\n\n5 agenti ANGELI DELLA MORTE scelti dalla seguente lista:\n• INTERCESSOR D’ASSALTO GRANATIERE\n• INTERCESSOR D’ASSALTO GUERRIERO\n• ELIMINATORE CECCHINO\n• INTERCESSOR PESANTE ARTIGLIERE\n• INTERCESSOR ARTIGLIERE con lanciagranate ausiliario e una delle seguenti opzioni:\n  - Fucile requiem a lunga gittata automatico; pugni\n  - Fucile requiem a lunga gittata; pugni\n  - Fucile requiem a lunga gittata Venator; pugni\n• INTERCESSOR GUERRIERO con una delle seguenti opzioni:\n  - Fucile requiem a lunga gittata automatico; pugni\n  - Fucile requiem a lunga gittata; pugni\n  - Fucile requiem a lunga gittata Venator; pugni\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente di questa lista solo una volta."
+    "description": "1 agente ANGELI DELLA MORTE scelto dalla seguente lista:<br><br>• INTERCESSOR D’ASSALTO SERGENTE con una opzione da ciascuna delle seguenti:\n  - Pistola lanciafiamme o pistola requiem pesante\n  - Spada a catena, maglio potenziato, arma potenziata o martello Tuono\n O la seguente opzione:\n  - Pistola plasma; spada a catena<br><br>• INTERCESSOR SERGENTE con una opzione da ciascuna delle seguenti:\n  - Fucile requiem a lunga gittata automatico, fucile requiem a lunga gittata o fucile requiem a lunga gittata Venator\n  - Spada a catena, pugni, maglio potenziato, arma potenziata o martello Tuono<br><br>• SPACE MARINE CAPITANO\n\n5 agenti ANGELI DELLA MORTE scelti dalla seguente lista:<br><br>• INTERCESSOR D’ASSALTO GRANATIERE<br><br>• INTERCESSOR D’ASSALTO GUERRIERO<br><br>• ELIMINATORE CECCHINO<br><br>• INTERCESSOR PESANTE ARTIGLIERE<br><br>• INTERCESSOR ARTIGLIERE con lanciagranate ausiliario e una delle seguenti opzioni:\n  - Fucile requiem a lunga gittata automatico; pugni\n  - Fucile requiem a lunga gittata; pugni\n  - Fucile requiem a lunga gittata Venator; pugni<br><br>• INTERCESSOR GUERRIERO con una delle seguenti opzioni:\n  - Fucile requiem a lunga gittata automatico; pugni\n  - Fucile requiem a lunga gittata; pugni\n  - Fucile requiem a lunga gittata Venator; pugni\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente di questa lista solo una volta."
   }
 }

@@ -3,6 +3,7 @@
   "agents": [
     {
       "name": "NIGHT LORD VISIONARIO",
+      "img_path": "assets/pics/nemesis_claw/night_lord_visionario.png",
       "keywords": [
         "ARTIGLIO NEMESI",
         "CAOS",
@@ -85,12 +86,13 @@
       "traits": [
         {
           "name": "Prescienza",
-          "description": "PSICHICA. Nel passo Preparare di ogni fase di Strategia ottieni D3 punti Prescienza. Alla fine di ciascun punto di svolta, scarta i tuoi punti Prescienza. Puoi spendere i tuoi punti Prescienza nella fase di Scontro a Fuoco come segue (puoi usare ciascuna delle seguenti regole solo una volta per punto di svolta):\n• Presentimento: PSICHICA. Ogni volta che è il tuo turno di attivare un agente amico puoi spendere 1 dei tuoi punti Prescienza per saltare quell’attivazione.\n• Premonizione: PSICHICA. Ogni volta che un dado attacco infligge Dnn Normali a questo agente puoi spendere 1 dei tuoi punti Prescienza per ignorare quei danni inflitti.\nNon puoi ottenere o spendere i tuoi punti Prescienza se questo agente è neutralizzato."
+          "description": "PSICHICA. Nel passo Preparare di ogni fase di Strategia ottieni D3 punti Prescienza. Alla fine di ciascun punto di svolta, scarta i tuoi punti Prescienza. Puoi spendere i tuoi punti Prescienza nella fase di Scontro a Fuoco come segue (puoi usare ciascuna delle seguenti regole solo una volta per punto di svolta):<br><br>• Presentimento: PSICHICA. Ogni volta che è il tuo turno di attivare un agente amico puoi spendere 1 dei tuoi punti Prescienza per saltare quell’attivazione.<br><br>• Premonizione: PSICHICA. Ogni volta che un dado attacco infligge Dnn Normali a questo agente puoi spendere 1 dei tuoi punti Prescienza per ignorare quei danni inflitti.\nNon puoi ottenere o spendere i tuoi punti Prescienza se questo agente è neutralizzato."
         }
       ]
     },
     {
       "name": "NIGHT LORD PORTATORE DI TERRORE",
+      "img_path": "assets/pics/nemesis_claw/night_lord_portatore_di_terrore.png",
       "keywords": [
         "ARTIGLIO NEMESI",
         "CAOS",
@@ -162,6 +164,7 @@
     },
     {
       "name": "NIGHT LORD ARTIGLIERE PESANTE",
+      "img_path": "assets/pics/nemesis_claw/night_lord_artigliere_pesante.png",
       "keywords": [
         "ARTIGLIO NEMESI",
         "CAOS",
@@ -236,6 +239,7 @@
     },
     {
       "name": "NIGHT LORD RUBAPELLE",
+      "img_path": "assets/pics/nemesis_claw/night_lord_rubapelle.png",
       "keywords": [
         "ARTIGLIO NEMESI",
         "CAOS",
@@ -278,6 +282,7 @@
     },
     {
       "name": "NIGHT LORD ARTIGLIERE",
+      "img_path": "assets/pics/nemesis_claw/night_lord_artigliere.png",
       "keywords": [
         "ARTIGLIO NEMESI",
         "CAOS",
@@ -351,6 +356,7 @@
     },
     {
       "name": "NIGHT LORD URLATORE",
+      "img_path": "assets/pics/nemesis_claw/night_lord_urlatore.png",
       "keywords": [
         "ARTIGLIO NEMESI",
         "CAOS",
@@ -389,6 +395,7 @@
     },
     {
       "name": "NIGHT LORD VENTRILOKAR",
+      "img_path": "assets/pics/nemesis_claw/night_lord_ventrilokar.png",
       "keywords": [
         "ARTIGLIO NEMESI",
         "CAOS",
@@ -421,7 +428,7 @@
       "abilities": [
         {
           "name": "IMITAZIONE SCONCERTANTE 1PA",
-          "description": "PSICHICA. Scegli un agente nemico entro 6\" da questo agente, poi seleziona una delle seguenti opzioni per quell’agente nemico (puoi selezionare ciascuna opzione solo una volta per battaglia):\n• Fino alla fine della sua prossima attivazione sottrai 1 dalla sua statistica LPA.\n• Cambia il suo ordine.\n• Svolgi un’azione Scattare gratuita con esso (specifica la posizione in cui l’avversario deve muoverlo).\nQuesto agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+          "description": "PSICHICA. Scegli un agente nemico entro 6\" da questo agente, poi seleziona una delle seguenti opzioni per quell’agente nemico (puoi selezionare ciascuna opzione solo una volta per battaglia):<br><br>• Fino alla fine della sua prossima attivazione sottrai 1 dalla sua statistica LPA.<br><br>• Cambia il suo ordine.<br><br>• Svolgi un’azione Scattare gratuita con esso (specifica la posizione in cui l’avversario deve muoverlo).\nQuesto agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
         }
       ],
       "traits": [
@@ -433,6 +440,7 @@
     },
     {
       "name": "NIGHT LORD GUERRIERO",
+      "img_path": "assets/pics/nemesis_claw/night_lord_guerriero.png",
       "keywords": [
         "ARTIGLIO NEMESI",
         "CAOS",
@@ -509,7 +517,7 @@
     },
     {
       "name": "CORAZZA D’OSCURITÀ",
-      "description": "Ogni volta che un agente nemico spara a un agente ARTIGLIO NEMESI amico, quell’agente amico è oscurato se si applicano entrambe le seguenti condizioni:\n• Si trova a più di 8\" dagli agenti nemici a cui è visibile.\n• Si trova entro 1\" da terreni Pesanti che non sono più in basso di esso, oppure qualsiasi parte della sua basetta si trova sotto terreni Sopraelevati."
+      "description": "Ogni volta che un agente nemico spara a un agente ARTIGLIO NEMESI amico, quell’agente amico è oscurato se si applicano entrambe le seguenti condizioni:<br><br>• Si trova a più di 8\" dagli agenti nemici a cui è visibile.<br><br>• Si trova entro 1\" da terreni Pesanti che non sono più in basso di esso, oppure qualsiasi parte della sua basetta si trova sotto terreni Sopraelevati."
     }
   ],
   "strategy_ploy": [
@@ -549,6 +557,6 @@
     }
   ],
   "agents_deploy_rules": {
-    "description": "KILL TEAM ARTIGLIO NEMESI\nARCHETIPI: INFILTRAZIONE, RICERCA E DISTRUZIONE\n\nAGENTI\n↘ 1 agente ARTIGLIO NEMESI VISIONARIO con una delle seguenti opzioni:\n• Pistola requiem; maglio potenziato\n• Pistola requiem; mazza potenziata\n• Pistola requiem; arma potenziata\n• Pistola plasma; lama a catena nostramana\n\n↘ 5 agenti ARTIGLIO NEMESI scelti dalla seguente lista:\n• PORTATORE DI TERRORE\n• ARTIGLIERE con una delle seguenti opzioni:\n  ○ Pistola requiem; lanciafiamme; pugni\n  ○ Pistola requiem; fucile termico; pugni\n  ○ Pistola requiem; fucile plasma; pugni\n• ARTIGLIERE PESANTE con una delle seguenti opzioni:\n  ○ Pistola requiem; requiem pesante; pugni\n  ○ Pistola requiem; lanciamissili; pugni\n• URLATORE\n• RUBAPELLE\n• VENTRILOKAR\n• GUERRIERO con una delle seguenti opzioni:\n  ○ Pistola requiem; spada a catena\n  ○ Fucile requiem; pugni\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente di questa lista solo una volta."
+    "description": "KILL TEAM ARTIGLIO NEMESI\nARCHETIPI: INFILTRAZIONE, RICERCA E DISTRUZIONE\n\nAGENTI\n↘ 1 agente ARTIGLIO NEMESI VISIONARIO con una delle seguenti opzioni:<br><br>• Pistola requiem; maglio potenziato<br><br>• Pistola requiem; mazza potenziata<br><br>• Pistola requiem; arma potenziata<br><br>• Pistola plasma; lama a catena nostramana\n\n↘ 5 agenti ARTIGLIO NEMESI scelti dalla seguente lista:<br><br>• PORTATORE DI TERRORE<br><br>• ARTIGLIERE con una delle seguenti opzioni:\n  ○ Pistola requiem; lanciafiamme; pugni\n  ○ Pistola requiem; fucile termico; pugni\n  ○ Pistola requiem; fucile plasma; pugni<br><br>• ARTIGLIERE PESANTE con una delle seguenti opzioni:\n  ○ Pistola requiem; requiem pesante; pugni\n  ○ Pistola requiem; lanciamissili; pugni<br><br>• URLATORE<br><br>• RUBAPELLE<br><br>• VENTRILOKAR<br><br>• GUERRIERO con una delle seguenti opzioni:\n  ○ Pistola requiem; spada a catena\n  ○ Fucile requiem; pugni\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente di questa lista solo una volta."
   }
 }

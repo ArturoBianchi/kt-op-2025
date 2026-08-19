@@ -56,9 +56,6 @@ const sectionDefinitions = [
     }
 ];
 
-// UNavigationMenu only highlights an entry when its own "active" flag is
-// true (it doesn't derive it from v-model), so mark the entry matching the
-// current selection as active on every re-render.
 const items = computed(() => [
     sectionDefinitions.map(item => ({
         ...item,
@@ -79,15 +76,6 @@ const factionAgents = computed(() =>
     factionJsonStore.getFactionByName(selectedTeam.value)?.agents ?? []
 );
 
-const testSelTeamItems = [
-    'Angeli della Morte',
-    'Legionari',
-    'Wrecka Krew',
-    'Ratlings',
-    'Nemesis Claw',
-    'Spectre Squad',
-    'Plague Marines'
-];
 </script>
 
 <template>
@@ -111,12 +99,12 @@ const testSelTeamItems = [
             />
         </Transition>
         <div class="grid grid-cols-1 p-1">
-            <div class="col-span-auto">
+            <div class="col-span-auto" style="margin-top: 1rem">
                 <UFormField size="sm" name="test" class="w-70">
                     <USelect v-model="selectedTeam" :items="factionItems" :content="{side: 'bottom'}" placeholder="Seleziona fazione..." class="w-full text-left" />
                 </UFormField>
             </div>
-            <div class="col-span-auto ">
+            <div class="col-span-auto" style="margin: 0.5rem 0;">
                 <UNavigationMenu :items="items" :ui="{root: 'py-1 [&>div]:w-full', list: 'w-full', item: 'py-0 flex-1 min-w-0',link: 'flex-col gap-1 px-1 justify-center', linkLeadingIcon: 'size-4',linkLabel: 'w-full text-center truncate text-[0.6rem]/3 font-normal'}" class="w-full"/>
             </div>
         </div>
@@ -154,8 +142,8 @@ const testSelTeamItems = [
 
 .factions-content {
     flex: 1;
+    min-width: 0;
     min-height: 70vh;
-    
     border-radius: var(--radius);
    
 }

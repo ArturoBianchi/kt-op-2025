@@ -3,6 +3,7 @@
   "agents": [
     {
       "name": "LEGIONARIO ASPIRANTE CAMPIONE",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -96,6 +97,7 @@
     },
     {
       "name": "LEGIONARIO PRESCELTO",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -166,6 +168,7 @@
     },
     {
       "name": "LEGIONARIO ELETTO",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -201,13 +204,14 @@
       "abilities": [
         {
           "name": "Scatenare il Demone",
-          "description": "puoi usare questa regola una volta per battaglia, quando questo agente viene attivato. Se lo fai, fino alla fine della battaglia:\n• Questo agente non può svolgere azioni Raccogliere Segnalino o azioni della missione (eccetto Azionare Portello). Se sta trasportando un segnalino, deve svolgere immediatamente l’azione Collocare Segnalino per 0PA (ciò ha la precedenza su tutte le altre regole).\n• I Dnn Normali e Critici di 4 o più infliggono a questo agente 1 danno in meno.\n• L’artiglio demoniaco di questo agente ha le regole delle armi Incessante e Letale 5+. Se questo agente ha la keyword NURGLE, non puoi ridurre i danni di un dado attacco di più di 1. In altre parole, non puoi usare entrambe le regole per ridurre di 2 Dnn Normali di 4 o più."
+          "description": "puoi usare questa regola una volta per battaglia, quando questo agente viene attivato. Se lo fai, fino alla fine della battaglia:<br><br>• Questo agente non può svolgere azioni Raccogliere Segnalino o azioni della missione (eccetto Azionare Portello). Se sta trasportando un segnalino, deve svolgere immediatamente l’azione Collocare Segnalino per 0PA (ciò ha la precedenza su tutte le altre regole).<br><br>• I Dnn Normali e Critici di 4 o più infliggono a questo agente 1 danno in meno.<br><br>• L’artiglio demoniaco di questo agente ha le regole delle armi Incessante e Letale 5+. Se questo agente ha la keyword NURGLE, non puoi ridurre i danni di un dado attacco di più di 1. In altre parole, non puoi usare entrambe le regole per ridurre di 2 Dnn Normali di 4 o più."
         }
       ],
       "traits": []
     },
     {
       "name": "LEGIONARIO ACCOLITO MALIFUOCO",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -276,6 +280,7 @@
     },
     {
       "name": "LEGIONARIO MACELLAIO",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -311,13 +316,14 @@
       "abilities": [
         {
           "name": "Assalto Distruttivo",
-          "description": "• Ogni volta che questo agente combatte o si rivale, gli agenti nemici non possono assistere.\n• Alla fine dell’attivazione o dell’azione in risposta di ogni agente nemico puoi selezionare un agente nemico entro 2\" da questo agente. Questo agente può svolgere un’azione Caricare gratuita (per farlo puoi cambiare il suo ordine in Ingaggiare), ma esso può muoversi di massimo 2\" e deve terminare quel movimento entro la distanza di controllo di quell’agente selezionato."
+          "description": "• Ogni volta che questo agente combatte o si rivale, gli agenti nemici non possono assistere.<br><br>• Alla fine dell’attivazione o dell’azione in risposta di ogni agente nemico puoi selezionare un agente nemico entro 2\" da questo agente. Questo agente può svolgere un’azione Caricare gratuita (per farlo puoi cambiare il suo ordine in Ingaggiare), ma esso può muoversi di massimo 2\" e deve terminare quel movimento entro la distanza di controllo di quell’agente selezionato."
         }
       ],
       "traits": []
     },
     {
       "name": "LEGIONARIO ARTIGLIERE",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -395,6 +401,7 @@
     },
     {
       "name": "LEGIONARIO ARTIGLIERE PESANTE",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -494,6 +501,7 @@
     },
     {
       "name": "LEGIONARIO PORTATORE DELL’ICONA",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -552,6 +560,7 @@
     },
     {
       "name": "LEGIONARIO ARTIGLIO CONFESSORE",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -595,13 +604,14 @@
         },
         {
           "name": "MARCHIO TERRIBILE (2PA)",
-          "description": "Colloca il tuo segnalino Terribile entro la distanza di controllo di questo agente.\n• Ogni volta che un agente nemico si trova entro 3\" dal tuo segnalino Terribile, l’avversario deve spendere 1PA addizionale affinché quell’agente nemico svolga azioni Raccogliere Segnalino e azioni della missione.\n• Ogni volta che determini il controllo di un segnalino, considera la statistica LPA totale degli agenti nemici che lo contendono come se fosse di 1 più bassa se almeno uno di quegli agenti nemici si trova entro 3\" dal tuo segnalino Terribile. Nota che ciò non è una modifica alla sua statistica LPA, quindi qualsiasi cambiamento è cumulativo a questo.\nQuesto agente può svolgere questa azione solo una volta per battaglia e non può svolgerla fintanto che si trova entro la distanza di controllo di un agente nemico."
+          "description": "Colloca il tuo segnalino Terribile entro la distanza di controllo di questo agente.<br><br>• Ogni volta che un agente nemico si trova entro 3\" dal tuo segnalino Terribile, l’avversario deve spendere 1PA addizionale affinché quell’agente nemico svolga azioni Raccogliere Segnalino e azioni della missione.<br><br>• Ogni volta che determini il controllo di un segnalino, considera la statistica LPA totale degli agenti nemici che lo contendono come se fosse di 1 più bassa se almeno uno di quegli agenti nemici si trova entro 3\" dal tuo segnalino Terribile. Nota che ciò non è una modifica alla sua statistica LPA, quindi qualsiasi cambiamento è cumulativo a questo.\nQuesto agente può svolgere questa azione solo una volta per battaglia e non può svolgerla fintanto che si trova entro la distanza di controllo di un agente nemico."
         }
       ],
       "traits": []
     },
     {
       "name": "LEGIONARIO GUERRIERO",
+      "img_path": "",
       "keywords": [
         "LEGIONARI",
         "CAOS",
@@ -740,6 +750,6 @@
     }
   ],
   "agents_deploy_rules": {
-    "description": "KILL TEAM LEGIONARI\nARCHETIPI: SICUREZZA, RICERCA E DISTRUZIONE\n\nAGENTI\n1 agente LEGIONARI scelto dalla seguente lista:\n• ASPIRANTE CAMPIONE con una opzione da ciascuna delle seguenti:\n  - Pistola plasma o pistola requiem corrotta\n  - Maglio potenziato, mazza potenziata, arma potenziata o spada a catena corrotta\n• PRESCELTO con una delle seguenti opzioni:\n  - Pistola plasma; lama demoniaca\n  - Pistola requiem corrotta; lama demoniaca\n\n5 agenti LEGIONARI scelti dalla seguente lista:\n• ELETTO\n• ACCOLITO MALIFUOCO\n• MACELLAIO\n• ARTIGLIERE con una delle seguenti opzioni:\n  - Pistola requiem; lanciafiamme; pugni\n  - Pistola requiem; fucile termico; pugni\n  - Pistola requiem; fucile plasma; pugni\n• ARTIGLIERE PESANTE con una delle seguenti opzioni:\n  - Pistola requiem; requiem pesante; pugni\n  - Pistola requiem; lanciamissili; pugni\n  - Pistola requiem; cannone a catena Mietitore; pugni\n• PORTATORE DELL’ICONA con una delle seguenti opzioni:\n  - Fucile requiem; pugni\n  - Pistola requiem; spada a catena\n• ARTIGLIO CONFESSORE\n• GUERRIERO con una delle seguenti opzioni:\n  - Fucile requiem; pugni\n  - Pistola requiem; spada a catena\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente in alto solo una volta."
+    "description": "KILL TEAM LEGIONARI\nARCHETIPI: SICUREZZA, RICERCA E DISTRUZIONE\n\nAGENTI\n1 agente LEGIONARI scelto dalla seguente lista:<br><br>• ASPIRANTE CAMPIONE con una opzione da ciascuna delle seguenti:\n  - Pistola plasma o pistola requiem corrotta\n  - Maglio potenziato, mazza potenziata, arma potenziata o spada a catena corrotta<br><br>• PRESCELTO con una delle seguenti opzioni:\n  - Pistola plasma; lama demoniaca\n  - Pistola requiem corrotta; lama demoniaca\n\n5 agenti LEGIONARI scelti dalla seguente lista:<br><br>• ELETTO<br><br>• ACCOLITO MALIFUOCO<br><br>• MACELLAIO<br><br>• ARTIGLIERE con una delle seguenti opzioni:\n  - Pistola requiem; lanciafiamme; pugni\n  - Pistola requiem; fucile termico; pugni\n  - Pistola requiem; fucile plasma; pugni<br><br>• ARTIGLIERE PESANTE con una delle seguenti opzioni:\n  - Pistola requiem; requiem pesante; pugni\n  - Pistola requiem; lanciamissili; pugni\n  - Pistola requiem; cannone a catena Mietitore; pugni<br><br>• PORTATORE DELL’ICONA con una delle seguenti opzioni:\n  - Fucile requiem; pugni\n  - Pistola requiem; spada a catena<br><br>• ARTIGLIO CONFESSORE<br><br>• GUERRIERO con una delle seguenti opzioni:\n  - Fucile requiem; pugni\n  - Pistola requiem; spada a catena\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente in alto solo una volta."
   }
 }

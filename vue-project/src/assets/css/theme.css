@@ -30,8 +30,8 @@
   --op-crit: #FFF59D;         /* Pastel Yellow */
 
   /* Tipografia */
-  --font-main: 'Inter', sans-serif;
-  --font-mono: 'Inter', sans-serif;
+  --font-main: 'Google Sans', sans-serif;
+  --font-mono: 'Google Sans', sans-serif;
 
   /* UI Setup */
   --radius: 8px;              /* Material standard radius */

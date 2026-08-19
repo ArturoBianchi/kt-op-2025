@@ -3,6 +3,7 @@
   "agents": [
     {
       "name": "SPETTRO SERGENTE VETERANO",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -42,6 +43,7 @@
     },
     {
       "name": "SPETTRO MEDICAE DA CAMPO",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -92,6 +94,7 @@
     },
     {
       "name": "SPETTRO GRANATIERE",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -145,6 +148,7 @@
     },
     {
       "name": "SPETTRO GUIDA",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -188,12 +192,13 @@
         },
         {
           "name": "Perlustrare Terreno",
-          "description": "gli elementi di terreno entro il tuo territorio o entro 3\" da questo agente sono perlustrati per gli agenti SQUADRA SPETTRO amici. Una volta in ciascuna delle proprie attivazioni, gli agenti SQUADRA SPETTRO amici possono svolgere una delle seguenti:\n• Ignorare i primi 2\" in verticale di cui si muovono durante un’arrampicata se l’elemento di terreno è perlustrato per gli agenti SQUADRA SPETTRO amici.\n• Svolgere l’azione Azionare Portello per 1PA in meno se il punto d’accesso è perlustrato per gli agenti SQUADRA SPETTRO amici."
+          "description": "gli elementi di terreno entro il tuo territorio o entro 3\" da questo agente sono perlustrati per gli agenti SQUADRA SPETTRO amici. Una volta in ciascuna delle proprie attivazioni, gli agenti SQUADRA SPETTRO amici possono svolgere una delle seguenti:<br><br>• Ignorare i primi 2\" in verticale di cui si muovono durante un’arrampicata se l’elemento di terreno è perlustrato per gli agenti SQUADRA SPETTRO amici.<br><br>• Svolgere l’azione Azionare Portello per 1PA in meno se il punto d’accesso è perlustrato per gli agenti SQUADRA SPETTRO amici."
         }
       ]
     },
     {
       "name": "SPETTRO ARTIGLIERE",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -241,6 +246,7 @@
     },
     {
       "name": "SPETTRO ARTIGLIERE PESANTE",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -293,6 +299,7 @@
     },
     {
       "name": "SPETTRO SERVENTE",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -336,6 +343,7 @@
     },
     {
       "name": "SPETTRO TIRATORE ESPERTO",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -388,6 +396,7 @@
     },
     {
       "name": "SPETTRO MITRAGLIERE",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -440,6 +449,7 @@
     },
     {
       "name": "SPETTRO SOLDATO",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -485,6 +495,7 @@
     },
     {
       "name": "SPETTRO OPERATORE VOX",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -530,6 +541,7 @@
     },
     {
       "name": "FARO VOX-RIPETITORE DEGLI SPETTRI",
+      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -568,7 +580,7 @@
     },
     {
       "name": "TRIANGOLAZIONE IMMAGINI TVCC",
-      "description": "Puoi usare questa regola una volta per punto di svolta, quando un agente SQUADRA SPETTRO amico svolge l’azione Sparare e dovresti scegliere un bersaglio valido. Se lo fai, quel bersaglio non può essere oscurato se è vera almeno una delle seguenti condizioni:\n• È un bersaglio valido anche per un altro agente SQUADRA SPETTRO amico.\n• Si trova entro 6\" da un agente FARO VOX-RIPETITORE amico."
+      "description": "Puoi usare questa regola una volta per punto di svolta, quando un agente SQUADRA SPETTRO amico svolge l’azione Sparare e dovresti scegliere un bersaglio valido. Se lo fai, quel bersaglio non può essere oscurato se è vera almeno una delle seguenti condizioni:<br><br>• È un bersaglio valido anche per un altro agente SQUADRA SPETTRO amico.<br><br>• Si trova entro 6\" da un agente FARO VOX-RIPETITORE amico."
     },
     {
       "name": "BENGALA ILLUMINANTE",
@@ -604,7 +616,7 @@
     },
     {
       "name": "PAZIENZA",
-      "description": "Nella fase di Scontro a Fuoco di questo punto di svolta puoi svolgere una delle seguenti:\n• Quando è il tuo turno di attivare un agente amico, puoi saltare quell’attivazione. Puoi farlo solo dopo la prima attivazione dell’avversario.\n• Quando un agente SQUADRA SPETTRO amico svolge l’azione Sparare o Combattere durante la sua attivazione, se è l’ultimo agente amico a essere attivato in questo punto di svolta, le sue armi hanno la regola delle armi Ineluttabile per quell’azione."
+      "description": "Nella fase di Scontro a Fuoco di questo punto di svolta puoi svolgere una delle seguenti:<br><br>• Quando è il tuo turno di attivare un agente amico, puoi saltare quell’attivazione. Puoi farlo solo dopo la prima attivazione dell’avversario.<br><br>• Quando un agente SQUADRA SPETTRO amico svolge l’azione Sparare o Combattere durante la sua attivazione, se è l’ultimo agente amico a essere attivato in questo punto di svolta, le sue armi hanno la regola delle armi Ineluttabile per quell’azione."
     }
   ],
   "fire_ploy": [
@@ -622,10 +634,10 @@
     },
     {
       "name": "DIFESA APPRONTATA",
-      "description": "Usa questo espediente Scontro a Fuoco quando un agente SQUADRA SPETTRO amico preparato o che ha un ordine Nascondersi si rivale. Puoi svolgere una delle seguenti:\n• All’inizio del passo Risolvere i dadi attacco puoi risolvere uno dei tuoi successi prima dell’ordine normale. Se lo fai, quel successo deve essere usato per bloccare.\n• Quando blocchi, quel blocco può essere assegnato a bloccare due successi non risolti (invece di uno).\nNon puoi usare questo espediente durante un’attivazione che hai interrotto con la regola della Fazione Sofisticate Tecniche di Sopravvivenza."
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente SQUADRA SPETTRO amico preparato o che ha un ordine Nascondersi si rivale. Puoi svolgere una delle seguenti:<br><br>• All’inizio del passo Risolvere i dadi attacco puoi risolvere uno dei tuoi successi prima dell’ordine normale. Se lo fai, quel successo deve essere usato per bloccare.<br><br>• Quando blocchi, quel blocco può essere assegnato a bloccare due successi non risolti (invece di uno).\nNon puoi usare questo espediente durante un’attivazione che hai interrotto con la regola della Fazione Sofisticate Tecniche di Sopravvivenza."
     }
   ],
   "agents_deploy_rules": {
-    "description": "KILL TEAM SQUADRA SPETTRO\nARCHETIPI: INFILTRAZIONE, RICOGNIZIONE\nAGENTI:\n- 1 SQUADRA SPETTRO SERGENTE VETERANO\n- 1 SQUADRA SPETTRO FARO VOX-RIPETITORE\n- 9 agenti SQUADRA SPETTRO scelti dalla seguente lista:\n  • MEDICAE DA CAMPO\n  • GRANATIERE\n  • GUIDA\n  • ARTIGLIERE con una delle seguenti opzioni: Fucile termico; pugni / Fucile plasma; pugni\n  • ARTIGLIERE PESANTE\n  • SERVENTE\n  • TIRATORE ESPERTO\n  • MITRAGLIERE\n  • SOLDATO\n  • OPERATORE VOX\n\nA eccezione degli agenti SOLDATO, il tuo kill team può includere ciascun agente di questa lista solo una volta.\nCon una delle seguenti opzioni:\n• Fucile laser a lunga gittata; calcio dell’arma\n• Carabina laser; calcio dell’arma"
+    "description": "KILL TEAM SQUADRA SPETTRO\nARCHETIPI: INFILTRAZIONE, RICOGNIZIONE\nAGENTI:\n- 1 SQUADRA SPETTRO SERGENTE VETERANO\n- 1 SQUADRA SPETTRO FARO VOX-RIPETITORE\n- 9 agenti SQUADRA SPETTRO scelti dalla seguente lista:\n  • MEDICAE DA CAMPO\n  • GRANATIERE\n  • GUIDA\n  • ARTIGLIERE con una delle seguenti opzioni: Fucile termico; pugni / Fucile plasma; pugni\n  • ARTIGLIERE PESANTE\n  • SERVENTE\n  • TIRATORE ESPERTO\n  • MITRAGLIERE\n  • SOLDATO\n  • OPERATORE VOX\n\nA eccezione degli agenti SOLDATO, il tuo kill team può includere ciascun agente di questa lista solo una volta.\nCon una delle seguenti opzioni:<br><br>• Fucile laser a lunga gittata; calcio dell’arma<br><br>• Carabina laser; calcio dell’arma"
   }
 }

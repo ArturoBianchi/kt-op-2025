@@ -74,7 +74,7 @@ onUnmounted(() => {
     <UApp>
         <div class="app-wrapper">
             <div class="app-container">
-                <AppHeader />
+<!--                <AppHeader />-->
                 <div v-if="pageTitle !== null" class="centered-view">
                     <h1 style="margin-bottom: 0.5rem; margin-top: 0.5rem">{{ pageTitle }}</h1>
                 </div>

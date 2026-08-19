@@ -193,7 +193,5 @@ export const useBattleSessionStore = defineStore(
         }
     },
     {
-        persist: {
-            serializer: createExpiringSerializer(NINE_HOURS_MS)
-        }
+        persist: true
     })

@@ -1,17 +1,59 @@
 <script setup>
-defineProps({
+import {computed} from "vue";
+
+const props = defineProps({
     agent: {
         type: Object,
         required: true
     }
 });
+
+// Carica in eager tutte le immagini degli agenti al momento della build, cosi'
+// il percorso relativo salvato nei JSON delle fazioni (es.
+// "assets/pics/nemesis_claw/night_lord_visionario.png") puo' essere risolto
+// nell'URL effettivo dell'asset gestito da Vite.
+const agentImages = import.meta.glob('../../assets/pics/**/*.png', {eager: true, import: 'default'});
+
+const resolvedImgPath = computed(() => {
+    if (!props.agent.img_path) return undefined;
+    const match = Object.entries(agentImages).find(([path]) => path.endsWith(props.agent.img_path));
+    return match?.[1];
+});
+
+const columns = [
+    {
+        accessorKey: 'name',
+        header: 'Arma'
+    },
+    {
+        accessorKey: 'ATT',
+        header: 'ATT'
+    },
+    {
+        accessorKey: 'COLP',
+        header: 'COLP'
+    },
+    {
+        accessorKey: 'DNN',
+        header: 'DNN'
+    },
+    {
+        accessorKey: 'RdA',
+        header: 'RdA',
+        cell: ({getValue}) => {
+            const value = getValue();
+            if (value === '' || value === null || value === undefined) return '\u00A0';
+            return Array.isArray(value) ? value.join(', ') : String(value);
+        }
+    }
+];
 </script>
 
 <template>
 <UCollapsible>
     <div class="grid grid-cols-8 cursor-pointer">
         <div class="col-span-4">
-            <UUser :avatar="{src: 'https://i.pravatar.cc/150?u=john-doe', loading: 'lazy',icon: 'i-lucide-image',}">
+            <UUser :avatar="{src: resolvedImgPath, loading: 'lazy', icon: 'i-lucide-image',}">
                 <template #name>
                     <p class="agent-name">{{ agent.name }}</p>
                 </template>
@@ -38,11 +80,28 @@ defineProps({
         </div>
     </div>
     <template #content>
-        <p class="testing">testing 1</p>
-        <p class="testing">testing 2</p>
-        <p class="testing">testing 3</p>
-        <p class="testing">testing 4</p>
-        <p class="testing">testing 5</p>
+        <div class="content-section">
+            <div style="margin-top: 0.5rem;">
+                <UTable sticky :data="agent.weapons || []"
+                        :columns="columns" class="w-full"
+                        :ui="{
+                        root: 'max-h-60',
+                        th: 'px-2 py-2 text-xs text-primary',
+                        td: 'px-2 py-1.5 text-[0.60rem] font-small text-highlighted'
+                    }" />
+            </div>
+            <div v-for="trait in agent.traits">
+                <p class="trait-section" v-html="'<b style=\'color: var(--accent-important);\'> ' + trait.name + ': </b>' + trait.description"></p>
+            </div>
+            <div v-for="ability in agent.abilities" :key="ability.name">
+                <div class="ability-section">
+                    <div class="ability-section-name">
+                        <p style="color: var(--text-primary); font-size: 0.6rem">{{ ability.name }}</p>
+                    </div>
+                    <p style="font-size: 0.6rem" v-html="ability.description"></p>
+                </div>
+            </div>
+        </div>
     </template>
 </UCollapsible>
 </template>
@@ -54,7 +113,7 @@ defineProps({
 }
 
 .agent-desc {
-    font-size: 0.5rem;
+    font-size: 0.3rem;
     color: var(--text-secondary);
 }
 
@@ -67,7 +126,37 @@ defineProps({
     font-size: 0.7rem;
     color: var(--text-primary);
 }
-.testing{
-    margin-bottom: 0.5rem;
+
+.content-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.trait-section {
+    margin-top: 0.5rem;
+    font-size: 0.60rem;
+}
+
+.trait-section b {
+    color: var(--accent-important);
+}
+
+.ability-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 2px solid;
+    border-left-color: var(--accent-important);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.ability-section-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.60rem;
+    font-weight: 900;
 }
 </style>
