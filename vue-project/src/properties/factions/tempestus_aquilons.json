@@ -1,0 +1,478 @@
+{
+  "faction": "TEMPESTUS AQUILON",
+  "agents": [
+    {
+      "name": "AQUILON TEMPESTOR",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "LEADER",
+        "TEMPESTOR"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 9
+      },
+      "weapons": [
+        {
+          "name": "Carabina perfolaser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Pistola perfolaser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Pistola requiem reliquia",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/5",
+          "RdA": "Gittata 8\", Letale 5+"
+        },
+        {
+          "name": "Spada a catena",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/5",
+          "RdA": ""
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "3+",
+          "DNN": "2/3",
+          "RdA": ""
+        },
+        {
+          "name": "Arma potenziata",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": "Letale 5+"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "COMANDO (1PA)",
+          "description": "SUPPORTO. Scegli un altro agente TEMPESTUS AQUILON amico (escluse le SERVOSENTINELLE) entro 6\" da questo agente e visibile ad esso. Fino alla fine della prossima attivazione di quell’agente aggiungi 1 alla sua statistica LPA. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Veterano dei Tempestus",
+          "description": "una volta per battaglia puoi usare un espediente Scontro a Fuoco per 0PC se questo è l’agente TEMPESTUS AQUILON specificato, oppure l’espediente Scontro a Fuoco Ripetizione Comando per 0PC se questo è l’agente per cui è stato tirato il dado attacco o difesa."
+        }
+      ]
+    },
+    {
+      "name": "AQUILON GRANATIERE",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "GRANATIERE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Pistola perfolaser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Bomba termica",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/3",
+          "RdA": "Gittata 3\", Devastante 3, Pesante (solo Riposizionarsi), Limitata 1, Penetrante 2"
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Granatiere",
+          "description": "questo agente può usare granate a frammentazione, perforanti, fumogene e ottundenti (vedi equipaggiamento universale). Farlo non conta ai fini di eventuali utilizzi limitati a tua disposizione (ovvero se scegli tali granate dall’equipaggiamento anche per altri agenti). Ogni volta che questo agente usa una granata a frammentazione o perforante, migliora di 1 la statistica Colp di quell’arma."
+        }
+      ]
+    },
+    {
+      "name": "AQUILON PISTOLERO",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "PISTOLERO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Pistole perfolaser (concentrato)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\", Incessante, Dilaniante"
+        },
+        {
+          "name": "Pistole perfolaser (salva)",
+          "ATT": 4,
+          "COLP": "4+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\", Salva*"
+        },
+        {
+          "name": "Pistole perfolaser (bruciapelo)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Incessante"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Salva",
+          "description": "scegli fino a due bersagli validi differenti che non si trovano entro la distanza di controllo di agenti amici. Spara con quest’arma contro entrambi in un ordine a tua scelta (tira per ciascuna sequenza separatamente)."
+        },
+        {
+          "name": "Conflitto a Fuoco",
+          "description": "ogni volta che un agente nemico entro 8\" da questo agente spara a questo agente, tieni il conto di ogni dado attacco che è stato scartato come fallimento. Dopo l’azione, prima che gli agenti neutralizzati vengano rimossi (incluso eventualmente questo), questo agente può svolgere un’azione Sparare gratuita (per farlo cambia il suo ordine in Ingaggiare), ma può scegliere come bersaglio quell’agente nemico solo con le sue pistole perfolaser (concentrato) e tiri solo un numero di dadi attacco pari ai dadi attacco scartati dall’avversario più uno (fino a un massimo di quattro)."
+        }
+      ]
+    },
+    {
+      "name": "AQUILON ARTIGLIERE",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "ARTIGLIERE"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Carabina termica",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "6/3",
+          "RdA": "Gittata 6\", Devastante 4, Penetrante 2"
+        },
+        {
+          "name": "Carabina plasma (standard)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": "Penetrante 1"
+        },
+        {
+          "name": "Carabina plasma (sovraccarica)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "5/6",
+          "RdA": "Ustionante, Letale 5+, Penetrante 1"
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": []
+    },
+    {
+      "name": "AQUILON TIRATORE SCELTO",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "TIRATORE SCELTO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Fucile perfolaser lungo (nascosto)",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": "Devastante 3, Pesante, Silenziosa, Posizione Nascosta*"
+        },
+        {
+          "name": "Fucile perfolaser lungo (mobile)",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Fucile perfolaser lungo (stazionario)",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": "Devastante 3, Pesante"
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Vantaggio del Cecchino",
+          "description": "ogni volta che questo agente si trova su un terreno Sopraelevato e sta sparando a un agente con l’ordine Ingaggiare che si trova almeno 2\" più in basso rispetto ad esso, tutti i profili del suo fucile perfolaser lungo hanno la regola delle armi Inclemente."
+        },
+        {
+          "name": "Posizione Nascosta",
+          "description": "questo agente può usare quest’arma solo la prima volta che svolge l’azione Sparare durante la battaglia."
+        }
+      ]
+    },
+    {
+      "name": "AQUILON PRECURSOR",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "PRECURSOR"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Pistola perfolaser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Pugnale dei Tempestus",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Letale 5+, Incessante"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Feroce Combattente con il Coltello",
+          "description": "ogni volta che questo agente combatte, dopo aver risolto il tuo primo dado attacco durante quella sequenza, puoi subito risolverne un altro (prima dell’avversario)."
+        },
+        {
+          "name": "Dinamico",
+          "description": "ogni volta che questo agente svolge l’azione Combattere o Sparare può subito dopo svolgere un’azione Scattare gratuita. Può farlo anche se ha svolto l’azione Caricare durante questa attivazione, ma può usare solo la distanza rimanente di quell’azione Caricare (fino a un massimo di 3\")."
+        }
+      ]
+    },
+    {
+      "name": "AQUILON SERVOSENTINELLA",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "SERVOSENTINELLA"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "4\"",
+        "SALV": "3+",
+        "FER": 10
+      },
+      "weapons": [
+        {
+          "name": "Lanciafiamme",
+          "ATT": 4,
+          "COLP": "2+",
+          "DNN": "3/3",
+          "RdA": "Gittata 8\", Saturazione, Torrenziale 2\""
+        },
+        {
+          "name": "Lanciagranate (a frammentazione)",
+          "ATT": 4,
+          "COLP": "4+",
+          "DNN": "2/4",
+          "RdA": "Area 2\""
+        },
+        {
+          "name": "Lanciagranate (perforante)",
+          "ATT": 4,
+          "COLP": "4+",
+          "DNN": "4/5",
+          "RdA": "Penetrante 1"
+        },
+        {
+          "name": "Fucile perfolaser a raffica (concentrato)",
+          "ATT": 5,
+          "COLP": "4+",
+          "DNN": "3/4",
+          "RdA": "Critici Penetranti 1"
+        },
+        {
+          "name": "Fucile perfolaser a raffica (sventagliata)",
+          "ATT": 4,
+          "COLP": "4+",
+          "DNN": "3/4",
+          "RdA": "Critici Penetranti 1, Torrenziale 1\""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Macchina",
+          "description": "questo agente può svolgere solo le azioni Scattare, Ripiegare, Riposizionarsi e Sparare. Non può rivalersi, assistere in combattimento o usare qualsiasi arma che non appare sulla sua carta dati."
+        },
+        {
+          "name": "Torretta",
+          "description": "questo agente può svolgere due azioni Sparare nella sua attivazione."
+        }
+      ]
+    },
+    {
+      "name": "AQUILON SOLDATO",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "SOLDATO"
+      ],
+      "stats": {
+        "LPA": 2,
+        "MOV": "6\"",
+        "SALV": "4+",
+        "FER": 8
+      },
+      "weapons": [
+        {
+          "name": "Carabina perfolaser",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": ""
+        },
+        {
+          "name": "Pugni",
+          "ATT": 3,
+          "COLP": "4+",
+          "DNN": "2/3",
+          "RdA": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Inserzione Rapida",
+          "description": "AZZARDO STRATEGICO nel primo punto di svolta. Ogni agente TEMPESTUS AQUILON SOLDATO amico interamente nella tua zona di atterraggio può subito svolgere un’azione Riposizionarsi gratuita, ma deve terminare quel movimento interamente entro 3\" dalla tua zona di atterraggio."
+        },
+        {
+          "name": "Atterraggio Veloce",
+          "description": "quando questo agente atterra puoi schierarlo entro 4\" in orizzontale da uno dei tuoi segnalini Atterraggio; ciò ha la precedenza sui normali requisiti di distanza."
+        }
+      ]
+    }
+  ],
+  "faction_equiment": [
+    {
+      "name": "PUGNALI DEI TEMPESTUS",
+      "description": "Gli agenti TEMPESTUS AQUILON amici (escluse le SERVOSENTINELLE) hanno la seguente arma da mischia:<br>Pugnale dei Tempestus | ATT: 3 | COLP: 4+ | DNN: 3/4"
+    },
+    {
+      "name": "STIMOLANTI DA COMBATTIMENTO",
+      "description": "Puoi ignorare qualsiasi cambiamento alla statistica Mov degli agenti TEMPESTUS AQUILON amici derivante dall’essere infortunati."
+    },
+    {
+      "name": "AUGURE DI ATTERRAGGIO",
+      "description": "Una volta durante la battaglia, quando un agente TEMPESTUS AQUILON amico schierato in cielo viene attivato, prima di usare o far atterrare quell’agente devi muovere di nuovo uno dei tuoi segnalini Atterraggio. Tuttavia, non può essere mosso più vicino alla zona di atterraggio dell’avversario."
+    },
+    {
+      "name": "SUPERVISORE REMOTO",
+      "description": "Una volta durante la battaglia, dopo aver spareggiato per determinare l’iniziativa, puoi ripetere il tiro del tuo D6."
+    }
+  ],
+  "faction_rules": [
+    {
+      "name": "INSERZIONE DALL’ALTO",
+      "description": "Quando schieri un Kill Team TEMPESTUS AQUILON prima della battaglia, il primo terzo del tuo kill team deve essere schierato come di consueto. Ogni terzo successivo può essere schierato in cielo: collocali da parte invece che nella killzone. Ogni terzo che schieri in cielo devi schierarlo in quel modo per intero (non solo una sua parte), poi colloca uno dei tuoi segnalini Atterraggio interamente nella tua zona di Atterraggio.<br>Come AZZARDO STRATEGICO nel primo e nel secondo punto di svolta puoi muovere i tuoi segnalini Atterraggio di massimo 4\" in orizzontale. In una killzone che usa le regole Spazi Angusti (come Killzone: Mondo Tomba) puoi misurare e muovere attraverso i terreni Muro.<br>Durante la fase di Scontro a Fuoco gli agenti TEMPESTUS AQUILON amici schierati in cielo vengono attivati come di consueto. Quando lo fai puoi usare o far atterrare quell’agente. Se atterra, schieralo nella killzone in un punto in cui può essere collocato come segue (non è più schierato in cielo):<br><br>• Entro 3\" in orizzontale da uno dei tuoi segnalini Atterraggio, oppure interamente nella tua zona di atterraggio.<br><br>• Non entro la distanza di controllo degli agenti nemici (tranne se stai schierando un agente PRECURSOR, che può essere collocato entro la distanza di controllo di un agente nemico).<br><br>• In modo che nessuna parte della sua basetta si trovi al di sotto di un terreno Sopraelevato.<br><br>• Con un ordine a tua scelta.<br>Considera l’agente come se avesse svolto l’azione Riposizionarsi (spendi i PA di conseguenza), poi continua la sua attivazione come di consueto. È oscurato fino alla fine della prossima attivazione o fino alla fine del punto di svolta (ciò che accade per primo).<br>Meno di metà dei tuoi agenti può essere schierata in cielo entro la fine del primo punto di svolta. In altre parole: entro la fine del primo punto di svolta più della metà dei tuoi agenti deve essere stato schierato nella killzone durante la battaglia.<br>Quando prepari i tuoi agenti durante il secondo o terzo punto di svolta rimuovi uno dei tuoi segnalini Atterraggio. Questo vuol dire che gli agenti ancora schierati in cielo sono neutralizzati alla fine del secondo punto di svolta."
+    },
+    {
+      "name": "PARACADUTE GRAVITAZIONALE",
+      "description": "Ogni volta che un agente TEMPESTUS AQUILON amico sta cadendo, ignora la distanza verticale."
+    }
+  ],
+  "strategy_ploy": [
+    {
+      "name": "OFFENSIVA IMPROVVISA",
+      "description": "Conta il numero di agenti TEMPESTUS AQUILON amici che non sono neutralizzati, poi dimezza il risultato (arrotondando per eccesso) per ottenere x. Fino alla fine della loro attivazione, le armi degli agenti TEMPESTUS AQUILON amici hanno la regola delle armi Bilanciata se sono i primi x agenti amici attivati in questo punto di svolta. Ad esempio, se hai cinque agenti, ne beneficiano i primi tre agenti amici attivati."
+    },
+    {
+      "name": "PRESERVARE LO SLANCIO",
+      "description": "Ogni volta che un agente TEMPESTUS AQUILON amico spara contro un agente nemico preparato o combatte contro un agente nemico preparato, le armi di quell’agente amico hanno la regola delle armi Inclemente."
+    },
+    {
+      "name": "OSSERVARE DALL’ALTO",
+      "description": "Scegli un agente nemico. Quell’agente e tutti gli altri agenti nemici entro 3\" da esso ottengono uno dei tuoi indicatori Individuato fino alla fine del punto di svolta. Ogni volta che un agente nemico che ha uno dei tuoi indicatori Individuato:<br><br>• Spara a un agente TEMPESTUS AQUILON amico puoi ripetere il tiro di uno dei tuoi dadi difesa.<br><br>• Combatte o si rivale contro un agente TEMPESTUS AQUILON amico, uno dei tuoi blocchi può essere assegnato a bloccare due successi non risolti (invece di uno)."
+    },
+    {
+      "name": "ATTERRARE E CONQUISTARE",
+      "description": "Scegli un segnalino.<br><br>• Fino al passo Preparare del prossimo punto di svolta, quando determini il controllo di quel segnalino considera la statistica LPA totale degli agenti TEMPESTUS AQUILON amici che lo contendono come di 1 più alta, fintanto che almeno un agente TEMPESTUS AQUILON amico lo sta effettivamente contendendo. Nota che ciò non è una modifica alla statistica LPA, quindi qualsiasi cambiamento è cumulativo a questo.<br><br>• Ogni volta che un agente TEMPESTUS AQUILON amico si trova entro 3\" da quel segnalino, aggiungi 1 (fino a un massimo di 4) alla statistica Att delle sue armi da mischia."
+    }
+  ],
+  "fire_ploy": [
+    {
+      "name": "ATTERRAGGIO AUDACE",
+      "description": "Usa questo espediente Scontro a Fuoco dopo aver tirato i dadi attacco per un agente TEMPESTUS AQUILON amico che si trova interamente entro il territorio dell’avversario o che durante questa attivazione è atterrato oppure è caduto da un terreno Sopraelevato alto almeno 2\" rispetto alla superficie della killzone. Se il bersaglio si trova entro 6\" da esso, puoi ripetere il tiro di qualsiasi dei tuoi dadi attacco."
+    },
+    {
+      "name": "CORREGGERE LE COORDINATE",
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente TEMPESTUS AQUILON amico atterra. Puoi schierarlo entro 5\" in orizzontale da uno dei tuoi segnalini Atterraggio; ciò ha la precedenza sui normali requisiti di distanza. Non può svolgere le azioni Scattare, Combattere o Sparare durante questo punto di svolta."
+    },
+    {
+      "name": "TEMPESTUS ESEMPLARI",
+      "description": "Usa questo espediente Scontro a Fuoco durante l’attivazione di un agente TEMPESTUS AQUILON amico (escluse le SERVOSENTINELLE e qualsiasi agente con una statistica LPA maggiore di 2). Durante quell’attivazione può svolgere l’azione Raccogliere Segnalino, Collocare Segnalino o un’azione della missione per 1 PA in meno."
+    },
+    {
+      "name": "PROGENA",
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente TEMPESTUS AQUILON amico (escluse le SERVOSENTINELLE) viene attivato. Recupera fino a 2D3 ferite perse e durante quell’attivazione puoi ignorare qualsiasi cambiamento alla sua statistica LPA."
+    }
+  ],
+  "agents_deploy_rules": "vue-project/src/properties/factions/deploy_tempestus_aquilons.html"
+}

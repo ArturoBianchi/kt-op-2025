@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from "vue";
-import FactionsData from "@/components/FactionsData.vue";
+import FactionsData from "@/views/FactionsData.vue";
+import WeaponRules from "@/views/WeaponRules.vue";
 import {useDataViewStore} from "@/stores/dataViewStore.js";
 import {storeToRefs} from "pinia";
 

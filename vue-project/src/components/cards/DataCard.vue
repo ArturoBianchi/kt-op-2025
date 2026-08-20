@@ -3,6 +3,10 @@ defineProps({
     pinData: {
         type: [Object, String, Number],
         default: null
+    },
+    pinDisabled: {
+        type: Boolean,
+        default: false
     }
 });
 
@@ -14,8 +18,8 @@ function handlePin(pinData) {
 </script>
 
 <template>
-    <div class="data-card card-gradient-background">
-        <UButton
+    <div :class="pinData ? 'data-card' : 'data-card-no-pin'" class="card-gradient-background">
+        <UButton v-if="!pinDisabled"
                 icon="i-lucide-pin"
                 color="neutral"
                 variant="ghost"
@@ -37,6 +41,18 @@ function handlePin(pinData) {
     padding: 0.5rem;
     padding-top: 1.5rem;
     padding-right: 2.25rem;
+    width: auto;
+    text-align: left;
+}
+
+.data-card-no-pin {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    padding-top: 1.5rem;
     width: auto;
     text-align: left;
 }

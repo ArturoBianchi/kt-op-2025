@@ -2,6 +2,8 @@
 import {computed, ref} from "vue";
 import {useFactionJsonStore} from "@/stores/factionJsonStore.js";
 import {useFactionsDataStore} from "@/stores/factionsData.js";
+import RuleCard from "@/components/cards/RuleCard.vue";
+import PloyCard from "@/components/cards/PloyCard.vue";
 
 const open = ref(true)
 const factionJsonStore = useFactionJsonStore();
@@ -76,6 +78,47 @@ const factionAgents = computed(() =>
     factionJsonStore.getFactionByName(selectedTeam.value)?.agents ?? []
 );
 
+const factionDeployRules = computed(() =>
+    factionJsonStore.getFactionByName(selectedTeam.value)?.agents_deploy_rules ?? []
+);
+
+const factionStratPloysItems = computed(() => {
+    let stratPloy = factionJsonStore.getFactionByName(selectedTeam.value)?.strategy_ploy ?? [];
+    return stratPloy.map(ploy => ({
+        id: 'ploy-id-' + ploy.name.toLowerCase().replace(" ", "-"),
+        component: PloyCard,
+        props: {ployData: ploy},
+    }));
+});
+
+const factionFirePloysItems = computed(() => {
+    let stratPloy = factionJsonStore.getFactionByName(selectedTeam.value)?.fire_ploy ?? [];
+    return stratPloy.map(ploy => ({
+        id: 'fire-ploy-id-' + ploy.name.toLowerCase().replace(" ", "-"),
+        component: PloyCard,
+        props: {ployData: ploy},
+    }));
+});
+
+const factionEquipItems = computed(() => {
+    let stratPloy = factionJsonStore.getFactionByName(selectedTeam.value)?.faction_equiment ?? [];
+    return stratPloy.map(ploy => ({
+        id: 'equip-ploy-id-' + ploy.name.toLowerCase().replace(" ", "-"),
+        component: PloyCard,
+        props: {ployData: ploy},
+    }));
+});
+
+const factionRulesItems = computed(() => {
+    let stratPloy = factionJsonStore.getFactionByName(selectedTeam.value)?.faction_rules ?? [];
+    return stratPloy.map(ploy => ({
+        id: 'rule-ploy-id-' + ploy.name.toLowerCase().replace(" ", "-"),
+        component: PloyCard,
+        props: {ployData: ploy},
+    }));
+});
+
+
 </script>
 
 <template>
@@ -120,7 +163,21 @@ const factionAgents = computed(() =>
                     </DataCard>
                 </li>
             </ul>
-            <p v-else-if="selectedItem" class="factions-content-placeholder">Nessun contenuto disponibile per questa sezione</p>
+            <ul v-if="selectedSection === 'sel-team'" class="factions-item-list">
+                <DeployRuleViewer :rules="factionDeployRules" />
+            </ul>
+            <ul v-if="selectedSection === 'reg-fazione'" class="factions-item-list">
+                <KTCarousel carousel-id="faction-strat-ploy-carousel" :carouselItems="factionRulesItems" />
+            </ul>
+            <ul v-if="selectedSection === 'esp-strat'" class="factions-item-list">
+                <KTCarousel carousel-id="faction-strat-ploy-carousel" :carouselItems="factionStratPloysItems" />
+            </ul>
+            <ul v-if="selectedSection === 'esp-fuoco'" class="factions-item-list">
+                <KTCarousel carousel-id="faction-strat-ploy-carousel" :carouselItems="factionFirePloysItems" />
+            </ul>
+            <ul v-if="selectedSection === 'equip'" class="factions-item-list">
+                <KTCarousel carousel-id="faction-strat-ploy-carousel" :carouselItems="factionEquipItems" />
+            </ul>
         </div>
     </div>
 </template>

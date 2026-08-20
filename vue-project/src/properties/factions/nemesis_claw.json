@@ -80,13 +80,13 @@
       "abilities": [
         {
           "name": "PREFIGURAZIONE 1PA",
-          "description": "PSICHICA. Spendi 1 dei tuoi punti Prescienza per ottenere 1PC. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico o più di una volta per punto di svolta."
+          "description": "PSICHICA. Spendi 1 dei tuoi punti Prescienza per ottenere 1PC.<br>Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico o più di una volta per punto di svolta."
         }
       ],
       "traits": [
         {
           "name": "Prescienza",
-          "description": "PSICHICA. Nel passo Preparare di ogni fase di Strategia ottieni D3 punti Prescienza. Alla fine di ciascun punto di svolta, scarta i tuoi punti Prescienza. Puoi spendere i tuoi punti Prescienza nella fase di Scontro a Fuoco come segue (puoi usare ciascuna delle seguenti regole solo una volta per punto di svolta):<br><br>• Presentimento: PSICHICA. Ogni volta che è il tuo turno di attivare un agente amico puoi spendere 1 dei tuoi punti Prescienza per saltare quell’attivazione.<br><br>• Premonizione: PSICHICA. Ogni volta che un dado attacco infligge Dnn Normali a questo agente puoi spendere 1 dei tuoi punti Prescienza per ignorare quei danni inflitti.\nNon puoi ottenere o spendere i tuoi punti Prescienza se questo agente è neutralizzato."
+          "description": "PSICHICA. Nel passo Preparare di ogni fase di Strategia ottieni D3 punti Prescienza. Alla fine di ciascun punto di svolta, scarta i tuoi punti Prescienza. Puoi spendere i tuoi punti Prescienza nella fase di Scontro a Fuoco come segue (puoi usare ciascuna delle seguenti regole solo una volta per punto di svolta):<br><br>• Presentimento: PSICHICA. Ogni volta che è il tuo turno di attivare un agente amico puoi spendere 1 dei tuoi punti Prescienza per saltare quell’attivazione.<br><br>• Premonizione: PSICHICA. Ogni volta che un dado attacco infligge Dnn Normali a questo agente puoi spendere 1 dei tuoi punti Prescienza per ignorare quei danni inflitti.<br>Non puoi ottenere o spendere i tuoi punti Prescienza se questo agente è neutralizzato."
         }
       ]
     },
@@ -148,14 +148,10 @@
       "abilities": [
         {
           "name": "AVVELENARE OBIETTIVO 1PA",
-          "description": "Scegli un segnalino obiettivo controllato da questo agente affinché ottenga uno dei tuoi indicatori Terrordroga. Non può essere un segnalino obiettivo entro la distanza di controllo di un agente nemico, né uno che ha già uno dei tuoi indicatori Terrordroga. La prima volta che un agente nemico che non ha uno dei tuoi indicatori Terrordroga contende quel segnalino obiettivo, quell’agente ottiene quell’indicatore Terrordroga, poi infliggi 2D3 danni a quell’agente (se ciò avviene durante un’azione, alla fine di quell’azione). Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+          "description": "Scegli un segnalino obiettivo controllato da questo agente affinché ottenga uno dei tuoi indicatori Terrordroga. Non può essere un segnalino obiettivo entro la distanza di controllo di un agente nemico, né uno che ha già uno dei tuoi indicatori Terrordroga. La prima volta che un agente nemico che non ha uno dei tuoi indicatori Terrordroga contende quel segnalino obiettivo, quell’agente ottiene quell’indicatore Terrordroga, poi infliggi 2D3 danni a quell’agente (se ciò avviene durante un’azione, alla fine di quell’azione).<br>Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
         }
       ],
       "traits": [
-        {
-          "name": "*Terrordroga",
-          "description": "nel passo Risolvere i dadi attacco, se infliggi danni con uno o più successi critici (inclusi quelli come conseguenza della regola delle armi Devastante), l’agente contro cui viene usata quest’arma ottiene uno dei tuoi indicatori Terrordroga (se non ne ha già uno)."
-        },
         {
           "name": "Avvelenamento da Terrordroga",
           "description": "ogni volta che un agente che ha uno dei tuoi indicatori Terrordroga viene attivato, infliggigli D3 danni."
@@ -236,49 +232,6 @@
       ],
       "abilities": [],
       "traits": []
-    },
-    {
-      "name": "NIGHT LORD RUBAPELLE",
-      "img_path": "assets/pics/nemesis_claw/night_lord_rubapelle.png",
-      "keywords": [
-        "ARTIGLIO NEMESI",
-        "CAOS",
-        "ASTARTES ERETICI",
-        "RUBAPELLE"
-      ],
-      "stats": {
-        "LPA": 3,
-        "MOV": "6\"",
-        "SALV": "3+",
-        "FER": 14
-      },
-      "weapons": [
-        {
-          "name": "Pistola requiem",
-          "ATT": 4,
-          "COLP": "3+",
-          "DNN": "3/4",
-          "RdA": "Gittata 8\""
-        },
-        {
-          "name": "Falcione a catena nostramano",
-          "ATT": 5,
-          "COLP": "3+",
-          "DNN": "4/6",
-          "RdA": "Dilaniante"
-        }
-      ],
-      "abilities": [],
-      "traits": [
-        {
-          "name": "Scorticali Vivi",
-          "description": "una volta per punto di svolta, quando questo agente neutralizza un agente nemico entro la propria distanza di controllo, puoi scegliere un altro agente nemico visibile a questo agente ed entro 6\" da questo agente o dall’agente nemico neutralizzato. Fino all’inizio del prossimo punto di svolta quell’altro agente nemico non può controllare segnalini né svolgere l’azione Raccogliere Segnalino o azioni della missione."
-        },
-        {
-          "name": "Tiranno delle Fosse dello Scuoiamento",
-          "description": "ogni volta che questo agente combatte o si rivale, i Dnn Normali e Critici di 3 o più gli infliggono 1 danno in meno."
-        }
-      ]
     },
     {
       "name": "NIGHT LORD ARTIGLIERE",
@@ -394,6 +347,49 @@
       ]
     },
     {
+      "name": "NIGHT LORD RUBAPELLE",
+      "img_path": "assets/pics/nemesis_claw/night_lord_rubapelle.png",
+      "keywords": [
+        "ARTIGLIO NEMESI",
+        "CAOS",
+        "ASTARTES ERETICI",
+        "RUBAPELLE"
+      ],
+      "stats": {
+        "LPA": 3,
+        "MOV": "6\"",
+        "SALV": "3+",
+        "FER": 14
+      },
+      "weapons": [
+        {
+          "name": "Pistola requiem",
+          "ATT": 4,
+          "COLP": "3+",
+          "DNN": "3/4",
+          "RdA": "Gittata 8\""
+        },
+        {
+          "name": "Falcione a catena nostramano",
+          "ATT": 5,
+          "COLP": "3+",
+          "DNN": "4/6",
+          "RdA": "Dilaniante"
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Scorticali Vivi",
+          "description": "una volta per punto di svolta, quando questo agente neutralizza un agente nemico entro la propria distanza di controllo, puoi scegliere un altro agente nemico visibile a questo agente ed entro 6\" da questo agente o dall’agente nemico neutralizzato. Fino all’inizio del prossimo punto di svolta quell’altro agente nemico non può controllare segnalini né svolgere l’azione Raccogliere Segnalino o azioni della missione."
+        },
+        {
+          "name": "Tiranno delle Fosse dello Scuoiamento",
+          "description": "ogni volta che questo agente combatte o si rivale, i Dnn Normali e Critici di 3 o più gli infliggono 1 danno in meno."
+        }
+      ]
+    },
+    {
       "name": "NIGHT LORD VENTRILOKAR",
       "img_path": "assets/pics/nemesis_claw/night_lord_ventrilokar.png",
       "keywords": [
@@ -428,7 +424,7 @@
       "abilities": [
         {
           "name": "IMITAZIONE SCONCERTANTE 1PA",
-          "description": "PSICHICA. Scegli un agente nemico entro 6\" da questo agente, poi seleziona una delle seguenti opzioni per quell’agente nemico (puoi selezionare ciascuna opzione solo una volta per battaglia):<br><br>• Fino alla fine della sua prossima attivazione sottrai 1 dalla sua statistica LPA.<br><br>• Cambia il suo ordine.<br><br>• Svolgi un’azione Scattare gratuita con esso (specifica la posizione in cui l’avversario deve muoverlo).\nQuesto agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+          "description": "PSICHICA. Scegli un agente nemico entro 6\" da questo agente, poi seleziona una delle seguenti opzioni per quell’agente nemico (puoi selezionare ciascuna opzione solo una volta per battaglia):<br><br>• Fino alla fine della sua prossima attivazione sottrai 1 dalla sua statistica LPA.<br><br>• Cambia il suo ordine.<br><br>• Svolgi un’azione Scattare gratuita con esso (specifica la posizione in cui l’avversario deve muoverlo).<br>Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
         }
       ],
       "traits": [
@@ -556,7 +552,5 @@
       "description": "Usa questo espediente Scontro a Fuoco all’inizio del passo Risolvere i dadi attacco, quando un agente ARTIGLIO NEMESI amico si rivale. Puoi risolvere uno dei tuoi successi prima del consueto ordine. Se lo fai, durante quella sequenza non puoi risolvere nessun altro successo."
     }
   ],
-  "agents_deploy_rules": {
-    "description": "KILL TEAM ARTIGLIO NEMESI\nARCHETIPI: INFILTRAZIONE, RICERCA E DISTRUZIONE\n\nAGENTI\n↘ 1 agente ARTIGLIO NEMESI VISIONARIO con una delle seguenti opzioni:<br><br>• Pistola requiem; maglio potenziato<br><br>• Pistola requiem; mazza potenziata<br><br>• Pistola requiem; arma potenziata<br><br>• Pistola plasma; lama a catena nostramana\n\n↘ 5 agenti ARTIGLIO NEMESI scelti dalla seguente lista:<br><br>• PORTATORE DI TERRORE<br><br>• ARTIGLIERE con una delle seguenti opzioni:\n  ○ Pistola requiem; lanciafiamme; pugni\n  ○ Pistola requiem; fucile termico; pugni\n  ○ Pistola requiem; fucile plasma; pugni<br><br>• ARTIGLIERE PESANTE con una delle seguenti opzioni:\n  ○ Pistola requiem; requiem pesante; pugni\n  ○ Pistola requiem; lanciamissili; pugni<br><br>• URLATORE<br><br>• RUBAPELLE<br><br>• VENTRILOKAR<br><br>• GUERRIERO con una delle seguenti opzioni:\n  ○ Pistola requiem; spada a catena\n  ○ Fucile requiem; pugni\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente di questa lista solo una volta."
-  }
+  "agents_deploy_rules": "vue-project/src/properties/factions/deploy_nemesis_claw.html"
 }

@@ -30,7 +30,6 @@ const title = computed(() => {
 <style scoped>
 .op-card {
     background-color: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
     border-radius: var(--radius);
     padding: 1rem;
     position: relative;
@@ -41,7 +40,6 @@ const title = computed(() => {
 
 .op-card:hover {
     transform: translateY(-2px);
-    border-color: var(--text-secondary);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
 }
 

@@ -47,7 +47,7 @@
           "description": "ogni volta che un agente nemico entro 7\" da questo agente e che ha un tuo indicatore Veleno perde una o più ferite, questo agente recupera fino ad altrettante ferite perse (fino a un massimo di 3 ferite perse per punto di svolta, e solo se questo agente non è neutralizzato)."
         },
         {
-          "name": "Tossica",
+          "name": "*Tossica",
           "description": "ogni volta che questo agente usa quest’arma contro un agente nemico che ha un tuo indicatore Veleno, aggiungi 1 a entrambe le statistiche Dnn di quest’arma."
         }
       ]
@@ -90,7 +90,7 @@
           "description": "questo agente può usare granate del contagio e perforanti (vedi equipaggiamento universale e della Fazione) senza che ciò conti ai fini di eventuali utilizzi limitati (ad es. se hai scelto tali granate dall’equipaggiamento anche per altri agenti). Ogni volta che lo fa, migliora di 1 la statistica Colp di quell’arma e le granate del contagio hanno la regola delle armi Tossica (vedi accanto)."
         },
         {
-          "name": "Tossica",
+          "name": "*Tossica",
           "description": "ogni volta che questo agente usa quest’arma contro un agente nemico che ha un tuo indicatore Veleno, aggiungi 1 a entrambe le statistiche Dnn di quest’arma."
         }
       ]
@@ -260,7 +260,7 @@
       "abilities": [
         {
           "name": "MIASMA VELENOSO 1PA",
-          "description": "PSICHICA. Scegli un agente nemico entro 7\" da questo agente e visibile a esso, oppure un agente nemico che è un bersaglio valido per questo agente. Quell’agente nemico ottiene un tuo indicatore Veleno (se non ce l’ha già). Se lo ha già, infliggigli invece 3 danni. Questo agente non può svolgere questa azione fintanto che si trova entro la distancia di controllo di un agente nemico."
+          "description": "PSICHICA. Scegli un agente nemico entro 7\" da questo agente e visibile a esso, oppure un agente nemico che è un bersaglio valido per questo agente. Quell’agente nemico ottiene un tuo indicatore Veleno (se non ce l’ha già). Se lo ha già, infliggigli invece 3 danni. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
         },
         {
           "name": "VITALITÀ PUTRESCENTE 1PA",
@@ -307,7 +307,7 @@
           "description": "ogni volta che un agente spara a questo agente, i risultati dei dadi difesa pari a 5+ sono successi critici."
         },
         {
-          "name": "Tossica",
+          "name": "*Tossica",
           "description": "ogni volta che questo agente usa quest’arma contro un agente nemico che ha un tuo indicatore Veleno, aggiungi 1 a entrambe le statistiche Dnn di quest’arma."
         }
       ]
@@ -315,20 +315,20 @@
   ],
   "faction_equiment": [
     {
-      "name": "CAMPANE DELLA PESTE",
-      "description": "Puoi ignorare qualsiasi cambiamento alle statistiche degli agenti MARINES DELLA PESTE amici derivante dall’essere infortunati (inclusi quelli alle statistiche delle loro armi)."
-    },
-    {
-      "name": "GRANATE DEL CONTAGIO",
-      "description": "Gli agenti MARINES DELLA PESTE amici hanno la seguente arma da tiro (non puoi sceglierla per usarla più di due volte durante la battaglia):\nNOME: Granata del contagio | ATT: 4 | COLP: 4+ | DNN: 2/4 | RdA: Gittata 6\", Area 2\", Saturazione, Inclemente, Veleno*"
-    },
-    {
       "name": "PROIETTILI DELLA PESTE",
       "description": "I fucili requiem e le pistole requiem degli agenti MARINES DELLA PESTE amici hanno le regole delle armi Veleno e Inclemente."
     },
     {
       "name": "SFIATI VELENIFERI",
       "description": "Ogni volta che un agente nemico viene attivato entro 3\" da un agente MARINES DELLA PESTE amico:<br><br>• Se quell’agente nemico non ha uno dei tuoi indicatori Veleno, tira un D3: con 3 ne ottiene uno.<br><br>• Se quell’agente nemico ha uno dei tuoi indicatori Veleno, infliggigli D3 danni (anziché 1)."
+    },
+    {
+      "name": "CAMPANE DELLA PESTE",
+      "description": "Puoi ignorare qualsiasi cambiamento alle statistiche degli agenti MARINES DELLA PESTE amici derivante dall’essere infortunati (inclusi quelli alle statistiche delle loro armi)."
+    },
+    {
+      "name": "GRANATE DEL CONTAGIO",
+      "description": "Gli agenti MARINES DELLA PESTE amici hanno la seguente arma da tiro (non puoi sceglierla per usarla più di due volte durante la battaglia):<br>Granata del contagio | ATT 4 | COLP 4+ | DNN 2/4 | RdA: Gittata 6\", Area 2\", Saturazione, Inclemente, Veleno*"
     }
   ],
   "faction_rules": [
@@ -338,7 +338,7 @@
     },
     {
       "name": "VELENO",
-      "description": "Alcune armi presenti nelle regole di questo team hanno la regola delle armi Veleno.\n*Veleno: nel passo Risolvere i dadi attacco, se infliggi danni con uno o più successi, l’agente contro cui viene usata quest’arma (esclusi gli agenti MARINES DELLA PESTE amici) ottiene uno dei tuoi indicatori Veleno (se non ce l’ha già). Ogni volta che un agente con un tuo indicatore Veleno viene attivato, infliggigli 1 danno."
+      "description": "Alcune armi presenti nelle regole di questo team hanno la regola delle armi Veleno.<br><br>*Veleno: nel passo Risolvere i dadi attacco, se infliggi danni con uno o più successi, l’agente contro cui viene usata quest’arma (esclusi gli agenti MARINES DELLA PESTE amici) ottiene uno dei tuoi indicatori Veleno (se non ce l’ha già). Ogni volta che un agente con un tuo indicatore Veleno viene attivato, infliggigli 1 danno."
     },
     {
       "name": "DISGUSTOSAMENTE RESISTENTE",
@@ -365,23 +365,21 @@
   ],
   "fire_ploy": [
     {
-      "name": "VELENO VIRULENTO",
-      "description": "Usa questo espediente Scontro a Fuoco durante l’attivazione o l’azione in risposta di un agente MARINES DELLA PESTE amico, prima o dopo che ha svolto un’azione. Un agente nemico entro 3\" da quell’agente o visibile ad esso ed entro 7\" da esso ottiene un tuo indicatore Veleno (se non ce l’ha già)."
-    },
-    {
-      "name": "DIPARTITA VELENOSA",
-      "description": "Usa questo espediente Scontro a Fuoco quando un agente MARINES DELLA PESTE amico viene neutralizzato, prima che venga rimosso dalla killzone. Ogni agente nemico entro 3\" da quell’agente e visibile a esso ottiene un tuo indicatore Veleno (se non ce l’ha già); per ciascuno di tali agenti nemici che ha già un tuo indicatore Veleno (anche nel caso in cui l’abbia ottenuto in questa azione), infliggigli invece 1 danno."
-    },
-    {
       "name": "ROBUSTEZZA RACCAPRICCIANTE",
       "description": "Usa questo espediente Scontro a Fuoco quando un dado attacco infligge danni a un agente MARINES DELLA PESTE amico. Fino alla fine dell’attivazione o dell’azione in risposta, ai fini della regola Disgustosamente Resistente per quell’agente sottrai sempre 1 (fino a un minimo di 2) dai danni inflitti; non hai bisogno di tirare."
     },
     {
       "name": "MALEDIZIONE DELLA MARCESCENZA",
       "description": "Usa questo espediente Scontro a Fuoco quando un agente MARINES DELLA PESTE amico combatte o spara contro un agente nemico entro 3\" da esso (o entro 7\" da esso se quell’agente nemico ha un tuo indicatore Veleno), dopo che l’avversario ha tirato i suoi dadi attacco o difesa. Per ogni risultato pari a 3 che ottiene, infliggi a quell’agente nemico 1 danno, quel risultato non può essere mantenuto come un successo e il tiro non può essere ripetuto."
+    },
+    {
+      "name": "VELENO VIRULENTO",
+      "description": "Usa questo espediente Scontro a Fuoco durante l’attivazione o l’azione in risposta di un agente MARINES DELLA PESTE amico, prima o dopo che ha svolto un’azione. Un agente nemico entro 3\" da quell’agente o visibile ad esso ed entro 7\" da esso ottiene un tuo indicatore Veleno (se non ce l’ha già)."
+    },
+    {
+      "name": "DIPARTITA VELENOSA",
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente MARINES DELLA PESTE amico viene neutralizzato, prima che venga rimosso dalla killzone. Ogni agente nemico entro 3\" da quell’agente e visibile a esso ottiene un tuo indicatore Veleno (se non ce l’ha già); per ciascuno di tali agenti nemici che ha già un tuo indicatore Veleno (anche nel caso in cui l’abbia ottenuto in questa azione), infliggigli invece 1 danno."
     }
   ],
-  "agents_deploy_rules": {
-    "description": "AGENTI\n↘ 1 agente MARINES DELLA PESTE CAMPIONE\n↘ 5 agenti MARINES DELLA PESTE scelti dalla seguente lista:<br><br>• BOMBARDIERE<br><br>• COMBATTENTE<br><br>• ARTIGLIERE PESANTE<br><br>• PORTATORE DELL’ICONA<br><br>• AGENTE DI VIRULENZA<br><br>• GUERRIERO\nIl tuo kill team può includere ciascun agente di questa lista solo una volta."
-  }
+  "agents_deploy_rules": "vue-project/src/properties/factions/deploy_plague_marines.html"
 }

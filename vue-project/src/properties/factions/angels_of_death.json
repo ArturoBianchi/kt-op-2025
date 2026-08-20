@@ -44,11 +44,11 @@
       "traits": [
         {
           "name": "Leader Eroico",
-          "description": "una volta per punto di svolta puoi scegliere una delle seguenti opzioni:<br><br>• Usare un espediente Scontro a Fuoco (escluso Ripetizione Comando) per 0PC se questo agente è l’agente ANGELI DELLA MORTE specificato.<br><br>• Usare l’espediente strategia Dottrina di Combattimento quando attivi un agente ANGELI DELLA MORTE amico se questo agente si trova nella killzone e non entro la distanza di controllo degli agenti nemici (pagane normalmente il costo in PC). Nota che non puoi farlo se hai già usato quell’espediente durante questo punto di svolta.<br><br>• Usare l’espediente Scontro a Fuoco Variare Dottrina per 0PC se questo agente si trova nella killzone e non entro la distanza di controllo degli agenti nemici."
+          "description": "Una volta per punto di svolta puoi scegliere una delle seguenti opzioni:<br><br>• Usare un espediente Scontro a Fuoco (escluso Ripetizione Comando) per 0PC se questo agente è l’agente ANGELI DELLA MORTE specificato.<br><br>• Usare l’espediente strategia Dottrina di Combattimento quando attivi un agente ANGELI DELLA MORTE amico se questo agente si trova nella killzone e non entro la distanza di controllo degli agenti nemici (pagane normalmente il costo in PC). Nota che non puoi farlo se hai già usato quell’espediente durante questo punto di svolta.<br><br>• Usare l’espediente Scontro a Fuoco Variare Dottrina per 0PC se questo agente si trova nella killzone e non entro la distanza di controllo degli agenti nemici."
         },
         {
           "name": "Aureola di Ferro",
-          "description": "una volta per battaglia, quando un dado attacco infligge Dnn Normali a questo agente, puoi ignorare quei danni inflitti."
+          "description": "Una volta per battaglia, quando un dado attacco infligge Dnn Normali a questo agente, puoi ignorare quei danni inflitti."
         }
       ]
     },
@@ -131,11 +131,11 @@
       "traits": [
         {
           "name": "Guerra Secondo Dottrina",
-          "description": "puoi scegliere ciascuna delle seguenti opzioni una volta per battaglia:<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina di Assalto, se questo agente si trova nella killzone quell’espediente ti costa 0PC.<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina Tattica, se questo agente si trova nella killzone quell’espediente ti costa 0PC."
+          "description": "Puoi scegliere ciascuna delle seguenti opzioni una volta per battaglia:<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina di Assalto, se questo agente si trova nella killzone quell’espediente ti costa 0PC.<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina Tattica, se questo agente si trova nella killzone quell’espediente ti costa 0PC."
         },
         {
           "name": "Veterano del Capitolo",
-          "description": "alla fine del passo Scegliere gli agenti, se questo agente è stato selezionato per lo schieramento, scegli per esso una TATTICA CAPITOLARE addizionale per la battaglia. A differenza delle TATTICHE CAPITOLARI primarie e secondarie, non sei tenuto a scegliere la stessa per ciascuna battaglia di una campagna o di un torneo."
+          "description": "Alla fine del passo Scegliere gli agenti, se questo agente è stato selezionato per lo schieramento, scegli per esso una TATTICA CAPITOLARE addizionale per la battaglia. A differenza delle TATTICHE CAPITOLARI primarie e secondarie, non sei tenuto a scegliere la stessa per ciascuna battaglia di una campagna o di un torneo."
         }
       ]
     },
@@ -225,11 +225,11 @@
       "traits": [
         {
           "name": "Guerra Secondo Dottrina",
-          "description": "puoi scegliere ciascuna delle seguenti opzioni una volta per battaglia:<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina di Devastazione, se questo agente si trova nella killzone quell’espediente ti costa 0PC.<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina Tattica, se questo agente si trova nella killzone quell’espediente ti costa 0PC."
+          "description": "Puoi scegliere ciascuna delle seguenti opzioni una volta per battaglia:<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina di Devastazione, se questo agente si trova nella killzone quell’espediente ti costa 0PC.<br><br>• Quando usi l’espediente Strategico Dottrina di Combattimento e poi selezioni Dottrina Tattica, se questo agente si trova nella killzone quell’espediente ti costa 0PC."
         },
         {
           "name": "Veterano del Capitolo",
-          "description": "alla fine del passo Scegliere gli agenti, se questo agente è stato selezionato per lo schieramento, scegli per esso una TATTICA CAPITOLARE addizionale per la battaglia. A differenza delle TATTICHE CAPITOLARI primarie e secondarie, non sei tenuto a scegliere la stessa per ciascuna battaglia di una campagna o di un torneo."
+          "description": "Alla fine del passo Scegliere gli agenti, se questo agente è stato selezionato per lo schieramento, scegli per esso una TATTICA CAPITOLARE addizionale per la battaglia. A differenza delle TATTICHE CAPITOLARI primarie e secondarie, non sei tenuto a scegliere la stessa per ciascuna battaglia di una campagna o di un torneo."
         }
       ]
     },
@@ -269,7 +269,7 @@
       "traits": [
         {
           "name": "Granatiere",
-          "description": "questo agente può usare granate a frammentazione e perforanti (vedi equipaggiamento universale) senza che ciò conti ai fini di eventuali utilizzi limitati (cioè se hai scelto tali granate dall’equipaggiamento anche per altri agenti). Ogni volta che lo fa, migliora di 1 la statistica Colp di quell’arma."
+          "description": "Questo agente può usare granate a frammentazione e perforanti (vedi equipaggiamento universale) senza che ciò conti ai fini di eventuali utilizzi limitati (cioè se hai scelto tali granate dall’equipaggiamento anche per altri agenti). Ogni volta che lo fa, migliora di 1 la statistica Colp di quell’arma."
         }
       ]
     },
@@ -508,7 +508,7 @@
           "RdA": "Gittata 8\""
         },
         {
-          "name": "Fuc. di prec. requiem (executioner)",
+          "name": "Fucile di precisione requiem (executioner)",
           "ATT": 4,
           "COLP": "2+",
           "DNN": "3/4",
@@ -539,13 +539,13 @@
       "abilities": [
         {
           "name": "MIRINO 1PA",
-          "description": "Fino all’inizio della sua prossima attivazione, ogni volta che questo agente spara, gli agenti nemici non possono essere oscurati.\nQuesto agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
+          "description": "Fino all’inizio della sua prossima attivazione, ogni volta che questo agente spara, gli agenti nemici non possono essere oscurati. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
         }
       ],
       "traits": [
         {
           "name": "Mantello Mimetico",
-          "description": "ogni volta che un agente spara a questo agente, ignora la regola delle armi Saturazione. Questo agente ha la TATTICA CAPITOLARE Furtivo. Se hai selezionato quella TATTICA CAPITOLARE, puoi attuare entrambe le sue opzioni (cioè puoi mantenere due tiri copertura, uno normale e uno come successo critico)."
+          "description": "Ogni volta che un agente spara a questo agente, ignora la regola delle armi Saturazione. Questo agente ha la TATTICA CAPITOLARE Furtivo. Se hai selezionato quella TATTICA CAPITOLARE, puoi attuare entrambe le sue opzioni (cioè puoi mantenere due tiri copertura, uno normale e uno come successo critico)."
         }
       ]
     }
@@ -571,11 +571,11 @@
   "faction_rules": [
     {
       "name": "TATTICHE CAPITOLARI",
-      "description": "Quando selezioni il tuo kill team, scegli una TATTICA CAPITOLARE primaria e secondaria per gli agenti ANGELI DELLA MORTE amici per la battaglia. Selezionare più volte la stessa TATTICA CAPITOLARE non produce effetti cumulativi.\n1. AGGRESSIVO: Le armi da mischia di questo agente hanno la regola delle armi Dilaniante.\n2. DUELLATORE: Ogni volta che questo agente combatte o si rivale, ciascuno dei tuoi successi normali può bloccare un successo critico non risolto (solo se l’arma dell’agente nemico non ha la regola delle armi Brutale).\n3. RISOLUTO: Puoi ignorare qualsiasi cambiamento alla statistica LPA di questo agente ed esso non è influenzato dalla regola delle armi Shock degli agenti nemici.\n4. FURTIVO: Ogni volta che un agente spara a questo agente, se puoi mantenere tiri copertura, puoi mantenere un tiro copertura addizionale, oppure puoi invece mantenere un tiro copertura come successo critico. Ciò non è cumulativo con i tiri copertura migliorati dai terreni Sopraelevati.\n5. AGILE: • Questo agente può svolgere l’azione Ripiegare per 1PA in meno. • Questo agente può svolgere l’azione Caricare mentre si trova entro la distanza di controllo di un agente nemico, e per farlo può lasciare la distanza di controllo di quell’agente (ma poi si applicano i normali requisiti di quel movimento).\n6. ROBUSTO: Ogni volta che un agente spara a questo agente, i risultati dei dadi difesa pari a 5+ sono successi critici. Ogni volta che questo agente si rivale, la prima volta che un dado attacco infligge 3 o più Dnn Normali a questo agente in quella sequenza, quel dado gli infligge 1 danno in meno.\n7. TIRATORE ESPERTO: Ogni volta che questo agente spara durante un’attivazione in cui non ha svolto l’azione Caricare, Ripiegare o Riposizionarsi, le sue armi requiem hanno le regole delle armi Accurata 1 e Inclemente.\n8. SPECIALISTA DEGLI ASSEDI: Le armi da tiro di questo agente hanno la regola delle armi Saturazione. Ogni volta che questo agente combatte o si rivale, gli agenti nemici non possono assistere."
+      "description": "Quando selezioni il tuo kill team, scegli una TATTICA CAPITOLARE primaria e secondaria per gli agenti ANGELI DELLA MORTE amici per la battaglia. Selezionare più volte la stessa TATTICA CAPITOLARE non produce effetti cumulativi.<br><br><br>1. AGGRESSIVO: Le armi da mischia di questo agente hanno la regola delle armi Dilaniante.<br>2. DUELLATORE: Ogni volta che questo agente combatte o si rivale, ciascuno dei tuoi successi normali può bloccare un successo critico non risolto (solo se l’arma dell’agente nemico non ha la regola delle armi Brutale).<br>3. RISOLUTO: Puoi ignorare qualsiasi cambiamento alla statistica LPA di questo agente ed esso non è influenzato dalla regola delle armi Shock degli agenti nemici.<br>4. FURTIVO: Ogni volta che un agente spara a questo agente, se puoi mantenere tiri copertura, puoi mantenere un tiro copertura addizionale, oppure puoi invece mantenere un tiro copertura come successo critico. Ciò non è cumulativo con i tiri copertura migliorati dai terreni Sopraelevati.<br>5. AGILE: Questo agente può svolgere l’azione Ripiegare per 1PA in meno; Questo agente può svolgere l’azione Caricare mentre si trova entro la distanza di controllo di un agente nemico, e per farlo può lasciare la distanza di controllo di quell’agente.<br>6. ROBUSTO: Ogni volta che un agente spara a questo agente, i risultati dei dadi difesa pari a 5+ sono successi critici. Ogni volta che questo agente si rivale, la prima volta che un dado attacco infligge 3 o più Dnn Normali a questo agente in quella sequenza, quel dado gli infligge 1 danno in meno.<br>7. TIRATORE ESPERTO: Ogni volta che questo agente spara durante un’attivazione in cui non ha svolto l’azione Caricare, Ripiegare o Riposizionarsi, le sue armi requiem hanno le regole delle armi Accurata 1 e Inclemente.<br>8. SPECIALISTA DEGLI ASSEDI: Le armi da tiro di questo agente hanno la regola delle armi Saturazione. Ogni volta che questo agente combatte o si rivale, gli agenti nemici non possono assistere."
     },
     {
       "name": "ASTARTES",
-      "description": "Durante l’attivazione di ciascun agente ANGELI DELLA MORTE amico, tale agente può svolgere due azioni Sparare o due azioni Combattere. Se svolge due azioni Sparare deve scegliere un’arma requiem per almeno una di esse, e se si tratta di un fucile di precisione requiem o di un requiem pesante deve spendere 1PA addizionale per la seconda azione, se entrambe le azioni usano quell’arma.\nOgni agente ANGELI DELLA MORTE amico può agire in risposta a prescindere dal proprio ordine."
+      "description": "Durante l’attivazione di ciascun agente ANGELI DELLA MORTE amico, tale agente può svolgere due azioni Sparare o due azioni Combattere. Se svolge due azioni Sparare deve scegliere un’arma requiem per almeno una di esse, e se si tratta di un fucile di precisione requiem o di un requiem pesante deve spendere 1PA addizionale per la seconda azione, se entrambe le azioni usano quell’arma. Ogni agente ANGELI DELLA MORTE amico può agire in risposta a prescindere dal proprio ordine."
     }
   ],
   "strategy_ploy": [
@@ -584,16 +584,16 @@
       "description": "Scegli una DOTTRINA DI COMBATTIMENTO fra quelle presentate in basso. Ogni volta che un agente ANGELI DELLA MORTE amico effettua quanto previsto da x, le sue armi hanno la regola delle armi Bilanciata. X è la DOTTRINA DI COMBATTIMENTO che hai scelto.<br><br>• Dottrina di Devastazione: spara a un agente a più di 6\" da esso.<br><br>• Dottrina Tattica: spara a un agente entro 6\" da esso.<br><br>• Dottrina di Assalto: combatte o si rivale."
     },
     {
-      "name": "INDOMITUS",
-      "description": "Ogni volta che un agente spara a un agente ANGELI DELLA MORTE amico, se ottieni due o più fallimenti puoi scartarne uno per mantenere un altro come se fosse invece un successo normale."
-    },
-    {
       "name": "ED ESSI NON CONOSCERANNO LA PAURA",
       "description": "Puoi ignorare qualsiasi cambiamento alle statistiche degli agenti ANGELI DELLA MORTE amici derivante dall’essere infortunati (inclusi quelli alle statistiche delle loro armi)."
     },
     {
       "name": "TATTICHE ADATTIVE",
       "description": "Cambia la tua TATTICA CAPITOLARE secondaria. Nota che questo espediente dura solo fino alla fine del punto di svolta, dopodiché ritorna la tua TATTICA CAPITOLARE secondaria originale."
+    },
+    {
+      "name": "INDOMITUS",
+      "description": "Ogni volta che un agente spara a un agente ANGELI DELLA MORTE amico, se ottieni due o più fallimenti puoi scartarne uno per mantenere un altro come se fosse invece un successo normale."
     }
   ],
   "fire_ploy": [
@@ -607,14 +607,12 @@
     },
     {
       "name": "ASSALTO FOLGORANTE",
-      "description": "Usa questo espediente Scontro a Fuoco quando un agente ANGELI DELLA MORTE amico svolga l’azione Combattere durante un’attivazione in cui ha svolto l’azione Caricare, all’inizio del passo Risolvere i dadi attacco. Fino alla fine di quella azione:<br><br>• Le sue armi da mischia hanno la regola delle armi Shock.<br><br>• La prima volta che affondi durante quella sequenza, infliggi 1 danno addizionale (fino a un massimo di 7)."
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente ANGELI DELLA MORTE amico svolge l’azione Combattere durante un’attivazione in cui ha svolto l’azione Caricare, all’inizio del passo Risolvere i dadi attacco. Fino alla fine di quella azione:<br><br>• Le sue armi da mischia hanno la regola delle armi Shock.<br><br>• La prima volta che affondi durante quella sequenza, infliggi 1 danno addizionale (fino a un massimo di 7)."
     },
     {
       "name": "IRA VENDICATIVA",
       "description": "Usa questo espediente Scontro a Fuoco quando un agente ANGELI DELLA MORTE amico agisce in risposta. Esso può svolgere gratuitamente un’azione addizionale da 1PA durante quell’azione in risposta, ma le due azioni devono essere diverse l’una dall’altra."
     }
   ],
-  "agents_deploy_rules": {
-    "description": "1 agente ANGELI DELLA MORTE scelto dalla seguente lista:<br><br>• INTERCESSOR D’ASSALTO SERGENTE con una opzione da ciascuna delle seguenti:\n  - Pistola lanciafiamme o pistola requiem pesante\n  - Spada a catena, maglio potenziato, arma potenziata o martello Tuono\n O la seguente opzione:\n  - Pistola plasma; spada a catena<br><br>• INTERCESSOR SERGENTE con una opzione da ciascuna delle seguenti:\n  - Fucile requiem a lunga gittata automatico, fucile requiem a lunga gittata o fucile requiem a lunga gittata Venator\n  - Spada a catena, pugni, maglio potenziato, arma potenziata o martello Tuono<br><br>• SPACE MARINE CAPITANO\n\n5 agenti ANGELI DELLA MORTE scelti dalla seguente lista:<br><br>• INTERCESSOR D’ASSALTO GRANATIERE<br><br>• INTERCESSOR D’ASSALTO GUERRIERO<br><br>• ELIMINATORE CECCHINO<br><br>• INTERCESSOR PESANTE ARTIGLIERE<br><br>• INTERCESSOR ARTIGLIERE con lanciagranate ausiliario e una delle seguenti opzioni:\n  - Fucile requiem a lunga gittata automatico; pugni\n  - Fucile requiem a lunga gittata; pugni\n  - Fucile requiem a lunga gittata Venator; pugni<br><br>• INTERCESSOR GUERRIERO con una delle seguenti opzioni:\n  - Fucile requiem a lunga gittata automatico; pugni\n  - Fucile requiem a lunga gittata; pugni\n  - Fucile requiem a lunga gittata Venator; pugni\n\nA eccezione degli agenti GUERRIERO, il tuo kill team può includere ciascun agente di questa lista solo una volta."
-  }
+  "agents_deploy_rules": "vue-project/src/properties/factions/deploy_angels_of_death.html"
 }

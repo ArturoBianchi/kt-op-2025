@@ -16,10 +16,11 @@ declare module 'vue' {
     AppMenu: typeof import('./src/components/common/AppMenu.vue')['default']
     CritCard: typeof import('./src/components/cards/CritCard.vue')['default']
     DataCard: typeof import('./src/components/cards/DataCard.vue')['default']
-    FactionsData: typeof import('./src/components/FactionsData.vue')['default']
+    DeployRuleViewer: typeof import('./src/components/DeployRuleViewer.vue')['default']
     KillCard: typeof import('./src/components/cards/KillCard.vue')['default']
     KTCarousel: typeof import('./src/components/KTCarousel.vue')['default']
     OpCard: typeof import('./src/components/cards/OpCard.vue')['default']
+    PloyCard: typeof import('./src/components/cards/PloyCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     RuleCard: typeof import('./src/components/cards/RuleCard.vue')['default']
@@ -37,6 +38,5 @@ declare module 'vue' {
     UTabs: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Tabs.vue')['default']
     UUser: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/User.vue')['default']
     WeaponDataCard: typeof import('./src/components/weapon/WeaponDataCard.vue')['default']
-    WeaponRules: typeof import('./src/components/WeaponRules.vue')['default']
   }
 }

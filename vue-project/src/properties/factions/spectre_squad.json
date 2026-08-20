@@ -3,7 +3,6 @@
   "agents": [
     {
       "name": "SPETTRO SERGENTE VETERANO",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -35,7 +34,7 @@
       ],
       "abilities": [
         {
-          "name": "IMPARTIRE MISSIONE (0PA)",
+          "name": "IMPARTIRE MISSIONE 0PA",
           "description": "Scegli un agente SQUADRA SPETTRO amico usato (escluso il FARO VOX-RIPETITORE) visibile a questo agente e che in questo punto di svolta non ha interrotto l’attivazione di un agente nemico con la regola della Fazione Sofisticate Tecniche di Sopravvivenza. Fino alla fine del punto di svolta quell’agente amico può usare la regola della Fazione anche se è usato (ciò ha la precedenza sulle regole consuete). Tuttavia, se lo fa non può agire in risposta durante il punto di svolta, né svolgere l’azione Riposizionarsi se l’ha già fatto in questo punto di svolta. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
         }
       ],
@@ -43,7 +42,6 @@
     },
     {
       "name": "SPETTRO MEDICAE DA CAMPO",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -81,7 +79,7 @@
       ],
       "abilities": [
         {
-          "name": "MEDIKIT (0PA)",
+          "name": "MEDIKIT 0PA",
           "description": "Scegli un agente SQUADRA SPETTRO amico (escluso il FARO VOX-RIPETITORE) entro la distanza di controllo di questo agente affinché recuperi fino a 2D3 ferite perse. Non può essere un agente su cui è stata usata la regola Medico! in questo punto di svolta. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
         }
       ],
@@ -94,7 +92,6 @@
     },
     {
       "name": "SPETTRO GRANATIERE",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -148,7 +145,6 @@
     },
     {
       "name": "SPETTRO GUIDA",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -198,7 +194,6 @@
     },
     {
       "name": "SPETTRO ARTIGLIERE",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -246,7 +241,6 @@
     },
     {
       "name": "SPETTRO ARTIGLIERE PESANTE",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -299,7 +293,6 @@
     },
     {
       "name": "SPETTRO SERVENTE",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -330,7 +323,7 @@
       ],
       "abilities": [
         {
-          "name": "CARICARE L’ARMA (1PA)",
+          "name": "CARICARE L’ARMA 1PA",
           "description": "Scegli un agente SQUADRA SPETTRO amico entro la distanza di controllo di questo agente e non entro 3\" dagli agenti nemici. Quell’agente amico può svolgere subito un’azione Sparare gratuita (esclusa Guardia), e puoi cambiare il suo ordine per farlo. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico, mentre agisce in risposta o durante un’attivazione in cui ha svolto l’azione Caricare, Scattare o Sparare (o viceversa)."
         }
       ],
@@ -343,7 +336,6 @@
     },
     {
       "name": "SPETTRO TIRATORE ESPERTO",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -389,14 +381,13 @@
       "abilities": [],
       "traits": [
         {
-          "name": "*Posizione Nascosta",
+          "name": "Posizione Nascosta",
           "description": "questo agente può usare quest’arma solo la prima volta che svolge l’azione Sparare durante la battaglia."
         }
       ]
     },
     {
       "name": "SPETTRO MITRAGLIERE",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -449,7 +440,6 @@
     },
     {
       "name": "SPETTRO SOLDATO",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -495,7 +485,6 @@
     },
     {
       "name": "SPETTRO OPERATORE VOX",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -533,7 +522,7 @@
       ],
       "abilities": [
         {
-          "name": "SEGNALE (1PA)",
+          "name": "SEGNALE 1PA",
           "description": "SUPPORTO. Scegli un altro agente SQUADRA SPETTRO amico (escluso il FARO VOX-RIPETITORE) visibile a questo agente. Fino alla fine della prossima attivazione di quell’agente aggiungi 1 alla sua statistica LPA. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
         }
       ],
@@ -541,7 +530,6 @@
     },
     {
       "name": "FARO VOX-RIPETITORE DEGLI SPETTRI",
-      "img_path": "",
       "keywords": [
         "SQUADRA SPETTRO",
         "IMPERIUM",
@@ -557,7 +545,7 @@
       "weapons": [],
       "abilities": [
         {
-          "name": "SEGNALE (1PA)",
+          "name": "SEGNALE 1PA",
           "description": "Scegli un altro agente SQUADRA SPETTRO amico entro 6\" da questo agente. Fino alla fine della prossima attivazione di quell’agente aggiungi 1 alla sua statistica LPA. Questo agente non può svolgere questa azione fintanto che si trova entro la distanza di controllo di un agente nemico."
         }
       ],
@@ -576,7 +564,7 @@
   "faction_equiment": [
     {
       "name": "CECCHINO APPOSTATO",
-      "description": "Una volta per punto di svolta un agente SQUADRA SPETTRO amico può usare la seguente arma da tiro: Cecchino Appostato (ATT: 4, COLP: 3+, DNN: 3/3, RdA: Devastante 2, Pesante (solo Scattare), Saturazione, Silenziosa)."
+      "description": "Una volta per punto di svolta un agente SQUADRA SPETTRO amico può usare la seguente arma da tiro:<br>Cecchino Appostato: ATT 4, COLP 3+, DNN 3/3 | RdA: Devastante 2, Pesante (solo Scattare), Saturazione, Silenziosa"
     },
     {
       "name": "TRIANGOLAZIONE IMMAGINI TVCC",
@@ -588,7 +576,7 @@
     },
     {
       "name": "MIMETISMO SOPRAFFINO",
-      "description": "Gli agenti SQUADRA SPETTRO amici (escluso il FARO VOX-RIPETITORE) possono svolgere la seguente azione unica:\nMIMETISMO SOPRAFFINO 1PA: Fino all’inizio della sua prossima attivazione, fintanto che questo agente ha un ordine Nascondersi e si trova in copertura, non può essere selezionato come bersaglio valido (a meno che l’attaccante non si trovi entro 2\") e ciò ha la precedenza su tutte le altre regole (ad es. A Ricerca e i terreni Sopraelevati). Questo agente non può svolgere questa azione fintanto che è visibile a un agente nemico e si trova entro 3\" da esso."
+      "description": "Gli agenti SQUADRA SPETTRO amici (escluso il FARO VOX-RIPETITORE) possono svolgere la seguente azione unica:<br>MIMETISMO SOPRAFFINO 1PA<br>Fino all’inizio della sua prossima attivazione, fintanto che questo agente ha un ordine Nascondersi e si trova in copertura, non può essere selezionato come bersaglio valido (a meno che l’attaccante non si trovi entro 2\") e ciò ha la precedenza su tutte le altre regole (ad es. A Ricerca e i terreni Sopraelevati).<br>Questo agente non può svolgere questa azione fintanto che è visibile a un agente nemico e si trova entro 3\" da esso."
     }
   ],
   "faction_rules": [
@@ -634,10 +622,8 @@
     },
     {
       "name": "DIFESA APPRONTATA",
-      "description": "Usa questo espediente Scontro a Fuoco quando un agente SQUADRA SPETTRO amico preparato o che ha un ordine Nascondersi si rivale. Puoi svolgere una delle seguenti:<br><br>• All’inizio del passo Risolvere i dadi attacco puoi risolvere uno dei tuoi successi prima dell’ordine normale. Se lo fai, quel successo deve essere usato per bloccare.<br><br>• Quando blocchi, quel blocco può essere assegnato a bloccare due successi non risolti (invece di uno).\nNon puoi usare questo espediente durante un’attivazione che hai interrotto con la regola della Fazione Sofisticate Tecniche di Sopravvivenza."
+      "description": "Usa questo espediente Scontro a Fuoco quando un agente SQUADRA SPETTRO amico preparato o che ha un ordine Nascondersi si rivale. Puoi svolgere una delle seguenti:<br><br>• All’inizio del passo Risolvere i dadi attacco puoi risolvere uno dei tuoi successi prima dell’ordine normale. Se lo fai, quel successo deve essere usato per bloccare.<br><br>• Quando blocchi, quel blocco può essere assegnato a bloccare due successi non risolti (invece di uno).<br>Non puoi usare questo espediente durante un’attivazione che hai interrotto con la regola della Fazione Sofisticate Tecniche di Sopravvivenza."
     }
   ],
-  "agents_deploy_rules": {
-    "description": "KILL TEAM SQUADRA SPETTRO\nARCHETIPI: INFILTRAZIONE, RICOGNIZIONE\nAGENTI:\n- 1 SQUADRA SPETTRO SERGENTE VETERANO\n- 1 SQUADRA SPETTRO FARO VOX-RIPETITORE\n- 9 agenti SQUADRA SPETTRO scelti dalla seguente lista:\n  • MEDICAE DA CAMPO\n  • GRANATIERE\n  • GUIDA\n  • ARTIGLIERE con una delle seguenti opzioni: Fucile termico; pugni / Fucile plasma; pugni\n  • ARTIGLIERE PESANTE\n  • SERVENTE\n  • TIRATORE ESPERTO\n  • MITRAGLIERE\n  • SOLDATO\n  • OPERATORE VOX\n\nA eccezione degli agenti SOLDATO, il tuo kill team può includere ciascun agente di questa lista solo una volta.\nCon una delle seguenti opzioni:<br><br>• Fucile laser a lunga gittata; calcio dell’arma<br><br>• Carabina laser; calcio dell’arma"
-  }
+  "agents_deploy_rules": "vue-project/src/properties/factions/deploy_spectre_squad.html"
 }
