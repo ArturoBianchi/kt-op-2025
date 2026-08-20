@@ -87,7 +87,7 @@ const columns = [
                         :ui="{
                         root: 'max-h-60',
                         th: 'px-2 py-2 text-xs text-primary',
-                        td: 'px-2 py-1.5 text-[0.60rem] font-small text-highlighted'
+                        td: 'px-2 py-1.5 text-[0.65rem] font-small text-neutral'
                     }" />
             </div>
             <div v-for="trait in agent.traits">
@@ -96,9 +96,9 @@ const columns = [
             <div v-for="ability in agent.abilities" :key="ability.name">
                 <div class="ability-section">
                     <div class="ability-section-name">
-                        <p style="color: var(--text-primary); font-size: 0.65rem">{{ ability.name }}</p>
+                        <p style="color: var(--text-primary); font-size: 0.70rem">{{ ability.name }}</p>
                     </div>
-                    <p style="font-size: 0.65rem" v-html="ability.description"></p>
+                    <p style="font-size: 0.70rem" v-html="ability.description"></p>
                 </div>
             </div>
         </div>
@@ -118,12 +118,12 @@ const columns = [
 }
 
 .agent-stat-label {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     color: var(--text-secondary);
 }
 
 .agent-stat {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: var(--text-primary);
 }
 
@@ -136,7 +136,7 @@ const columns = [
 
 .trait-section {
     margin-top: 0.5rem;
-    font-size: 0.65rem;
+    font-size: 0.70rem;
 }
 
 .trait-section b {

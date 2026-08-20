@@ -235,7 +235,7 @@ p {
 }
 
 .app-container {
-  max-width: 90%;
+  max-width: 100%;
   width: 100%;
   background-color: var(--bg-app); /* The actual app background */
   display: flex;
