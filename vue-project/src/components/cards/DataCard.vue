@@ -18,7 +18,7 @@ function handlePin(pinData) {
 </script>
 
 <template>
-    <div :class="pinData ? 'data-card' : 'data-card-no-pin'" class="card-gradient-background">
+    <div :class="pinData ? 'data-card' : 'data-card-no-pin'">
         <UButton v-if="!pinDisabled"
                 icon="i-lucide-pin"
                 color="neutral"
@@ -43,7 +43,10 @@ function handlePin(pinData) {
     padding-right: 2.25rem;
     width: auto;
     text-align: left;
+    background-color: var(--bg-surface);
 }
+
+
 
 .data-card-no-pin {
     position: relative;

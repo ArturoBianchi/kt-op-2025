@@ -81,24 +81,25 @@ const columns = [
     </div>
     <template #content>
         <div class="content-section">
-            <div style="margin-top: 0.5rem;">
+            <div style="margin-top: 0.5rem; color: var(--text-primary); font-weight: 300; letter-spacing: 0.04rem">
                 <UTable sticky :data="agent.weapons || []"
                         :columns="columns" class="w-full"
                         :ui="{
                         root: 'max-h-60',
+                        thead: 'bg-transparent',
                         th: 'px-2 py-2 text-xs text-primary',
-                        td: 'px-2 py-1.5 text-[0.65rem] font-small text-neutral'
+                        td: 'px-2 py-1.5 text-[0.7rem] text-neutral'
                     }" />
             </div>
             <div v-for="trait in agent.traits">
-                <p class="trait-section" v-html="'<b style=\'color: var(--accent-important);\'> ' + trait.name + ': </b>' + trait.description"></p>
+                <p class="trait-section contrast-text" v-html="'<b style=\'color: var(--accent-important);\'> ' + trait.name + ': </b>' + trait.description"></p>
             </div>
             <div v-for="ability in agent.abilities" :key="ability.name">
                 <div class="ability-section">
                     <div class="ability-section-name">
-                        <p style="color: var(--text-primary); font-size: 0.70rem">{{ ability.name }}</p>
+                        <p class="contrast-text" style="color: var(--text-primary); font-size: 0.70rem">{{ ability.name }}</p>
                     </div>
-                    <p style="font-size: 0.70rem" v-html="ability.description"></p>
+                    <p class="contrast-text" style="font-size: 0.70rem" v-html="ability.description"></p>
                 </div>
             </div>
         </div>
@@ -113,17 +114,17 @@ const columns = [
 }
 
 .agent-desc {
-    font-size: 0.38rem;
+    font-size: 0.44rem;
     color: var(--text-secondary);
 }
 
 .agent-stat-label {
-    font-size: 0.6rem;
-    color: var(--text-secondary);
+    font-size: 0.7rem;
+    color: var(--accent-main);
 }
 
 .agent-stat {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     color: var(--text-primary);
 }
 
@@ -158,5 +159,9 @@ const columns = [
     align-items: center;
     margin-bottom: 0.60rem;
     font-weight: 900;
+}
+
+.contrast-text {
+    font-size: 0.7rem; color: var(--text-primary); font-weight: 300; letter-spacing: 0.05rem;
 }
 </style>

@@ -10,7 +10,7 @@
   --bg-contrast-surface: color-mix(in srgb, white 5%, var(--bg-surface));
 
   /* Testi */
-  --text-primary: rgba(255, 255, 255, 0.87); /* Material High Emphasis */
+  --text-primary: rgb(255 255 255 / 0.87); /* Material High Emphasis */
   --text-secondary: rgba(255, 255, 255, 0.60); /* Material Medium Emphasis */
   --text-disabled: rgba(255, 255, 255, 0.38);  /* Material Disabled */
   
