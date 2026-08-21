@@ -88,7 +88,7 @@ const columns = [
                         root: 'max-h-60',
                         thead: 'bg-transparent',
                         th: 'px-2 py-2 text-xs text-primary',
-                        td: 'px-2 py-1.5 text-[0.7rem] text-neutral'
+                        td: 'px-2 py-1.5 text-[0.8rem] text-neutral'
                     }" />
             </div>
             <div v-for="trait in agent.traits">
@@ -97,9 +97,9 @@ const columns = [
             <div v-for="ability in agent.abilities" :key="ability.name">
                 <div class="ability-section">
                     <div class="ability-section-name">
-                        <p class="contrast-text" style="color: var(--text-primary); font-size: 0.70rem">{{ ability.name }}</p>
+                        <p class="contrast-text">{{ ability.name }}</p>
                     </div>
-                    <p class="contrast-text" style="font-size: 0.70rem" v-html="ability.description"></p>
+                    <p class="contrast-text" v-html="ability.description"></p>
                 </div>
             </div>
         </div>
@@ -109,17 +109,17 @@ const columns = [
 
 <style scoped>
 .agent-name{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--text-primary);
 }
 
 .agent-desc {
-    font-size: 0.44rem;
+    font-size: 0.6rem;
     color: var(--text-secondary);
 }
 
 .agent-stat-label {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--accent-main);
 }
 
@@ -137,7 +137,7 @@ const columns = [
 
 .trait-section {
     margin-top: 0.5rem;
-    font-size: 0.70rem;
+    font-size: 0.80rem;
 }
 
 .trait-section b {
@@ -162,6 +162,6 @@ const columns = [
 }
 
 .contrast-text {
-    font-size: 0.7rem; color: var(--text-primary); font-weight: 300; letter-spacing: 0.05rem;
+    font-size: 0.8rem; color: var(--text-primary); font-weight: 300; letter-spacing: 0.05rem;
 }
 </style>
